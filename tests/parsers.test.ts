@@ -48,4 +48,43 @@ describe("parsers by corpus", () => {
     expect(arts[0]?.text).toContain("Competencia");
     expect(arts[1]?.text).toContain("Prórroga");
   });
+
+  it("uses a specific Constitución parser that skips publication text and starts at the constitutional article 1", () => {
+    const html = [
+      "<div id='Contenido'>",
+      "Ordénase la publicación del texto oficial...<br>",
+      "Artículo 1º.- La Nación Argentina adopta para su gobierno...<br>",
+      "Artículo 2º.- El Gobierno federal sostiene...<br>",
+      "</div>",
+    ].join("");
+    const arts = extractArticlesForLaw("constitucion", html);
+    expect(arts.map((a) => a.number)).toEqual(["1", "2"]);
+    expect(arts[0]?.text).toContain("La Nación Argentina adopta");
+  });
+
+  it("uses a specific Penal parser that captures articles with quinquies suffix", () => {
+    const html = [
+      "<div id='Contenido'>",
+      "Artículo 1.- Este Código se aplicará...<br>",
+      "ARTICULO 41 quinquies — Cuando alguno de los delitos...<br>",
+      "Artículo 42.- El que...<br>",
+      "Antecedentes Normativos<br>",
+      "</div>",
+    ].join("");
+    const arts = extractArticlesForLaw("penal", html);
+    expect(arts.map((a) => a.number)).toContain("41quinquies");
+  });
+
+  it("uses a specific LDC parser that captures bis articles", () => {
+    const html = [
+      "<div id='Contenido'>",
+      "ARTICULO 1º — Objeto...<br>",
+      "ARTICULO 8º bis: Trato digno...<br>",
+      "ARTICULO 9º — Cosas usadas...<br>",
+      "Antecedentes Normativos<br>",
+      "</div>",
+    ].join("");
+    const arts = extractArticlesForLaw("ley_24240", html);
+    expect(arts.map((a) => a.number)).toContain("8bis");
+  });
 });

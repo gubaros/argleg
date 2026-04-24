@@ -141,6 +141,26 @@ describe("findArticle", () => {
     expect(art?.text.toLowerCase()).not.toContain("antecedentes normativos");
   });
 
+  it("loads substantive Constitución article 1 instead of publication text", () => {
+    const art = findArticle(lib, "constitucion", "1");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("la nación argentina");
+    expect(art?.text.toLowerCase()).toContain("adopta para su gobierno");
+    expect(art?.text.toLowerCase()).not.toContain("ordénase la publicación");
+  });
+
+  it("loads Penal article 41quinquies with suffix preserved", () => {
+    const art = findArticle(lib, "penal", "41quinquies");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("aterrorizar a la población");
+  });
+
+  it("loads LDC article 8bis with bis suffix preserved", () => {
+    const art = findArticle(lib, "ley_24240", "8bis");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("trato digno");
+  });
+
   it("still has substantive CCyC content in mid-range articles", () => {
     const art = findArticle(lib, "ccyc", "765");
     expect(art).toBeDefined();

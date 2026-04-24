@@ -1,9 +1,11 @@
 /**
  * Logger for argleg-mcp.
  *
- * IMPORTANT: always writes to STDERR. STDOUT is reserved for the MCP
- * JSON-RPC transport when the server is attached over stdio; writing
- * anything else there would corrupt the protocol stream.
+ * IMPORTANT: STDOUT is reserved for the MCP JSON-RPC transport when the
+ * server is attached over stdio; writing anything else there would corrupt
+ * the protocol stream.
+ *
+ * Logs always go to STDERR and, optionally, to a file via ARGLEG_LOG_FILE.
  *
  * Control level via env var ARGLEG_LOG_LEVEL: silent | info | verbose | debug
  * Default: info.
@@ -11,6 +13,8 @@
  * Also honours ARGLEG_LOG_JSON=1 to emit one JSON object per line
  * (easier to pipe into log aggregators).
  */
+
+import { appendFileSync } from "node:fs";
 
 export type LogLevel = "silent" | "info" | "verbose" | "debug";
 
@@ -31,24 +35,35 @@ function resolveLevel(): LogLevel {
 
 const LEVEL: LogLevel = resolveLevel();
 const JSON_MODE = process.env.ARGLEG_LOG_JSON === "1";
+const LOG_FILE = process.env.ARGLEG_LOG_FILE?.trim() || "";
 
 function enabled(at: LogLevel): boolean {
   return LEVEL_RANK[at] <= LEVEL_RANK[LEVEL];
+}
+
+function writeLine(line: string): void {
+  process.stderr.write(line);
+  if (!LOG_FILE) return;
+  try {
+    appendFileSync(LOG_FILE, line, "utf8");
+  } catch {
+    // Avoid recursive logging if the log file itself fails.
+  }
 }
 
 function emit(level: LogLevel, event: string, fields: Record<string, unknown> = {}): void {
   if (!enabled(level)) return;
   const ts = new Date().toISOString();
   if (JSON_MODE) {
-    const line = JSON.stringify({ ts, level, event, ...fields });
-    process.stderr.write(line + "\n");
+    const line = JSON.stringify({ ts, level, event, ...fields }) + "\n";
+    writeLine(line);
     return;
   }
   const pairs = Object.entries(fields)
     .filter(([, v]) => v !== undefined)
     .map(([k, v]) => `${k}=${fmt(v)}`)
     .join(" ");
-  process.stderr.write(`[argleg-mcp ${ts} ${level.padEnd(7)}] ${event}${pairs ? " " + pairs : ""}\n`);
+  writeLine(`[argleg-mcp ${ts} ${level.padEnd(7)}] ${event}${pairs ? " " + pairs : ""}\n`);
 }
 
 function fmt(v: unknown): string {
@@ -81,14 +96,14 @@ export const log = {
     if (LEVEL === "silent") return;
     const ts = new Date().toISOString();
     if (JSON_MODE) {
-      process.stderr.write(JSON.stringify({ ts, level: "error", event, ...fields }) + "\n");
+      writeLine(JSON.stringify({ ts, level: "error", event, ...fields }) + "\n");
       return;
     }
     const pairs = Object.entries(fields ?? {})
       .filter(([, v]) => v !== undefined)
       .map(([k, v]) => `${k}=${fmt(v)}`)
       .join(" ");
-    process.stderr.write(`[argleg-mcp ${ts} error  ] ${event}${pairs ? " " + pairs : ""}\n`);
+    writeLine(`[argleg-mcp ${ts} error  ] ${event}${pairs ? " " + pairs : ""}\n`);
   },
 };
 

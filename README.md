@@ -173,6 +173,30 @@ ARGLEG_LOG_LEVEL=debug npm start
 
 # Debug en formato JSON, pipeado a un archivo
 ARGLEG_LOG_LEVEL=debug ARGLEG_LOG_JSON=1 npm start 2> argleg.log.jsonl
+
+# Forzar además un archivo de log propio del servidor
+ARGLEG_LOG_LEVEL=verbose ARGLEG_LOG_FILE=/tmp/argleg-mcp.log npm start
+```
+
+### Archivo de log opcional
+
+Si tu cliente MCP no te muestra `stderr` claramente, podés pedirle al servidor que
+además escriba a un archivo local:
+
+```bash
+ARGLEG_LOG_LEVEL=verbose ARGLEG_LOG_FILE=/tmp/argleg-mcp.log npm start
+```
+
+Variables:
+- `ARGLEG_LOG_FILE=/ruta/al/archivo.log` → duplica cada línea de log en ese archivo.
+- `ARGLEG_LOG_JSON=1` → si querés JSONL en ese mismo archivo.
+
+Ejemplo:
+```bash
+ARGLEG_LOG_LEVEL=debug \
+ARGLEG_LOG_JSON=1 \
+ARGLEG_LOG_FILE=/tmp/argleg-mcp.jsonl \
+node dist/index.js
 ```
 
 ### Dónde ver los logs cuando corre bajo un cliente MCP

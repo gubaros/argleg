@@ -73,6 +73,21 @@ describe("parseArticlesFromText", () => {
     expect(arts[0]!.text).toBe("primera");
   });
 
+  it("skips approving-law preamble when ANEXO I is present", () => {
+    const text = [
+      "ARTICULO 1° — Apruébase el Código Civil y Comercial.",
+      "ARTICULO 10. — Comuníquese al Poder Ejecutivo.",
+      "ANEXO I TITULO PRELIMINAR CAPITULO 1 Derecho",
+      "ARTICULO 1° — Fuentes y aplicación.",
+      "ARTICULO 2° — Interpretación.",
+    ].join("\n");
+    const arts = parseArticlesFromText(text);
+    expect(arts).toHaveLength(2);
+    expect(arts[0]!.number).toBe("1");
+    expect(arts[0]!.text).toContain("Fuentes y aplicación");
+    expect(arts[1]!.number).toBe("2");
+  });
+
   it("returns empty array when no article header exists", () => {
     const arts = parseArticlesFromText("esto no es una ley");
     expect(arts).toHaveLength(0);

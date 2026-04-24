@@ -51,8 +51,46 @@ function truncateAtFooter(text: string): string {
   return text.slice(0, cut);
 }
 
+function normalizeForSearch(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function sliceAtAnnexIIfPresent(text: string): string {
+  const normalized = normalizeForSearch(text);
+  const candidates = [
+    "anexo i titulo preliminar",
+    "anexo i - titulo preliminar",
+    "anexo i — titulo preliminar",
+    "anexo i capítulo 1 derecho",
+    "anexo i capitulo 1 derecho",
+  ];
+
+  let best = -1;
+  for (const candidate of candidates) {
+    const idx = normalized.indexOf(candidate);
+    if (idx >= 0 && (best === -1 || idx < best)) best = idx;
+  }
+  if (best === -1) return text;
+
+  // Map approximate normalized index back to original by walking chars.
+  let seen = 0;
+  for (let i = 0; i < text.length; i++) {
+    const chunk = normalizeForSearch(text[i] ?? "");
+    seen += chunk.length;
+    if (seen >= best) {
+      return text.slice(i);
+    }
+  }
+  return text;
+}
+
 export function parseArticlesFromText(raw: string): Article[] {
-  const normalized = raw.replace(/\r\n/g, "\n");
+  const normalized = sliceAtAnnexIIfPresent(raw.replace(/\r\n/g, "\n"));
 
   // Skip any preamble (TOC, section headings) before the first article header.
   // Some InfoLEG pages put "Antecedentes Normativos" inside their TOC, which

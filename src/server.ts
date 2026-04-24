@@ -5,11 +5,21 @@ import { searchArticles } from "./laws/search.js";
 import { formatArticle, formatHit, formatLawSummary } from "./laws/format.js";
 import { LawIdSchema, LAW_IDS, type LawId } from "./laws/types.js";
 import { log, resultSize } from "./log.js";
+import { ARGLEG_BUILD_DATE_TIME, ARGLEG_VERSION } from "./version.js";
 
 const DISCLAIMER =
   "\n\n---\n> **Aviso legal:** Esta información es de carácter orientativo. El contenido normativo proviene de " +
   "archivos locales y no sustituye el asesoramiento profesional de un abogado matriculado. " +
   "Verificá siempre el texto vigente en fuentes oficiales (InfoLEG, BORA).";
+
+const VERSION_TEXT = `\n\nVersión de ArgLeg MCP: ${ARGLEG_VERSION} (${ARGLEG_BUILD_DATE_TIME})`;
+
+function textPayload(text: string, extra: Record<string, unknown> = {}) {
+  return {
+    content: [{ type: "text" as const, text: text + VERSION_TEXT }],
+    structuredContent: { version: ARGLEG_VERSION, ...extra },
+  };
+}
 
 export async function buildServer(): Promise<McpServer> {
   const lib = await loadLibrary();
@@ -36,7 +46,7 @@ export async function buildServer(): Promise<McpServer> {
   }
 
   const server = new McpServer(
-    { name: "argleg-mcp", version: "0.1.0" },
+    { name: "argleg-mcp", version: ARGLEG_VERSION },
     { capabilities: { resources: {}, tools: {}, prompts: {} } },
   );
 
@@ -45,7 +55,7 @@ export async function buildServer(): Promise<McpServer> {
   registerPrompts(server);
 
   log.info("server.ready", {
-    tools: 3,
+    tools: 4,
     resources: lib.laws.size + 1,
     prompts: 2,
     log_level: log.level,
@@ -134,6 +144,34 @@ function runPromptLogged<T>(name: string, args: unknown, fn: () => T): T {
 // ─── Tools ───────────────────────────────────────────────────────────────────
 
 function registerTools(server: McpServer, lib: LoadedLibrary): void {
+  server.registerTool(
+    "server_info",
+    {
+      title: "Información del servidor ArgLeg",
+      description: "Devuelve metadata operativa del servidor, incluyendo versión y ubicación de la base local.",
+      inputSchema: {},
+    },
+    async () =>
+      runToolLogged("server_info", {}, async () =>
+        textPayload(
+          [
+            `Servidor: argleg-mcp`,
+            `Versión: ${ARGLEG_VERSION}`,
+            `Fecha y hora de versión: ${ARGLEG_BUILD_DATE_TIME}`,
+            `Base local: ${lib.dataDir}`,
+            `Normas cargadas: ${lib.laws.size}`,
+          ].join("\n"),
+          {
+            name: "argleg-mcp",
+            version: ARGLEG_VERSION,
+            buildDateTime: ARGLEG_BUILD_DATE_TIME,
+            dataDir: lib.dataDir,
+            loadedLaws: lib.laws.size,
+          },
+        ),
+      ),
+  );
+
   // search_law
   server.registerTool(
     "search_law",
@@ -170,7 +208,7 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
         const { query, law, article, limit } = args;
         if (law && !lib.laws.has(law)) {
           log.info("search_law.missing_law", { law });
-          return { content: [{ type: "text", text: NOT_AVAILABLE }] };
+          return textPayload(NOT_AVAILABLE, { law });
         }
 
         const hits = searchArticles(lib, { query, law, article, limit });
@@ -182,27 +220,19 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
         });
 
         if (hits.length === 0) {
-          return {
-            content: [
-              {
-                type: "text",
-                text:
-                  "No se encontraron resultados para la consulta en la base local." +
-                  DISCLAIMER,
-              },
-            ],
-          };
+          return textPayload(
+            "No se encontraron resultados para la consulta en la base local." + DISCLAIMER,
+            { query, law, article, results: 0 },
+          );
         }
 
         const body = hits.map(formatHit).join("\n\n");
-        return {
-          content: [
-            {
-              type: "text",
-              text: `## Resultados (${hits.length})\n\n${body}${DISCLAIMER}`,
-            },
-          ],
-        };
+        return textPayload(`## Resultados (${hits.length})\n\n${body}${DISCLAIMER}`, {
+          query,
+          law,
+          article,
+          results: hits.length,
+        });
       }),
   );
 
@@ -230,25 +260,21 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
         const { law, article_number } = args;
         if (!lib.laws.has(law)) {
           log.info("get_article.missing_law", { law });
-          return { content: [{ type: "text", text: NOT_AVAILABLE }] };
+          return textPayload(NOT_AVAILABLE, { law });
         }
 
         const art = findArticle(lib, law, article_number);
         if (!art) {
           log.info("get_article.missing_article", { law, article_number });
-          return {
-            content: [
-              {
-                type: "text",
-                text: `norma no disponible en la base local (Art. ${article_number} de \`${law}\` no está cargado).`,
-              },
-            ],
-          };
+          return textPayload(
+            `norma no disponible en la base local (Art. ${article_number} de \`${law}\` no está cargado).`,
+            { law, article_number },
+          );
         }
 
         const lawObj = lib.laws.get(law)!;
         const text = formatArticle(law, lawObj, art);
-        return { content: [{ type: "text", text: text + DISCLAIMER }] };
+        return textPayload(text + DISCLAIMER, { law, article_number, found: true });
       }),
   );
 
@@ -280,11 +306,7 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
 
         if (missing.length > 0) {
           log.info("compare_articles.missing_law", { missing });
-          return {
-            content: [
-              { type: "text", text: `${NOT_AVAILABLE}: ${missing.join(", ")}` },
-            ],
-          };
+          return textPayload(`${NOT_AVAILABLE}: ${missing.join(", ")}`, { missing });
         }
 
         const artA = findArticle(lib, law_a, article_a);
@@ -296,14 +318,9 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
 
         if (notFound.length > 0) {
           log.info("compare_articles.missing_article", { notFound });
-          return {
-            content: [
-              {
-                type: "text",
-                text: `norma no disponible en la base local: ${notFound.join(", ")}`,
-              },
-            ],
-          };
+          return textPayload(`norma no disponible en la base local: ${notFound.join(", ")}`, {
+            notFound,
+          });
         }
 
         const blockA = formatArticle(law_a, lawObjA!, artA!);
@@ -322,7 +339,7 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
           DISCLAIMER,
         ].join("\n");
 
-        return { content: [{ type: "text", text }] };
+        return textPayload(text, { law_a, article_a, law_b, article_b });
       }),
   );
 }
@@ -345,7 +362,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
         },
         async () =>
           runResourceLogged(id, uri, async () => ({
-            contents: [{ uri, mimeType: "text/plain", text: NOT_AVAILABLE }],
+            contents: [{ uri, mimeType: "text/plain", text: NOT_AVAILABLE + VERSION_TEXT }],
           })),
       );
       continue;
@@ -365,7 +382,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
             {
               uri,
               mimeType: "text/markdown",
-              text: formatLawSummary(law) + DISCLAIMER,
+              text: formatLawSummary(law) + DISCLAIMER + VERSION_TEXT,
             },
           ],
         })),
@@ -411,7 +428,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
         if (!isValidLawId(lawId)) {
           log.info("resource.invalid_law", { law: lawId });
           return {
-            contents: [{ uri: uri.href, mimeType: "text/plain", text: NOT_AVAILABLE }],
+            contents: [{ uri: uri.href, mimeType: "text/plain", text: NOT_AVAILABLE + VERSION_TEXT }],
           };
         }
 
@@ -419,7 +436,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
         if (!law) {
           log.info("resource.missing_law", { law: lawId });
           return {
-            contents: [{ uri: uri.href, mimeType: "text/plain", text: NOT_AVAILABLE }],
+            contents: [{ uri: uri.href, mimeType: "text/plain", text: NOT_AVAILABLE + VERSION_TEXT }],
           };
         }
 
@@ -431,7 +448,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
               {
                 uri: uri.href,
                 mimeType: "text/plain",
-                text: `norma no disponible en la base local (Art. ${articleNum} de \`${lawId}\` no está cargado).`,
+                text: `norma no disponible en la base local (Art. ${articleNum} de \`${lawId}\` no está cargado).${VERSION_TEXT}`,
               },
             ],
           };
@@ -442,7 +459,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
             {
               uri: uri.href,
               mimeType: "text/markdown",
-              text: formatArticle(lawId as LawId, law, art) + DISCLAIMER,
+              text: formatArticle(lawId as LawId, law, art) + DISCLAIMER + VERSION_TEXT,
             },
           ],
         };
@@ -486,6 +503,7 @@ function registerPrompts(server: McpServer): void {
                 type: "text",
                 text: [
                   `Analizá el artículo ${article_number} de la norma \`${law}\` utilizando el recurso MCP \`law://${law}/article/${article_number}\`.`,
+                  `Versión de ArgLeg MCP: ${ARGLEG_VERSION}.`,
                   "",
                   "Estructura tu respuesta en las siguientes secciones:",
                   "1. **Texto del artículo** (transcribir literalmente desde el recurso).",
@@ -539,6 +557,7 @@ function registerPrompts(server: McpServer): void {
                 type: "text",
                 text: [
                   `Comparará el Art. ${article_a} de \`${law_a}\` con el Art. ${article_b} de \`${law_b}\` usando la herramienta \`compare_articles\`.`,
+                  `Versión de ArgLeg MCP: ${ARGLEG_VERSION}.`,
                   focusBlock,
                   "",
                   "Estructura tu análisis en:",

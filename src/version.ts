@@ -1,0 +1,2 @@
+export const ARGLEG_VERSION = "0.1.29";
+export const ARGLEG_BUILD_DATE_TIME = "2026-04-24T21:36:41.848Z";

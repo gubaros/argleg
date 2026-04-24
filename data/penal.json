@@ -8,8 +8,21 @@
   "articles": [
     {
       "number": "1",
-      "text": "Este Código se aplicará:\n\n\n\n\n\n1) Por delitos cometidos o cuyos efectos deban producirse en el\nterritorio de la Nación Argentina, o en los lugares sometidos a su\njurisdicción.\n\n\n\n\n\n2) Por delitos cometidos en el extranjero por agentes o empleados de autoridades argentinas en desempeño de su cargo.\n\n\n\n\n\n3) Por el delito previsto en el artículo 258 bis cometido en el\nextranjero, por ciudadanos argentinos o personas jurídicas con\ndomicilio en la República Argentina, ya sea aquel fijado en sus\nestatutos o el correspondiente a los establecimientos o sucursales que\nposea en el territorio argentino.\n\n\n\n\n(Artículo sustituido por art. 29 de la Ley N° 27.401 B.O. 1/12/2017. Vigencia:\na los noventa (90) días de su publicación en el Boletín Oficial de la\nRepública Argentina)ARTICULO 2º.- Si la ley vigente al\ntiempo de cometerse el delito fuere distinta de la que exista al\npronunciarse el fallo o en el tiempo intermedio, se aplicará siempre la\nmás benigna. \nSi durante la condena se dictare una ley más\nbenigna, la pena se limitará a la establecida por esa ley. En todos los\ncasos del presente artículo, los efectos de la nueva ley se operarán de\npleno derecho.",
-      "incisos": [],
+      "text": "Este Código se aplicará:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Por delitos cometidos o cuyos efectos deban producirse en el territorio de la Nación Argentina, o en los lugares sometidos a su jurisdicción."
+        },
+        {
+          "id": "2",
+          "text": "Por delitos cometidos en el extranjero por agentes o empleados de autoridades argentinas en desempeño de su cargo."
+        },
+        {
+          "id": "3",
+          "text": "Por el delito previsto en el artículo 258 bis cometido en el extranjero, por ciudadanos argentinos o personas jurídicas con domicilio en la República Argentina, ya sea aquel fijado en sus estatutos o el correspondiente a los establecimientos o sucursales que posea en el territorio argentino. (Artículo sustituido por art. 29 de la Ley N° 27.401 B.O. 1/12/2017. Vigencia: a los noventa (90) días de su publicación en el Boletín Oficial de la República Argentina)ARTICULO 2º.- Si la ley vigente al tiempo de cometerse el delito fuere distinta de la que exista al pronunciarse el fallo o en el tiempo intermedio, se aplicará siempre la más benigna. Si durante la condena se dictare una ley más benigna, la pena se limitará a la establecida por esa ley. En todos los casos del presente artículo, los efectos de la nueva ley se operarán de pleno derecho."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -64,8 +77,33 @@
     },
     {
       "number": "10",
-      "text": "Podrán, a criterio del juez competente, cumplir la pena de reclusión o prisión en detención domiciliaria:\na) El interno enfermo cuando la privación de la\nlibertad en el establecimiento carcelario le impide recuperarse o\ntratar adecuadamente su dolencia y no correspondiere su alojamiento en\nun establecimiento hospitalario;\nb) El interno que padezca una enfermedad incurable en período terminal;\nc) El interno díscapacitado cuando la privación de\nla libertad en el establecimiento carcelario es inadecuada por su\ncondición implicándole un trato indigno, inhumano o cruel;\nd) El interno mayor de setenta (70) años;\ne) La mujer embarazada;\nf) La madre de un niño menor de cinco (5) años o de una persona con discapacidad a su cargo.\n(Artículo sustituido por art. 4° de la Ley N° 26.472, B.O. 20/1/2009)",
-      "incisos": [],
+      "text": "Podrán, a criterio del juez competente, cumplir la pena de reclusión o prisión en detención domiciliaria:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El interno enfermo cuando la privación de la libertad en el establecimiento carcelario le impide recuperarse o tratar adecuadamente su dolencia y no correspondiere su alojamiento en un establecimiento hospitalario;"
+        },
+        {
+          "id": "b",
+          "text": "El interno que padezca una enfermedad incurable en período terminal;"
+        },
+        {
+          "id": "c",
+          "text": "El interno díscapacitado cuando la privación de la libertad en el establecimiento carcelario es inadecuada por su condición implicándole un trato indigno, inhumano o cruel;"
+        },
+        {
+          "id": "d",
+          "text": "El interno mayor de setenta (70) años;"
+        },
+        {
+          "id": "e",
+          "text": "La mujer embarazada;"
+        },
+        {
+          "id": "f",
+          "text": "La madre de un niño menor de cinco (5) años o de una persona con discapacidad a su cargo. (Artículo sustituido por art. 4° de la Ley N° 26.472, B.O. 20/1/2009)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -92,8 +130,21 @@
     },
     {
       "number": "14",
-      "text": " La libertad condicional no se concederá a los reincidentes. Tampoco se concederá cuando la condena fuera por:\n\n\n\n1) Homicidios agravados previstos en el artículo 80 del Código Penal.\n\n\n\n2) Delitos contra la integridad sexual, previstos en los arts. 119,\n120, 124, 125, 125 bis, 126, 127, 128 primer y segundo párrafos, y 130\ndel Código Penal.\n\n\n\n3) Privación ilegal de la libertad coactiva, si se causare\nintencionalmente la muerte de la persona ofendida, previsto en el",
-      "incisos": [],
+      "text": " La libertad condicional no se concederá a los reincidentes. Tampoco se concederá cuando la condena fuera por:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Homicidios agravados previstos en el artículo 80 del Código Penal."
+        },
+        {
+          "id": "2",
+          "text": "Delitos contra la integridad sexual, previstos en los arts. 119, 120, 124, 125, 125 bis, 126, 127, 128 primer y segundo párrafos, y 130 del Código Penal."
+        },
+        {
+          "id": "3",
+          "text": "Privación ilegal de la libertad coactiva, si se causare intencionalmente la muerte de la persona ofendida, previsto en el"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -218,8 +269,41 @@
     },
     {
       "number": "27bis",
-      "text": "Al suspender\ncondicionalmente la ejecución de la pena, el Tribunal deberá disponer\nque, durante un plazo que fijará entre dos y cuatro años según la\ngravedad del delito, el condenado cumpla todas o alguna de las\nsiguientes reglas de conducta, en tanto resulten adecuadas para\nprevenir la comisión de nuevos delitos:\n1. Fijar residencia y someterse al cuidado de un patronato.\n2. Abstenerse de concurrir a determinados lugares o de relacionarse con determinadas personas.\n3. Abstenerse de usar estupefacientes o de abusar de bebidas alcohólicas.\n4. Asistir a la escolaridad primaria, si no la tuviere cumplida.\n5. Realizar estudios o prácticas necesarios para su capacitación laboral o profesional.\n6. Someterse a un tratamiento médico o psicológico, previo informe que acredite su necesidad y eficacia.\n7. Adoptar oficio, arte, industria o profesión, adecuado a su capacidad.\n8. Realizar trabajos no remunerados en favor del\nestado o de instituciones de bien público, fuera de sus horarios\nhabituales de trabajo.\nLas reglas podrán ser modificadas por el Tribunal según resulte conveniente al caso.\nSi el condenado no cumpliere con alguna regla, el\nTribunal podrá disponer que no se compute como plazo de cumplimiento\ntodo o parte del tiempo transcurrido hasta ese momento. Si el condenado\npersistiere o reiterare el incumplimiento, el Tribunal podrá revocar la\ncondicionalidad de la condena. El condenado deberá entonces cumplir la\ntotalidad de la pena de prisión impuesta en la sentencia.\n(Artículo incorporado por art. 1° de la Ley N° 24.316 B.O. 19/5/1994)",
-      "incisos": [],
+      "text": "Al suspender condicionalmente la ejecución de la pena, el Tribunal deberá disponer que, durante un plazo que fijará entre dos y cuatro años según la gravedad del delito, el condenado cumpla todas o alguna de las siguientes reglas de conducta, en tanto resulten adecuadas para prevenir la comisión de nuevos delitos:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Fijar residencia y someterse al cuidado de un patronato."
+        },
+        {
+          "id": "2",
+          "text": "Abstenerse de concurrir a determinados lugares o de relacionarse con determinadas personas."
+        },
+        {
+          "id": "3",
+          "text": "Abstenerse de usar estupefacientes o de abusar de bebidas alcohólicas."
+        },
+        {
+          "id": "4",
+          "text": "Asistir a la escolaridad primaria, si no la tuviere cumplida."
+        },
+        {
+          "id": "5",
+          "text": "Realizar estudios o prácticas necesarios para su capacitación laboral o profesional."
+        },
+        {
+          "id": "6",
+          "text": "Someterse a un tratamiento médico o psicológico, previo informe que acredite su necesidad y eficacia."
+        },
+        {
+          "id": "7",
+          "text": "Adoptar oficio, arte, industria o profesión, adecuado a su capacidad."
+        },
+        {
+          "id": "8",
+          "text": "Realizar trabajos no remunerados en favor del estado o de instituciones de bien público, fuera de sus horarios habituales de trabajo. Las reglas podrán ser modificadas por el Tribunal según resulte conveniente al caso. Si el condenado no cumpliere con alguna regla, el Tribunal podrá disponer que no se compute como plazo de cumplimiento todo o parte del tiempo transcurrido hasta ese momento. Si el condenado persistiere o reiterare el incumplimiento, el Tribunal podrá revocar la condicionalidad de la condena. El condenado deberá entonces cumplir la totalidad de la pena de prisión impuesta en la sentencia. (Artículo incorporado por art. 1° de la Ley N° 24.316 B.O. 19/5/1994)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -232,15 +316,45 @@
     },
     {
       "number": "29",
-      "text": "La sentencia condenatoria podrá ordenar:\n1. La reposición al estado anterior a la comisión\ndel delito, en cuanto sea posible, disponiendo a ese fin las\nrestituciones y demás medidas necesarias.\n2. La indemnización del daño material y moral\ncausado a la víctima, a su familia o a un tercero, fijándose el monto\nprudencialmente por el juez en defecto de plena prueba.\n3. El pago de las costas.\n(Artículo sustituido por art. 27 de la Ley N° 25.188 B.O. 1/11/1999.)",
-      "incisos": [],
+      "text": "La sentencia condenatoria podrá ordenar:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "La reposición al estado anterior a la comisión del delito, en cuanto sea posible, disponiendo a ese fin las restituciones y demás medidas necesarias."
+        },
+        {
+          "id": "2",
+          "text": "La indemnización del daño material y moral causado a la víctima, a su familia o a un tercero, fijándose el monto prudencialmente por el juez en defecto de plena prueba."
+        },
+        {
+          "id": "3",
+          "text": "El pago de las costas. (Artículo sustituido por art. 27 de la Ley N° 25.188 B.O. 1/11/1999.)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "30",
-      "text": "La obligación de\nindemnizar es preferente a todas las que contrajere el responsable\ndespués de cometido el delito, a la ejecución de la pena de decomiso\ndel producto o el provecho del delito y al pago de la multa. Si los\nbienes del condenado no fueren suficientes para cubrir todas sus\nresponsabilidades pecuniarias, éstas se satisfarán en el orden\nsiguiente:\n1. La indemnización de los daños y perjuicios.\n2. El resarcimiento de los gastos del juicio.\n3. El decomiso del producto o el provecho del delito.\n4. El pago de la multa.\n(Artículo sustituido por art. 28 de la Ley N° 25.188 B.O. 1/11/1999.)",
-      "incisos": [],
+      "text": "La obligación de indemnizar es preferente a todas las que contrajere el responsable después de cometido el delito, a la ejecución de la pena de decomiso del producto o el provecho del delito y al pago de la multa. Si los bienes del condenado no fueren suficientes para cubrir todas sus responsabilidades pecuniarias, éstas se satisfarán en el orden siguiente:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "La indemnización de los daños y perjuicios."
+        },
+        {
+          "id": "2",
+          "text": "El resarcimiento de los gastos del juicio."
+        },
+        {
+          "id": "3",
+          "text": "El decomiso del producto o el provecho del delito."
+        },
+        {
+          "id": "4",
+          "text": "El pago de la multa. (Artículo sustituido por art. 28 de la Ley N° 25.188 B.O. 1/11/1999.)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -267,8 +381,21 @@
     },
     {
       "number": "34",
-      "text": "No son punibles: \n1º. El que no haya podido en el momento del hecho,\nya sea por insuficiencia de sus facultades, por alteraciones morbosas\nde las mismas o por su estado de inconciencia, error o ignorancia de\nhecho no imputables, comprender la criminalidad del acto o dirigir sus\nacciones. \nEn caso de enajenación, el tribunal podrá ordenar la\nreclusión del agente en un manicomio, del que no saldrá sino por\nresolución judicial, con audiencia del ministerio público y previo\ndictamen de peritos que declaren desaparecido el peligro de que el\nenfermo se dañe a sí mismo o a los demás. \nEn los demás casos en que se absolviere a un\nprocesado por las causales del presente inciso, el tribunal ordenará la\nreclusión del mismo en un establecimiento adecuado hasta que se\ncomprobase la desaparición de las condiciones que le hicieren\npeligroso; \n2º. El que obrare violentado por fuerza física irresistible o amenazas de sufrir un mal grave e inminente; \n3º. El que causare un mal por evitar otro mayor inminente a que ha sido extraño; \n4º. El que obrare en cumplimiento de un deber o en el legítimo ejercicio de su derecho, autoridad o cargo; \n5º. El que obrare en virtud de obediencia debida; \n6º. El que obrare en defensa propia o de sus derechos, siempre que concurrieren las siguientes circunstancias: \na) Agresión ilegítima; \nb) Necesidad racional del medio empleado para impedirla o repelerla; \nc) Falta de provocación suficiente por parte del que se defiende. \nSe entenderá que concurren estas circunstancias\nrespecto de aquel que durante la noche rechazare el escalamiento o\nfractura de los cercados, paredes o entradas de su casa, o departamento\nhabitado o de sus dependencias, cualquiera que sea el daño ocasionado\nal agresor. \nIgualmente respecto de aquél que encontrare a un extraño dentro de su hogar, siempre que haya resistencia; \n7º. El que obrare en defensa de la persona o\nderechos de otro, siempre que concurran las circunstancias a) y b) del\ninciso anterior y caso de haber precedido provocación suficiente por\nparte del agredido, la de que no haya participado en ella el tercero\ndefensor.",
-      "incisos": [],
+      "text": "No son punibles: 1º. El que no haya podido en el momento del hecho, ya sea por insuficiencia de sus facultades, por alteraciones morbosas de las mismas o por su estado de inconciencia, error o ignorancia de hecho no imputables, comprender la criminalidad del acto o dirigir sus acciones. En caso de enajenación, el tribunal podrá ordenar la reclusión del agente en un manicomio, del que no saldrá sino por resolución judicial, con audiencia del ministerio público y previo dictamen de peritos que declaren desaparecido el peligro de que el enfermo se dañe a sí mismo o a los demás. En los demás casos en que se absolviere a un procesado por las causales del presente inciso, el tribunal ordenará la reclusión del mismo en un establecimiento adecuado hasta que se comprobase la desaparición de las condiciones que le hicieren peligroso; 2º. El que obrare violentado por fuerza física irresistible o amenazas de sufrir un mal grave e inminente; 3º. El que causare un mal por evitar otro mayor inminente a que ha sido extraño; 4º. El que obrare en cumplimiento de un deber o en el legítimo ejercicio de su derecho, autoridad o cargo; 5º. El que obrare en virtud de obediencia debida; 6º. El que obrare en defensa propia o de sus derechos, siempre que concurrieren las siguientes circunstancias:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Agresión ilegítima;"
+        },
+        {
+          "id": "b",
+          "text": "Necesidad racional del medio empleado para impedirla o repelerla;"
+        },
+        {
+          "id": "c",
+          "text": "Falta de provocación suficiente por parte del que se defiende. Se entenderá que concurren estas circunstancias respecto de aquel que durante la noche rechazare el escalamiento o fractura de los cercados, paredes o entradas de su casa, o departamento habitado o de sus dependencias, cualquiera que sea el daño ocasionado al agresor. Igualmente respecto de aquél que encontrare a un extraño dentro de su hogar, siempre que haya resistencia; 7º. El que obrare en defensa de la persona o derechos de otro, siempre que concurran las circunstancias a) y b) del inciso anterior y caso de haber precedido provocación suficiente por parte del agredido, la de que no haya participado en ella el tercero defensor."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -330,8 +457,45 @@
     },
     {
       "number": "41ter",
-      "text": " Las escalas penales podrán reducirse a las de la\ntentativa respecto de los partícipes o autores por algún delito de los\ndetallados a continuación en este artículo, cuando durante la\nsustanciación del proceso del que sean parte, brinden información o\ndatos precisos, comprobables y verosímiles.\n\n\n\n\n\nEl proceso sobre el cual se aporten datos o información deberá estar vinculado con alguno de los siguientes delitos:\n\n\n\n\n\na) Delitos de producción, tráfico, transporte, siembra, almacenamiento\ny comercialización de estupefacientes, precursores químicos o cualquier\notra materia prima para su producción o fabricación previstos en la ley\n23.737 o la que en el futuro la reemplace, y la organización y\nfinanciación de dichos delitos;\n\n\n\n\n\nb) Delitos previstos en la sección XII, título I del Código Aduanero;\n\n\n\n\n\nc) Todos los casos en los que sea aplicable el artículo 41 quinquies del Código Penal;\n\n\n\n\n\nd) Delitos previstos en los artículos 125, 125 bis, 126, 127 y 128 del Código Penal;\n\n\n\n\n\ne) Delitos previstos en los artículos 142 bis, 142 ter y 170 del Código Penal;\n\n\n\n\n\nf) Delitos previstos en los artículos 145 bis y 145 ter del Código Penal;\n\n\n\n\n\ng) Delitos cometidos en los términos de los artículos 210 y 210 bis del Código Penal;\n\n\n\n\n\nh) Delitos previstos en los capítulos VI, VII, VIII, IX, IX bis y X del\ntítulo XI y en el inciso 5 del artículo 174, del Código Penal;\n\n\n\n\n\ni) Delitos previstos en el título XIII, del libro segundo, del Código Penal.\n\n\n\n\n\nPara la procedencia de este beneficio será necesario que los datos o\ninformación aportada contribuyan a evitar o impedir el comienzo, la\npermanencia o consumación de un delito; esclarecer el hecho objeto de\ninvestigación u otros conexos; revelar la identidad o el paradero de\nautores, coautores, instigadores o partícipes de estos hechos\ninvestigados o de otros conexos; proporcionar datos suficientes que\npermitan un significativo avance de la investigación o el paradero de\nvíctimas privadas de su libertad; averiguar el destino de los\ninstrumentos, bienes, efectos, productos o ganancias del delito; o\nindicar las fuentes de financiamiento de organizaciones criminales\ninvolucradas en la comisión de los delitos previstos en el presente\nartículo.\n\n\n\n\n\nCuando el delito atribuido al imputado estuviere reprimido con prisión\ny/o reclusión perpetua, la pena sólo podrá reducirse hasta los quince\n(15) años de prisión.\n\n\n\n\n\nLa reducción de pena no procederá respecto de las penas de inhabilitación o multa.\n\n\n\n\n\n(Artículo sustituido por art. 1° de la Ley N° 27.304 B.O. 2/11/2016)",
-      "incisos": [],
+      "text": " Las escalas penales podrán reducirse a las de la tentativa respecto de los partícipes o autores por algún delito de los detallados a continuación en este artículo, cuando durante la sustanciación del proceso del que sean parte, brinden información o datos precisos, comprobables y verosímiles. El proceso sobre el cual se aporten datos o información deberá estar vinculado con alguno de los siguientes delitos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Delitos de producción, tráfico, transporte, siembra, almacenamiento y comercialización de estupefacientes, precursores químicos o cualquier otra materia prima para su producción o fabricación previstos en la ley 23.737 o la que en el futuro la reemplace, y la organización y financiación de dichos delitos;"
+        },
+        {
+          "id": "b",
+          "text": "Delitos previstos en la sección XII, título I del Código Aduanero;"
+        },
+        {
+          "id": "c",
+          "text": "Todos los casos en los que sea aplicable el artículo 41 quinquies del Código Penal;"
+        },
+        {
+          "id": "d",
+          "text": "Delitos previstos en los artículos 125, 125 bis, 126, 127 y 128 del Código Penal;"
+        },
+        {
+          "id": "e",
+          "text": "Delitos previstos en los artículos 142 bis, 142 ter y 170 del Código Penal;"
+        },
+        {
+          "id": "f",
+          "text": "Delitos previstos en los artículos 145 bis y 145 ter del Código Penal;"
+        },
+        {
+          "id": "g",
+          "text": "Delitos cometidos en los términos de los artículos 210 y 210 bis del Código Penal;"
+        },
+        {
+          "id": "h",
+          "text": "Delitos previstos en los capítulos VI, VII, VIII, IX, IX bis y X del título XI y en el inciso 5 del artículo 174, del Código Penal;"
+        },
+        {
+          "id": "i",
+          "text": "Delitos previstos en el título XIII, del libro segundo, del Código Penal. Para la procedencia de este beneficio será necesario que los datos o información aportada contribuyan a evitar o impedir el comienzo, la permanencia o consumación de un delito; esclarecer el hecho objeto de investigación u otros conexos; revelar la identidad o el paradero de autores, coautores, instigadores o partícipes de estos hechos investigados o de otros conexos; proporcionar datos suficientes que permitan un significativo avance de la investigación o el paradero de víctimas privadas de su libertad; averiguar el destino de los instrumentos, bienes, efectos, productos o ganancias del delito; o indicar las fuentes de financiamiento de organizaciones criminales involucradas en la comisión de los delitos previstos en el presente artículo. Cuando el delito atribuido al imputado estuviere reprimido con prisión y/o reclusión perpetua, la pena sólo podrá reducirse hasta los quince (15) años de prisión. La reducción de pena no procederá respecto de las penas de inhabilitación o multa. (Artículo sustituido por art. 1° de la Ley N° 27.304 B.O. 2/11/2016)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -414,8 +578,17 @@
     },
     {
       "number": "52",
-      "text": "Se impondrá reclusión\npor tiempo indeterminado como accesoria de la última condena, cuando la\nreincidencia fuere múltiple en forma tal que mediaren las siguientes\npenas anteriores: \n1. Cuatro penas privativas de libertad, siendo una de ellas mayor de tres años; \n2. Cinco penas privativas de libertad, de tres años o menores. \nLos tribunales podrán, por una única vez, dejar en\nsuspenso la aplicación de esta medida accesoria, fundando expresamente\nsu decisión en la forma prevista en el artículo 26.",
-      "incisos": [],
+      "text": "Se impondrá reclusión por tiempo indeterminado como accesoria de la última condena, cuando la reincidencia fuere múltiple en forma tal que mediaren las siguientes penas anteriores:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Cuatro penas privativas de libertad, siendo una de ellas mayor de tres años;"
+        },
+        {
+          "id": "2",
+          "text": "Cinco penas privativas de libertad, de tres años o menores. Los tribunales podrán, por una única vez, dejar en suspenso la aplicación de esta medida accesoria, fundando expresamente su decisión en la forma prevista en el artículo 26."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -463,8 +636,37 @@
     },
     {
       "number": "59",
-      "text": "La acción penal se extinguirá:\n\n\n\n1) Por la muerte del imputado;\n\n\n\n2) Por la amnistía;\n\n\n\n3) Por la prescripción;\n\n\n\n4) Por la renuncia del agraviado, respecto de los delitos de acción privada;\n\n\n\n5) Por aplicación de un criterio de oportunidad, de conformidad con lo previsto en las leyes procesales correspondientes;\n\n\n\n6) Por conciliación o reparación integral del perjuicio, de conformidad\ncon lo previsto en las leyes procesales correspondientes;\n\n\n\n7) Por el cumplimiento de las condiciones establecidas para la\nsuspensión del proceso a prueba, de conformidad con lo previsto en este\nCódigo y las leyes procesales correspondientes.\n(Artículo sustituido por art. 1° de la Ley N° 27.147 B.O. 18/06/2015)",
-      "incisos": [],
+      "text": "La acción penal se extinguirá:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Por la muerte del imputado;"
+        },
+        {
+          "id": "2",
+          "text": "Por la amnistía;"
+        },
+        {
+          "id": "3",
+          "text": "Por la prescripción;"
+        },
+        {
+          "id": "4",
+          "text": "Por la renuncia del agraviado, respecto de los delitos de acción privada;"
+        },
+        {
+          "id": "5",
+          "text": "Por aplicación de un criterio de oportunidad, de conformidad con lo previsto en las leyes procesales correspondientes;"
+        },
+        {
+          "id": "6",
+          "text": "Por conciliación o reparación integral del perjuicio, de conformidad con lo previsto en las leyes procesales correspondientes;"
+        },
+        {
+          "id": "7",
+          "text": "Por el cumplimiento de las condiciones establecidas para la suspensión del proceso a prueba, de conformidad con lo previsto en este Código y las leyes procesales correspondientes. (Artículo sustituido por art. 1° de la Ley N° 27.147 B.O. 18/06/2015)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -519,8 +721,29 @@
     },
     {
       "number": "67",
-      "text": "La prescripción se suspende en los casos de los delitos\npara cuyo juzgamiento sea necesaria la resolución de cuestiones previas\no prejudiciales, que deban ser resueltas en otro juicio. Terminada la\ncausa de la suspensión, la prescripción sigue su curso.\n\n\n\n\n\nLa prescripción también se suspende en los casos de delitos cometidos\nen el ejercicio de la función pública, para todos los que hubiesen\nparticipado, mientras cualquiera de ellos se encuentre desempeñando un\ncargo público.\n\n\n\n\n\nEl curso de la prescripción de la acción penal correspondiente a los\ndelitos previstos en los artículos 226 y 227 bis, se suspenderá hasta\nel restablecimiento del orden constitucional.\n\n\n\n\n\nEn los delitos previstos en los artículos 119, 120, 125, 125 bis, 128,\n129 in fine, 130 párrafos segundo y tercero, 145 bis y 145 ter del\nCódigo Penal, se suspende la prescripción mientras la víctima sea menor\nde edad y hasta que habiendo cumplido la mayoría de edad formule por sí\nla denuncia o ratifique la formulada por sus representantes legales\ndurante su minoría de edad.\n\n\n\n\n\nSi como consecuencia de cualquiera de los delitos indicados hubiera\nocurrido la muerte del menor de edad, comenzará a correr desde la\nmedianoche del día en que aquél hubiera alcanzado la mayoría de edad.\n\n\n\n\n\nLa prescripción se interrumpe solamente por:\n\n\n\n\n\na) La comisión de otro delito;\n\n\n\n\n\nb) El primer llamado efectuado a una persona, en el marco de un proceso\njudicial, con el objeto de recibirle declaración indagatoria por el\ndelito investigado;\n\n\n\n\n\nc) El requerimiento acusatorio de apertura o elevación a juicio,\nefectuado en la forma que lo establezca la legislación procesal\ncorrespondiente;\n\n\n\n\n\nd) El auto de citación a juicio o acto procesal equivalente; y\n\n\n\n\n\ne) El dictado de sentencia condenatoria, aunque la misma no se encuentre firme.\n\n\n\n\n\nLa prescripción corre, se suspende o se interrumpe separadamente para\ncada delito y para cada uno de sus partícipes, con la excepción\nprevista en el segundo párrafo de este artículo.\n\n\n\n\n\n(Artículo sustituido por art. 2° de la Ley N° 27.206 B.O. 10/11/2015)ARTICULO 68.- El indulto del reo extinguirá la pena y sus efectos, con excepción de las indemnizaciones debidas a particulares.",
-      "incisos": [],
+      "text": "La prescripción se suspende en los casos de los delitos para cuyo juzgamiento sea necesaria la resolución de cuestiones previas o prejudiciales, que deban ser resueltas en otro juicio. Terminada la causa de la suspensión, la prescripción sigue su curso. La prescripción también se suspende en los casos de delitos cometidos en el ejercicio de la función pública, para todos los que hubiesen participado, mientras cualquiera de ellos se encuentre desempeñando un cargo público. El curso de la prescripción de la acción penal correspondiente a los delitos previstos en los artículos 226 y 227 bis, se suspenderá hasta el restablecimiento del orden constitucional. En los delitos previstos en los artículos 119, 120, 125, 125 bis, 128, 129 in fine, 130 párrafos segundo y tercero, 145 bis y 145 ter del Código Penal, se suspende la prescripción mientras la víctima sea menor de edad y hasta que habiendo cumplido la mayoría de edad formule por sí la denuncia o ratifique la formulada por sus representantes legales durante su minoría de edad. Si como consecuencia de cualquiera de los delitos indicados hubiera ocurrido la muerte del menor de edad, comenzará a correr desde la medianoche del día en que aquél hubiera alcanzado la mayoría de edad. La prescripción se interrumpe solamente por:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La comisión de otro delito;"
+        },
+        {
+          "id": "b",
+          "text": "El primer llamado efectuado a una persona, en el marco de un proceso judicial, con el objeto de recibirle declaración indagatoria por el delito investigado;"
+        },
+        {
+          "id": "c",
+          "text": "El requerimiento acusatorio de apertura o elevación a juicio, efectuado en la forma que lo establezca la legislación procesal correspondiente;"
+        },
+        {
+          "id": "d",
+          "text": "El auto de citación a juicio o acto procesal equivalente; y"
+        },
+        {
+          "id": "e",
+          "text": "El dictado de sentencia condenatoria, aunque la misma no se encuentre firme. La prescripción corre, se suspende o se interrumpe separadamente para cada delito y para cada uno de sus partícipes, con la excepción prevista en el segundo párrafo de este artículo. (Artículo sustituido por art. 2° de la Ley N° 27.206 B.O. 10/11/2015)ARTICULO 68.- El indulto del reo extinguirá la pena y sus efectos, con excepción de las indemnizaciones debidas a particulares."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -540,22 +763,61 @@
     },
     {
       "number": "71",
-      "text": "Sin perjuicio de las reglas de\ndisponibilidad de la acción penal previstas en la legislación procesal,\ndeberán iniciarse de oficio todas las acciones penales, con excepción\nde las siguientes:\n\n\n\n1) Las que dependieren de instancia privada;\n\n\n\n2) Las acciones privadas.\n(Artículo sustituido por art. 2° de la Ley N° 27.147 B.O. 18/06/2015)",
-      "incisos": [],
+      "text": "Sin perjuicio de las reglas de disponibilidad de la acción penal previstas en la legislación procesal, deberán iniciarse de oficio todas las acciones penales, con excepción de las siguientes:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Las que dependieren de instancia privada;"
+        },
+        {
+          "id": "2",
+          "text": "Las acciones privadas. (Artículo sustituido por art. 2° de la Ley N° 27.147 B.O. 18/06/2015)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "72",
-      "text": "Son acciones dependientes de instancia privada las que nacen de los siguientes delitos:\n\n\n\n\n\n1. Los previstos en los artículos 119, 120 y 130 del Código Penal\ncuando no resultare la muerte de la persona ofendida o lesiones de las\nmencionadas en el artículo 91.\n\n\n\n\n\n2. Lesiones leves, sean dolosas o culposas.\n\n\n\n\n\n3. Impedimento de contacto de los hijos menores con sus padres no convivientes.\n\n\n\n\n\nEn los casos de este artículo, no se procederá a formar causa sino por\nacusación o denuncia del agraviado, de su tutor, guardador o\nrepresentantes legales. Sin embargo, se procederá de oficio:\n\n\n\n\n\na) En los casos del inciso 1, cuando la víctima fuere menor de 18 años de edad o haya sido declarada incapaz;\n\n\n\n\n\nb) En los casos del inciso 2, cuando mediaren razones de seguridad o interés público;\n\n\n\n\n\nc) En los casos de los incisos 2 y 3, cuando el delito fuere cometido\ncontra un menor que no tenga padres, tutor ni guardador, o que lo fuere\npor uno de sus ascendientes, tutor o guardador, o cuando existieren\nintereses gravemente contrapuestos entre éstos y el menor, siempre que\nresultare más conveniente para el interés superior de aquél.\n\n\n\n\n\n(Artículo sustituido por Ley N° 27.455 B.O. 25/10/2018)",
-      "incisos": [],
+      "text": "Son acciones dependientes de instancia privada las que nacen de los siguientes delitos:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Los previstos en los artículos 119, 120 y 130 del Código Penal cuando no resultare la muerte de la persona ofendida o lesiones de las mencionadas en el artículo 91."
+        },
+        {
+          "id": "2",
+          "text": "Lesiones leves, sean dolosas o culposas."
+        },
+        {
+          "id": "3",
+          "text": "Impedimento de contacto de los hijos menores con sus padres no convivientes. En los casos de este artículo, no se procederá a formar causa sino por acusación o denuncia del agraviado, de su tutor, guardador o representantes legales. Sin embargo, se procederá de oficio: a) En los casos del inciso 1, cuando la víctima fuere menor de 18 años de edad o haya sido declarada incapaz; b) En los casos del inciso 2, cuando mediaren razones de seguridad o interés público; c) En los casos de los incisos 2 y 3, cuando el delito fuere cometido contra un menor que no tenga padres, tutor ni guardador, o que lo fuere por uno de sus ascendientes, tutor o guardador, o cuando existieren intereses gravemente contrapuestos entre éstos y el menor, siempre que resultare más conveniente para el interés superior de aquél. (Artículo sustituido por Ley N° 27.455 B.O. 25/10/2018)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "73",
-      "text": "Son acciones privadas las que nacen de los siguientes delitos:\n\n\n\n1) Calumnias e injurias;\n\n\n\n2) Violación de secretos, salvo en los casos de los artículos 154 y 157;\n\n\n\n3) Concurrencia desleal, prevista en el artículo 159;\n\n\n\n4) Incumplimiento de los deberes de asistencia familiar, cuando la víctima fuere el cónyuge.\n\n\n\nAsimismo, son acciones privadas las que de conformidad con lo dispuesto\npor las leyes procesales correspondientes, surgen de la conversión de\nla acción pública en privada o de la prosecución de la acción penal por\nparte de la víctima.\n\n\n\nLa acción por calumnia e injuria, podrá ser ejercitada sólo por el\nofendido y después de su muerte por el cónyuge, hijos, nietos o padres\nsobrevivientes.\n\n\n\nEn los demás casos, se procederá únicamente por querella del agraviado o de sus guardadores o representantes legales.\n(Artículo sustituido por art. 3° de la Ley N° 27.147 B.O. 18/06/2015)",
-      "incisos": [],
+      "text": "Son acciones privadas las que nacen de los siguientes delitos:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Calumnias e injurias;"
+        },
+        {
+          "id": "2",
+          "text": "Violación de secretos, salvo en los casos de los artículos 154 y 157;"
+        },
+        {
+          "id": "3",
+          "text": "Concurrencia desleal, prevista en el artículo 159;"
+        },
+        {
+          "id": "4",
+          "text": "Incumplimiento de los deberes de asistencia familiar, cuando la víctima fuere el cónyuge. Asimismo, son acciones privadas las que de conformidad con lo dispuesto por las leyes procesales correspondientes, surgen de la conversión de la acción pública en privada o de la prosecución de la acción penal por parte de la víctima. La acción por calumnia e injuria, podrá ser ejercitada sólo por el ofendido y después de su muerte por el cónyuge, hijos, nietos o padres sobrevivientes. En los demás casos, se procederá únicamente por querella del agraviado o de sus guardadores o representantes legales. (Artículo sustituido por art. 3° de la Ley N° 27.147 B.O. 18/06/2015)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -631,15 +893,61 @@
     },
     {
       "number": "80",
-      "text": "- Se impondrá reclusión perpetua o prisión perpetua, pudiendo aplicarse lo dispuesto en el artículo 52, al que matare: \n1º A su ascendiente, descendiente, cónyuge, ex cónyuge, o a la persona\ncon quien mantiene o ha mantenido una relación de pareja, mediare o no\nconvivencia. (inciso sustituido por art. 1° de la Ley N° 26.791 B.O. 14/12/2012) \n2º Con ensañamiento, alevosía, veneno u otro procedimiento insidioso. \n3º Por precio o promesa remuneratoria. \n4º Por placer, codicia, odio racial, religioso, de género o a la orientación sexual, identidad de género o su expresión. (inciso sustituido por art. 1° de la Ley N° 26.791 B.O. 14/12/2012) \n5º Por un medio idóneo para crear un peligro común. \n6º Con el concurso premeditado de dos o más personas. \n7º Para preparar, facilitar, consumar u ocultar otro\ndelito o para asegurar sus resultados o procurar la impunidad para sí o\npara otro o por no haber logrado el fin propuesto al intentar otro\ndelito. \n8° A un miembro de las fuerzas de seguridad pública, policiales o penitenciarias, por su función, cargo o condición. (Inciso incorporado por art. 1° de la Ley N° 25.601 B.O.11/6/2002)\n9° Abusando de su función o cargo, cuando fuere\nmiembro integrante de las fuerzas de seguridad, policiales o del\nservicio penitenciario. (Inciso incorporado por art. 1° de la Ley N° 25.816 B.O.9/12/2003)\n10 A su superior militar frente a enemigo o tropa formada con armas. (Inciso incorporado por art. 2° del Anexo I de la Ley N° 26.394\nB.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su\npromulgación. Durante dicho período se llevará a cabo en las áreas\npertinentes un programa de divulgación y capacitación sobre su\ncontenido y aplicación)\n\n11. A una mujer cuando el hecho sea perpetrado por un hombre y mediare violencia de género. (inciso incorporado por art. 2° de la Ley N° 26.791 B.O. 14/12/2012)\n\n\n\n\n\n12. Con el propósito de causar sufrimiento a una persona con la que se\nmantiene o ha mantenido una relación en los términos del inciso 1°. (inciso incorporado por art. 2° de la Ley N° 26.791 B.O. 14/12/2012)\n\nCuando en el caso del inciso 1° de este artículo, mediaren\ncircunstancias extraordinarias de atenuación, el juez podrá aplicar\nprisión o reclusión de ocho (8) a veinticinco (25) años. Esto no será\naplicable a quien anteriormente hubiera realizado actos de violencia\ncontra la mujer víctima. (Párrafo sustituido por art. 3° de la Ley N° 26.791 B.O. 14/12/2012)",
-      "incisos": [],
+      "text": "- Se impondrá reclusión perpetua o prisión perpetua, pudiendo aplicarse lo dispuesto en el artículo 52, al que matare:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "A su ascendiente, descendiente, cónyuge, ex cónyuge, o a la persona con quien mantiene o ha mantenido una relación de pareja, mediare o no convivencia. (inciso sustituido por art. 1° de la Ley N° 26.791 B.O. 14/12/2012)"
+        },
+        {
+          "id": "2",
+          "text": "Con ensañamiento, alevosía, veneno u otro procedimiento insidioso."
+        },
+        {
+          "id": "3",
+          "text": "Por precio o promesa remuneratoria."
+        },
+        {
+          "id": "4",
+          "text": "Por placer, codicia, odio racial, religioso, de género o a la orientación sexual, identidad de género o su expresión. (inciso sustituido por art. 1° de la Ley N° 26.791 B.O. 14/12/2012)"
+        },
+        {
+          "id": "5",
+          "text": "Por un medio idóneo para crear un peligro común."
+        },
+        {
+          "id": "6",
+          "text": "Con el concurso premeditado de dos o más personas."
+        },
+        {
+          "id": "7",
+          "text": "Para preparar, facilitar, consumar u ocultar otro delito o para asegurar sus resultados o procurar la impunidad para sí o para otro o por no haber logrado el fin propuesto al intentar otro delito."
+        },
+        {
+          "id": "8",
+          "text": "A un miembro de las fuerzas de seguridad pública, policiales o penitenciarias, por su función, cargo o condición. (Inciso incorporado por art. 1° de la Ley N° 25.601 B.O.11/6/2002)"
+        },
+        {
+          "id": "9",
+          "text": "Abusando de su función o cargo, cuando fuere miembro integrante de las fuerzas de seguridad, policiales o del servicio penitenciario. (Inciso incorporado por art. 1° de la Ley N° 25.816 B.O.9/12/2003) 10 A su superior militar frente a enemigo o tropa formada con armas. (Inciso incorporado por art. 2° del Anexo I de la Ley N° 26.394 B.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su promulgación. Durante dicho período se llevará a cabo en las áreas pertinentes un programa de divulgación y capacitación sobre su contenido y aplicación) 11. A una mujer cuando el hecho sea perpetrado por un hombre y mediare violencia de género. (inciso incorporado por art. 2° de la Ley N° 26.791 B.O. 14/12/2012) 12. Con el propósito de causar sufrimiento a una persona con la que se mantiene o ha mantenido una relación en los términos del inciso 1°. (inciso incorporado por art. 2° de la Ley N° 26.791 B.O. 14/12/2012) Cuando en el caso del inciso 1° de este artículo, mediaren circunstancias extraordinarias de atenuación, el juez podrá aplicar prisión o reclusión de ocho (8) a veinticinco (25) años. Esto no será aplicable a quien anteriormente hubiera realizado actos de violencia contra la mujer víctima. (Párrafo sustituido por art. 3° de la Ley N° 26.791 B.O. 14/12/2012)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "81",
-      "text": "- 1º Se impondrá reclusión de tres a seis años, o prisión de uno a tres años: \na) Al que matare a otro, encontrándose en un estado de emoción violenta y que las circunstancias hicieren excusable. \nb) Al que, con el propósito de causar un daño en el\ncuerpo o en la salud, produjere la muerte de alguna persona, cuando el\nmedio empleado no debía razonablemente ocasionar la muerte. \n2º (Inciso derogado por art. 1° de la Ley N° 24.410 B.O. 2/1/1995)",
-      "incisos": [],
+      "text": "- 1º Se impondrá reclusión de tres a seis años, o prisión de uno a tres años:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Al que matare a otro, encontrándose en un estado de emoción violenta y que las circunstancias hicieren excusable."
+        },
+        {
+          "id": "b",
+          "text": "Al que, con el propósito de causar un daño en el cuerpo o en la salud, produjere la muerte de alguna persona, cuando el medio empleado no debía razonablemente ocasionar la muerte. 2º (Inciso derogado por art. 1° de la Ley N° 24.410 B.O. 2/1/1995)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -673,8 +981,17 @@
     },
     {
       "number": "85",
-      "text": "- El o la que causare un aborto será reprimido:\n\n\n\n\n\n1. Con prisión de tres (3) a diez (10) años, si obrare sin\nconsentimiento de la persona gestante. Esta pena podrá elevarse hasta\nquince (15) años si el hecho fuere seguido de la muerte de la persona\ngestante.\n\n\n\n\n\n2. Con prisión de tres (3) meses a un (1) año, si obrare con\nconsentimiento de la persona gestante, luego de la semana catorce (14)\nde gestación y siempre que no mediaren los supuestos previstos en el",
-      "incisos": [],
+      "text": "- El o la que causare un aborto será reprimido:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Con prisión de tres (3) a diez (10) años, si obrare sin consentimiento de la persona gestante. Esta pena podrá elevarse hasta quince (15) años si el hecho fuere seguido de la muerte de la persona gestante."
+        },
+        {
+          "id": "2",
+          "text": "Con prisión de tres (3) meses a un (1) año, si obrare con consentimiento de la persona gestante, luego de la semana catorce (14) de gestación y siempre que no mediaren los supuestos previstos en el"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -764,15 +1081,37 @@
     },
     {
       "number": "97",
-      "text": "- Los que se batieren en\nduelo, con intervención de dos o más padrinos, mayores de edad, que\nelijan las armas y arreglen las demás condiciones del desafío, serán\nreprimidos: \n1º Con prisión de uno a seis meses, al que no\ninfiriere lesión a su adversario o sólo le causare una lesión de las\ndeterminadas en el artículo 89. \n2º Con prisión de uno a cuatro años, al que causare\nla muerte de su adversario o le infiriere lesión de las determinadas en\nlos artículos 90 y 91.",
-      "incisos": [],
+      "text": "- Los que se batieren en duelo, con intervención de dos o más padrinos, mayores de edad, que elijan las armas y arreglen las demás condiciones del desafío, serán reprimidos:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Con prisión de uno a seis meses, al que no infiriere lesión a su adversario o sólo le causare una lesión de las determinadas en el artículo 89."
+        },
+        {
+          "id": "2",
+          "text": "Con prisión de uno a cuatro años, al que causare la muerte de su adversario o le infiriere lesión de las determinadas en los artículos 90 y 91."
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "98",
-      "text": "- Los que se batieren,\nsin la intervención de padrinos, mayores de edad, que elijan las armas\ny arreglen las demás condiciones del desafío, serán reprimidos: \n1º El que matare a su adversario, con la pena señalada para el homicida; \n2º El que causare lesiones, con la pena señalada para el autor de lesiones; \n3º El que no causare lesiones, con prisión de un mes a un año.",
-      "incisos": [],
+      "text": "- Los que se batieren, sin la intervención de padrinos, mayores de edad, que elijan las armas y arreglen las demás condiciones del desafío, serán reprimidos:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El que matare a su adversario, con la pena señalada para el homicida;"
+        },
+        {
+          "id": "2",
+          "text": "El que causare lesiones, con la pena señalada para el autor de lesiones;"
+        },
+        {
+          "id": "3",
+          "text": "El que no causare lesiones, con prisión de un mes a un año."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -792,8 +1131,17 @@
     },
     {
       "number": "101",
-      "text": "- El combatiente que faltare, en daño de su adversario, a las condiciones ajustadas por los padrinos, será reprimido: \n1º Con reclusión o prisión de tres a diez años, si causare lesiones a su adversario. \n2º Con reclusión o prisión de diez a veinticinco años, si le causare la muerte.",
-      "incisos": [],
+      "text": "- El combatiente que faltare, en daño de su adversario, a las condiciones ajustadas por los padrinos, será reprimido:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Con reclusión o prisión de tres a diez años, si causare lesiones a su adversario."
+        },
+        {
+          "id": "2",
+          "text": "Con reclusión o prisión de diez a veinticinco años, si le causare la muerte."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -862,8 +1210,21 @@
     },
     {
       "number": "111",
-      "text": "- El acusado de injuria,\nen los casos en los que las expresiones de ningún modo estén vinculadas\ncon asuntos de interés público, no podrá probar la verdad de la\nimputación salvo en los casos siguientes:\n1) Si el hecho atribuido a la persona ofendida, hubiere dado lugar a un proceso penal.\n2) Si el querellante pidiera la prueba de la imputación dirigida contra él.\nEn estos casos, si se probare la verdad de las imputaciones, el acusado quedará exento de pena.\n(Artículo sustituido por art. 3° de la Ley N° 26.551 B.O. 27/11/2009)",
-      "incisos": [],
+      "text": "- El acusado de injuria, en los casos en los que las expresiones de ningún modo estén vinculadas con asuntos de interés público, no podrá probar la verdad de la imputación salvo en los casos siguientes:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Si el hecho atribuido a la persona ofendida, hubiere dado lugar a un proceso penal."
+        },
+        {
+          "id": "2",
+          "text": "Si el querellante pidiera la prueba de la imputación dirigida contra él. En estos casos, si se probare la verdad de las imputaciones, el acusado quedará exento de pena. (Artículo sustituido por art."
+        },
+        {
+          "id": "3",
+          "text": "de la Ley N° 26.551 B.O. 27/11/2009)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -925,8 +1286,33 @@
     },
     {
       "number": "119",
-      "text": "- Será reprimido con reclusión o prisión de seis (6) meses\na cuatro (4) años el que abusare sexualmente de una persona cuando ésta\nfuera menor de trece (13) años o cuando mediare violencia, amenaza,\nabuso coactivo o intimidatorio de una relación de dependencia, de\nautoridad, o de poder, o aprovechándose de que la víctima por cualquier\ncausa no haya podido consentir libremente la acción.\n\n\n\n\n\nLa pena será de cuatro (4) a diez (10) años de reclusión o prisión\ncuando el abuso por su duración o circunstancias de su realización,\nhubiere configurado un sometimiento sexual gravemente ultrajante para\nla víctima.\n\n\n\n\n\nLa pena será de seis (6) a quince (15) años de reclusión o prisión\ncuando mediando las circunstancias del primer párrafo hubiere acceso\ncarnal por vía anal, vaginal u oral o realizare otros actos análogos\nintroduciendo objetos o partes del cuerpo por alguna de las dos\nprimeras vías.\n\n\n\n\n\nEn los supuestos de los dos párrafos anteriores, la pena será de ocho (8) a veinte (20) años de reclusión o prisión si:\n\n\n\n\n\na) Resultare un grave daño en la salud física o mental de la víctima;\n\n\n\n\n\nb) El hecho fuere cometido por ascendiente, descendiente, afín en línea\nrecta, hermano, tutor, curador, ministro de algún culto reconocido o\nno, encargado de la educación o de la guarda;\n\n\n\n\n\nc) El autor tuviere conocimiento de ser portador de una enfermedad de\ntransmisión sexual grave, y hubiere existido peligro de contagio;\n\n\n\n\n\nd) El hecho fuere cometido por dos o más personas, o con armas;\n\n\n\n\n\ne) El hecho fuere cometido por personal perteneciente a las fuerzas policiales o de seguridad, en ocasión de sus funciones;\n\n\n\n\n\nf) El hecho fuere cometido contra un menor de dieciocho (18) años,\naprovechando la situación de convivencia preexistente con el mismo.\n\n\n\n\n\nEn el supuesto del primer párrafo, la pena será de tres (3) a diez (10)\naños de reclusión o prisión si concurren las circunstancias de los\nincisos a), b), d), e) o f).\n\n\n\n\n\n(Artículo sustituido por art. 1° de la Ley N° 27.352 B.O. 17/5/2017)ARTICULO 120  Será reprimido con\nprisión o reclusión de tres a seis años el que realizare algunas de las\nacciones previstas en el segundo o en el tercer párrafo del artículo\n119 con una persona menor de dieciséis años, aprovechándose de su\ninmadurez sexual, en razón de la mayoría de edad del autor, su relación\nde preeminencia respecto de la víctima, u otra circunstancia\nequivalente, siempre que no resultare un delito más severamente penado.\nLa pena será de prisión o reclusión de seis a diez\naños si mediare alguna de las circunstancias previstas en los incisos\na), b), c), e) o f) del cuarto párrafo del artículo 119\n(Artículo sustituido por art. 3° de la Ley N° 25.087 B.O. 14/5/1999)",
-      "incisos": [],
+      "text": "- Será reprimido con reclusión o prisión de seis (6) meses a cuatro (4) años el que abusare sexualmente de una persona cuando ésta fuera menor de trece (13) años o cuando mediare violencia, amenaza, abuso coactivo o intimidatorio de una relación de dependencia, de autoridad, o de poder, o aprovechándose de que la víctima por cualquier causa no haya podido consentir libremente la acción. La pena será de cuatro (4) a diez (10) años de reclusión o prisión cuando el abuso por su duración o circunstancias de su realización, hubiere configurado un sometimiento sexual gravemente ultrajante para la víctima. La pena será de seis (6) a quince (15) años de reclusión o prisión cuando mediando las circunstancias del primer párrafo hubiere acceso carnal por vía anal, vaginal u oral o realizare otros actos análogos introduciendo objetos o partes del cuerpo por alguna de las dos primeras vías. En los supuestos de los dos párrafos anteriores, la pena será de ocho (8) a veinte (20) años de reclusión o prisión si:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Resultare un grave daño en la salud física o mental de la víctima;"
+        },
+        {
+          "id": "b",
+          "text": "El hecho fuere cometido por ascendiente, descendiente, afín en línea recta, hermano, tutor, curador, ministro de algún culto reconocido o no, encargado de la educación o de la guarda;"
+        },
+        {
+          "id": "c",
+          "text": "El autor tuviere conocimiento de ser portador de una enfermedad de transmisión sexual grave, y hubiere existido peligro de contagio;"
+        },
+        {
+          "id": "d",
+          "text": "El hecho fuere cometido por dos o más personas, o con armas;"
+        },
+        {
+          "id": "e",
+          "text": "El hecho fuere cometido por personal perteneciente a las fuerzas policiales o de seguridad, en ocasión de sus funciones;"
+        },
+        {
+          "id": "f",
+          "text": "El hecho fuere cometido contra un menor de dieciocho (18) años, aprovechando la situación de convivencia preexistente con el mismo. En el supuesto del primer párrafo, la pena será de tres (3) a diez (10) años de reclusión o prisión si concurren las circunstancias de los incisos a), b), d), e) o f). (Artículo sustituido por art. 1° de la Ley N° 27.352 B.O. 17/5/2017)ARTICULO 120  Será reprimido con prisión o reclusión de tres a seis años el que realizare algunas de las acciones previstas en el segundo o en el tercer párrafo del artículo 119 con una persona menor de dieciséis años, aprovechándose de su inmadurez sexual, en razón de la mayoría de edad del autor, su relación de preeminencia respecto de la víctima, u otra circunstancia equivalente, siempre que no resultare un delito más severamente penado. La pena será de prisión o reclusión de seis a diez años si mediare alguna de las circunstancias previstas en los incisos a), b), c), e) o f) del cuarto párrafo del artículo 119 (Artículo sustituido por art. 3° de la Ley N° 25.087 B.O. 14/5/1999)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -974,15 +1360,41 @@
     },
     {
       "number": "126",
-      "text": " En el caso del\nartículo anterior, la pena será de cinco (5) a diez (10) años de\nprisión, si concurriere alguna de las siguientes circunstancias:\n\n\n\n1. Mediare engaño, fraude, violencia, amenaza o cualquier otro medio de\nintimidación o coerción, abuso de autoridad o de una situación de\nvulnerabilidad, o concesión o recepción de pagos o beneficios para\nobtener el consentimiento de una persona que tenga autoridad sobre la\nvíctima.\n\n\n\n2. El autor fuere ascendiente, descendiente, cónyuge, afín en línea\nrecta, colateral o conviviente, tutor, curador, autoridad o ministro de\ncualquier culto reconocido o no, o encargado de la educación o de la\nguarda de la víctima.\n\n\n\n3. El autor fuere funcionario público o miembro de una fuerza de seguridad, policial o penitenciaria.\n\n\n\nCuando la víctima fuere menor de dieciocho (18) años la pena será de diez (10) a quince (15) años de prisión.\n(Artículo sustituido por art. 22 de la Ley N° 26.842 B.O. 27/12/2012)",
-      "incisos": [],
+      "text": " En el caso del artículo anterior, la pena será de cinco (5) a diez (10) años de prisión, si concurriere alguna de las siguientes circunstancias:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Mediare engaño, fraude, violencia, amenaza o cualquier otro medio de intimidación o coerción, abuso de autoridad o de una situación de vulnerabilidad, o concesión o recepción de pagos o beneficios para obtener el consentimiento de una persona que tenga autoridad sobre la víctima."
+        },
+        {
+          "id": "2",
+          "text": "El autor fuere ascendiente, descendiente, cónyuge, afín en línea recta, colateral o conviviente, tutor, curador, autoridad o ministro de cualquier culto reconocido o no, o encargado de la educación o de la guarda de la víctima."
+        },
+        {
+          "id": "3",
+          "text": "El autor fuere funcionario público o miembro de una fuerza de seguridad, policial o penitenciaria. Cuando la víctima fuere menor de dieciocho (18) años la pena será de diez (10) a quince (15) años de prisión. (Artículo sustituido por art. 22 de la Ley N° 26.842 B.O. 27/12/2012)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "127",
-      "text": " Será reprimido con prisión de\ncuatro (4) a seis (6) años, el que explotare económicamente el\nejercicio de la prostitución de una persona, aunque mediare el\nconsentimiento de la víctima.\n\n\n\nLa pena será de cinco (5) a diez (10) años de prisión, si concurriere alguna de las siguientes circunstancias:\n\n\n\n1. Mediare engaño, fraude, violencia, amenaza o cualquier otro medio de\nintimidación o coerción, abuso de autoridad o de una situación de\nvulnerabilidad, o concesión o recepción de pagos o beneficios para\nobtener el consentimiento de una persona que tenga autoridad sobre la\nvíctima.\n\n\n\n2. El autor fuere ascendiente, descendiente, cónyuge, afín en línea\nrecta, colateral o conviviente, tutor, curador, autoridad o ministro de\ncualquier culto reconocido o no, o encargado de la educación o de la\nguarda de la víctima.\n\n\n\n3. El autor fuere funcionario público o miembro de una fuerza de seguridad, policial o penitenciaria.\n\n\n\nCuando la víctima fuere menor de dieciocho (18) años la pena será de diez (10) a quince (15) años de prisión.\n(Artículo sustituido por art. 23 de la Ley N° 26.842 B.O. 27/12/2012)",
-      "incisos": [],
+      "text": " Será reprimido con prisión de cuatro (4) a seis (6) años, el que explotare económicamente el ejercicio de la prostitución de una persona, aunque mediare el consentimiento de la víctima. La pena será de cinco (5) a diez (10) años de prisión, si concurriere alguna de las siguientes circunstancias:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Mediare engaño, fraude, violencia, amenaza o cualquier otro medio de intimidación o coerción, abuso de autoridad o de una situación de vulnerabilidad, o concesión o recepción de pagos o beneficios para obtener el consentimiento de una persona que tenga autoridad sobre la víctima."
+        },
+        {
+          "id": "2",
+          "text": "El autor fuere ascendiente, descendiente, cónyuge, afín en línea recta, colateral o conviviente, tutor, curador, autoridad o ministro de cualquier culto reconocido o no, o encargado de la educación o de la guarda de la víctima."
+        },
+        {
+          "id": "3",
+          "text": "El autor fuere funcionario público o miembro de una fuerza de seguridad, policial o penitenciaria. Cuando la víctima fuere menor de dieciocho (18) años la pena será de diez (10) a quince (15) años de prisión. (Artículo sustituido por art. 23 de la Ley N° 26.842 B.O. 27/12/2012)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1072,8 +1484,17 @@
     },
     {
       "number": "139",
-      "text": "Se impondrá prisión de 2 a 6 años:\n1. A la mujer que fingiere preñez o parto para dar a su supuesto hijo derechos que no le correspondan.\n2. Al que, por un acto cualquiera, hiciere incierto,\nalterare o suprimiere la identidad de un menor de 10 años, y el que lo\nretuviere u ocultare.\n(Artículo sustituido por art. 6° de la Ley N° 24.410 B.O. 2/1/1995)",
-      "incisos": [],
+      "text": "Se impondrá prisión de 2 a 6 años:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "A la mujer que fingiere preñez o parto para dar a su supuesto hijo derechos que no le correspondan."
+        },
+        {
+          "id": "2",
+          "text": "Al que, por un acto cualquiera, hiciere incierto, alterare o suprimiere la identidad de un menor de 10 años, y el que lo retuviere u ocultare. (Artículo sustituido por art. 6° de la Ley N° 24.410 B.O. 2/1/1995)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1100,8 +1521,33 @@
     },
     {
       "number": "142bis",
-      "text": "- Se impondrá\nprisión o reclusión de cinco (5) a quince (15) años, al que sustrajere,\nretuviere u ocultare a una persona con el fin de obligar a la víctima o\na un tercero, a hacer, no hacer, o tolerar algo contra su voluntad. Si\nel autor lograre su propósito, el mínimo de la pena se elevará a ocho\n(8) años.\nLa pena será de diez (10) a veinticinco (25) años de prisión o reclusión:\n1. Si la víctima fuese una mujer embarazada; un menor de dieciocho (18) años de edad; o un mayor de setenta (70) años de edad.\n2. Si el hecho se cometiere en la persona de un\nascendiente; de un hermano; del cónyuge o conviviente; o de otro\nindividuo a quien se deba respeto particular.\n3. Si se causare a la víctima lesiones graves o gravísimas.\n4. Cuando la víctima sea una persona discapacitada, enferma o que no pueda valerse por sí misma.\n5. Cuando el agente sea funcionario o empleado\npúblico o pertenezca o haya pertenecido al momento de comisión del\nhecho a una fuerza armada, de seguridad u organismo de inteligencia del\nEstado. (Inciso sustituido por art. 3° del Anexo I de la Ley N° 26.394\nB.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su\npromulgación. Durante dicho período se llevará a cabo en las áreas\npertinentes un programa de divulgación y capacitación sobre su\ncontenido y aplicación)\n6. Cuando participaran en el hecho tres (3) o más personas.\nLa pena será de quince (15) a veinticinco (25) años\nde prisión a reclusión si del hecho resultara la muerte de la persona\nofendida, como consecuencia no querida por el autor.\nLa pena será de prisión o reclusión perpetua si se causare intencionalmente la muerte de la persona ofendida.\nLa pena del partícipe que, desvinculándose de los\notros, se esforzare de modo que la víctima recupere la libertad, sin\nque tal resultado fuese la consecuencia del logro del propósito del\nautor, se reducirá de un tercio a la mitad.\n(Artículo sustituido por art. 3° de la Ley N° 25.742 B.O. 20/6/2003)",
-      "incisos": [],
+      "text": "- Se impondrá prisión o reclusión de cinco (5) a quince (15) años, al que sustrajere, retuviere u ocultare a una persona con el fin de obligar a la víctima o a un tercero, a hacer, no hacer, o tolerar algo contra su voluntad. Si el autor lograre su propósito, el mínimo de la pena se elevará a ocho (8) años. La pena será de diez (10) a veinticinco (25) años de prisión o reclusión:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Si la víctima fuese una mujer embarazada; un menor de dieciocho (18) años de edad; o un mayor de setenta (70) años de edad."
+        },
+        {
+          "id": "2",
+          "text": "Si el hecho se cometiere en la persona de un ascendiente; de un hermano; del cónyuge o conviviente; o de otro individuo a quien se deba respeto particular."
+        },
+        {
+          "id": "3",
+          "text": "Si se causare a la víctima lesiones graves o gravísimas."
+        },
+        {
+          "id": "4",
+          "text": "Cuando la víctima sea una persona discapacitada, enferma o que no pueda valerse por sí misma."
+        },
+        {
+          "id": "5",
+          "text": "Cuando el agente sea funcionario o empleado público o pertenezca o haya pertenecido al momento de comisión del hecho a una fuerza armada, de seguridad u organismo de inteligencia del Estado. (Inciso sustituido por art. 3° del Anexo I de la Ley N° 26.394 B.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su promulgación. Durante dicho período se llevará a cabo en las áreas pertinentes un programa de divulgación y capacitación sobre su contenido y aplicación)"
+        },
+        {
+          "id": "6",
+          "text": "Cuando participaran en el hecho tres (3) o más personas. La pena será de quince (15) a veinticinco (25) años de prisión a reclusión si del hecho resultara la muerte de la persona ofendida, como consecuencia no querida por el autor. La pena será de prisión o reclusión perpetua si se causare intencionalmente la muerte de la persona ofendida. La pena del partícipe que, desvinculándose de los otros, se esforzare de modo que la víctima recupere la libertad, sin que tal resultado fuese la consecuencia del logro del propósito del autor, se reducirá de un tercio a la mitad. (Artículo sustituido por art. 3° de la Ley N° 25.742 B.O. 20/6/2003)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1128,8 +1574,21 @@
     },
     {
       "number": "144bis",
-      "text": "- Será reprimido con prisión o reclusión de uno a cinco años e inhabilitación especial por doble tiempo: \n1. El funcionario público que, con abuso de sus\nfunciones o sin las formalidades prescriptas por la ley, privase a\nalguno de su libertad personal;\n2. El funcionario que desempeñando un acto de\nservicio cometiera cualquier vejación contra las personas o les\naplicare apremios ilegales;\n3. El funcionario público que impusiere a los presos que guarde, severidades, vejaciones, o apremios ilegales.\nSi concurriere alguna de las circunstancias\nenumeradas en los incisos 1, 2, 3 y 5 del artículo 142, la pena\nprivativa de la libertad será de reclusión o prisión de dos a seis años.",
-      "incisos": [],
+      "text": "- Será reprimido con prisión o reclusión de uno a cinco años e inhabilitación especial por doble tiempo:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El funcionario público que, con abuso de sus funciones o sin las formalidades prescriptas por la ley, privase a alguno de su libertad personal;"
+        },
+        {
+          "id": "2",
+          "text": "El funcionario que desempeñando un acto de servicio cometiera cualquier vejación contra las personas o les aplicare apremios ilegales;"
+        },
+        {
+          "id": "3",
+          "text": "El funcionario público que impusiere a los presos que guarde, severidades, vejaciones, o apremios ilegales. Si concurriere alguna de las circunstancias enumeradas en los incisos 1, 2, 3 y 5 del artículo 142, la pena privativa de la libertad será de reclusión o prisión de dos a seis años."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1163,8 +1622,37 @@
     },
     {
       "number": "145ter",
-      "text": "- En los supuestos del artículo 145 bis la pena será de cinco (5) a diez (10) años de prisión, cuando:\n\n\n\n1. Mediare engaño, fraude, violencia, amenaza o cualquier otro medio de\nintimidación o coerción, abuso de autoridad o de una situación de\nvulnerabilidad, o concesión o recepción de pagos o beneficios para\nobtener el consentimiento de una persona que tenga autoridad sobre la\nvíctima.\n\n\n\n2. La víctima estuviere embarazada, o fuere mayor de setenta (70) años.\n\n\n\n3. La víctima fuera una persona discapacitada, enferma o que no pueda valerse por sí misma.\n\n\n\n4. Las víctimas fueren tres (3) o más.\n\n\n\n5. En la comisión del delito participaren tres (3) o más personas.\n\n\n\n6. El autor fuere ascendiente, descendiente, cónyuge, afín en línea\nrecta, colateral o conviviente, tutor, curador, autoridad o ministro de\ncualquier \n\nculto reconocido o no, o encargado de la educación o de la guarda de la víctima.\n\n\n\n7. El autor fuere funcionario público o miembro de una fuerza de seguridad, policial o penitenciaria.\n\n\n\nCuando se lograra consumar la explotación de la víctima objeto del\ndelito de trata de personas la pena será de ocho (8) a doce (12) años\nde prisión.\n\n\n\nCuando la víctima fuere menor de dieciocho (18) años la pena será de diez (10) a quince (15) años de prisión.\n(Artículo sustituido por art. 26 de la Ley N° 26.842 B.O. 27/12/2012)",
-      "incisos": [],
+      "text": "- En los supuestos del artículo 145 bis la pena será de cinco (5) a diez (10) años de prisión, cuando:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Mediare engaño, fraude, violencia, amenaza o cualquier otro medio de intimidación o coerción, abuso de autoridad o de una situación de vulnerabilidad, o concesión o recepción de pagos o beneficios para obtener el consentimiento de una persona que tenga autoridad sobre la víctima."
+        },
+        {
+          "id": "2",
+          "text": "La víctima estuviere embarazada, o fuere mayor de setenta (70) años."
+        },
+        {
+          "id": "3",
+          "text": "La víctima fuera una persona discapacitada, enferma o que no pueda valerse por sí misma."
+        },
+        {
+          "id": "4",
+          "text": "Las víctimas fueren tres (3) o más."
+        },
+        {
+          "id": "5",
+          "text": "En la comisión del delito participaren tres (3) o más personas."
+        },
+        {
+          "id": "6",
+          "text": "El autor fuere ascendiente, descendiente, cónyuge, afín en línea recta, colateral o conviviente, tutor, curador, autoridad o ministro de cualquier culto reconocido o no, o encargado de la educación o de la guarda de la víctima."
+        },
+        {
+          "id": "7",
+          "text": "El autor fuere funcionario público o miembro de una fuerza de seguridad, policial o penitenciaria. Cuando se lograra consumar la explotación de la víctima objeto del delito de trata de personas la pena será de ocho (8) a doce (12) años de prisión. Cuando la víctima fuere menor de dieciocho (18) años la pena será de diez (10) a quince (15) años de prisión. (Artículo sustituido por art. 26 de la Ley N° 26.842 B.O. 27/12/2012)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1205,8 +1693,17 @@
     },
     {
       "number": "149ter",
-      "text": "- En el caso del último apartado del artículo anterior, la pena será: \n1) De tres a seis años de prisión o reclusión si se\nemplearen armas o si las amenazas fueren anónimas; 2) De cinco a diez\naños de prisión o reclusión en los siguientes casos: \na) Si las amenazas tuvieren como propósito la\nobtención de alguna medida o concesión por parte de cualquier miembro\nde los poderes públicos; \nb) Si las amenazas tuvieren como propósito el de\ncompeler a una persona a hacer abandono del país, de una provincia o de\nlos lugares de su residencia habitual o de trabajo. \nCapítulo II\nViolación de domicilio",
-      "incisos": [],
+      "text": "- En el caso del último apartado del artículo anterior, la pena será:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "De tres a seis años de prisión o reclusión si se emplearen armas o si las amenazas fueren anónimas;"
+        },
+        {
+          "id": "2",
+          "text": "De cinco a diez años de prisión o reclusión en los siguientes casos: a) Si las amenazas tuvieren como propósito la obtención de alguna medida o concesión por parte de cualquier miembro de los poderes públicos; b) Si las amenazas tuvieren como propósito el de compeler a una persona a hacer abandono del país, de una provincia o de los lugares de su residencia habitual o de trabajo. Capítulo II Violación de domicilio"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1275,8 +1772,21 @@
     },
     {
       "number": "157bis",
-      "text": "-Será reprimido con la pena de prisión de un (1) mes a dos (2) años el que:\n\n\n\n\n\n1. A sabiendas e ilegítimamente, o violando sistemas de\nconfidencialidad y seguridad de datos, accediere, de cualquier forma, a\nun banco de datos personales.\n\n\n\n\n\n2. Ilegítimamente proporcionare o revelare a otro información\nregistrada en un archivo o en un banco de datos personales cuyo secreto\nestuviere obligado a preservar por disposición de la ley.\n\n\n\n\n\n3. Ilegítimamente insertare o hiciere insertar datos en un archivo de datos personales.\n\n\n\n\n\nCuando el autor sea funcionario público sufrirá, además, pena de inhabilitación especial de un (1) a cuatro (4) años.\n\n\n\n\n\nCuando las conductas reprimidas se hicieran para acceder, revelar,\ninsertar o suprimir datos que afectaren a un banco de datos genéticos,\nregistros, exámenes o muestras de ADN, la pena será de prisión de seis\n(6) meses a cuatro (4) años, con más inhabilitación especial para\nejercer la profesión de dos (2) a cinco (5) años.\n\n\n\n\n\n(Artículo sustituido por art. 17 de la Ley N° 27.759 B.O. 14/10/2024. Vigencia: a partir del día siguiente al\nde su publicación en el Boletín Oficial de la República Argentina.)\n\n\nCapítulo IV\nDelitos contra la libertad de trabajo y asociación",
-      "incisos": [],
+      "text": "-Será reprimido con la pena de prisión de un (1) mes a dos (2) años el que:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "A sabiendas e ilegítimamente, o violando sistemas de confidencialidad y seguridad de datos, accediere, de cualquier forma, a un banco de datos personales."
+        },
+        {
+          "id": "2",
+          "text": "Ilegítimamente proporcionare o revelare a otro información registrada en un archivo o en un banco de datos personales cuyo secreto estuviere obligado a preservar por disposición de la ley."
+        },
+        {
+          "id": "3",
+          "text": "Ilegítimamente insertare o hiciere insertar datos en un archivo de datos personales. Cuando el autor sea funcionario público sufrirá, además, pena de inhabilitación especial de un (1) a cuatro (4) años. Cuando las conductas reprimidas se hicieran para acceder, revelar, insertar o suprimir datos que afectaren a un banco de datos genéticos, registros, exámenes o muestras de ADN, la pena será de prisión de seis (6) meses a cuatro (4) años, con más inhabilitación especial para ejercer la profesión de dos (2) a cinco (5) años. (Artículo sustituido por art. 17 de la Ley N° 27.759 B.O. 14/10/2024. Vigencia: a partir del día siguiente al de su publicación en el Boletín Oficial de la República Argentina.) Capítulo IV Delitos contra la libertad de trabajo y asociación"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1317,8 +1827,33 @@
     },
     {
       "number": "163",
-      "text": "- Se aplicará prisión de uno a seis años en los casos siguientes:\n1º Cuando el hurto fuere de productos separados del\nsuelo o de máquinas, instrumentos de trabajo o de productos\nagroquímicos, fertilizantes u otros insumos similares, dejados en el\ncampo, o de alambres u otros elementos de los cercos.\n(Inciso sustituido por art. 2° de la Ley N° 25.890 B.O.21/5/2004)\n2º Cuando el hurto se cometiere con ocasión de un\nincendio, explosión, inundación, naufragio, accidente de ferrocarril,\nasonada o motín o aprovechando las facilidades provenientes de\ncualquier otro desastre o conmoción pública o de un infortunio\nparticular del damnificado;\n3º Cuando se hiciere uso de ganzúa, llave falsa u\notro instrumento semejante o de llave verdadera que hubiere sido\nsubstraída, hallada o retenida; (Inciso sustituido por art. 1° de la Ley N° 24.721 B.O. 18/11/1996)\n4º Cuando se perpetrare con escalamiento.\n5º Cuando el hurto fuese de mercaderías u otras\ncosas muebles transportadas por cualquier medio y se cometiere entre el\nmomento de su carga y el de su destino o entrega, o durante las escalas\nque se realizaren. . (Inciso incorporado por art. 1° de la Ley N° 23.468 B.O. 26/1/1987)\n6º Cuando el hurto fuere de vehículos dejados en la vía pública o en lugares de acceso público. . (Inciso incorporado por art. 1° de la Ley N° 24.721 B.O. 18/11/1996)",
-      "incisos": [],
+      "text": "- Se aplicará prisión de uno a seis años en los casos siguientes:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Cuando el hurto fuere de productos separados del suelo o de máquinas, instrumentos de trabajo o de productos agroquímicos, fertilizantes u otros insumos similares, dejados en el campo, o de alambres u otros elementos de los cercos. (Inciso sustituido por art."
+        },
+        {
+          "id": "2",
+          "text": "de la Ley N° 25.890 B.O.21/5/2004) 2º Cuando el hurto se cometiere con ocasión de un incendio, explosión, inundación, naufragio, accidente de ferrocarril, asonada o motín o aprovechando las facilidades provenientes de cualquier otro desastre o conmoción pública o de un infortunio particular del damnificado;"
+        },
+        {
+          "id": "3",
+          "text": "Cuando se hiciere uso de ganzúa, llave falsa u otro instrumento semejante o de llave verdadera que hubiere sido substraída, hallada o retenida; (Inciso sustituido por art. 1° de la Ley N° 24.721 B.O. 18/11/1996)"
+        },
+        {
+          "id": "4",
+          "text": "Cuando se perpetrare con escalamiento."
+        },
+        {
+          "id": "5",
+          "text": "Cuando el hurto fuese de mercaderías u otras cosas muebles transportadas por cualquier medio y se cometiere entre el momento de su carga y el de su destino o entrega, o durante las escalas que se realizaren. . (Inciso incorporado por art. 1° de la Ley N° 23.468 B.O. 26/1/1987)"
+        },
+        {
+          "id": "6",
+          "text": "Cuando el hurto fuere de vehículos dejados en la vía pública o en lugares de acceso público. . (Inciso incorporado por art. 1° de la Ley N° 24.721 B.O. 18/11/1996)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1345,8 +1880,17 @@
     },
     {
       "number": "166",
-      "text": "-Se aplicará reclusión o prisión de CINCO a QUINCE años:\n1. Si por las violencias ejercidas para realizar el robo, se causare alguna de las lesiones previstas en los artículos 90 y 91.\n2. Si el robo se cometiere con armas, o en despoblado y en banda.\nSi el arma utilizada fuera de fuego, la escala penal prevista se elevará en un tercio en su mínimo y en su máximo.\nSi se cometiere el robo con un arma de fuego cuya\naptitud para el disparo no pudiera tenerse de ningún modo por\nacreditada, o con un arma de utilería, la pena será de TRES a DIEZ años\nde reclusión o prisión.\n(Artículo sustituido por art. 1° de la Ley N° 25.882 B.O. 26/4/2004)",
-      "incisos": [],
+      "text": "-Se aplicará reclusión o prisión de CINCO a QUINCE años:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Si por las violencias ejercidas para realizar el robo, se causare alguna de las lesiones previstas en los artículos 90 y 91."
+        },
+        {
+          "id": "2",
+          "text": "Si el robo se cometiere con armas, o en despoblado y en banda. Si el arma utilizada fuera de fuego, la escala penal prevista se elevará en un tercio en su mínimo y en su máximo. Si se cometiere el robo con un arma de fuego cuya aptitud para el disparo no pudiera tenerse de ningún modo por acreditada, o con un arma de utilería, la pena será de TRES a DIEZ años de reclusión o prisión. (Artículo sustituido por art. 1° de la Ley N° 25.882 B.O. 26/4/2004)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1394,8 +1938,33 @@
     },
     {
       "number": "170",
-      "text": "- Se impondrá reclusión\no prisión de cinco (5) a quince (15) años, al que sustrajere, retuviere\nu ocultare a una persona para sacar rescate. Si el autor lograre su\npropósito, el mínimo de la pena se elevará a ocho (8) años.\nLa pena será de diez (10) a veinticinco (25) años de prisión o reclusión:\n1. Si la víctima fuese una mujer embarazada; un menor de dieciocho (18) años de edad o un mayor de setenta (70) años de edad.\n2. Si el hecho se cometiere en la persona de un\nascendiente; de un hermano; del cónyuge o conviviente; o de otro\nindividuo a quien se deba respeto particular.\n3. Si se causare a la víctima lesiones graves o gravísimas.\n4. Cuando la víctima sea una persona discapacitada; enferma; o que no pueda valerse por sí misma.\n5. Cuando el agente sea funcionario o empleado\npúblico; o pertenezca o haya pertenecido a alguna fuerza de seguridad u\norganismo de inteligencia del Estado.\n6. Cuando participaran en el hecho tres (3) o más personas.\nLa pena será de quince (15) a veinticinco (25) años\nde prisión o reclusión si del hecho resultare la muerte de la persona\nofendida, como consecuencia no querida por el autor.\nLa pena será de prisión o reclusión perpetua si se causara intencionalmente la muerte de la persona ofendida.\nLa pena del partícipe que, desvinculándose de los\notros, se esforzare de modo que la víctima recupere la libertad, sin\nque tal resultado fuese la consecuencia del pago del precio de la\nlibertad, se reducirá de un tercio a la mitad.\n(Artículo sustituido por art. 4° de la Ley N° 25.742 B.O. 20/6/2003)",
-      "incisos": [],
+      "text": "- Se impondrá reclusión o prisión de cinco (5) a quince (15) años, al que sustrajere, retuviere u ocultare a una persona para sacar rescate. Si el autor lograre su propósito, el mínimo de la pena se elevará a ocho (8) años. La pena será de diez (10) a veinticinco (25) años de prisión o reclusión:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Si la víctima fuese una mujer embarazada; un menor de dieciocho (18) años de edad o un mayor de setenta (70) años de edad."
+        },
+        {
+          "id": "2",
+          "text": "Si el hecho se cometiere en la persona de un ascendiente; de un hermano; del cónyuge o conviviente; o de otro individuo a quien se deba respeto particular."
+        },
+        {
+          "id": "3",
+          "text": "Si se causare a la víctima lesiones graves o gravísimas."
+        },
+        {
+          "id": "4",
+          "text": "Cuando la víctima sea una persona discapacitada; enferma; o que no pueda valerse por sí misma."
+        },
+        {
+          "id": "5",
+          "text": "Cuando el agente sea funcionario o empleado público; o pertenezca o haya pertenecido a alguna fuerza de seguridad u organismo de inteligencia del Estado."
+        },
+        {
+          "id": "6",
+          "text": "Cuando participaran en el hecho tres (3) o más personas. La pena será de quince (15) a veinticinco (25) años de prisión o reclusión si del hecho resultare la muerte de la persona ofendida, como consecuencia no querida por el autor. La pena será de prisión o reclusión perpetua si se causara intencionalmente la muerte de la persona ofendida. La pena del partícipe que, desvinculándose de los otros, se esforzare de modo que la víctima recupere la libertad, sin que tal resultado fuese la consecuencia del pago del precio de la libertad, se reducirá de un tercio a la mitad. (Artículo sustituido por art. 4° de la Ley N° 25.742 B.O. 20/6/2003)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1415,8 +1984,73 @@
     },
     {
       "number": "173",
-      "text": "Sin perjuicio de la\ndisposición general del artículo precedente, se considerarán casos\nespeciales de defraudación y sufrirán la pena que él establece:\n1. El que defraudare a otro en la substancia,\ncalidad o cantidad de las cosas que le entregue en virtud de contrato o\nde un título obligatorio;\n2. El que con perjuicio de otro se negare a\nrestituir o no restituyere a su debido tiempo, dinero, efectos o\ncualquier otra cosa mueble que se le haya dado en depósito, comisión,\nadministración u otro título que produzca obligación de entregar o\ndevolver;\n3. El que defraudare, haciendo suscribir con engaño algún documento;\n4. El que cometiere alguna defraudación abusando de\nfirma en blanco, extendiendo con ella algún documento en perjuicio del\nmismo que la dio o de tercero;\n5. El dueño de una cosa mueble que la sustrajere de\nquien la tenga legítimamente en su poder, con perjuicio del mismo o de\ntercero; \n6. El que otorgare en perjuicio de otro, un contrato simulado o falsos recibidos;\n7. El que, por disposición de la ley, de la\nautoridad o por un acto jurídico, tuviera a su cargo el manejo, la\nadministración o el cuidado de bienes o intereses pecuniarios ajenos, y\ncon el fin de procurar para sí o para un tercero un lucro indebido o\npara causar daño, violando sus deberes perjudicare los intereses\nconfiados u obligare abusivamente al titular de éstos;\n8. El que cometiere defraudación, substituyendo,\nocultando o mutilando algún proceso, expediente, documento u otro papel\nimportante;\n9. El que vendiere o gravare como bienes libres, los\nque fueren litigiosos o estuvieren embargados o gravados; y el que\nvendiere, gravare o arrendare como propios, bienes ajenos; \n10. El que defraudare, con pretexto de supuesta remuneración a los jueces u otros empleados públicos; \n11. El que tornare imposible, incierto o litigioso\nel derecho sobre un bien o el cumplimiento, en las condiciones\npactadas, de una obligación referente al mismo, sea mediante cualquier\nacto jurídico relativo al mismo bien, aunque no importe enajenación,\nsea removiéndolo, reteniéndolo, ocultándolo o dañándolo, siempre que el\nderecho o la obligación hubieran sido acordados a otro por un precio o\ncomo garantía;\n12. El titular fiduciario, el administrador de\nfondos comunes de inversión o el dador de un contrato de leasing, que\nen beneficio propio o de un tercero dispusiere, gravare o perjudicare\nlos bienes y de esta manera defraudare los derechos de los\ncocontratantes; (Inciso incorporado por art. 82 de la Ley N° 24.441 B.O. 16/1/1995)\n13. El que encontrándose autorizado para ejecutar\nextrajudicialmente un inmueble lo ejecutara en perjuicio del deudor, a\nsabiendas de que el mismo no se encuentra en mora, o maliciosamente\nomitiera cumplimentar los recaudos establecidos para la subasta\nmediante dicho procedimiento especial; (Inciso incorporado por art. 82 de la Ley N° 24.441 B.O. 16/1/1995)\n14. El tenedor de letras hipotecarias que en\nperjuicio del deudor o de terceros omitiera consignar en el título los\npagos recibidos. (Inciso incorporado por art. 82 de la Ley N° 24.441 B.O. 16/1/1995)\n15. El que defraudare mediante el uso de una tarjeta\nde compra, crédito o débito, cuando la misma hubiere sido falsificada,\nadulterada, hurtada, robada, perdida u obtenida del legítimo emisor\nmediante ardid o engaño, o mediante el uso no autorizado de sus datos,\naunque lo hiciere por medio de una operación automática. (Inciso incorporado por art. 1° de la Ley N° 25.930 B.O. 21/9/2004)\n16. El que defraudare a otro mediante cualquier\ntécnica de manipulación informática que altere el normal funcionamiento\nde un sistema informático o la transmisión de datos. (Inciso incorporado por art. 9° de la Ley N° 26.388, B.O. 25/6/2008)",
-      "incisos": [],
+      "text": "Sin perjuicio de la disposición general del artículo precedente, se considerarán casos especiales de defraudación y sufrirán la pena que él establece:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El que defraudare a otro en la substancia, calidad o cantidad de las cosas que le entregue en virtud de contrato o de un título obligatorio;"
+        },
+        {
+          "id": "2",
+          "text": "El que con perjuicio de otro se negare a restituir o no restituyere a su debido tiempo, dinero, efectos o cualquier otra cosa mueble que se le haya dado en depósito, comisión, administración u otro título que produzca obligación de entregar o devolver;"
+        },
+        {
+          "id": "3",
+          "text": "El que defraudare, haciendo suscribir con engaño algún documento;"
+        },
+        {
+          "id": "4",
+          "text": "El que cometiere alguna defraudación abusando de firma en blanco, extendiendo con ella algún documento en perjuicio del mismo que la dio o de tercero;"
+        },
+        {
+          "id": "5",
+          "text": "El dueño de una cosa mueble que la sustrajere de quien la tenga legítimamente en su poder, con perjuicio del mismo o de tercero;"
+        },
+        {
+          "id": "6",
+          "text": "El que otorgare en perjuicio de otro, un contrato simulado o falsos recibidos;"
+        },
+        {
+          "id": "7",
+          "text": "El que, por disposición de la ley, de la autoridad o por un acto jurídico, tuviera a su cargo el manejo, la administración o el cuidado de bienes o intereses pecuniarios ajenos, y con el fin de procurar para sí o para un tercero un lucro indebido o para causar daño, violando sus deberes perjudicare los intereses confiados u obligare abusivamente al titular de éstos;"
+        },
+        {
+          "id": "8",
+          "text": "El que cometiere defraudación, substituyendo, ocultando o mutilando algún proceso, expediente, documento u otro papel importante;"
+        },
+        {
+          "id": "9",
+          "text": "El que vendiere o gravare como bienes libres, los que fueren litigiosos o estuvieren embargados o gravados; y el que vendiere, gravare o arrendare como propios, bienes ajenos;"
+        },
+        {
+          "id": "10",
+          "text": "El que defraudare, con pretexto de supuesta remuneración a los jueces u otros empleados públicos;"
+        },
+        {
+          "id": "11",
+          "text": "El que tornare imposible, incierto o litigioso el derecho sobre un bien o el cumplimiento, en las condiciones pactadas, de una obligación referente al mismo, sea mediante cualquier acto jurídico relativo al mismo bien, aunque no importe enajenación, sea removiéndolo, reteniéndolo, ocultándolo o dañándolo, siempre que el derecho o la obligación hubieran sido acordados a otro por un precio o como garantía;"
+        },
+        {
+          "id": "12",
+          "text": "El titular fiduciario, el administrador de fondos comunes de inversión o el dador de un contrato de leasing, que en beneficio propio o de un tercero dispusiere, gravare o perjudicare los bienes y de esta manera defraudare los derechos de los cocontratantes; (Inciso incorporado por art. 82 de la Ley N° 24.441 B.O. 16/1/1995)"
+        },
+        {
+          "id": "13",
+          "text": "El que encontrándose autorizado para ejecutar extrajudicialmente un inmueble lo ejecutara en perjuicio del deudor, a sabiendas de que el mismo no se encuentra en mora, o maliciosamente omitiera cumplimentar los recaudos establecidos para la subasta mediante dicho procedimiento especial; (Inciso incorporado por art. 82 de la Ley N° 24.441 B.O. 16/1/1995)"
+        },
+        {
+          "id": "14",
+          "text": "El tenedor de letras hipotecarias que en perjuicio del deudor o de terceros omitiera consignar en el título los pagos recibidos. (Inciso incorporado por art. 82 de la Ley N° 24.441 B.O. 16/1/1995)"
+        },
+        {
+          "id": "15",
+          "text": "El que defraudare mediante el uso de una tarjeta de compra, crédito o débito, cuando la misma hubiere sido falsificada, adulterada, hurtada, robada, perdida u obtenida del legítimo emisor mediante ardid o engaño, o mediante el uso no autorizado de sus datos, aunque lo hiciere por medio de una operación automática. (Inciso incorporado por art. 1° de la Ley N° 25.930 B.O. 21/9/2004)"
+        },
+        {
+          "id": "16",
+          "text": "El que defraudare a otro mediante cualquier técnica de manipulación informática que altere el normal funcionamiento de un sistema informático o la transmisión de datos. (Inciso incorporado por art. 9° de la Ley N° 26.388, B.O. 25/6/2008)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1443,8 +2077,21 @@
     },
     {
       "number": "176",
-      "text": "- Será reprimido, como\nquebrado fraudulento, con prisión de dos a seis años e inhabilitación\nespecial de tres a diez años, el comerciante declarado en quiebra que,\nen fraude de sus acreedores, hubiere incurrido en algunos de los hechos\nsiguientes: \n1º Simular o suponer deudas, enajenaciones, gastos o pérdidas; \n2º No justificar la salida o existencia de bienes\nque debiera tener; substraer u ocultar alguna cosa que correspondiere a\nla masa; \n3º Conceder ventajas indebidas a cualquier acreedor.",
-      "incisos": [],
+      "text": "- Será reprimido, como quebrado fraudulento, con prisión de dos a seis años e inhabilitación especial de tres a diez años, el comerciante declarado en quiebra que, en fraude de sus acreedores, hubiere incurrido en algunos de los hechos siguientes:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Simular o suponer deudas, enajenaciones, gastos o pérdidas;"
+        },
+        {
+          "id": "2",
+          "text": "No justificar la salida o existencia de bienes que debiera tener; substraer u ocultar alguna cosa que correspondiere a la masa;"
+        },
+        {
+          "id": "3",
+          "text": "Conceder ventajas indebidas a cualquier acreedor."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1478,15 +2125,41 @@
     },
     {
       "number": "181",
-      "text": "Será reprimido con prisión de seis meses a tres años:\n1º el que por violencia, amenazas, engaños, abusos\nde confianza o clandestinidad despojare a otro, total o parcialmente,\nde la posesión o tenencia de un inmueble o del ejercicio de un derecho\nreal constituido sobre él, sea que el despojo se produzca invadiendo el\ninmueble, manteniéndose en él o expulsando a los ocupantes;\n2º el que, para apoderarse de todo o parte de un inmueble, destruyere o alterare los términos o límites del mismo;\n3º el que, con violencias o amenazas, turbare la posesión o tenencia de un inmueble.\n(Artículo sustituido por art. 2° Ley N° 24.454 B.O. 7/3/1995)",
-      "incisos": [],
+      "text": "Será reprimido con prisión de seis meses a tres años:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "el que por violencia, amenazas, engaños, abusos de confianza o clandestinidad despojare a otro, total o parcialmente, de la posesión o tenencia de un inmueble o del ejercicio de un derecho real constituido sobre él, sea que el despojo se produzca invadiendo el inmueble, manteniéndose en él o expulsando a los ocupantes;"
+        },
+        {
+          "id": "2",
+          "text": "el que, para apoderarse de todo o parte de un inmueble, destruyere o alterare los términos o límites del mismo;"
+        },
+        {
+          "id": "3",
+          "text": "el que, con violencias o amenazas, turbare la posesión o tenencia de un inmueble. (Artículo sustituido por art. 2° Ley N° 24.454 B.O. 7/3/1995)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "182",
-      "text": "- Será reprimido con prisión de quince días a un año: \n1º El que ilícitamente y con el propósito de causar\nperjuicio a otro sacare aguas de represas, estanques u otros depósitos,\nríos, arroyos, fuentes, canales o acueductos o las sacare en mayor\ncantidad que aquella a que tenga derecho; \n2º El que estorbare el ejercicio de los derechos que un tercero tuviere sobre dichas aguas; \n3º El que ilícitamente y con el propósito de causar\nperjuicio a otro represare, desviare o detuviere las aguas de los ríos,\narroyos, canales o fuentes o usurpare un derecho cualquiera referente\nal curso de ellas. \nLa pena se aumentará hasta dos años, si para cometer\nlos delitos expresados en los números anteriores, se rompieren o\nalteraren diques, esclusas, compuertas u otras obras semejantes hechas\nen los ríos, arroyos, fuentes, depósitos, canales o acueductos. \nCapítulo VII\nDaños",
-      "incisos": [],
+      "text": "- Será reprimido con prisión de quince días a un año:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El que ilícitamente y con el propósito de causar perjuicio a otro sacare aguas de represas, estanques u otros depósitos, ríos, arroyos, fuentes, canales o acueductos o las sacare en mayor cantidad que aquella a que tenga derecho;"
+        },
+        {
+          "id": "2",
+          "text": "El que estorbare el ejercicio de los derechos que un tercero tuviere sobre dichas aguas;"
+        },
+        {
+          "id": "3",
+          "text": "El que ilícitamente y con el propósito de causar perjuicio a otro represare, desviare o detuviere las aguas de los ríos, arroyos, canales o fuentes o usurpare un derecho cualquiera referente al curso de ellas. La pena se aumentará hasta dos años, si para cometer los delitos expresados en los números anteriores, se rompieren o alteraren diques, esclusas, compuertas u otras obras semejantes hechas en los ríos, arroyos, fuentes, depósitos, canales o acueductos. Capítulo VII Daños"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1499,22 +2172,81 @@
     },
     {
       "number": "184",
-      "text": "- La pena será de tres (3) meses a cuatro (4) años de prisión, si mediare cualquiera de las circunstancias siguientes:\n1. Ejecutar el hecho con el fin de impedir el libre ejercicio de la autoridad o en venganza de sus determinaciones;\n2. Producir infección o contagio en aves u otros animales domésticos;\n3. Emplear substancias venenosas o corrosivas;\n4. Cometer el delito en despoblado y en banda;\n5. Ejecutarlo en archivos, registros, bibliotecas,\nmuseos o en puentes, caminos, paseos u otros bienes de uso público; o\nen tumbas, signos conmemorativos, monumentos, estatuas, cuadros u otros\nobjetos de arte colocados en edificios o lugares públicos; o en datos,\ndocumentos, programas o sistemas informáticos públicos;\n6. Ejecutarlo en sistemas informáticos destinados a\nla prestación de servicios de salud, de comunicaciones, de provisión o\ntransporte de energía, de medios de transporte u otro servicio público.\n(Artículo sustituido por art. 11 de la Ley N° 26.388, B.O. 25/6/2008)\nCapítulo VIII\nDisposiciones generales",
-      "incisos": [],
+      "text": "- La pena será de tres (3) meses a cuatro (4) años de prisión, si mediare cualquiera de las circunstancias siguientes:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Ejecutar el hecho con el fin de impedir el libre ejercicio de la autoridad o en venganza de sus determinaciones;"
+        },
+        {
+          "id": "2",
+          "text": "Producir infección o contagio en aves u otros animales domésticos;"
+        },
+        {
+          "id": "3",
+          "text": "Emplear substancias venenosas o corrosivas;"
+        },
+        {
+          "id": "4",
+          "text": "Cometer el delito en despoblado y en banda;"
+        },
+        {
+          "id": "5",
+          "text": "Ejecutarlo en archivos, registros, bibliotecas, museos o en puentes, caminos, paseos u otros bienes de uso público; o en tumbas, signos conmemorativos, monumentos, estatuas, cuadros u otros objetos de arte colocados en edificios o lugares públicos; o en datos, documentos, programas o sistemas informáticos públicos;"
+        },
+        {
+          "id": "6",
+          "text": "Ejecutarlo en sistemas informáticos destinados a la prestación de servicios de salud, de comunicaciones, de provisión o transporte de energía, de medios de transporte u otro servicio público. (Artículo sustituido por art. 11 de la Ley N° 26.388, B.O. 25/6/2008) Capítulo VIII Disposiciones generales"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "185",
-      "text": "- Están exentos de\nresponsabilidad criminal, sin perjuicio de la civil, por los hurtos,\ndefraudaciones o daños que recíprocamente se causaren:\n1. Los cónyuges, ascendientes, descendientes y afines en la línea recta;\n2. El consorte viudo, respecto de las cosas de la pertenencia de su difunto cónyuge, mientras no hayan pasado a poder de otro;\n3. Los hermanos y cuñados, si viviesen juntos.\nLa excepción establecida en el párrafo anterior, no es aplicable a los extraños que participen del delito. \nDELITOS CONTRA LA SEGURIDAD PUBLICA\nCapítulo I\nIncendios y otros estragos",
-      "incisos": [],
+      "text": "- Están exentos de responsabilidad criminal, sin perjuicio de la civil, por los hurtos, defraudaciones o daños que recíprocamente se causaren:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Los cónyuges, ascendientes, descendientes y afines en la línea recta;"
+        },
+        {
+          "id": "2",
+          "text": "El consorte viudo, respecto de las cosas de la pertenencia de su difunto cónyuge, mientras no hayan pasado a poder de otro;"
+        },
+        {
+          "id": "3",
+          "text": "Los hermanos y cuñados, si viviesen juntos. La excepción establecida en el párrafo anterior, no es aplicable a los extraños que participen del delito. DELITOS CONTRA LA SEGURIDAD PUBLICA Capítulo I Incendios y otros estragos"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "186",
-      "text": "- El que causare incendio, explosión o inundación, será reprimido: \n1º Con reclusión o prisión de tres a diez años, si hubiere peligro común para los bienes; \n2º Con reclusión o prisión de tres a diez años el que causare incendio o destrucción por cualquier otro medio: \na) De cereales en parva, gavillas o bolsas, o de los mismos todavía no cosechados; \nb) De bosques, viñas, olivares, cañaverales,\nalgodonales, yerbatales o cualquiera otra plantación de árboles o\narbustos en explotación, ya sea con sus frutos en pie o cosechados; \nc) De ganado en los campos o de sus productos amontonados en el campo o depositados; \nd) De la leña o carbón de leña, apilados o amontonados en los campos de su explotación y destinados al comercio; \ne) De alfalfares o cualquier otro cultivo de forrajes, ya sea en pie o emparvados, engavillados, ensilados o enfardados; \nf) De los mismos productos mencionados en los párrafos anteriores, cargados, parados o en movimiento; \n3º Con reclusión o prisión de tres a quince años, si\nhubiere peligro para un archivo público, biblioteca, museo, arsenal,\nastillero, fábrica de pólvora o de pirotecnia militar o parque de\nartillería; \n4º Con reclusión o prisión de tres a quince años, si hubiere peligro de muerte para alguna persona; \n5º Con reclusión o prisión de ocho a veinte años, si el hecho fuere causa inmediata de la muerte de alguna persona.",
-      "incisos": [],
+      "text": "- El que causare incendio, explosión o inundación, será reprimido:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Con reclusión o prisión de tres a diez años, si hubiere peligro común para los bienes;"
+        },
+        {
+          "id": "2",
+          "text": "Con reclusión o prisión de tres a diez años el que causare incendio o destrucción por cualquier otro medio: a) De cereales en parva, gavillas o bolsas, o de los mismos todavía no cosechados; b) De bosques, viñas, olivares, cañaverales, algodonales, yerbatales o cualquiera otra plantación de árboles o arbustos en explotación, ya sea con sus frutos en pie o cosechados; c) De ganado en los campos o de sus productos amontonados en el campo o depositados; d) De la leña o carbón de leña, apilados o amontonados en los campos de su explotación y destinados al comercio; e) De alfalfares o cualquier otro cultivo de forrajes, ya sea en pie o emparvados, engavillados, ensilados o enfardados; f) De los mismos productos mencionados en los párrafos anteriores, cargados, parados o en movimiento;"
+        },
+        {
+          "id": "3",
+          "text": "Con reclusión o prisión de tres a quince años, si hubiere peligro para un archivo público, biblioteca, museo, arsenal, astillero, fábrica de pólvora o de pirotecnia militar o parque de artillería;"
+        },
+        {
+          "id": "4",
+          "text": "Con reclusión o prisión de tres a quince años, si hubiere peligro de muerte para alguna persona;"
+        },
+        {
+          "id": "5",
+          "text": "Con reclusión o prisión de ocho a veinte años, si el hecho fuere causa inmediata de la muerte de alguna persona."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1562,8 +2294,25 @@
     },
     {
       "number": "191",
-      "text": "- El que empleare cualquier medio para detener o entorpecer la marcha de un tren o para hacerle descarrilar, será reprimido: \n1º Con prisión de seis meses a tres años, si no se produjere descarrilamiento u otro accidente; \n2º Con prisión de dos a seis años, si se produjere descarrilamiento u otro accidente; \n3º Con reclusión o prisión de tres a diez años, si a consecuencia del accidente, resultare lesionada alguna persona; \n4º Con reclusión o prisión de diez a veinticinco años, si resultare la muerte de alguna persona.",
-      "incisos": [],
+      "text": "- El que empleare cualquier medio para detener o entorpecer la marcha de un tren o para hacerle descarrilar, será reprimido:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Con prisión de seis meses a tres años, si no se produjere descarrilamiento u otro accidente;"
+        },
+        {
+          "id": "2",
+          "text": "Con prisión de dos a seis años, si se produjere descarrilamiento u otro accidente;"
+        },
+        {
+          "id": "3",
+          "text": "Con reclusión o prisión de tres a diez años, si a consecuencia del accidente, resultare lesionada alguna persona;"
+        },
+        {
+          "id": "4",
+          "text": "Con reclusión o prisión de diez a veinticinco años, si resultare la muerte de alguna persona."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1618,8 +2367,37 @@
     },
     {
       "number": "198",
-      "text": "- Será reprimido con reclusión o prisión de tres a quince años: \n1º El que practicare en el mar o en ríos navegables,\nalgún acto de depredación o violencia contra un buque o contra personas\no cosas que en él se encuentren, sin estar autorizado por alguna\npotencia beligerante o excediendo los límites de una autorización\nlegítimamente concedida; \n2º El que practicare algún acto de depredación o\nviolencia contra una aeronave en vuelo o mientras realiza las\noperaciones inmediatamente anteriores al vuelo, o contra personas o\ncosas que en ellas se encuentren, sin estar autorizado por alguna\npotencia beligerante o excediendo los límites de una autorización\nlegítimamente concedida; \n3º El que mediante violencia, intimidación o engaño,\nusurpare la autoridad de un buque o aeronave, con el fin de apoderarse\nde él o de disponer de las cosas o de las personas que lleva; \n4º El que, en connivencia con piratas, les entregare\nun buque o aeronave, su carga o lo que perteneciere a su pasaje o\ntripulación; \n5º El que, con amenazas o violencia, se opusiere a\nque el comandante o la tripulación defiendan el buque o aeronave\natacado por piratas; \n6º El que, por cuenta propia o ajena, equipare un buque o aeronave destinados a la piratería; \n7º El que, desde el territorio de la República, a sabiendas traficare con piratas o les suministrare auxilio.",
-      "incisos": [],
+      "text": "- Será reprimido con reclusión o prisión de tres a quince años:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El que practicare en el mar o en ríos navegables, algún acto de depredación o violencia contra un buque o contra personas o cosas que en él se encuentren, sin estar autorizado por alguna potencia beligerante o excediendo los límites de una autorización legítimamente concedida;"
+        },
+        {
+          "id": "2",
+          "text": "El que practicare algún acto de depredación o violencia contra una aeronave en vuelo o mientras realiza las operaciones inmediatamente anteriores al vuelo, o contra personas o cosas que en ellas se encuentren, sin estar autorizado por alguna potencia beligerante o excediendo los límites de una autorización legítimamente concedida;"
+        },
+        {
+          "id": "3",
+          "text": "El que mediante violencia, intimidación o engaño, usurpare la autoridad de un buque o aeronave, con el fin de apoderarse de él o de disponer de las cosas o de las personas que lleva;"
+        },
+        {
+          "id": "4",
+          "text": "El que, en connivencia con piratas, les entregare un buque o aeronave, su carga o lo que perteneciere a su pasaje o tripulación;"
+        },
+        {
+          "id": "5",
+          "text": "El que, con amenazas o violencia, se opusiere a que el comandante o la tripulación defiendan el buque o aeronave atacado por piratas;"
+        },
+        {
+          "id": "6",
+          "text": "El que, por cuenta propia o ajena, equipare un buque o aeronave destinados a la piratería;"
+        },
+        {
+          "id": "7",
+          "text": "El que, desde el territorio de la República, a sabiendas traficare con piratas o les suministrare auxilio."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1723,8 +2501,21 @@
     },
     {
       "number": "208",
-      "text": "- Será reprimido con prisión de quince días a un año: \n1º El que, sin título ni autorización para el\nejercicio de un arte de curar o excediendo los límites de su\nautorización, anunciare, prescribiere, administrare o aplicare\nhabitualmente medicamentos, aguas, electricidad, hipnotismo o cualquier\nmedio destinado al tratamiento de las enfermedades de las personas, aun\na título gratuito; \n2º El que, con título o autorización para el\nejercicio de un arte de curar, anunciare o prometiere la curación de\nenfermedades a término fijo o por medios secretos o infalibles; \n3º El que, con título o autorización para el\nejercicio de un arte de curar, prestare su nombre a otro que no tuviere\ntítulo o autorización, para que ejerza los actos a que se refiere el\ninciso 1º de este artículo. \nDELITOS CONTRA EL ORDEN PUBLICO\nCapítulo I\nInstigación a cometer delitos",
-      "incisos": [],
+      "text": "- Será reprimido con prisión de quince días a un año:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El que, sin título ni autorización para el ejercicio de un arte de curar o excediendo los límites de su autorización, anunciare, prescribiere, administrare o aplicare habitualmente medicamentos, aguas, electricidad, hipnotismo o cualquier medio destinado al tratamiento de las enfermedades de las personas, aun a título gratuito;"
+        },
+        {
+          "id": "2",
+          "text": "El que, con título o autorización para el ejercicio de un arte de curar, anunciare o prometiere la curación de enfermedades a término fijo o por medios secretos o infalibles;"
+        },
+        {
+          "id": "3",
+          "text": "El que, con título o autorización para el ejercicio de un arte de curar, prestare su nombre a otro que no tuviere título o autorización, para que ejerza los actos a que se refiere el inciso 1º de este artículo. DELITOS CONTRA EL ORDEN PUBLICO Capítulo I Instigación a cometer delitos"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1751,8 +2542,41 @@
     },
     {
       "number": "210bis",
-      "text": "- Se impondrá\nreclusión o prisión de cinco a veinte años al que tomare parte,\ncooperare o ayudare a la formación o al mantenimiento de una asociación\nilícita destinada a cometer delitos cuando la acción contribuya a poner\nen peligro la vigencia de la Constitución Nacional, siempre que ella\nreúna por lo menos dos de las siguientes características: \na) Estar integrada por diez o más individuos; \nb) Poseer una organización militar o de tipo militar; \nc) Tener estructura celular; \nd) Disponer de armas de guerra o explosivos de gran poder ofensivo; \ne) Operar en más de una de las jurisdicciones políticas del país; \nf) Estar compuesta por uno o más oficiales o suboficiales de las fuerzas armadas o de seguridad; \ng) Tener notorias conexiones con otras organizaciones similares existentes en el país o en el exterior; \nh) Recibir algún apoyo, ayuda o dirección de funcionarios públicos.",
-      "incisos": [],
+      "text": "- Se impondrá reclusión o prisión de cinco a veinte años al que tomare parte, cooperare o ayudare a la formación o al mantenimiento de una asociación ilícita destinada a cometer delitos cuando la acción contribuya a poner en peligro la vigencia de la Constitución Nacional, siempre que ella reúna por lo menos dos de las siguientes características:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Estar integrada por diez o más individuos;"
+        },
+        {
+          "id": "b",
+          "text": "Poseer una organización militar o de tipo militar;"
+        },
+        {
+          "id": "c",
+          "text": "Tener estructura celular;"
+        },
+        {
+          "id": "d",
+          "text": "Disponer de armas de guerra o explosivos de gran poder ofensivo;"
+        },
+        {
+          "id": "e",
+          "text": "Operar en más de una de las jurisdicciones políticas del país;"
+        },
+        {
+          "id": "f",
+          "text": "Estar compuesta por uno o más oficiales o suboficiales de las fuerzas armadas o de seguridad;"
+        },
+        {
+          "id": "g",
+          "text": "Tener notorias conexiones con otras organizaciones similares existentes en el país o en el exterior;"
+        },
+        {
+          "id": "h",
+          "text": "Recibir algún apoyo, ayuda o dirección de funcionarios públicos."
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1807,8 +2631,21 @@
     },
     {
       "number": "215",
-      "text": "- Será reprimido con\nreclusión o prisión perpetua, el que cometiere el delito previsto en el\nartículo precedente, en los casos siguientes: \n1º Si ejecutare un hecho dirigido a someter total o\nparcialmente la Nación al dominio extranjero o a menoscabar su\nindependencia o integridad; \n2º Si indujere o decidiere a una potencia extranjera a hacer la guerra contra la República. \n3° Si perteneciere a las fuerzas armadas. (Inciso incorporado por art. 5° del Anexo I de la Ley N° 26.394\nB.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su\npromulgación. Durante dicho período se llevará a cabo en las áreas\npertinentes un programa de divulgación y capacitación sobre su\ncontenido y aplicación)",
-      "incisos": [],
+      "text": "- Será reprimido con reclusión o prisión perpetua, el que cometiere el delito previsto en el artículo precedente, en los casos siguientes:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Si ejecutare un hecho dirigido a someter total o parcialmente la Nación al dominio extranjero o a menoscabar su independencia o integridad;"
+        },
+        {
+          "id": "2",
+          "text": "Si indujere o decidiere a una potencia extranjera a hacer la guerra contra la República."
+        },
+        {
+          "id": "3",
+          "text": "Si perteneciere a las fuerzas armadas. (Inciso incorporado por art. 5° del Anexo I de la Ley N° 26.394 B.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su promulgación. Durante dicho período se llevará a cabo en las áreas pertinentes un programa de divulgación y capacitación sobre su contenido y aplicación)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -1933,8 +2770,17 @@
     },
     {
       "number": "230",
-      "text": "- Serán reprimidos con prisión de uno a cuatro años: \n1. Los individuos de una fuerza armada o reunión de\npersonas, que se atribuyeren los derechos del pueblo y peticionaren a\nnombre de éste (art. 22 de la Constitución Nacional); \n2. Los que se alzaren públicamente para impedir la\nejecución de las leyes nacionales o provinciales o de las resoluciones\nde los funcionarios públicos nacionales o provinciales, cuando el hecho\nno constituya delito más severamente penado por este código. \nCapítulo III\nDisposiciones comunes a los Capítulos precedentes",
-      "incisos": [],
+      "text": "- Serán reprimidos con prisión de uno a cuatro años:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Los individuos de una fuerza armada o reunión de personas, que se atribuyeren los derechos del pueblo y peticionaren a nombre de éste (art. 22 de la Constitución Nacional);"
+        },
+        {
+          "id": "2",
+          "text": "Los que se alzaren públicamente para impedir la ejecución de las leyes nacionales o provinciales o de las resoluciones de los funcionarios públicos nacionales o provinciales, cuando el hecho no constituya delito más severamente penado por este código. Capítulo III Disposiciones comunes a los Capítulos precedentes"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -2038,8 +2884,29 @@
     },
     {
       "number": "241bis",
-      "text": "Se impondrá prisión de tres (3) a diez (10) años a los militares que:\n1. Tumultuosamente peticionaren o se atribuyeren la representación de una fuerza armada.\n2. Tomaren armas o hicieren uso de éstas, de naves o\naeronaves o extrajeren fuerzas armadas de sus asientos naturales,\ncontra las órdenes de sus superiores.\n3. Hicieren uso del personal de la fuerza, de la\nnave o de la aeronave bajo su mando contra sus superiores u omitieren\nresistir o contener a éstas, estando en condiciones de hacerlo.\n4. Será penado con prisión de uno (1) a cinco (5)\naños la conspiración para cometer los delitos de este artículo. No será\npenado por conspiración quien la denunciare en tiempo para evitar la\ncomisión del hecho.\n5. Si en razón de los hechos previstos en este\nartículo resultare la muerte de una o más personas, se sufrieren\npérdidas militares o se impidiere o dificultare la salvación de vidas\nen supuesto de catástrofe, el máximo de la pena se elevará a\nveinticinco (25) años. En cualquier caso se impondrán las penas aquí\nprevistas siempre que no resultare un delito más severamente penado. (Artículo incorporado por art. 12 del Anexo I de la Ley N° 26.394\nB.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su\npromulgación. Durante dicho período se llevará a cabo en las áreas\npertinentes un programa de divulgación y capacitación sobre su\ncontenido y aplicación)",
-      "incisos": [],
+      "text": "Se impondrá prisión de tres (3) a diez (10) años a los militares que:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Tumultuosamente peticionaren o se atribuyeren la representación de una fuerza armada."
+        },
+        {
+          "id": "2",
+          "text": "Tomaren armas o hicieren uso de éstas, de naves o aeronaves o extrajeren fuerzas armadas de sus asientos naturales, contra las órdenes de sus superiores."
+        },
+        {
+          "id": "3",
+          "text": "Hicieren uso del personal de la fuerza, de la nave o de la aeronave bajo su mando contra sus superiores u omitieren resistir o contener a éstas, estando en condiciones de hacerlo."
+        },
+        {
+          "id": "4",
+          "text": "Será penado con prisión de uno (1) a cinco (5) años la conspiración para cometer los delitos de este artículo. No será penado por conspiración quien la denunciare en tiempo para evitar la comisión del hecho."
+        },
+        {
+          "id": "5",
+          "text": "Si en razón de los hechos previstos en este artículo resultare la muerte de una o más personas, se sufrieren pérdidas militares o se impidiere o dificultare la salvación de vidas en supuesto de catástrofe, el máximo de la pena se elevará a veinticinco (25) años. En cualquier caso se impondrán las penas aquí previstas siempre que no resultare un delito más severamente penado. (Artículo incorporado por art. 12 del Anexo I de la Ley N° 26.394 B.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su promulgación. Durante dicho período se llevará a cabo en las áreas pertinentes un programa de divulgación y capacitación sobre su contenido y aplicación)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -2122,8 +2989,17 @@
     },
     {
       "number": "250bis",
-      "text": "Será penado con\nprisión de cuatro (4) a diez (10) años, siempre que no resultare otro\ndelito más severamente penado, el militar que en tiempo de conflicto\narmado:\n1. Abandonare sus funciones de control, vigilancia,\ncomunicaciones o la atención de los instrumentos que tuviese a su cargo\npara esos fines, las descuidase o se incapacitase para su cumplimiento.\n2. Observare cualquier dato significativo para la defensa y no lo informase o tomase las medidas del caso.\n(Artículo incorporado por art. 16 del Anexo I de la Ley N° 26.394\nB.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su\npromulgación. Durante dicho período se llevará a cabo en las áreas\npertinentes un programa de divulgación y capacitación sobre su\ncontenido y aplicación)",
-      "incisos": [],
+      "text": "Será penado con prisión de cuatro (4) a diez (10) años, siempre que no resultare otro delito más severamente penado, el militar que en tiempo de conflicto armado:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Abandonare sus funciones de control, vigilancia, comunicaciones o la atención de los instrumentos que tuviese a su cargo para esos fines, las descuidase o se incapacitase para su cumplimiento."
+        },
+        {
+          "id": "2",
+          "text": "Observare cualquier dato significativo para la defensa y no lo informase o tomase las medidas del caso. (Artículo incorporado por art. 16 del Anexo I de la Ley N° 26.394 B.O. 29/8/2008. Vigencia: comenzará a regir a los SEIS (6) meses de su promulgación. Durante dicho período se llevará a cabo en las áreas pertinentes un programa de divulgación y capacitación sobre su contenido y aplicación)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -2451,8 +3327,21 @@
     },
     {
       "number": "289",
-      "text": "- Será reprimido con prisión de seis meses a tres años:\n1. El que falsificare marcas, contraseñas o firmas\noficialmente usadas o legalmente requeridas para contrastar pesas o\nmedidas, identificar cualquier objeto o certificar su calidad, cantidad\no contenido, y el que las aplicare a objetos distintos de aquellos a\nque debían ser aplicados.\n2. El que falsificare billetes de empresas públicas de transporte.\n3. El que falsificare, alterare o suprimiere la numeración de un objeto registrada de acuerdo con la ley.\n(Artículo sustituido por art. 1° de la Ley N° 24.721 B.O. 18/11/1996)",
-      "incisos": [],
+      "text": "- Será reprimido con prisión de seis meses a tres años:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "El que falsificare marcas, contraseñas o firmas oficialmente usadas o legalmente requeridas para contrastar pesas o medidas, identificar cualquier objeto o certificar su calidad, cantidad o contenido, y el que las aplicare a objetos distintos de aquellos a que debían ser aplicados."
+        },
+        {
+          "id": "2",
+          "text": "El que falsificare billetes de empresas públicas de transporte."
+        },
+        {
+          "id": "3",
+          "text": "El que falsificare, alterare o suprimiere la numeración de un objeto registrada de acuerdo con la ley. (Artículo sustituido por art. 1° de la Ley N° 24.721 B.O. 18/11/1996)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -2577,15 +3466,49 @@
     },
     {
       "number": "303",
-      "text": "1. Será reprimido con prisión de tres (3) a diez (10) años y multa de\ndos (2) a diez (10) veces del monto de la operación, el que\nconvirtiere, transfiriere, administrare, vendiere, gravare, adquiriere,\ndisimulare o de cualquier otro modo pusiere en circulación en el\nmercado, bienes u otros activos provenientes de un ilícito penal, con\nla consecuencia posible de que el origen de los bienes originarios o\nlos subrogantes adquieran la apariencia de un origen lícito, y siempre\nque su valor supere la suma de ciento cincuenta (150) Salarios mínimos,\nvitales y móviles al momento de los hechos, sea en un solo acto o por\nla reiteración de hechos diversos vinculados entre sí.\n\n\n\n\n\n2. La pena prevista en el inciso 1) será aumentada en un tercio del máximo y en la mitad del mínimo, en los siguientes casos:\n\n\n\n\n\na) Cuando el autor realizare el hecho con habitualidad o como miembro\nde una asociación o banda formada para la comisión continuada de hechos\nde esta naturaleza;\n\n\n\n\n\nb) Cuando el autor fuera funcionario público que hubiera cometido el\nhecho en ejercicio u ocasión de sus funciones. En este caso, sufrirá\nademás pena de inhabilitación especial de tres (3) a diez (10) años. La\nmisma pena sufrirá el que hubiere actuado en ejercicio de una profesión\nu oficio que requieran habilitación especial.\n\n\n\n\n\n3. El que recibiere bienes u otros activos provenientes de un ilícito\npenal, con el fin de hacerlos aplicar en una operación de las previstas\nen el inciso 1), que les dé la apariencia posible de un origen lícito\nserá reprimido con la pena de prisión de seis (6) meses a tres (3) años.\n\n\n\n\n\n4. Si el valor de los bienes no superare la suma indicada en el inciso\n1), el autor será reprimido con la pena de multa de cinco (5) a veinte\n(20) veces del monto de la operación.\n\n\n\n\n\n5. Las disposiciones de este artículo regirán aún cuando el ilícito\npenal precedente hubiera sido cometido fuera del ámbito de aplicación\nespacial de este Código, en tanto el hecho que lo tipificara también\nhubiera estado sancionado con pena en el lugar de su comisión.\n\n\n\n\n\n(Artículo sustituido por art. 2° de la Ley N° 27.739 B.O. 15/3/2024.)",
-      "incisos": [],
+      "text": "1. Será reprimido con prisión de tres (3) a diez (10) años y multa de dos (2) a diez (10) veces del monto de la operación, el que convirtiere, transfiriere, administrare, vendiere, gravare, adquiriere, disimulare o de cualquier otro modo pusiere en circulación en el mercado, bienes u otros activos provenientes de un ilícito penal, con la consecuencia posible de que el origen de los bienes originarios o los subrogantes adquieran la apariencia de un origen lícito, y siempre que su valor supere la suma de ciento cincuenta (150) Salarios mínimos, vitales y móviles al momento de los hechos, sea en un solo acto o por la reiteración de hechos diversos vinculados entre sí. 2. La pena prevista en el inciso 1) será aumentada en un tercio del máximo y en la mitad del mínimo, en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Cuando el autor realizare el hecho con habitualidad o como miembro de una asociación o banda formada para la comisión continuada de hechos de esta naturaleza;"
+        },
+        {
+          "id": "b",
+          "text": "Cuando el autor fuera funcionario público que hubiera cometido el hecho en ejercicio u ocasión de sus funciones. En este caso, sufrirá además pena de inhabilitación especial de tres (3) a diez (10) años. La misma pena sufrirá el que hubiere actuado en ejercicio de una profesión u oficio que requieran habilitación especial. 3. El que recibiere bienes u otros activos provenientes de un ilícito penal, con el fin de hacerlos aplicar en una operación de las previstas en el inciso 1), que les dé la apariencia posible de un origen lícito será reprimido con la pena de prisión de seis (6) meses a tres (3) años. 4. Si el valor de los bienes no superare la suma indicada en el inciso 1), el autor será reprimido con la pena de multa de cinco (5) a veinte (20) veces del monto de la operación. 5. Las disposiciones de este artículo regirán aún cuando el ilícito penal precedente hubiera sido cometido fuera del ámbito de aplicación espacial de este Código, en tanto el hecho que lo tipificara también hubiera estado sancionado con pena en el lugar de su comisión. (Artículo sustituido por art. 2° de la Ley N° 27.739 B.O. 15/3/2024.)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "304",
-      "text": "- Cuando los\nhechos delictivos previstos en el artículo precedente hubieren sido\nrealizados en nombre, o con la intervención, o en beneficio de una\npersona de existencia ideal, se impondrán a la entidad las siguientes\nsanciones conjunta o alternativamente:\n1. Multa de dos (2) a diez (10) veces el valor de los bienes objeto del delito.\n2. Suspensión total o parcial de actividades, que en ningún caso podrá exceder de diez (10) años.\n3. Suspensión para participar en concursos o\nlicitaciones estatales de obras o servicios públicos o en cualquier\notra actividad vinculada con el Estado, que en ningún caso podrá\nexceder de diez (10) años.\n4. Cancelación de la personería cuando hubiese sido\ncreada al solo efecto de la comisión del delito, o esos actos\nconstituyan la principal actividad de la entidad.\n5. Pérdida o suspensión de los beneficios estatales que tuviere.\n6. Publicación de un extracto de la sentencia condenatoria a costa de la persona jurídica.\nPara graduar estas sanciones, los jueces tendrán en\ncuenta el incumplimiento de reglas y procedimientos internos, la\nomisión de vigilancia sobre la actividad de los autores y partícipes,\nla extensión del daño causado, el monto de dinero involucrado en la\ncomisión del delito, el tamaño, la naturaleza y la capacidad económica\nde la persona jurídica.\nCuando fuere indispensable mantener la continuidad\noperativa de la entidad, o de una obra, o de un servicio en particular,\nno serán aplicables las sanciones previstas por el inciso 2 y el inciso\n4.\n(Artículo incorporado por art. 5º de la Ley Nº 26.683 B.O. 21/06/2011)",
-      "incisos": [],
+      "text": "- Cuando los hechos delictivos previstos en el artículo precedente hubieren sido realizados en nombre, o con la intervención, o en beneficio de una persona de existencia ideal, se impondrán a la entidad las siguientes sanciones conjunta o alternativamente:",
+      "incisos": [
+        {
+          "id": "1",
+          "text": "Multa de dos (2) a diez (10) veces el valor de los bienes objeto del delito."
+        },
+        {
+          "id": "2",
+          "text": "Suspensión total o parcial de actividades, que en ningún caso podrá exceder de diez (10) años."
+        },
+        {
+          "id": "3",
+          "text": "Suspensión para participar en concursos o licitaciones estatales de obras o servicios públicos o en cualquier otra actividad vinculada con el Estado, que en ningún caso podrá exceder de diez (10) años."
+        },
+        {
+          "id": "4",
+          "text": "Cancelación de la personería cuando hubiese sido creada al solo efecto de la comisión del delito, o esos actos constituyan la principal actividad de la entidad."
+        },
+        {
+          "id": "5",
+          "text": "Pérdida o suspensión de los beneficios estatales que tuviere."
+        },
+        {
+          "id": "6",
+          "text": "Publicación de un extracto de la sentencia condenatoria a costa de la persona jurídica. Para graduar estas sanciones, los jueces tendrán en cuenta el incumplimiento de reglas y procedimientos internos, la omisión de vigilancia sobre la actividad de los autores y partícipes, la extensión del daño causado, el monto de dinero involucrado en la comisión del delito, el tamaño, la naturaleza y la capacidad económica de la persona jurídica. Cuando fuere indispensable mantener la continuidad operativa de la entidad, o de una obra, o de un servicio en particular, no serán aplicables las sanciones previstas por el inciso 2 y el inciso 4. (Artículo incorporado por art. 5º de la Ley Nº 26.683 B.O. 21/06/2011)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -2598,8 +3521,33 @@
     },
     {
       "number": "306",
-      "text": "1. Será reprimido con prisión de cinco (5) a quince (15) años y multa\nde dos (2) a diez (10) veces del monto de la operación, el que directa\no indirectamente recolectare o proveyere bienes u otros activos, de\nfuente lícita o ilícita, con la intención de que se utilicen, o a\nsabiendas de que serán utilizados, en todo o en parte:\n\n\n\n\n\n\n\na) Para financiar la comisión de un delito con la finalidad establecida en el artículo 41 quinquies;\n\n\n\n\n\n\n\nb) Por una organización que cometa o intente cometer delitos con la finalidad establecida en el artículo 41 quinquies;\n\n\n\n\n\n\n\nc) Por un individuo que cometa, intente cometer o participe de\ncualquier modo en la comisión de delitos con la finalidad establecida\nen el artículo 41 quinquies;\n\n\n\n\n\n\n\nd) Para financiar, para sí o para terceros, el viaje o la logística de\nindividuos y/o cosas a un Estado distinto al de su residencia o\nnacionalidad, o dentro del mismo territorio nacional, con el propósito\nde perpetrar, planear, preparar o participar en delitos con la\nfinalidad prevista en el artículo 41 quinquies;\n\n\n\n\n\n\n\ne) Para financiar, para sí o para terceros, la provisión o recepción de\nentrenamiento para la comisión de delitos con la finalidad prevista en\nel artículo 41 quinquies;\n\n\n\n\n\n\n\nf) Para financiar la adquisición, elaboración, producción, desarrollo,\nposesión, suministro, exportación, importación, almacenamiento,\ntransporte, transferencia, o de cualquier manera el empleo de armas de\ndestrucción masiva del tipo nuclear, química, biológica, sus sistemas\nvectores, medio de lanzamiento y sus materiales relacionados,\nincluyendo tecnologías y bienes de uso dual para cometer cualquiera de\nlos delitos previstos en este Código o en Convenciones Internacionales.\n\n\n\n\n\n\n\nTambién será reprimido con la misma pena de prisión y multa quien\nelabore, produzca, fabrique, desarrolle, posea, suministre, exporte,\nimporte, almacene, transporte, transfiera, emplee, o que de cualquier\nforma prolifere; incrementando, acrecentando, reproduciendo o\nmultiplicando, las armas de destrucción masiva señaladas en el párrafo\nanterior, sus sistemas vectores y sus materiales relacionados\ndestinados a su preparación.\n\n\n\n\n\n\n\n2. Las penas establecidas se aplicarán independientemente del\nacaecimiento del delito al que se destinara el financiamiento y, si\néste se cometiere, aún si los bienes o el dinero no fueran utilizados\npara su comisión.\n\n\n\n\n\n\n\n3. Si la escala penal prevista para el delito que se financia o\npretende financiar fuera menor que la establecida en este artículo, se\naplicará al caso la escala penal del delito que se trate.\n\n\n\n\n\n\n\n4. Las disposiciones de este artículo regirán aun cuando el ilícito\npenal que se financia o se pretende financiar tuviere lugar fuera del\námbito de aplicación espacial de este Código, o cuando en el caso de\nlos incisos b) y c) la organización o el individuo se encontraran fuera\ndel territorio nacional, en tanto el hecho también hubiera estado\nsancionado con pena en la jurisdicción competente para su juzgamiento.\n\n\n\n\n\n\n\n\n(Artículo sustituido por art. 3° de la Ley N° 27.739 B.O. 15/3/2024.)",
-      "incisos": [],
+      "text": "1. Será reprimido con prisión de cinco (5) a quince (15) años y multa de dos (2) a diez (10) veces del monto de la operación, el que directa o indirectamente recolectare o proveyere bienes u otros activos, de fuente lícita o ilícita, con la intención de que se utilicen, o a sabiendas de que serán utilizados, en todo o en parte:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Para financiar la comisión de un delito con la finalidad establecida en el artículo 41 quinquies;"
+        },
+        {
+          "id": "b",
+          "text": "Por una organización que cometa o intente cometer delitos con la finalidad establecida en el artículo 41 quinquies;"
+        },
+        {
+          "id": "c",
+          "text": "Por un individuo que cometa, intente cometer o participe de cualquier modo en la comisión de delitos con la finalidad establecida en el artículo 41 quinquies;"
+        },
+        {
+          "id": "d",
+          "text": "Para financiar, para sí o para terceros, el viaje o la logística de individuos y/o cosas a un Estado distinto al de su residencia o nacionalidad, o dentro del mismo territorio nacional, con el propósito de perpetrar, planear, preparar o participar en delitos con la finalidad prevista en el artículo 41 quinquies;"
+        },
+        {
+          "id": "e",
+          "text": "Para financiar, para sí o para terceros, la provisión o recepción de entrenamiento para la comisión de delitos con la finalidad prevista en el artículo 41 quinquies;"
+        },
+        {
+          "id": "f",
+          "text": "Para financiar la adquisición, elaboración, producción, desarrollo, posesión, suministro, exportación, importación, almacenamiento, transporte, transferencia, o de cualquier manera el empleo de armas de destrucción masiva del tipo nuclear, química, biológica, sus sistemas vectores, medio de lanzamiento y sus materiales relacionados, incluyendo tecnologías y bienes de uso dual para cometer cualquiera de los delitos previstos en este Código o en Convenciones Internacionales. También será reprimido con la misma pena de prisión y multa quien elabore, produzca, fabrique, desarrolle, posea, suministre, exporte, importe, almacene, transporte, transfiera, emplee, o que de cualquier forma prolifere; incrementando, acrecentando, reproduciendo o multiplicando, las armas de destrucción masiva señaladas en el párrafo anterior, sus sistemas vectores y sus materiales relacionados destinados a su preparación. 2. Las penas establecidas se aplicarán independientemente del acaecimiento del delito al que se destinara el financiamiento y, si éste se cometiere, aún si los bienes o el dinero no fueran utilizados para su comisión. 3. Si la escala penal prevista para el delito que se financia o pretende financiar fuera menor que la establecida en este artículo, se aplicará al caso la escala penal del delito que se trate. 4. Las disposiciones de este artículo regirán aun cuando el ilícito penal que se financia o se pretende financiar tuviere lugar fuera del ámbito de aplicación espacial de este Código, o cuando en el caso de los incisos b) y c) la organización o el individuo se encontraran fuera del territorio nacional, en tanto el hecho también hubiera estado sancionado con pena en la jurisdicción competente para su juzgamiento. (Artículo sustituido por art. 3° de la Ley N° 27.739 B.O. 15/3/2024.)"
+        }
+      ],
       "location": {},
       "materia": []
     },
@@ -2612,15 +3560,41 @@
     },
     {
       "number": "308",
-      "text": "El mínimo\nde la pena prevista en el artículo anterior se elevará a dos (2) años\nde prisión y el máximo a seis (6) años de prisión, cuando:\n\n\n\n\n\n\n\na)    Los autores del delito utilizaren o suministraren información privilegiada de manera habitual;\n\n\n\n\n\n\n\nb)    El uso o suministro de información privilegiada diera lugar a la\nobtención de un beneficio o evitara un perjuicio económico, para sí o\npara terceros. \n\n\n\n\n\n\n\nEl máximo de la pena prevista se elevará a ocho (8) años de prisión cuando:\n\n\n\n\n\n\n\nc)    El uso o suministro de información privilegiada causare un grave perjuicio en el mercado de valores;\n\n\n\n\n\n\n\nd)    El delito fuere cometido por un director, miembro del órgano de\nfiscalización, funcionario o empleado de una entidad autorregulada o de\nsociedades calificadoras de riesgo, o ejerciera profesión de las que\nrequieren habilitación o matrícula, o un funcionario público. En estos\ncasos, se impondrá además pena de inhabilitación especial de hasta ocho\n(8) años.\n\n\n\n\n\n\n\n(Artículo incorporado por art. 4° de la Ley N° 26.733 B.O. 28/12/2011) (Artículo 307 renumerado como artículo 308 por art. 2° del Decreto N° 169/2012 B.O. 06/02/2012)",
-      "incisos": [],
+      "text": "El mínimo de la pena prevista en el artículo anterior se elevará a dos (2) años de prisión y el máximo a seis (6) años de prisión, cuando:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Los autores del delito utilizaren o suministraren información privilegiada de manera habitual;"
+        },
+        {
+          "id": "b",
+          "text": "El uso o suministro de información privilegiada diera lugar a la obtención de un beneficio o evitara un perjuicio económico, para sí o para terceros. El máximo de la pena prevista se elevará a ocho (8) años de prisión cuando:"
+        },
+        {
+          "id": "c",
+          "text": "El uso o suministro de información privilegiada causare un grave perjuicio en el mercado de valores;"
+        },
+        {
+          "id": "d",
+          "text": "El delito fuere cometido por un director, miembro del órgano de fiscalización, funcionario o empleado de una entidad autorregulada o de sociedades calificadoras de riesgo, o ejerciera profesión de las que requieren habilitación o matrícula, o un funcionario público. En estos casos, se impondrá además pena de inhabilitación especial de hasta ocho (8) años. (Artículo incorporado por art. 4° de la Ley N° 26.733 B.O. 28/12/2011) (Artículo 307 renumerado como artículo 308 por art. 2° del Decreto N° 169/2012 B.O. 06/02/2012)"
+        }
+      ],
       "location": {},
       "materia": []
     },
     {
       "number": "309",
-      "text": "1.    Será reprimido con prisión de uno (1) a cuatro (4) años, multa\nequivalente al monto de la operación e inhabilitación de hasta cinco\n(5) años, el que: \n\n\n\n\n\n\n\na)    Realizare transacciones u operaciones que hicieren subir,\nmantener o bajar el precio de valores negociables u otros instrumentos\nfinancieros, valiéndose de noticias falsas, negociaciones fingidas,\nreunión o coalición entre los principales tenedores de la especie, con\nel fin de producir la apariencia de mayor liquidez o de negociarla a un\ndeterminado precio;\n\n\n\n\n\n\n\nb)    Ofreciere valores negociables o instrumentos financieros,\ndisimulando u ocultando hechos o circunstancias verdaderas o afirmando\no haciendo entrever hechos o circunstancias falsas. \n\n\n\n\n\n\n\n2. Será reprimido con prisión de dos (2) a seis (6) años, cuando el\nrepresentante, administrador o fiscalizador de una sociedad comercial\nde las que tienen obligación de establecer órganos de fiscalización\nprivada, informare a los socios o accionistas ocultando o falseando\nhechos importantes para apreciar la situación económica de la empresa o\nque en los balances, memorias u otros documentos de contabilidad,\nconsignare datos falsos o incompletos.\n\n\n\n\n\n\n\n(Artículo incorporado por art. 5° de la Ley N° 26.733 B.O. 28/12/2011) (Artículo 308 renumerado como artículo 309 por art. 3° del Decreto N° 169/2012 B.O. 06/02/2012)",
-      "incisos": [],
+      "text": "1. Será reprimido con prisión de uno (1) a cuatro (4) años, multa equivalente al monto de la operación e inhabilitación de hasta cinco (5) años, el que:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Realizare transacciones u operaciones que hicieren subir, mantener o bajar el precio de valores negociables u otros instrumentos financieros, valiéndose de noticias falsas, negociaciones fingidas, reunión o coalición entre los principales tenedores de la especie, con el fin de producir la apariencia de mayor liquidez o de negociarla a un determinado precio;"
+        },
+        {
+          "id": "b",
+          "text": "Ofreciere valores negociables o instrumentos financieros, disimulando u ocultando hechos o circunstancias verdaderas o afirmando o haciendo entrever hechos o circunstancias falsas. 2. Será reprimido con prisión de dos (2) a seis (6) años, cuando el representante, administrador o fiscalizador de una sociedad comercial de las que tienen obligación de establecer órganos de fiscalización privada, informare a los socios o accionistas ocultando o falseando hechos importantes para apreciar la situación económica de la empresa o que en los balances, memorias u otros documentos de contabilidad, consignare datos falsos o incompletos. (Artículo incorporado por art. 5° de la Ley N° 26.733 B.O. 28/12/2011) (Artículo 308 renumerado como artículo 309 por art. 3° del Decreto N° 169/2012 B.O. 06/02/2012)"
+        }
+      ],
       "location": {},
       "materia": []
     },

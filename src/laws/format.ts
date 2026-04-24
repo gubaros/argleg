@@ -1,6 +1,13 @@
 import type { Article, Law, LawId } from "./types.js";
 import type { SearchHit } from "./search.js";
 
+function formatInciso(id: string, text: string): string {
+  const clean = text.trim().replace(/\n{2,}/g, "\n");
+  const lines = clean.split("\n");
+  if (lines.length === 1) return `- **${id})** ${lines[0]}`;
+  return [`- **${id})** ${lines[0]}`, ...lines.slice(1).map((line) => `  ${line}`)].join("\n");
+}
+
 export function formatArticle(lawId: LawId, law: Law, art: Article): string {
   const parts: string[] = [];
   parts.push(`# ${law.shortName} — Art. ${art.number}`);
@@ -8,11 +15,11 @@ export function formatArticle(lawId: LawId, law: Law, art: Article): string {
   const loc = formatLocation(art);
   if (loc) parts.push(`_${loc}_`);
   parts.push("");
-  parts.push(art.text.trim());
+  if (art.text.trim()) parts.push(art.text.trim());
   if (art.incisos.length > 0) {
     parts.push("");
     for (const inc of art.incisos) {
-      parts.push(`- **${inc.id})** ${inc.text.trim()}`);
+      parts.push(formatInciso(inc.id, inc.text));
     }
   }
   parts.push("");

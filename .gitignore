@@ -5,3 +5,6 @@ dist/
 .env
 .env.*
 coverage/
+tmp/
+parser_logs/
+.claude/

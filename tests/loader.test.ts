@@ -155,10 +155,39 @@ describe("findArticle", () => {
     expect(art?.text.toLowerCase()).toContain("aterrorizar a la población");
   });
 
+  it("loads Penal article 59 with structured numeric incisos", () => {
+    const art = findArticle(lib, "penal", "59");
+    expect(art).toBeDefined();
+    expect(art?.incisos.length).toBeGreaterThan(3);
+    expect(art?.incisos[0]?.id).toBe("1");
+  });
+
   it("loads LDC article 8bis with bis suffix preserved", () => {
     const art = findArticle(lib, "ley_24240", "8bis");
     expect(art).toBeDefined();
     expect(art?.text.toLowerCase()).toContain("trato digno");
+  });
+
+  it("loads Constitución article 75 with structured numbered incisos", () => {
+    const art = findArticle(lib, "constitucion", "75");
+    expect(art).toBeDefined();
+    expect(art?.incisos.length).toBeGreaterThan(10);
+    expect(art?.incisos[0]?.id).toBe("1");
+  });
+
+  it("loads Constitución article 99 with structured numbered incisos", () => {
+    const art = findArticle(lib, "constitucion", "99");
+    expect(art).toBeDefined();
+    expect(art?.incisos.length).toBeGreaterThan(5);
+    expect(art?.incisos[0]?.id).toBe("1");
+    expect(art?.incisos.map((x) => x.id)).toContain("17");
+    expect(art?.incisos.map((x) => x.id)).not.toContain("23");
+  });
+
+  it("loads CCyC article 14 with structured incisos", () => {
+    const art = findArticle(lib, "ccyc", "14");
+    expect(art).toBeDefined();
+    expect(art?.incisos.map((x) => x.id)).toEqual(["a", "b"]);
   });
 
   it("still has substantive CCyC content in mid-range articles", () => {

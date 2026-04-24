@@ -41,8 +41,6 @@ describe("formatArticle", () => {
 
   it("renders incisos when present", () => {
     const law = lib.laws.get("ccyc")!;
-    // Build a synthetic article with structured incisos so the test is
-    // independent of whether the live data keeps incisos structured or inlined.
     const synthetic = {
       number: "test",
       title: "Ejemplo",
@@ -57,6 +55,14 @@ describe("formatArticle", () => {
     const out = formatArticle("ccyc", law, synthetic);
     expect(out).toContain("**a)**");
     expect(out).toContain("**b)**");
+  });
+
+  it("indents multiline incisos cleanly", () => {
+    const law = lib.laws.get("constitucion")!;
+    const art = findArticle(lib, "constitucion", "75")!;
+    const out = formatArticle("constitucion", law, art);
+    expect(out).toContain("- **1)**");
+    expect(out).toContain("\n  derechos de importación y exportación");
   });
 });
 

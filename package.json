@@ -1,6 +1,6 @@
 {
   "name": "argleg-mcp",
-  "version": "0.1.0",
+  "version": "0.1.29",
   "private": true,
   "description": "MCP server for Argentine legislation (read-only, local source of truth).",
   "type": "module",
@@ -9,6 +9,7 @@
   },
   "main": "dist/index.js",
   "scripts": {
+    "prebuild": "node scripts/bump-version.mjs",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",

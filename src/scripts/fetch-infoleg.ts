@@ -184,7 +184,9 @@ async function main(): Promise<void> {
   const id = LawIdSchema.parse(args.id);
 
   const { html, source } = await readHtml(args);
+  process.env.ARGLEG_WRITE_PARSER_LOGS = "1";
   const articles = extractArticlesForLaw(id, html);
+  delete process.env.ARGLEG_WRITE_PARSER_LOGS;
 
   if (articles.length === 0) {
     throw new Error(

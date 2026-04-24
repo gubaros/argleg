@@ -72,7 +72,7 @@ describe("searchArticles", () => {
 
   it("returns empty array when law has no match", () => {
     const hits = searchArticles(lib, {
-      query: "xyz_term_that_will_never_match_zzz",
+      query: "qzxvplmnoa_9823746501_unmatchable_token",
     });
     expect(hits).toHaveLength(0);
   });

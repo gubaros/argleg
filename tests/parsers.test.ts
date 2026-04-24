@@ -32,4 +32,20 @@ describe("parsers by corpus", () => {
     expect(arts.map((a) => a.number)).toEqual(["1", "2"]);
     expect(arts[0]?.text).toContain("Juicio previo");
   });
+
+  it("uses a specific CPCCN parser that preserves full article bodies and cuts before antecedentes", () => {
+    const html = [
+      "<div id='Contenido'>",
+      "Art. 1° - Competencia.<br>",
+      "CAPITULO II - CUESTIONES DE COMPETENCIA<br>",
+      "Art. 2° - Prórroga.<br>",
+      "Antecedentes Normativos<br>",
+      "Art. 999 - ruido<br>",
+      "</div>",
+    ].join("");
+    const arts = extractArticlesForLaw("cpccn", html);
+    expect(arts.map((a) => a.number)).toEqual(["1", "2"]);
+    expect(arts[0]?.text).toContain("Competencia");
+    expect(arts[1]?.text).toContain("Prórroga");
+  });
 });

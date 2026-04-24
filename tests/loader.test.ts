@@ -102,6 +102,45 @@ describe("findArticle", () => {
     expect(art2200?.text.toLowerCase()).toContain("propietario no deudor");
   });
 
+  it("loads substantive CPPF article 1 after parser-specific cleanup", () => {
+    const art = findArticle(lib, "cppf", "1");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("juicio previo");
+  });
+
+  it("loads substantive CPPF article 202 instead of a section heading", () => {
+    const art = findArticle(lib, "cppf", "202");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("actos de inicio");
+  });
+
+  it("loads substantive CPPF final article 349", () => {
+    const art = findArticle(lib, "cppf", "349");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("fuerzas armadas");
+  });
+
+  it("loads CPCCN article 134 with full body instead of a truncated stub", () => {
+    const art = findArticle(lib, "cpccn", "134");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("notificación");
+    expect(art?.text.length).toBeGreaterThan(100);
+  });
+
+  it("loads CPCCN article 362 with full body instead of a truncated stub", () => {
+    const art = findArticle(lib, "cpccn", "362");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("audiencia prevista en el");
+    expect(art?.text.toLowerCase()).toContain("artículo 360");
+  });
+
+  it("loads CPCCN final article 784 and stops before antecedentes", () => {
+    const art = findArticle(lib, "cpccn", "784");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("venta de mercaderías");
+    expect(art?.text.toLowerCase()).not.toContain("antecedentes normativos");
+  });
+
   it("still has substantive CCyC content in mid-range articles", () => {
     const art = findArticle(lib, "ccyc", "765");
     expect(art).toBeDefined();

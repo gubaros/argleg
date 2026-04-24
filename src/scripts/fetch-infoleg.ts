@@ -3,7 +3,7 @@ import { readFile, writeFile, stat, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { homedir } from "node:os";
 import { LAW_FILE_BY_ID, LawIdSchema, LawSchema } from "../laws/types.js";
-import { extractArticles, buildLaw } from "./infoleg.js";
+import { extractArticlesForLaw, buildLaw } from "./infoleg.js";
 
 interface Args {
   url?: string;
@@ -143,7 +143,11 @@ function parseArgs(argv: string[]): Args {
 async function readHtml(args: Args): Promise<{ html: string; source: string }> {
   if (args.file) {
     const abs = path.resolve(args.file);
-    const html = await readFile(abs, "utf8");
+    const buf = await readFile(abs);
+    let html = buf.toString("utf8");
+    if (looksMojibake(html)) {
+      html = buf.toString("latin1");
+    }
     return { html, source: abs };
   }
   if (args.url) {
@@ -180,11 +184,11 @@ async function main(): Promise<void> {
   const id = LawIdSchema.parse(args.id);
 
   const { html, source } = await readHtml(args);
-  const articles = extractArticles(html);
+  const articles = extractArticlesForLaw(id, html);
 
   if (articles.length === 0) {
     throw new Error(
-      "No se detectaron artículos. Revisá el HTML fuente o ajustá la heurística en src/scripts/infoleg.ts",
+      "No se detectaron artículos. Revisá el HTML fuente o el parser específico en src/scripts/parsers/.",
     );
   }
 

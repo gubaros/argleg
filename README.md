@@ -46,8 +46,20 @@ Los archivos en `data/` son esqueletos con texto placeholder.
 
 ### Auto-importar desde InfoLEG
 
-El proyecto incluye un script `fetch-infoleg` que descarga una norma desde InfoLEG,
-extrae los artículos con heurística por regex y genera el JSON automáticamente.
+El proyecto incluye un script `fetch-infoleg` que descarga una norma desde InfoLEG
+y genera el JSON automáticamente.
+
+**Importante:** a partir de esta versión, cada corpus pasa por su propio parser.
+No todos tienen el mismo nivel de madurez todavía:
+
+- `ccyc` → parser específico sólido (salta ley aprobatoria / corta en ANEXO II)
+- `cppf` → parser específico implementado, pero todavía requiere una pasada adicional de validación de corpus regenerado
+- `constitucion` → parser dedicado por archivo, actualmente con estrategia base
+- `penal` → parser dedicado por archivo, actualmente con estrategia base
+- `cpccn` → parser dedicado por archivo, actualmente con estrategia base
+- `ley_24240` → parser dedicado por archivo, actualmente con estrategia base
+
+La arquitectura ya no usa un único parser compartido para todas las normas.
 
 ```bash
 # dry-run: imprime el JSON por stdout sin escribir nada
@@ -75,7 +87,7 @@ URLs sugeridas (InfoLEG texto actualizado):
 | `cpccn` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/40000-44999/43797/texact.htm |
 | `ley_24240` | http://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/638/texact.htm |
 
-> **Es un importador best-effort.** El script usa regex sobre headers `ARTICULO N°` / `Art. N` y trunca al encontrar secciones de `Antecedentes Normativos` / `NOTA`. Revisá siempre el output antes de usarlo: puede arrastrar encabezados de capítulo al final de un artículo, o no detectar ubicación (`location`), materia (`materia`) e incisos — esos campos quedan vacíos y los enriquecés a mano cuando querés.
+> **Es un importador con parsers específicos por corpus.** Aun así, sigue siendo necesario revisar el output: algunos corpus todavía pueden arrastrar encabezados de capítulo al final de un artículo, o no detectar ubicación (`location`), materia (`materia`) e incisos. Esos campos siguen quedando vacíos y los enriquecés a mano cuando querés.
 
 ### Formato de cada archivo JSON
 

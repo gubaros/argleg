@@ -16,13 +16,16 @@ export function extractArticles(html: string): Article[] {
   // Prefer the known InfoLEG container, fall back to body.
   const container = $("#Contenido").length ? $("#Contenido") : $("body");
 
-  const blocks = container
-    .find("p, div, h1, h2, h3, h4, h5, h6, li, blockquote, td")
-    .map((_, el) => $(el).text().replace(/ /g, " ").trim())
-    .get()
-    .filter((t) => t.length > 0);
+  // InfoLEG often encodes article flow with <br> tags inside a few large containers.
+  // Flattening only block elements loses late sections (notably in CCyC), so we first
+  // serialize the whole container HTML, turn <br> into line breaks, then read text.
+  const rawHtml = container.html() ?? "";
+  const withBreaks = rawHtml.replace(/<br\s*\/?>/gi, "\n");
+  const text = load(`<div id="root">${withBreaks}</div>`)("#root")
+    .text()
+    .replace(/ /g, " ")
+    .replace(/\r\n/g, "\n");
 
-  const text = blocks.join("\n");
   return parseArticlesFromText(text);
 }
 
@@ -40,6 +43,7 @@ const FOOTER_MARKERS = [
   /^\s*Normas\s+modificatorias\b/im,
   /^\s*Notas?:\s*$/im,
   /^\s*NOTA:\s/im,
+  /^\s*ANEXO\s+II\b/im,
 ];
 
 function truncateAtFooter(text: string): string {
@@ -61,32 +65,31 @@ function normalizeForSearch(text: string): string {
 }
 
 function sliceAtAnnexIIfPresent(text: string): string {
-  const normalized = normalizeForSearch(text);
-  const candidates = [
-    "anexo i titulo preliminar",
-    "anexo i - titulo preliminar",
-    "anexo i — titulo preliminar",
-    "anexo i capítulo 1 derecho",
-    "anexo i capitulo 1 derecho",
+  const directPatterns = [
+    /anexo\s+i\s+titulo\s+preliminar/iu,
+    /anexo\s+i\s+[\-–—]?\s*titulo\s+preliminar/iu,
+    /anexo\s+i\s+cap[ií]tulo\s+1\s+derecho/iu,
   ];
 
-  let best = -1;
-  for (const candidate of candidates) {
-    const idx = normalized.indexOf(candidate);
-    if (idx >= 0 && (best === -1 || idx < best)) best = idx;
+  let best: number | null = null;
+  for (const re of directPatterns) {
+    const m = re.exec(text);
+    if (m && (best === null || m.index < best)) best = m.index;
   }
-  if (best === -1) return text;
+  if (best !== null) return text.slice(best);
 
-  // Map approximate normalized index back to original by walking chars.
-  let seen = 0;
-  for (let i = 0; i < text.length; i++) {
-    const chunk = normalizeForSearch(text[i] ?? "");
-    seen += chunk.length;
-    if (seen >= best) {
-      return text.slice(i);
-    }
+  const normalized = normalizeForSearch(text);
+  const idx = normalized.indexOf("anexo i titulo preliminar");
+  if (idx === -1) return text;
+
+  // Fallback: rough projection from normalized index to original index.
+  let out = 0;
+  let acc = "";
+  while (out < text.length && acc.length < idx) {
+    acc += normalizeForSearch(text[out] ?? "");
+    out += 1;
   }
-  return text;
+  return text.slice(out);
 }
 
 export function parseArticlesFromText(raw: string): Article[] {

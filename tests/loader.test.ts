@@ -89,14 +89,17 @@ describe("findArticle", () => {
     expect(withPrefix).toEqual(withoutPrefix);
   });
 
-  it("currently exposes the reported CCyC corruption at the start of the corpus", () => {
+  it("loads substantive CCyC article 1 after skipping the approving law", () => {
     const art1 = findArticle(lib, "ccyc", "1");
-    const art10 = findArticle(lib, "ccyc", "10");
     expect(art1).toBeDefined();
-    expect(art1?.text.toLowerCase()).toContain("apruébase el");
-    expect(art1?.text.toLowerCase()).toContain("código civil y comercial");
-    expect(art10?.text.toLowerCase()).toContain("comuníquese al");
-    expect(art10?.text.toLowerCase()).toContain("poder ejecutivo");
+    expect(art1?.text.toLowerCase()).toContain("fuentes");
+    expect(art1?.text.toLowerCase()).toContain("aplicaci");
+  });
+
+  it("loads substantive CCyC article 2200 from the high range", () => {
+    const art2200 = findArticle(lib, "ccyc", "2200");
+    expect(art2200).toBeDefined();
+    expect(art2200?.text.toLowerCase()).toContain("propietario no deudor");
   });
 
   it("still has substantive CCyC content in mid-range articles", () => {
@@ -105,9 +108,10 @@ describe("findArticle", () => {
     expect(art?.text.toLowerCase()).toContain("obligación es de dar dinero");
   });
 
-  it("keeps CCyC truncation visible for missing high articles", () => {
-    const art = findArticle(lib, "ccyc", "2200");
-    expect(art).toBeUndefined();
+  it("loads the final CCyC article 2671", () => {
+    const art = findArticle(lib, "ccyc", "2671");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("derecho aplicable");
   });
 });
 

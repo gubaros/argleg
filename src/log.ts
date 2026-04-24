@@ -1,0 +1,108 @@
+/**
+ * Logger for argleg-mcp.
+ *
+ * IMPORTANT: always writes to STDERR. STDOUT is reserved for the MCP
+ * JSON-RPC transport when the server is attached over stdio; writing
+ * anything else there would corrupt the protocol stream.
+ *
+ * Control level via env var ARGLEG_LOG_LEVEL: silent | info | verbose | debug
+ * Default: info.
+ *
+ * Also honours ARGLEG_LOG_JSON=1 to emit one JSON object per line
+ * (easier to pipe into log aggregators).
+ */
+
+export type LogLevel = "silent" | "info" | "verbose" | "debug";
+
+const LEVEL_RANK: Record<LogLevel, number> = {
+  silent: 0,
+  info: 1,
+  verbose: 2,
+  debug: 3,
+};
+
+function resolveLevel(): LogLevel {
+  const raw = (process.env.ARGLEG_LOG_LEVEL ?? "info").toLowerCase();
+  if (raw === "silent" || raw === "info" || raw === "verbose" || raw === "debug") {
+    return raw;
+  }
+  return "info";
+}
+
+const LEVEL: LogLevel = resolveLevel();
+const JSON_MODE = process.env.ARGLEG_LOG_JSON === "1";
+
+function enabled(at: LogLevel): boolean {
+  return LEVEL_RANK[at] <= LEVEL_RANK[LEVEL];
+}
+
+function emit(level: LogLevel, event: string, fields: Record<string, unknown> = {}): void {
+  if (!enabled(level)) return;
+  const ts = new Date().toISOString();
+  if (JSON_MODE) {
+    const line = JSON.stringify({ ts, level, event, ...fields });
+    process.stderr.write(line + "\n");
+    return;
+  }
+  const pairs = Object.entries(fields)
+    .filter(([, v]) => v !== undefined)
+    .map(([k, v]) => `${k}=${fmt(v)}`)
+    .join(" ");
+  process.stderr.write(`[argleg-mcp ${ts} ${level.padEnd(7)}] ${event}${pairs ? " " + pairs : ""}\n`);
+}
+
+function fmt(v: unknown): string {
+  if (typeof v === "string") {
+    // Keep short inline; quote if it has spaces or special chars.
+    if (v.length <= 80 && !/[\s"=]/.test(v)) return v;
+    return JSON.stringify(v);
+  }
+  if (v instanceof Error) return JSON.stringify({ message: v.message });
+  try {
+    return JSON.stringify(v);
+  } catch {
+    return String(v);
+  }
+}
+
+export const log = {
+  level: LEVEL,
+  info(event: string, fields?: Record<string, unknown>) {
+    emit("info", event, fields);
+  },
+  verbose(event: string, fields?: Record<string, unknown>) {
+    emit("verbose", event, fields);
+  },
+  debug(event: string, fields?: Record<string, unknown>) {
+    emit("debug", event, fields);
+  },
+  error(event: string, fields?: Record<string, unknown>) {
+    // Errors are always shown unless silent.
+    if (LEVEL === "silent") return;
+    const ts = new Date().toISOString();
+    if (JSON_MODE) {
+      process.stderr.write(JSON.stringify({ ts, level: "error", event, ...fields }) + "\n");
+      return;
+    }
+    const pairs = Object.entries(fields ?? {})
+      .filter(([, v]) => v !== undefined)
+      .map(([k, v]) => `${k}=${fmt(v)}`)
+      .join(" ");
+    process.stderr.write(`[argleg-mcp ${ts} error  ] ${event}${pairs ? " " + pairs : ""}\n`);
+  },
+};
+
+/** Truncate a string to at most n chars with ellipsis for log output. */
+export function truncate(s: string, n = 200): string {
+  if (s.length <= n) return s;
+  return s.slice(0, n) + `…(+${s.length - n} chars)`;
+}
+
+/** Best-effort size of a tool/resource/prompt result payload. */
+export function resultSize(result: unknown): number {
+  try {
+    return JSON.stringify(result).length;
+  } catch {
+    return -1;
+  }
+}

@@ -1,0 +1,920 @@
+{
+  "id": "constitucion",
+  "title": "Constitución de la Nación Argentina",
+  "shortName": "CN",
+  "officialNumber": "Constitución Nacional (texto ordenado 1994)",
+  "source": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/804/norma.htm",
+  "lastUpdated": "2026-04-24",
+  "articles": [
+    {
+      "number": "1",
+      "text": "Ordénase la publicación del texto\noficial de la Constitución Nacional (sancionada en 1853 con las\nreformas de los años 1860, 1866, 1898, 1957 y 1994) que es el que se\ntranscribe a continuación:\nCONSTITUCION DE LA NACION ARGENTINA\nPREÁMBULO\nNos los representantes del pueblo de la\nNación Argentina, reunidos en Congreso General Constituyente por\nvoluntad y elección de las provincias que la componen, en cumplimiento\nde pactos preexistentes, con el objeto de constituir la unión nacional,\nafianzar la justicia, consolidar la paz interior, proveer a la defensa\ncomún, promover el bienestar general, y asegurar los beneficios de la\nlibertad, para nosotros, para nuestra posteridad, y para todos los\nhombres del mundo que quieran habitar en el suelo argentino: invocando\nla protección de Dios, fuente de toda razón y justicia: ordenamos,\ndecretamos y establecemos esta Constitución, para la Nación Argentina.\nPRIMERA PARTE\nCapítulo Primero\nDeclaraciones, derechos y garantías",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "2",
+      "text": "El Gobierno federal sostiene el culto católico apostólico romano.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "3",
+      "text": "Las autoridades que\nejercen el Gobierno federal, residen en la ciudad que se declare\nCapital de la República por una ley especial del Congreso, previa\ncesión hecha por una o más legislaturas provinciales, del territorio\nque haya de federalizarse.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "4",
+      "text": "El Gobierno federal\nprovee a los gastos de la Nación con los fondos del Tesoro nacional\nformado del producto de derechos de importación y exportación, del de\nla venta o locación de tierras de propiedad nacional, de la renta de\nCorreos, de las demás contribuciones que equitativa y proporcionalmente\na la población imponga el Congreso General, y de los empréstitos y\noperaciones de crédito que decrete el mismo Congreso para urgencias de\nla Nación, o para empresas de utilidad nacional.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "5",
+      "text": "Cada provincia dictará\npara sí una Constitución bajo el sistema representativo republicano, de\nacuerdo con los principios, declaraciones y garantías de la\nConstitución Nacional; y que asegure su administración de justicia, su\nrégimen municipal, y la educación primaria. Bajo de estas condiciones\nel Gobierno federal, garante a cada provincia el goce y ejercicio de\nsus instituciones.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "6",
+      "text": "El Gobierno federal\ninterviene en el territorio de las provincias para garantir la forma\nrepublicana de gobierno, o repeler invasiones exteriores, y a\nrequisición de sus autoridades constituidas para sostenerlas o\nrestablecerlas, si hubiesen sido depuestas por la sedición, o por\ninvasión de otra provincia.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "7",
+      "text": "Los actos públicos y\nprocedimientos judiciales de una provincia gozan de entera fe en las\ndemás; y el Congreso puede por leyes generales determinar cuál será la\nforma probatoria de estos actos y procedimientos, y los efectos legales\nque producirán.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "8",
+      "text": "Los ciudadanos de cada\nprovincia gozan de todos los derechos, privilegios e inmunidades\ninherentes al título de ciudadano en las demás. La extradición de los\ncriminales es de obligación recíproca entre todas las provincias.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "9",
+      "text": "En todo el territorio de\nla Nación no habrá más aduanas que las nacionales, en las cuales\nregirán las tarifas que sancione el Congreso.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "10",
+      "text": "En el interior de la\nRepública es libre de derechos la circulación de los efectos de\nproducción o fabricación nacional, así como la de los géneros y\nmercancías de todas clases, despachadas en las aduanas exteriores.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "11",
+      "text": "Los artículos de\nproducción o fabricación nacional o extranjera, así como los ganados de\ntoda especie, que pasen por territorio de una provincia a otra, serán\nlibres de los derechos llamados de tránsito, siéndolo también los\ncarruajes, buques o bestias en que se transporten; y ningún otro\nderecho podrá imponérseles en adelante, cualquiera que sea su\ndenominación, por el hecho de transitar el territorio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "12",
+      "text": "Los buques destinados de\nuna provincia a otra, no serán obligados a entrar, anclar y pagar\nderechos por causa de tránsito, sin que en ningún caso puedan\nconcederse preferencias a un puerto respecto de otro, por medio de\nleyes o reglamentos de comercio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "13",
+      "text": "Podrán admitirse nuevas\nprovincias en la Nación; pero no podrá erigirse una provincia en el\nterritorio de otra u otras, ni de varias formarse una sola, sin el\nconsentimiento de la Legislatura de las provincias interesadas y del\nCongreso.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "14",
+      "text": "Todos los habitantes de\nla Nación gozan de los siguientes derechos conforme a las leyes que\nreglamenten su ejercicio; a saber: de trabajar y ejercer toda industria\nlícita; de navegar y comerciar; de peticionar a las autoridades; de\nentrar, permanecer, transitar y salir del territorio argentino; de\npublicar sus ideas por la prensa sin censura previa; de usar y disponer\nde su propiedad; de asociarse con fines útiles; de profesar libremente\nsu culto; de enseñar y aprender.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "14bis",
+      "text": "El trabajo en sus\ndiversas formas gozará de la protección de las leyes, las que\nasegurarán al trabajador: condiciones dignas y equitativas de labor,\njornada limitada; descanso y vacaciones pagados; retribución justa;\nsalario mínimo vital móvil; igual remuneración por igual tarea;\nparticipación en las ganancias de las empresas, con control de la\nproducción y colaboración en la dirección; protección contra el despido\narbitrario; estabilidad del empleado público; organización sindical\nlibre y democrática, reconocida por la simple inscripción en un\nregistro especial.\nQueda garantizado a los gremios: concertar convenios\ncolectivos de trabajo; recurrir a la conciliación y al arbitraje; el\nderecho de huelga. Los representantes gremiales gozarán de las\ngarantías necesarias para el cumplimiento de su gestión sindical y las\nrelacionadas con la estabilidad de su empleo.\nEl Estado otorgará los beneficios de la seguridad\nsocial, que tendrá carácter de integral e irrenunciable. En especial,\nla ley establecerá: el seguro social obligatorio, que estará a cargo de\nentidades nacionales o provinciales con autonomía financiera y\neconómica, administradas por los interesados con participación del\nEstado, sin que pueda existir superposición de aportes; jubilaciones y\npensiones móviles; la protección integral de la familia; la defensa del\nbien de familia; la compensación económica familiar y el acceso a una\nvivienda digna.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "15",
+      "text": "En la Nación Argentina no hay\nesclavos: los pocos que hoy existen quedan libres desde la jura de esta\nConstitución; y una ley especial reglará las indemnizaciones a que dé\nlugar esta declaración. Todo contrato de compra y venta de personas es\nun crimen de que serán responsables los que lo celebrasen, y el\nescribano o funcionario que lo autorice. Y los esclavos que de\ncualquier modo se introduzcan quedan libres por el solo hecho de pisar\nel territorio de la República.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "16",
+      "text": "La Nación Argentina no admite\nprerrogativas de sangre, ni de nacimiento: no hay en ella fueros\npersonales ni títulos de nobleza. Todos sus habitantes son iguales ante\nla ley, y admisibles en los empleos sin otra condición que la\nidoneidad. La igualdad es la base del impuesto y de las cargas públicas.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "17",
+      "text": "La propiedad es\ninviolable, y ningún habitante de la Nación puede ser privado de ella,\nsino en virtud de sentencia fundada en ley. La expropiación por causa\nde utilidad pública, debe ser calificada por ley y previamente\nindemnizada. Sólo el Congreso impone las contribuciones que se expresan\nen el Artículo 4º. Ningún servicio personal es exigible, sino en virtud\nde ley o de sentencia fundada en ley. Todo autor o inventor es\npropietario exclusivo de su obra, invento o descubrimiento, por el\ntérmino que le acuerde la ley. La confiscación de bienes queda borrada\npara siempre del Código Penal argentino. Ningún cuerpo armado puede\nhacer requisiciones, ni exigir auxilios de ninguna especie.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "18",
+      "text": "Ningún habitante de la\nNación puede ser penado sin juicio previo fundado en ley anterior al\nhecho del proceso, ni juzgado por comisiones especiales, o sacado de\nlos jueces designados por la ley antes del hecho de la causa. Nadie\npuede ser obligado a declarar contra sí mismo; ni arrestado sino en\nvirtud de orden escrita de autoridad competente. Es inviolable la\ndefensa en juicio de la persona y de los derechos. El domicilio es\ninviolable, como también la correspondencia epistolar y los papeles\nprivados; y una ley determinará en qué casos y con qué justificativos\npodrá procederse a su allanamiento y ocupación. Quedan abolidos para\nsiempre la pena de muerte por causas políticas, toda especie de\ntormento y los azotes. Las cárceles de la Nación serán sanas y limpias,\npara seguridad y no para castigo de los reos detenidos en ellas, y toda\nmedida que a pretexto de precaución conduzca a mortificarlos más allá\nde lo que aquélla exija, hará responsable al juez que la autorice.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "19",
+      "text": "Las acciones privadas de\nlos hombres que de ningún modo ofendan al orden y a la moral pública,\nni perjudiquen a un tercero, están sólo reservadas a Dios, y exentas de\nla autoridad de los magistrados. Ningún habitante de la Nación será\nobligado a hacer lo que no manda la ley, ni privado de lo que ella no\nprohíbe.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "20",
+      "text": "Los extranjeros gozan en\nel territorio de la Nación de todos los derechos civiles del ciudadano;\npueden ejercer su industria, comercio y profesión; poseer bienes\nraíces, comprarlos y enajenarlos; navegar los ríos y costas; ejercer\nlibremente su culto; testar y casarse conforme a las leyes. No están\nobligados a admitir la ciudadanía, ni a pagar contribuciones forzosas\nextraordinarias. Obtienen nacionalización residiendo dos años continuos\nen la Nación; pero la autoridad puede acortar este término a favor del\nque lo solicite, alegando y probando servicios a la República.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "21",
+      "text": "Todo ciudadano argentino\nestá obligado a armarse en defensa de la patria y de esta Constitución,\nconforme a las leyes que al efecto dicte el Congreso y a los decretos\ndel Ejecutivo nacional. Los ciudadanos por naturalización son libres de\nprestar o no este servicio por el término de diez años contados desde\nel día en que obtengan su carta de ciudadanía.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "22",
+      "text": "El pueblo no delibera ni\ngobierna, sino por medio de sus representantes y autoridades creadas\npor esta Constitución. Toda fuerza armada o reunión de personas que se\natribuya los derechos del pueblo y peticione a nombre de éste, comete\ndelito de sedición.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "23",
+      "text": "En caso de conmoción\ninterior o de ataque exterior que pongan en peligro el ejercicio de\nesta Constitución y de las autoridades creadas por ella, se declarará\nen estado de sitio la provincia o territorio en donde exista la\nperturbación del orden, quedando suspensas allí las garantías\nconstitucionales. Pero durante esta suspensión no podrá el presidente\nde la República condenar por sí ni aplicar penas. Su poder se limitará\nen tal caso respecto de las personas, a arrestarlas o trasladarlas de\nun punto a otro de la Nación, si ellas no prefiriesen salir fuera del\nterritorio argentino.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "24",
+      "text": "El Congreso promoverá la reforma de la actual legislación en todos sus ramos, y el establecimiento del juicio por jurados.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "25",
+      "text": "El Gobierno federal\nfomentará la inmigración europea; y no podrá restringir, limitar ni\ngravar con impuesto alguno la entrada en el territorio argentino de los\nextranjeros que traigan por objeto labrar la tierra, mejorar las\nindustrias, e introducir y enseñar las ciencias y las artes.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "26",
+      "text": "La navegación de los\nríos interiores de la Nación es libre para todas las banderas, con\nsujeción únicamente a los reglamentos que dicte la autoridad nacional.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "27",
+      "text": "El Gobierno federal está\nobligado a afianzar sus relaciones de paz y comercio con las potencias\nextranjeras por medio de tratados que estén en conformidad con los\nprincipios de derecho público establecidos en esta Constitución.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "28",
+      "text": "Los principios,\ngarantías y derechos reconocidos en los anteriores artículos, no podrán\nser alterados por las leyes que reglamenten su ejercicio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "29",
+      "text": "El Congreso no puede conceder al Ejecutivo nacional, ni las Legislaturas provinciales a los gobernadores de provincia, facultades extraordinarias, ni la suma del poder público, ni otorgarles sumisiones o supremacías\npor las que la vida, el honor o las fortunas de los argentinos queden a\nmerced de gobiernos o persona alguna. Actos de esta naturaleza llevan\nconsigo una nulidad insanable, y sujetarán a los que los formulen,\nconsientan o firmen, a la responsabilidad y pena de los infames\ntraidores a la patria.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "30",
+      "text": "La Constitución puede\nreformarse en el todo o en cualquiera de sus partes. La necesidad de\nreforma debe ser declarada por el Congreso con el voto de dos terceras\npartes, al menos, de sus miembros; pero no se efectuará sino por una\nConvención convocada al efecto.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "31",
+      "text": "Esta Constitución, las\nleyes de la Nación que en su consecuencia se dicten por el Congreso y\nlos tratados con las potencias extranjeras son la ley suprema de la\nNación; y las autoridades de cada provincia están obligadas a\nconformarse a ella, no obstante cualquiera disposición en contrario que\ncontengan las leyes o constituciones provinciales, salvo para la\nprovincia de Buenos Aires, los tratados ratificados después del Pacto\nde 11 de noviembre de 1859.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "32",
+      "text": "El Congreso federal no dictará leyes que restrinjan la libertad de imprenta o establezcan sobre ella la jurisdicción federal.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "33",
+      "text": "Las declaraciones,\nderechos y garantías que enumera la Constitución no serán entendidos\ncomo negación de otros derechos y garantías no enumerados; pero que\nnacen del principio de la soberanía del pueblo y de la forma\nrepublicana de gobierno.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "34",
+      "text": "Los jueces de las cortes\nfederales no podrán serlo al mismo tiempo de los tribunales de\nprovincia, ni el servicio federal, tanto en lo civil como en lo militar\nda residencia en la provincia en que se ejerza, y que no sea la del\ndomicilio habitual del empleado, entendiéndose esto para los efectos de\noptar a empleos en la provincia en que accidentalmente se encuentren.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "35",
+      "text": "Las denominaciones\nadoptadas sucesivamente desde 1810 hasta el presente, a saber:\nProvincias Unidas del Río de la Plata, República Argentina,\nConfederación Argentina, serán en adelante nombres oficiales\nindistintamente para la designación del Gobierno y territorio de las\nprovincias, empleándose las palabras \"Nación Argentina\" en la formación\ny sanción de las leyes.\nCAPÍTULO SEGUNDO\nNuevos derechos y garantías",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "36",
+      "text": "Esta\nConstitución mantendrá su imperio aun cuando se interrumpiere su\nobservancia por actos de fuerza contra el orden institucional y el\nsistema democrático. Estos actos serán insanablemente nulos.\nSus autores serán pasibles de la sanción prevista\nen el Artículo 29, inhabilitados a perpetuidad para ocupar cargos\npúblicos y excluidos de los beneficios del indulto y la conmutación de\npenas.\nTendrán las mismas sanciones quienes, como\nconsecuencia de estos actos, usurparen funciones previstas para las\nautoridades de esta Constitución o las de las provincias, los que\nresponderán civil y penalmente de sus actos. Las acciones respectivas\nserán imprescriptibles.\nTodos los ciudadanos tienen el derecho de resistencia contra quienes ejecutaren los actos de fuerza enunciados en este artículo.\nAtentará asimismo contra el sistema democrático\nquien incurriere en grave delito doloso contra el Estado que conlleve\nenriquecimiento, quedando inhabilitado por el tiempo que las leyes\ndeterminen para ocupar cargos o empleos públicos.\nEl Congreso sancionará una ley sobre ética pública para el ejercicio de la función.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "37",
+      "text": "Esta\nConstitución garantiza el pleno ejercicio de los derechos políticos,\ncon arreglo al principio de la soberanía popular y de las leyes que se\ndicten en consecuencia. El sufragio es universal, igual, secreto y\nobligatorio.\nLa igualdad real de oportunidades entre varones y\nmujeres para el acceso a cargos electivos y partidarios se garantizará\npor acciones positivas en la regulación de los partidos políticos y en\nel régimen electoral.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "38",
+      "text": "Los partidos políticos son instituciones fundamentales del sistema democrático.\nSu creación y el ejercicio de sus actividades son\nlibres dentro del respeto a esta Constitución, la que garantiza su\norganización y funcionamiento democráticos, la representación de las\nminorías, la competencia para la postulación de candidatos a cargos\npúblicos electivos, el acceso a la información pública y la difusión de\nsus ideas.\nEl Estado contribuye al sostenimiento económico de sus actividades y de la capacitación de sus dirigentes.\nLos partidos políticos deberán dar publicidad del origen y destino de sus fondos y patrimonio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "39",
+      "text": "Los\nciudadanos tienen el derecho de iniciativa para presentar proyectos de\nley en la Cámara de Diputados. El Congreso deberá darles expreso\ntratamiento dentro del término de doce meses.\nEl Congreso, con el voto de la mayoría absoluta\nde la totalidad de los miembros de cada Cámara, sancionará una ley\nreglamentaria que no podrá exigir más del tres por ciento del padrón\nelectoral nacional, dentro del cual deberá contemplar una adecuada\ndistribución territorial para suscribir la iniciativa.\nNo serán objeto de iniciativa popular los\nproyectos referidos a reforma constitucional, tratados internacionales,\ntributos, presupuesto y materia penal.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "40",
+      "text": "El\nCongreso, a iniciativa de la Cámara de Diputados, podrá someter a\nconsulta popular un proyecto de ley. La ley de convocatoria no podrá\nser vetada. El voto afirmativo del proyecto por el pueblo de la Nación\nlo convertirá en ley y su promulgación será automática.\nEl Congreso o el presidente de la Nación, dentro\nde sus respectivas competencias, podrán convocar a consulta popular no\nvinculante. En este caso el voto no será obligatorio.\nEl Congreso, con el voto de la mayoría absoluta\nde la totalidad de los miembros de cada Cámara, reglamentará las\nmaterias, procedimientos y oportunidad de la consulta popular.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "41",
+      "text": "Todos\nlos habitantes gozan del derecho a un ambiente sano, equilibrado, apto\npara el desarrollo humano y para que las actividades productivas\nsatisfagan las necesidades presentes sin comprometer las de las\ngeneraciones futuras; y tienen el deber de preservarlo. El daño\nambiental generará prioritariamente la obligación de recomponer, según\nlo establezca la ley.\nLas autoridades proveerán a la protección de este\nderecho, a la utilización racional de los recursos naturales, a la\npreservación del patrimonio natural y cultural y de la diversidad\nbiológica, y a la información y educación ambientales.\nCorresponde a la Nación dictar las normas que\ncontengan los presupuestos mínimos de protección, y a las provincias,\nlas necesarias para complementarlas, sin que aquéllas alteren las\njurisdicciones locales.\nSe prohíbe el ingreso al territorio nacional de residuos actual o potencialmente peligrosos, y de los radiactivos.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "42",
+      "text": "Los\nconsumidores y usuarios de bienes y servicios tienen derecho, en la\nrelación de consumo, a la protección de su salud, seguridad e intereses\neconómicos; a una información adecuada y veraz; a la libertad de\nelección, y a condiciones de trato equitativo y digno.\nLas autoridades proveerán a la protección de esos\nderechos, a la educación para el consumo, a la defensa de la\ncompetencia contra toda forma de distorsión de los mercados, al control\nde los monopolios naturales y legales, al de la calidad y eficiencia de\nlos servicios públicos, y a la constitución de asociaciones de\nconsumidores y de usuarios.\nLa legislación establecerá procedimientos\neficaces para la prevención y solución de conflictos, y los marcos\nregulatorios de los servicios públicos de competencia nacional,\npreviendo la necesaria participación de las asociaciones de\nconsumidores y usuarios y de las provincias interesadas, en los\norganismos de control.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "43",
+      "text": "Toda\npersona puede interponer acción expedita y rápida de amparo, siempre\nque no exista otro medio judicial más idóneo, contra todo acto u\nomisión de autoridades públicas o de particulares, que en forma actual\no inminente lesione, restrinja, altere o amenace, con arbitrariedad o\nilegalidad manifiesta, derechos y garantías reconocidos por esta\nConstitución, un tratado o una ley. En el caso, el juez podrá declarar\nla inconstitucionalidad de la norma en que se funde el acto u omisión\nlesiva.\nPodrán interponer esta acción contra cualquier\nforma de discriminación y en lo relativo a los derechos que protegen al\nambiente, a la competencia, al usuario y al consumidor, así como a los\nderechos de incidencia colectiva en general, el afectado, el defensor\ndel pueblo y las asociaciones que propendan a esos fines, registradas\nconforme a la ley, la que determinará los requisitos y formas de su\norganización.\nToda persona podrá interponer esta acción para\ntomar conocimiento de los datos a ella referidos y de su finalidad, que\nconsten en registros o bancos de datos públicos, o los privados\ndestinados a proveer informes, y en caso de falsedad o discriminación,\npara exigir la supresión, rectificación, confidencialidad o\nactualización de aquéllos. No podrá afectarse el secreto de las fuentes\nde información periodística.\nCuando el derecho lesionado, restringido,\nalterado o amenazado fuera la libertad física, o en caso de\nagravamiento ilegítimo en la forma o condiciones de detención, o en el\nde desaparición forzada de personas, la acción de hábeas corpus podrá\nser interpuesta por el afectado o por cualquiera en su favor y el juez\nresolverá de inmediato, aun durante la vigencia del estado de sitio.\nSEGUNDA PARTE\nAUTORIDADES DE LA NACION\nTITULO PRIMERO\nGOBIERNO FEDERAL\nSECCION PRIMERA\nDEL PODER LEGISLATIVO",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "44",
+      "text": "Un\nCongreso compuesto de dos Cámaras, una de Diputados de la Nación y otra\nde Senadores de las provincias y de la ciudad de Buenos Aires, será\ninvestido del Poder Legislativo de la Nación.\nCAPÍTULO PRIMERO\nDe la Cámara de Diputados",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "45",
+      "text": "La\nCámara de Diputados se compondrá de representantes elegidos\ndirectamente por el pueblo de las provincias, de la ciudad de Buenos\nAires, y de la Capital en caso de traslado, que se consideran a este\nfin como distritos electorales de un solo Estado y a simple pluralidad\nde sufragios. El número de representantes será de uno por cada treinta\ny tres mil habitantes o fracción que no baje de dieciséis mil\nquinientos. Después de la realización de cada censo, el Congreso fijará\nla representación con arreglo al mismo, pudiendo aumentar pero no\ndisminuir la base expresada para cada diputado.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "46",
+      "text": "Los diputados para la\nprimera Legislatura se nombrarán en la proporción siguiente: por la\nprovincia de Buenos Aires doce: por la de Córdoba seis: por la de\nCatamarca tres: por la de Corrientes cuatro: por la de Entre Ríos dos:\npor la de Jujuy dos: por la de Mendoza tres: por la de La Rioja dos:\npor la de Salta tres: por la de Santiago cuatro: por la de San Juan\ndos: por la de Santa Fe dos: por la de San Luis dos: y por la de\nTucumán tres.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "47",
+      "text": "Para la segunda\nLegislatura deberá realizarse el censo general, y arreglarse a él el\nnúmero de diputados; pero este censo sólo podrá renovarse cada diez\naños.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "48",
+      "text": "Para ser diputado se\nrequiere haber cumplido la edad de veinticinco años, tener cuatro años\nde ciudadanía en ejercicio, y ser natural de la provincia que lo elija,\no con dos años de residencia inmediata en ella.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "49",
+      "text": "Por esta vez las\nLegislaturas de las provincias reglarán los medios de hacer efectiva la\nelección directa de los diputados de la Nación: para lo sucesivo el\nCongreso expedirá una ley general.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "50",
+      "text": "Los diputados durarán en su\nrepresentación por cuatro años, y son reelegibles; pero la Sala se\nrenovará por mitad cada bienio; a cuyo efecto los nombrados para la\nprimera Legislatura, luego que se reúnan, sortearán los que deban salir\nen el primer período.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "51",
+      "text": "En caso de vacante, el Gobierno de provincia, o de la Capital, hace proceder a elección legal de un nuevo miembro.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "52",
+      "text": "A la Cámara de Diputados\ncorresponde exclusivamente la iniciativa de las leyes sobre\ncontribuciones y reclutamiento de tropas.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "53",
+      "text": "Sólo\nella ejerce el derecho de acusar ante el Senado al presidente,\nvicepresidente, al jefe de gabinete de ministros, a los ministros y a\nlos miembros de la Corte Suprema, en las causas de responsabilidad que\nse intenten contra ellos, por mal desempeño o por delito en el\nejercicio de sus funciones; o por crímenes comunes, después de haber\nconocido de ellos y declarado haber lugar a la formación de causa por\nla mayoría de dos terceras partes de sus miembros presentes.\nCAPÍTULO SEGUNDO\nDel Senado",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "54",
+      "text": "El\nSenado se compondrá de tres senadores por cada provincia y tres por la\nciudad de Buenos Aires, elegidos en forma directa y conjunta,\ncorrespondiendo dos bancas al partido político que obtenga el mayor\nnúmero de votos, y la restante al partido político que le siga en\nnúmero de votos. Cada senador tendrá un voto.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "55",
+      "text": "Son requisitos para ser\nelegido senador: tener la edad de treinta años, haber sido seis años\nciudadano de la Nación, disfrutar de una renta anual de dos mil pesos\nfuertes o de una entrada equivalente, y ser natural de la provincia que\nlo elija, o con dos años de residencia inmediata en ella.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "56",
+      "text": "Los\nsenadores duran seis años en el ejercicio de su mandato, y son\nreelegibles indefinidamente; pero el Senado se renovará a razón de una\ntercera parte de los distritos electorales cada dos años.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "57",
+      "text": "El vicepresidente de la\nNación será presidente del Senado; pero no tendrá voto sino en el caso\nque haya empate en la votación.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "58",
+      "text": "El Senado nombrará un\npresidente provisorio que lo presida en caso de ausencia del\nvicepresidente, o cuando éste ejerce las funciones de presidente de la\nNación.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "59",
+      "text": "Al Senado corresponde\njuzgar en juicio público a los acusados por la Cámara de Diputados,\ndebiendo sus miembros prestar juramento para este acto. Cuando el\nacusado sea el presidente de la Nación, el Senado será presidido por el\npresidente de la Corte Suprema. Ninguno será declarado culpable sino a\nmayoría de los dos tercios de los miembros presentes.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "60",
+      "text": "Su fallo no tendrá más\nefecto que destituir al acusado, y aun declararle incapaz de ocupar\nningún empleo de honor, de confianza o a sueldo en la Nación. Pero la\nparte condenada quedará, no obstante, sujeta a acusación, juicio y\ncastigo conforme a las leyes ante los tribunales ordinarios.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "61",
+      "text": "Corresponde también al\nSenado autorizar al presidente de la Nación para que declare en estado\nde sitio, uno o varios puntos de la República en caso de ataque\nexterior.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "62",
+      "text": "Cuando vacase alguna\nplaza de senador por muerte, renuncia u otra causa, el Gobierno a que\ncorresponda la vacante hace proceder inmediatamente a la elección de un\nnuevo miembro.\nCAPITULO TERCERO\nDisposiciones comunes a ambas Cámaras",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "63",
+      "text": "Ambas Cámaras se reunirán por sí mismas en sesiones ordinarias todos\nlos años desde el primero de marzo hasta el treinta de noviembre.\nPueden también ser convocadas extraordinariamente por el Presidente de\nla Nación o prorrogadas sus sesiones.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "64",
+      "text": "Cada Cámara es juez de\nlas elecciones, derechos y títulos de sus miembros en cuanto a su\nvalidez. Ninguna de ellas entrará en sesión sin la mayoría absoluta de\nsus miembros; pero un número menor podrá compeler a los miembros\nausentes a que concurran a las sesiones, en los términos y bajo las\npenas que cada Cámara establecerá.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "65",
+      "text": "Ambas Cámaras empiezan y\nconcluyen sus sesiones simultáneamente. Ninguna de ellas, mientras se\nhallen reunidas, podrá suspender sus sesiones más de tres días, sin el\nconsentimiento de la otra.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "66",
+      "text": "Cada Cámara hará su\nreglamento y podrá con dos tercios de votos, corregir a cualquiera de\nsus miembros por desorden de conducta en el ejercicio de sus funciones,\no removerlo por inhabilidad física o moral sobreviniente a su\nincorporación, y hasta excluirle de su seno; pero bastará la mayoría de\nuno sobre la mitad de los presentes para decidir en las renuncias que\nvoluntariamente hicieren de sus cargos.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "67",
+      "text": "Los senadores y\ndiputados prestarán, en el acto de su incorporación, juramento de\ndesempeñar debidamente el cargo, y de obrar en todo en conformidad a lo\nque prescribe esta Constitución.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "68",
+      "text": "Ninguno de los miembros\ndel Congreso puede ser acusado, interrogado judicialmente, ni molestado\npor las opiniones o discursos que emita desempeñando su mandato de\nlegislador.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "69",
+      "text": "Ningún senador o\ndiputado, desde el día de su elección hasta el de su cese, puede ser\narrestado; excepto el caso de ser sorprendido in fraganti en la\nejecución de algún crimen que merezca pena de muerte, infamante, u otra\naflictiva; de lo que se dará cuenta a la Cámara respectiva con la\ninformación sumaria del hecho.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "70",
+      "text": "Cuando se forme querella\npor escrito ante las justicias ordinarias contra cualquier senador o\ndiputado, examinado el mérito del sumario en juicio público, podrá cada\nCámara, con dos tercios de votos, suspender en sus funciones al\nacusado, y ponerlo a disposición del juez competente para su\njuzgamiento.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "71",
+      "text": "Cada una de las Cámaras\npuede hacer venir a su sala a los ministros del Poder Ejecutivo para\nrecibir las explicaciones e informes que estime convenientes.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "72",
+      "text": "Ningún miembro del\nCongreso podrá recibir empleo o comisión del Poder Ejecutivo, sin\nprevio consentimiento de la Cámara respectiva, excepto los empleos de\nescala.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "73",
+      "text": "Los eclesiásticos regulares no pueden ser miembros del Congreso, ni los gobernadores de provincia por la de su mando.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "74",
+      "text": "Los servicios de los senadores y diputados son remunerados por el Tesoro de la Nación, con una dotación que señalará la ley.\nCAPITULO CUARTO\nAtribuciones del Congreso",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "75",
+      "text": "Corresponde al Congreso:\n1. Legislar en materia aduanera. Establecer los\nderechos de importación y exportación, los cuales, así como las\navaluaciones sobre las que recaigan, serán uniformes en toda la Nación.\n2. Imponer contribuciones indirectas como facultad\nconcurrente con las provincias. Imponer contribuciones directas, por\ntiempo determinado, proporcionalmente iguales en todo el territorio de\nla Nación, siempre que la defensa, seguridad común y bien general del\nEstado lo exijan. Las contribuciones previstas en este inciso, con\nexcepción de la parte o el total de las que tengan asignación\nespecífica, son coparticipables.\nUna ley convenio, sobre la base de acuerdos entre la\nNación y las provincias, instituirá regímenes de coparticipación de\nestas contribuciones, garantizando la automaticidad en la remisión de\nlos fondos.\nLa distribución entre la Nación, las provincias y la\nciudad de Buenos Aires y entre éstas, se efectuará en relación directa\na las competencias, servicios y funciones de cada una de ellas\ncontemplando criterios objetivos de reparto; será equitativa, solidaria\ny dará prioridad al logro de un grado equivalente de desarrollo,\ncalidad de vida e igualdad de oportunidades en todo el territorio\nnacional.\nLa ley convenio tendrá como Cámara de origen el\nSenado y deberá ser sancionada con la mayoría absoluta de la totalidad\nde los miembros de cada Cámara, no podrá ser modificada unilateralmente\nni reglamentada y será aprobada por las provincias.\nNo habrá transferencia de competencias, servicios o\nfunciones sin la respectiva reasignación de recursos, aprobada por ley\ndel Congreso cuando correspondiere y por la provincia interesada o la\nciudad de Buenos Aires en su caso.\nUn organismo fiscal federal tendrá a su cargo el\ncontrol y fiscalización de la ejecución de lo establecido en este\ninciso, según lo determina la ley, la que deberá asegurar la\nrepresentación de todas las provincias y la ciudad de Buenos Aires en\nsu composición.\n3. Establecer y modificar asignaciones específicas\nde recursos coparticipables, por tiempo determinado, por ley especial\naprobada por la mayoría absoluta de la totalidad de los miembros de\ncada Cámara.\n4. Contraer empréstitos sobre el crédito de la Nación.\n5. Disponer del uso y de la enajenación de las tierras de propiedad nacional.\n6. Establecer y reglamentar un banco federal con facultad de emitir moneda, así como otros bancos nacionales.\n7. Arreglar el pago de la deuda interior y exterior de la Nación.\n8. Fijar anualmente, conforme a las pautas\nestablecidas en el tercer párrafo del inc. 2 de este artículo, el\npresupuesto general de gastos y cálculo de recursos de la\nadministración nacional, en base al programa general de gobierno y al\nplan de inversiones públicas y aprobar o desechar la cuenta de\ninversión.\n9. Acordar subsidios del Tesoro nacional a las\nprovincias, cuyas rentas no alcancen, según sus presupuestos, a cubrir\nsus gastos ordinarios.\n10. Reglamentar la libre navegación de los ríos\ninteriores, habilitar los puertos que considere convenientes, y crear o\nsuprimir aduanas.\n11. Hacer sellar moneda, fijar su valor y el de las\nextranjeras; y adoptar un sistema uniforme de pesos y medidas para toda\nla Nación.\n12. Dictar los Códigos Civil, Comercial, Penal, de Minería, y del Trabajo y Seguridad Social, en cuerpos unificados o separados,\nsin que tales códigos alteren las jurisdicciones locales,\ncorrespondiendo su aplicación a los tribunales federales o\nprovinciales, según que las cosas o las personas cayeren bajo sus\nrespectivas jurisdicciones; y especialmente leyes generales para toda\nla Nación sobre naturalización y nacionalidad, con sujeción al principio de nacionalidad natural y por opción en beneficio de la argentina:\nasí como sobre bancarrotas, sobre falsificación de la moneda corriente\ny documentos públicos del Estado, y las que requiera el establecimiento\ndel juicio por jurados.\n13. Reglar el comercio con las naciones extranjeras, y de las provincias entre sí.\n14. Arreglar y establecer los correos generales de la Nación.\n15. Arreglar definitivamente los límites del\nterritorio de la Nación, fijar los de las provincias, crear otras\nnuevas, y determinar por una legislación especial la organización,\nadministración y gobierno que deben tener los territorios nacionales,\nque queden fuera de los límites que se asignen a las provincias.\n16. Proveer a la seguridad de las fronteras.\n17. Reconocer la preexistencia étnica y cultural de los pueblos indígenas argentinos.\nGarantizar el respeto a su identidad y el derecho\na una educación bilingüe e intercultural; reconocer la personería\nJurídica de sus comunidades, y la posesión y propiedad comunitarias de\nlas tierras que tradicionalmente ocupan; y regular la entrega de otras\naptas y suficientes para el desarrollo humano; ninguna de ellas será\nenajenable, transmisible ni susceptible de gravámenes o embargos.\nAsegurar su participación en la gestión referida a sus recursos\nnaturales y a los demás intereses que los afecten. Las provincias\npueden ejercer concurrentemente estas atribuciones.\n18. Proveer lo conducente a la prosperidad del país,\nal adelanto y bienestar de todas las provincias, y al progreso de la\nilustración, dictando planes de instrucción general y universitaria, y\npromoviendo la industria, la inmigración, la construcción de\nferrocarriles y canales navegables, la colonización de tierras de\npropiedad nacional, la introducción y establecimiento de nuevas\nindustrias, la importación de capitales extranjeros y la exploración de\nlos ríos interiores, por leyes protectoras de estos fines y por\nconcesiones temporales de privilegios y recompensas de estímulo.\n19. Proveer lo conducente al desarrollo humano,\nal progreso económico con justicia social, a la productividad de la\neconomía nacional, a la generación de empleo, a la formación\nprofesional de los trabajadores, a la defensa del valor de la moneda, a\nla investigación y al desarrollo científico y tecnológico, su difusión\ny aprovechamiento.\nProveer al crecimiento armónico de la Nación y al\npoblamiento de su territorio; promover políticas diferenciadas que\ntiendan a equilibrar el desigual desarrollo relativo de provincias y\nregiones. Para estas iniciativas, el Senado será Cámara de origen.\nSancionar leyes de organización y de base de la\neducación que consoliden la unidad nacional respetando las\nparticularidades provinciales y locales; que aseguren la\nresponsabilidad indelegable del Estado, la participación de la familia\ny la sociedad, la promoción de los valores democráticos y la igualdad\nde oportunidades y posibilidades sin discriminación alguna; y que\ngaranticen los principios de gratuidad y equidad de la educación\npública estatal y la autonomía y autarquía de las universidades\nnacionales.\nDictar leyes que protejan la identidad y pluralidad\ncultural, la libre creación y circulación de las obras del autor; el\npatrimonio artístico y los espacios culturales y audiovisuales.\n20. Establecer tribunales inferiores a la Corte Suprema de Justicia; crear y suprimir empleos, fijar sus atribuciones, dar pensiones, decretar honores, y conceder amnistías generales.\n21. Admitir o desechar los motivos de dimisión del\npresidente o vicepresidente de la República; y declarar el caso de\nproceder a nueva elección.\n22. Aprobar o desechar tratados concluidos\ncon las demás naciones y con las organizaciones internacionales y los\nconcordatos con la Santa Sede. Los tratados y concordatos tienen\njerarquía superior a las leyes.\nLa Declaración Americana de los Derechos y\nDeberes del Hombre; la Declaración Universal de Derechos Humanos; la\nConvención Americana sobre Derechos Humanos; el Pacto Internacional de\nDerechos Económicos, Sociales y Culturales; el Pacto Internacional de\nDerechos Civiles y Políticos y su Protocolo Facultativo; la Convención\nsobre la Prevención y la Sanción del Delito de Genocidio; la Convención\nInternacional sobre la Eliminación de todas las Formas de\nDiscriminación Racial; la Convención sobre la Eliminación de todas las\nFormas de Discriminación contra la Mujer; la Convención contra la\nTortura y otros Tratos o Penas Crueles, Inhumanos o Degradantes; la\nConvención sobre los Derechos del Niño; en las condiciones de su\nvigencia, tienen jerarquía constitucional, no derogan artículo alguno\nde la primera parte de esta Constitución y deben entenderse\ncomplementarios de los derechos y garantías por ella reconocidos. Sólo\npodrán ser denunciados, en su caso, por el Poder Ejecutivo Nacional,\nprevia aprobación de las dos terceras partes de la totalidad de los\nmiembros de cada Cámara.\nLos demás tratados y convenciones sobre derechos\nhumanos, luego de ser aprobados por el Congreso, requerirán del voto de\nlas dos terceras partes de la totalidad de los miembros de cada Cámara\npara gozar de la jerarquía constitucional.\n23. Legislar y promover medidas de acción\npositiva que garanticen la igualdad real de oportunidades y de trato, y\nel pleno goce y ejercicio de los derechos reconocidos por esta\nConstitución y por los tratados internacionales vigentes sobre derechos\nhumanos, en particular respecto de los niños, las mujeres, los ancianos\ny las personas con discapacidad.\nDictar un régimen de seguridad social especial e\nintegral en protección del niño en situación de desamparo, desde el\nembarazo hasta la finalización del período de enseñanza elemental, y de\nla madre durante el embarazo y el tiempo de lactancia.\n24. Aprobar tratados de integración que deleguen\ncompetencias y jurisdicción a organizaciones supraestatales en\ncondiciones de reciprocidad e igualdad, y que respeten el orden\ndemocrático y los derechos humanos. Las normas dictadas en su\nconsecuencia tienen jerarquía superior a las leyes.\nLa aprobación de estos tratados con Estados de\nLatinoamérica requerirá la mayoría absoluta de la totalidad de los\nmiembros de cada Cámara. En el caso de tratados con otros Estados, el\nCongreso de la Nación, con la mayoría absoluta de los miembros\npresentes de cada Cámara, declarará la conveniencia de la aprobación\ndel tratado y sólo podrá ser aprobado con el voto de la mayoría\nabsoluta de la totalidad de los miembros de cada Cámara, después de\nciento veinte días del acto declarativo.\nLa denuncia de los tratados referidos a este inciso,\nexigirá la previa aprobación de la mayoría absoluta de la totalidad da\nlos miembros de cada Cámara.\n25. Autorizar al Poder Ejecutivo para declarar la guerra o hacer la paz.\n26. Facultar al Poder Ejecutivo para ordenar represalias, y establecer reglamentos para las presas.\n27. Fijar las fuerzas armadas en tiempo de paz y guerra, y dictar las normas para su organización y gobierno.\n28. Permitir la introducción de tropas extranjeras\nen el territorio de la Nación, y la salida de las fuerzas nacionales\nfuera de él.\n29. Declarar en estado de sitio uno o varios puntos\nde la Nación en caso de conmoción interior, y aprobar o suspender el\nestado de sitio declarado, durante su receso, por el Poder Ejecutivo.\n30. Ejercer una legislación exclusiva en\nel territorio de la capital de la Nación y dictar la legislación\nnecesaria para el cumplimiento de los fines específicos de los\nestablecimientos de utilidad nacional en el territorio de la República.\nLas autoridades provinciales y municipales conservarán los poderes de\npolicía e imposición sobre estos establecimientos, en tanto no\ninterfieran en el cumplimiento de aquellos fines.\n31. Disponer la intervención federal a una provincia o a la ciudad de Buenos Aires.\nAprobar o revocar la intervención decretada, durante su receso, por el Poder Ejecutivo.\n32. Hacer todas las leyes y reglamentos que sean\nconvenientes para poner en ejercicio los poderes antecedentes, y todos\nlos otros concedidos por la presente Constitución al Gobierno de la\nNación Argentina.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "76",
+      "text": "Se\nprohíbe la delegación legislativa en el Poder Ejecutivo, salvo en\nmaterias determinadas de administración o de emergencia pública, con\nplazo fijado para su ejercicio y dentro de las bases de la delegación\nque el Congreso establezca.\nLa caducidad resultante del transcurso del plazo\nprevisto en el párrafo anterior no importará revisión de las relaciones\njurídicas nacidas al amparo de las normas dictadas en consecuencia de\nla delegación legislativa.\nCAPÍTULO QUINTO\nDe la formación y sanción de las leyes",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "77",
+      "text": "Las\nleyes pueden tener principio en cualquiera de las Cámaras del Congreso,\npor proyectos presentados por sus miembros o por el Poder Ejecutivo,\nsalvo las excepciones que establece esta Constitución.\nLos proyectos de ley que modifiquen el régimen\nelectoral y de partidos políticos deberán ser aprobados por mayoría\nabsoluta del total de los miembros de las Cámaras.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "78",
+      "text": "Aprobado un proyecto de ley por\nla Cámara de su origen, pasa para su discusión a la otra Cámara.\nAprobado por ambas, pasa al Poder Ejecutivo de la Nación para su\nexamen; y si también obtiene su aprobación, lo promulga como ley.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "79",
+      "text": "Cada\nCámara, luego de aprobar un proyecto de ley en general, puede delegar\nen sus comisiones la aprobación en particular del proyecto, con el voto\nde la mayoría absoluta del total de sus miembros. La Cámara podrá, con\nigual número de votos, dejar sin efecto la delegación y retomar el\ntrámite ordinario. La aprobación en comisión requerirá el voto de la\nmayoría absoluta del total de sus miembros. Una vez aprobado el\nproyecto en comisión, se seguirá el trámite ordinario.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "80",
+      "text": "Se\nreputa aprobado por el Poder Ejecutivo todo proyecto no devuelto en el\ntérmino de diez días útiles. Los proyectos desechados parcialmente no\npodrán ser aprobados en la parte restante. Sin embargo, las partes no\nobservadas solamente podrán ser promulgadas si tienen autonomía\nnormativa y su aprobación parcial no altera el espíritu ni la unidad\ndel proyecto sancionado por el Congreso. En este caso será de\naplicación el procedimiento previsto para los decretos de necesidad y\nurgencia.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "81",
+      "text": "Ningún\nproyecto de ley desechado totalmente por una de las Cámaras podrá\nrepetirse en las sesiones de aquel año. Ninguna de las Cámaras puede\ndesechar totalmente un proyecto que hubiera tenido origen en ella y\nluego hubiese sido adicionado o enmendado por la Cámara revisora. Si el\nproyecto fuere objeto de adiciones o correcciones por la Cámara\nrevisora, deberá indicarse el resultado de la votación a fin de\nestablecer si tales adiciones o correcciones fueron realizadas por\nmayoría absoluta de los presentes o por las dos terceras partes de los\npresentes. La Cámara de origen podrá por mayoría absoluta de los\npresentes aprobar el proyecto con las adiciones o correcciones\nintroducidas o insistir en la redacción originaria, a menos que las\nadiciones o correcciones las haya realizado la revisora por dos\nterceras partes de los presentes. En este último caso, el proyecto\npasará al Poder Ejecutivo con las adiciones o correcciones de la Cámara\nrevisora, salvo que la Cámara de origen insista en su redacción\noriginaria con el voto de las dos terceras partes de los presentes. La\nCámara de origen no podrá introducir nuevas adiciones o correcciones a\nlas realizadas por la Cámara revisora.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "82",
+      "text": "La voluntad de cada Cámara debe manifestarse expresamente; se excluye, en todos los casos, la sanción tácita o ficta.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "83",
+      "text": "Desechado en el todo o\nen parte un proyecto por el Poder Ejecutivo, vuelve con sus objeciones\na la Cámara de su origen: ésta lo discute de nuevo, y si lo confirma\npor mayoría de dos tercios de votos, pasa otra vez a la Cámara de\nrevisión. Si ambas Cámaras lo sancionan por igual mayoría, el proyecto\nes ley y pasa al Poder Ejecutivo para su promulgación. Las votaciones\nde ambas Cámaras serán en este caso nominales, por si o por no; y tanto\nlos nombres y fundamentos de los sufragantes, como las objeciones del\nPoder Ejecutivo, se publicarán inmediatamente por la prensa. Si las\nCámaras difieren sobre las objeciones, el proyecto no podrá repetirse\nen las sesiones de aquel año.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "84",
+      "text": "En la\nsanción de las leyes se usará de esta fórmula: El Senado y Cámara de\nDiputados de la Nación Argentina, reunidos en Congreso, ... decretan o\nsancionan con fuerza de ley.\nCAPITULO SEXTO\nDe la Auditoría General de la Nación",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "85",
+      "text": "El\ncontrol externo del sector público nacional en sus aspectos\npatrimoniales, económicos, financieros y operativos, será una\natribución propia del Poder Legislativo.\nEl examen y la opinión del Poder Legislativo\nsobre el desempeño y situación general de la administración pública\nestarán sustentados en los dictámenes de la Auditoría General de la\nNación.\nEste organismo de asistencia técnica del\nCongreso, con autonomía funcional, se integrará del modo que establezca\nla ley que reglamenta su creación y funcionamiento, que deberá ser\naprobada por mayoría absoluta de los miembros de cada Cámara. El\npresidente del organismo será designado a propuesta del partido\npolítico de oposición con mayor número de legisladores en el Congreso.\nTendrá a su cargo el control de legalidad,\ngestión y auditoría de toda la actividad de la administración pública\ncentralizada y descentralizada, cualquiera fuera su modalidad de\norganización, y las demás funciones que la ley le otorgue. Intervendrá\nnecesariamente en el trámite de aprobación o rechazo de las cuentas de\npercepción e inversión de los fondos públicos.\nCAPÍTULO SEPTIMO\nDel Defensor del Pueblo",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "86",
+      "text": "El\nDefensor del Pueblo es un órgano independiente instituido en el ámbito\ndel Congreso de la Nación, que actuará con plena autonomía funcional,\nsin recibir instrucciones de ninguna autoridad. Su misión es la defensa\ny protección de los derechos humanos y demás derechos, garantías e\nintereses tutelados en esta Constitución y las leyes, ante hechos,\nactos u omisiones de la Administración; y el control del ejercicio de\nlas funciones administrativas públicas.\nEl Defensor del Pueblo tiene legitimación\nprocesal. Es designado y removido por el Congreso con el voto de las\ndos terceras partes de los miembros presentes de cada una de las\nCámaras. Goza de las inmunidades y privilegios de los legisladores.\nDurará en su cargo cinco años, pudiendo ser nuevamente designado por\nuna sola vez.\nLa organización y el funcionamiento de esta institución serán regulados por una ley especial.\nSECCIÓN SEGUNDA\nDEL PODER EJECUTIVO\nCAPÍTULO PRIMERO\nDe su naturaleza y duración",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "87",
+      "text": "El Poder Ejecutivo de la Nación será desempeñado por un ciudadano con el título de \"Presidente de la Nación Argentina\".",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "88",
+      "text": "En caso de enfermedad,\nausencia de la Capital, muerte, renuncia o destitución del Presidente,\nel Poder Ejecutivo será ejercido por el vicepresidente de la Nación. En\ncaso de destitución, muerte, dimisión o inhabilidad del Presidente y\nvicepresidente de la Nación, el Congreso determinará qué funcionario\npúblico ha de desempeñar la Presidencia, hasta que haya cesado la causa\nde la inhabilidad o un nuevo presidente sea electo.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "89",
+      "text": "Para\nser elegido Presidente o vicepresidente de la Nación, se requiere haber\nnacido en el territorio argentino, o ser hijo de ciudadano nativo,\nhabiendo nacido en país extranjero; y las demás calidades exigidas para\nser elegido senador.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "90",
+      "text": "El Presidente y\nvicepresidente duran en sus funciones el término de cuatro años y\npodrán ser reelegidos o sucederse recíprocamente por un solo período\nconsecutivo. Si han sido reelectos o se han sucedido recíprocamente no\npueden ser elegidos para ninguno de ambos cargos, sino con el intervalo\nde un período.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "91",
+      "text": "El Presidente de la\nNación cesa en el poder el mismo día en que expira su período de cuatro\naños; sin que evento alguno que lo haya interrumpido, pueda ser motivo\nde que se le complete más tarde.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "92",
+      "text": "El Presidente y\nvicepresidente disfrutan de un sueldo pagado por el Tesoro de la\nNación, que no podrá ser alterado en el período de sus nombramientos.\nDurante el mismo período no podrán ejercer otro empleo, ni recibir\nningún otro emolumento de la Nación, ni de provincia alguna.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "93",
+      "text": "Al\ntomar posesión de su cargo el presidente y vicepresidente prestarán\njuramento, en manos del presidente del Senado y ante el Congreso\nreunido en Asamblea, respetando sus creencias religiosas, de\n\"desempeñar con lealtad y patriotismo el cargo de Presidente (o\nvicepresidente) de la Nación y observar y hacer observar fielmente la\nConstitución de la Nación Argentina\".\nCAPÍTULO SEGUNDO\nDe la forma y tiempo de la elección del Presidente y vicepresidente de la Nación",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "94",
+      "text": "El\nPresidente y el vicepresidente de la Nación serán elegidos directamente\npor el Pueblo, en doble vuelta, según lo establece esta Constitución. A\neste fin el territorio nacional conformará un distrito único.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "95",
+      "text": "La elección se efectuará dentro de los dos meses anteriores a la conclusión del mandato del Presidente en ejercicio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "96",
+      "text": "La\nsegunda vuelta electoral, si correspondiere, se realizará entre las dos\nfórmulas de candidatos más votadas, dentro de los treinta días de\ncelebrada la anterior.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "97",
+      "text": "Cuando\nla fórmula que resultare más votada en la primera vuelta, hubiere\nobtenido más del cuarenta y cinco por ciento de los votos afirmativos\nválidamente emitidos, sus integrantes serán proclamados como Presidente\ny vicepresidente de la Nación.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "98",
+      "text": "Cuando\nla fórmula que resultare más votada en la primera vuelta hubiere\nobtenido el cuarenta por ciento por lo menos de los votos afirmativos\nválidamente emitidos y, además, existiere una diferencia mayor de diez\npuntos porcentuales respecto del total de los votos afirmativos\nválidamente emitidos sobre la fórmula que le sigue en número de votos,\nsus integrantes serán proclamados como Presidente y vicepresidente de\nla Nación.\nCAPÍTULO TERCERO\nAtribuciones del Poder Ejecutivo",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "99",
+      "text": "El Presidente de la Nación tiene las siguientes atribuciones:\n1. Es el jefe supremo de la Nación, jefe del gobierno y responsable político de la administración general del país.\n2. Expide las instrucciones y reglamentos que sean\nnecesarios para la ejecución de las leyes de la Nación, cuidando de no\nalterar su espíritu con excepciones reglamentarias.\n3. Participa de la formación de las leyes con arreglo a la Constitución, las promulga y hace publicar.\nEl Poder Ejecutivo no podrá en ningún caso bajo pena\nde nulidad absoluta e insanable, emitir disposiciones de carácter\nlegislativo.\nSolamente cuando circunstancias excepcionales\nhicieran imposible seguir los trámites ordinarios previstos por esta\nConstitución para la sanción de las leyes, y no se trate de normas que\nregulen materia penal, tributaria, electoral o de régimen de los\npartidos políticos, podrá dictar decretos por razones de necesidad y\nurgencia, los que serán decididos en acuerdo general de ministros que\ndeberán refrendarlos, conjuntamente con el jefe de gabinete de\nministros.\nEl jefe de gabinete de ministros personalmente y\ndentro de los diez días someterá la medida a consideración de la\nComisión Bicameral Permanente, cuya composición deberá respetar la\nproporción de las representaciones políticas de cada Cámara. Esta\ncomisión elevará su despacho en un plazo de diez días al plenario de\ncada Cámara para su expreso tratamiento, el que de inmediato\nconsiderarán las Cámaras. Una ley especial sancionada con la mayoría\nabsoluta de la totalidad de los miembros de cada Cámara regulará el\ntrámite y los alcances de la intervención del Congreso.\n4. Nombra los magistrados de la Corte Suprema con\nacuerdo del Senado por dos tercios de sus miembros presentes, en sesión\npública, convocada al efecto.\nNombra los demás jueces de los tribunales federales\ninferiores en base a una propuesta vinculante en terna del Consejo de\nla Magistratura, con acuerdo del Senado, en sesión pública, en la que\nse tendrá en cuenta la idoneidad de los candidatos.\nUn nuevo nombramiento, precedido de igual acuerdo,\nserá necesario para mantener en el cargo a cualquiera de esos\nmagistrados, una vez que cumplan la edad de setenta y cinco años. Todos\nlos nombramientos de magistrados cuya edad sea la indicada o mayor se\nharán por cinco años, y podrán ser repetidos indefinidamente, por el\nmismo trámite.\n5. Puede indultar o conmutar las penas por delitos\nsujetos a la jurisdicción federal, previo informe del tribunal\ncorrespondiente, excepto en los casos de acusación por la Cámara de\nDiputados.\n6. Concede jubilaciones, retiros, licencias y pensiones conforme a las leyes de la Nación.\n7. Nombra y remueve a los embajadores, ministros\nplenipotenciarios y encargados de negocios con acuerdo del Senado; por\nsí solo nombra y remueve al jefe de gabinete de ministros y a los demás\nministros del despacho, los oficiales de su secretaría, los agentes\nconsulares y los empleados cuyo nombramiento no está reglado de otra\nforma por esta Constitución.\n8. Hace anualmente la apertura de las sesiones del\nCongreso, reunidas al efecto ambas Cámaras, dando cuenta en esta\nocasión del estado de la Nación, de las reformas prometidas por la\nConstitución, y recomendando a su consideración las medidas que juzgue\nnecesarias y convenientes.\n9. Prorroga las sesiones ordinarias del Congreso, o\nlo convoca a sesiones extraordinarias, cuando un grave interés de orden\no de progreso lo requiera.\n10. Supervisa el ejercicio de la facultad del\njefe de gabinete de ministros respecto de la recaudación de las rentas\nda la Nación y de su inversión, con arreglo a la ley o presupuesto de\ngastos nacionales.\n11. Concluye y firma tratados, concordatos y otras\nnegociaciones requeridas para el mantenimiento de buenas relaciones con\nlas organizaciones internacionales y las naciones extranjeras, recibe\nsus ministros y admite sus cónsules.\n12. Es comandante en jefe de todas las Fuerzas Armadas de la Nación.\n13. Provee los empleos militares de la Nación: con\nacuerdo del Senado, en la concesión de los empleos o grados de\noficiales superiores de las Fuerzas Armadas; y por sí solo en el campo\nde batalla.\n14. Dispone de las Fuerzas Armadas, y corre con su organización y distribución según las necesidades de la Nación.\n15. Declara la guerra y ordena represalias con autorización y aprobación del Congreso.\n16. Declara en estado de sitio uno o varios puntos\nde la Nación, en caso de ataque exterior y por un término limitado, con\nacuerdo del Senado. En caso de conmoción interior sólo tiene esta\nfacultad cuando el Congreso está en receso, porque es atribución que\ncorresponde a este cuerpo. El Presidente la ejerce con las limitaciones\nprescriptas en el Artículo 23.\n17. Puede pedir al jefe de gabinete de ministros\ny a los jefes de todos los ramos y departamentos de la administración,\ny por su conducto a los demás empleados, los informes que crea\nconvenientes, y ellos están obligados a darlos.\n18. Puede ausentarse del territorio de la Nación,\ncon permiso del Congreso. En el receso de éste, sólo podrá hacerlo sin\nlicencia por razones justificadas de servicio público.\n19. Puede llenar las vacantes de los empleos, que\nrequieran el acuerdo del Senado, y que ocurran durante su receso, por\nmedio de nombramientos en comisión que expirarán al fin de la próxima\nLegislatura.\n20. Decreta la intervención federal a una provincia\no a la ciudad de Buenos Aires en caso de receso del Congreso, y debe\nconvocarlo simultáneamente para su tratamiento.\nCAPÍTULO CUARTO\nDel jefe de gabinete y demás ministros del Poder Ejecutivo",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "100",
+      "text": "El\njefe de gabinete de ministros y los demás ministros secretarios cuyo\nnúmero y competencia será establecida por una ley especial, tendrán a\nsu cargo el despacho de los negocios de la Nación, y refrendarán y\nlegalizarán los actos del presidente por medio de su firma, sin cuyo\nrequisito carecen de eficacia.\nAl jefe de gabinete de ministros, con responsabilidad política ante el Congreso de la Nación, le corresponde:\n1. Ejercer la administración general del país.\n2. Expedir los actos y reglamentos que sean\nnecesarios para ejercer las facultades que le atribuye este artículo y\naquellas que le delegue el presidente de la Nación, con el refrendo del\nministro secretario del ramo al cual el acto o reglamento se refiera.\n3. Efectuar los nombramientos de los empleados de la administración, excepto los que correspondan al presidente.\n4. Ejercer las funciones y atribuciones que le\ndelegue el presidente de la Nación y, en acuerdo de gabinete resolver\nsobre las materias que le indique el Poder Ejecutivo, o por su propia\ndecisión, en aquellas que por su importancia estime necesario, en el\námbito de su competencia.\n5. Coordinar, preparar y convocar las reuniones de gabinete de ministros, presidiéndolas en caso de ausencia del presidente.\n6. Enviar al Congreso los proyectos de ley de\nministerios y de presupuesto nacional, previo tratamiento en acuerdo de\ngabinete y aprobación del Poder Ejecutivo.\n7. Hacer recaudar las rentas de la Nación y ejecutar la ley de presupuesto nacional.\n8. Refrendar los decretos reglamentarios de las\nleyes, los decretos que dispongan la prórroga de las sesiones\nordinarias del Congreso o la convocatoria de sesiones extraordinarias y\nlos mensajes del presidente que promuevan la iniciativa legislativa.\n9. Concurrir a las sesiones del Congreso y participar en sus debates, pero no votar.\n10. Una vez que se inicien las sesiones\nordinarias del Congreso, presentar junto a los restantes ministros una\nmemoria detallada del estado de la Nación en lo relativo a los negocios\nde los respectivos departamentos.\n11. Producir los informes y explicaciones verbales o escritos que cualquiera de las Cámaras solicite al Poder Ejecutivo.\n12. Refrendar los decretos que ejercen facultades\ndelegadas por el Congreso, los que estarán sujetos al control de la\nComisión Bicameral Permanente.\n13. Refrendar conjuntamente con los demás\nministros los decretos de necesidad y urgencia y los decretos que\npromulgan parcialmente leyes. Someterá personalmente y dentro de los\ndiez días de su sanción estos decretos a consideración de la Comisión\nBicameral Permanente.\nEl jefe de gabinete de ministros no podrá desempeñar simultáneamente otro ministerio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "101",
+      "text": "El jefe de gabinete\nde ministros debe concurrir al Congreso al menos una vez por mes,\nalternativamente a cada una de sus Cámaras, para informar de la marcha\ndel gobierno, sin perjuicio de lo dispuesto en el Artículo 71. Puede\nser interpelado a los efectos del tratamiento de una moción de censura,\npor el voto de la mayoría absoluta de la totalidad de los miembros de\ncualquiera de las Cámaras, y ser removido por el voto de la mayoría absoluta de los miembros de cada una de las Cámaras.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "102",
+      "text": "Cada ministro es responsable de los actos que legaliza; y solidariamente de los que acuerda con sus colegas.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "103",
+      "text": "Los ministros no pueden\npor sí solos, en ningún caso, tomar resoluciones, a excepción de lo\nconcerniente al régimen económico y administrativo de sus respectivos\ndepartamentos.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "104",
+      "text": "Luego que el Congreso\nabra sus sesiones, deberán los ministros del despacho presentarle una\nmemoria detallada del estado de la Nación en lo relativo a los negocios\nde sus respectivos departamentos.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "105",
+      "text": "No pueden ser senadores ni diputados, sin hacer dimisión de sus empleos de ministros.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "106",
+      "text": "Pueden los ministros concurrir a las sesiones del Congreso y tomar parte en sus debates, pero no votar.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "107",
+      "text": "Gozarán por sus servicios de\nun sueldo establecido por la ley, que no podrá ser aumentado ni\ndisminuido en favor o perjuicio de los que se hallen en ejercicio.\nSECCIÓN TERCERA\nDEL PODER JUDICIAL\nCAPÍTULO PRIMERO\nDe su naturaleza y duración",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "108",
+      "text": "El Poder Judicial de la Nación\nserá ejercido por una Corte Suprema de Justicia, y por los demás\ntribunales inferiores que el Congreso estableciere en el territorio de\nla Nación.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "109",
+      "text": "En ningún caso el presidente\nde la Nación puede ejercer funciones judiciales, arrogarse el\nconocimiento de causas pendientes o restablecer las fenecidas.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "110",
+      "text": "Los jueces de la Corte Suprema\ny de los tribunales inferiores de la Nación conservarán sus empleos\nmientras dure su buena conducta, y recibirán por sus servicios una\ncompensación que determinará la ley, y que no podrá ser disminuida en\nmanera alguna, mientras permaneciesen en sus funciones.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "111",
+      "text": "Ninguno podrá ser miembro de\nla Corte Suprema de Justicia, sin ser abogado de la Nación con ocho\naños de ejercicio, y tener las calidades requeridas para ser senador.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "112",
+      "text": "En la primera instalación de\nla Corte Suprema, los individuos nombrados prestarán juramento en manos\ndel Presidente de la Nación, de desempeñar sus obligaciones,\nadministrando justicia bien y legalmente, y en conformidad a lo que\nprescribe la Constitución. En lo sucesivo lo prestarán ante el\npresidente de la misma Corte.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "113",
+      "text": "La Corte Suprema dictará su reglamento interior y nombrará a sus empleados.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "114",
+      "text": "El\nConsejo de la Magistratura, regulado por una ley especial sancionada\npor la mayoría absoluta de la totalidad de los miembros de cada Cámara,\ntendrá a su cargo la selección de los magistrados y la administración\ndel Poder Judicial.\nEl Consejo será integrado periódicamente de modo\nque se procure el equilibrio entre la representación de los órganos\npolíticos resultantes de la elección popular, de los jueces de todas\nlas instancias y de los abogados de la matrícula federal. Será\nintegrado, asimismo, por otras personas del ámbito académico y\ncientífico, en el número y la forma que indique la ley.\nSerán sus atribuciones:\n1. Seleccionar mediante concursos públicos los postulantes a las magistraturas inferiores.\n2. Emitir propuestas en ternas vinculantes, para el nombramiento de los magistrados de los tribunales inferiores.\n3. Administrar los recursos y ejecutar el presupuesto que la ley asigne a la administración de justicia.\n4. Ejercer facultades disciplinarias sobre magistrados.\n5. Decidir la apertura del procedimiento de\nremoción de magistrados, en su caso ordenar la suspensión, y formular\nla acusación correspondiente.\n6. Dictar los reglamentos relacionados con la\norganización judicial y todos aquellos que sean necesarios para\nasegurar la independencia de los jueces y la eficaz prestación de los\nservicios de justicia.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "115",
+      "text": "Los jueces de los\ntribunales inferiores de la Nación serán removidos por las causales\nexpresadas en el Artículo 53, por un jurado de enjuiciamiento integrado\npor legisladores, magistrados y abogados de la matrícula federal.\nSu fallo, que será irrecurrible, no tendrá más\nefecto que destituir al acusado. Pero la parte condenada quedará no\nobstante sujeta a acusación, juicio y castigo conforme a las leyes ante\nlos tribunales ordinarios.\nCorresponderá archivar las actuaciones y, en su\ncaso, reponer al juez suspendido, si transcurrieren ciento ochenta días\ncontados desde la decisión de abrir el procedimiento de remoción, sin\nque haya sido dictado el fallo.\nEn la ley especial a que se refiere el Artículo 114, se determinará la integración y procedimiento de este jurado.\nCAPÍTULO SEGUNDO\nAtribuciones del Poder Judicial",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "116",
+      "text": "Corresponde a la Corte Suprema\ny a los tribunales inferiores de la Nación, el conocimiento y decisión\nde todas las causas que versen sobre puntos regidos por la\nConstitución, y por las leyes de la Nación, con la reserva hecha en el\ninc. 12 del Artículo 75: y por los tratados con las naciones\nextranjeras: de las causas concernientes a embajadores, ministros\npúblicos y cónsules extranjeros: de las causas de almirantazgo y\njurisdicción marítima: de los asuntos en que la Nación sea parte: de\nlas causas que se susciten entre dos o más provincias; entre una\nprovincia y los vecinos de otra; entre los vecinos de diferentes\nprovincias; y entre una provincia o sus vecinos, contra un Estado o\nciudadano extranjero.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "117",
+      "text": "En estos casos la Corte\nSuprema ejercerá su jurisdicción por apelación según las reglas y\nexcepciones que prescriba el Congreso; pero en todos los asuntos\nconcernientes a embajadores, ministros y cónsules extranjeros, y en los\nque alguna provincia fuese parte, la ejercerá originaria y\nexclusivamente.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "118",
+      "text": "Todos los juicios\ncriminales ordinarios, que no se deriven del derecho de acusación\nconcedido a la Cámara de Diputados se terminarán por jurados, luego que\nse establezca en la República esta institución. La actuación de estos\njuicios se hará en la misma provincia donde se hubiere cometido el\ndelito; pero cuando éste se cometa fuera de los límites de la Nación,\ncontra el derecho de gentes, el Congreso determinará por una ley\nespecial el lugar en que haya de seguirse el juicio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "119",
+      "text": "La traición contra la\nNación consistirá únicamente en tomar las armas contra ella, o en\nunirse a sus enemigos prestándoles ayuda y socorro. El Congreso fijará\npor una ley especial la pena de este delito; pero ella no pasará de la\npersona del delincuente, ni la infamia del reo se transmitirá a sus\nparientes de cualquier grado.\nSECCIÓN CUARTA\nDel ministerio público",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "120",
+      "text": "El\nMinisterio Público es un órgano independiente con autonomía funcional y\nautarquía financiera que tiene por función promover la actuación de la\njusticia en defensa de la legalidad de los intereses generales de la\nsociedad en coordinación con las demás autoridades de la República.\nEstá integrado por un procurador general de la\nNación y un defensor general de la Nación y los demás miembros que la\nley establezca.\nSus miembros gozan de inmunidades funcionales e intangibilidad de remuneraciones.\nTITULO SEGUNDO\nGOBIERNOS DE PROVINCIA",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "121",
+      "text": "Las provincias\nconservan todo el poder no delegado por esta Constitución al Gobierno\nfederal, y el que expresamente se hayan reservado por pactos especiales\nal tiempo de su incorporación.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "122",
+      "text": "Se dan sus propias\ninstituciones locales y se rigen por ellas. Eligen sus gobernadores,\nsus legisladores y demás funcionarios de provincia, sin intervención\ndel Gobierno federal.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "123",
+      "text": "Cada\nprovincia dicta su propia constitución, conforme a lo dispuesto por el",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "124",
+      "text": "Las\nprovincias podrán crear regiones para el desarrollo económico y social\ny establecer órganos con facultades para el cumplimiento de sus fines y\npodrán también celebrar convenios internacionales en tanto no sean\nincompatibles con la política exterior de la Nación y no afecten las\nfacultades delegadas al Gobierno federal o el crédito público de la\nNación; con conocimiento del Congreso Nacional. La ciudad de Buenos\nAires tendrá el régimen que se establezca a tal efecto.\nCorresponde a las provincias el dominio originario de los recursos naturales existentes en su territorio.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "125",
+      "text": "Las provincias pueden celebrar\ntratados parciales para fines de administración de justicia, de\nintereses económicos y trabajos de utilidad común, con conocimiento del\nCongreso Federal; y promover su industria, la inmigración, la\nconstrucción de ferrocarriles y canales navegables, la colonización de\ntierras de propiedad provincial, la introducción y establecimiento de\nnuevas industrias, la importación de capitales extranjeros y la\nexploración de sus ríos, por leyes protectoras de estos fines, y con\nsus recursos propios.\nLas provincias y la ciudad de Buenos Aires pueden\nconservar organismos de seguridad social para los empleados públicos y\nlos profesionales; y promover el progreso económico, el desarrollo\nhumano, la generación de empleo, la educación, la ciencia, el\nconocimiento y la cultura.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "126",
+      "text": "Las provincias no ejercen el\npoder delegado a la Nación. No pueden celebrar tratados parciales de\ncarácter político; ni expedir leyes sobre comercio, o navegación\ninterior o exterior; ni establecer aduanas provinciales; ni acuñar\nmoneda; ni establecer bancos con facultad de emitir billetes, sin\nautorización del Congreso Federal; ni dictar los Códigos Civil,\nComercial, Penal y de Minería, después que el Congreso los haya\nsancionado; ni dictar especialmente leyes sobre ciudadanía y\nnaturalización, bancarrotas, falsificación de moneda o documentos del\nEstado; ni establecer derechos de tonelaje; ni armar buques de guerra o\nlevantar ejércitos, salvo el caso de invasión exterior o de un peligro\ntan inminente que no admita dilación dando luego cuenta al Gobierno\nfederal; ni nombrar o recibir agentes extranjeros.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "127",
+      "text": "Ninguna provincia puede\ndeclarar, ni hacer la guerra a otra provincia. Sus quejas deben ser\nsometidas a la Corte Suprema de Justicia y dirimidas por ella. Sus\nhostilidades de hecho son actos de guerra civil, calificados de\nsedición o asonada, que el Gobierno federal debe sofocar y reprimir\nconforme a la ley.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "128",
+      "text": "Los gobernadores de\nprovincia son agentes naturales del Gobierno federal para hacer cumplir\nla Constitución y las leyes de la Nación.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    },
+    {
+      "number": "129",
+      "text": "La\nciudad de Buenos Aires tendrá un régimen de Gobierno autónomo con\nfacultades propias de legislación y jurisdicción, y su jefe de gobierno\nserá elegido directamente por el pueblo de la ciudad.\nUna ley garantizará los intereses del Estado nacional mientras la ciudad de Buenos Aires sea capital de la Nación.\nEn el marco de lo dispuesto en este artículo, el\nCongreso de la Nación convocará a los habitantes de la ciudad de Buenos\nAires para que, mediante los representantes que elijan a ese efecto,\ndicten el Estatuto Organizativo de sus instituciones.\nDISPOSICIONES TRANSITORIAS\nPrimera. La Nación\nArgentina ratifica su legítima e imprescriptible soberanía sobre las\nislas Malvinas, Georgias del Sur y Sandwich del Sur y los espacios\nmarítimos e insulares correspondientes, por ser parte integrante del\nterritorio nacional.\nLa recuperación de dichos territorios y el\nejercicio pleno de la soberanía, respetando el modo de vida de sus\nhabitantes, y conforme a los principios del derecho internacional,\nconstituyen un objetivo permanente e irrenunciable del pueblo argentino.\nSegunda. Las acciones positivas a que\nalude el Artículo 37 en su último párrafo no podrán ser inferiores a\nlas vigentes al tiempo de sancionarse esta Constitución y durarán lo\nque la ley determine.\n(Corresponde al Artículo 37)\nTercera. La ley que reglamente el ejercicio de la iniciativa popular deberá ser aprobada dentro de los dieciocho meses de esta sanción.\n(Corresponde al Artículo 39)\nCuarta. Los actuales integrantes del\nSenado de la Nación desempeñarán su cargo hasta la extinción del\nmandato correspondiente a cada uno.\nEn ocasión de renovarse un tercio del Senado en\nmil novecientos noventa y cinco, por finalización de los mandatos de\ntodos los senadores elegidos en mil novecientos ochenta y seis, será\ndesignado además un tercer senador por distrito por cada Legislatura.\nEl conjunto de los senadores por cada distrito se integrará, en lo\nposible, de modo que correspondan dos bancas al partido político o\nalianza electoral que tenga el mayor número de miembros en la\nlegislatura, y la restante al partido político o alianza electoral que\nle siga en número de miembros de ella. En caso de empate, se hará\nprevalecer al partido político o alianza electoral que hubiera obtenido\nmayor cantidad de sufragios en la elección legislativa provincial\ninmediata anterior.\nLa elección de los senadores que reemplacen a\naquellos cuyos mandatos vencen en mil novecientos noventa y ocho, así\ncomo la elección de quien reemplace a cualquiera de los actuales\nsenadores en caso de aplicación del Artículo 62, se hará por estas\nmismas reglas de designación. Empero, el partido político o alianza\nelectoral que tenga el mayor número de miembros en la Legislatura al\ntiempo de la elección del senador, tendrá derecho a que sea elegido su\ncandidato, con la sola limitación de que no resulten los tres senadores\nde un mismo partido político o alianza electoral.\nEstas reglas serán también aplicables a la\nelección de los senadores por la ciudad de Buenos Aires, en mil\nnovecientos noventa y cinco por el cuerpo electoral, y en mil\nnovecientos noventa y ocho, por el órgano legislativo de la ciudad.\nLa elección de todos los senadores a que se\nrefiere esta cláusula se llevará a cabo con una anticipación no menor\nde sesenta ni mayor de noventa días al momento en que el senador deba\nasumir su función.\nEn todos los casos, los candidatos a senadores\nserán propuestos por los partidos políticos o alianzas electorales. El\ncumplimiento de las exigencias legales y estatutarias para ser\nproclamado candidato será certificado por la Justicia Electoral\nNacional y comunicado a la Legislatura.\nToda vez que se elija un senador nacional se designará un suplente, quien asumirá en los casos del Artículo 62.\nLos mandatos de los senadores elegidos por\naplicación de esta cláusula transitoria durarán hasta el nueve de\ndiciembre del dos mil uno.\n(Corresponde al Artículo 54)\nQuinta. Todos los integrantes del Senado\nserán elegidos en la forma indicada en el Artículo 54 dentro de los dos\nmeses anteriores al diez de diciembre del dos mil uno, decidiéndose por\nla suerte, luego que todos se reúnan, quienes deban salir en el primero\ny segundo bienio.\n(Corresponde al Artículo 56)\nSexta. Un régimen de coparticipación\nconforme lo dispuesto en el inc. 2 del Artículo 75 y la reglamentación\ndel organismo fiscal federal, serán establecidos antes de la\nfinalización del año 1996; la distribución de competencias, servicios y\nfunciones vigentes a la sanción de esta reforma, no podrá modificarse\nsin la aprobación de la provincia interesada; tampoco podrá modificarse\nen desmedro de las provincias la distribución de recursos vigente a la\nsanción de esta reforma y en ambos casos hasta el dictado del\nmencionado régimen de coparticipación.\nLa presente cláusula no afecta los reclamos\nadministrativos o judiciales en trámite originados por diferencias por\ndistribución de competencias, servicios, funciones o recursos entre la\nNación y las provincias.\n(Corresponde al Artículo 75 inc. 2).\nSéptima. El Congreso ejercerá en la ciudad\nde Buenos Aires mientras sea capital de la Nación las atribuciones\nlegislativas que conserve con arreglo al Artículo 129.\n(Corresponde al Artículo 75 inc. 30).\nOctava. La legislación delegada\npreexistente que no contenga plazo establecido para su ejercicio\ncaducará a los cinco años de la vigencia de esta disposición excepto\naquella que el Congreso de la Nación ratifique expresamente por una\nnueva ley.\n(Corresponde al Artículo 76).\nNovena. El mandato del presidente en ejercicio al momento de sancionarse esta reforma deberá ser considerado como primer período.\n(Corresponde al Artículo 90)\nDécima. El mandato del Presidente de la Nación que asuma su cargo el 8 de julio de 1995 se extinguirá el 10 de diciembre de 1999.\n(Corresponde al Artículo 90)\nUndécimo. La caducidad de los\nnombramientos y la duración limitada previstas en el Artículo 99 inc. 4\nentrarán en vigencia a los cinco años de la sanción de esta reforma\nconstitucional.\n(Corresponde al Artículo 99 inc. 4)\nDuodécima. Las prescripciones establecidas\nen los arts. 100 y 101 del capítulo cuarto de la sección segunda de la\nsegunda parte de esta Constitución referidas al jefe de gabinete de\nministros, entrarán en vigencia el 8 de julio de 1995.\nEl jefe de gabinete de ministros será designado\npor primera vez el 8 de julio de 1995 hasta esa fecha sus facultades\nserán ejercitadas por el Presidente de la República.\n(Corresponde a los arts. 99 inc. 7, 100 y 101.)\nDecimotercera. A partir de los trescientos\nsesenta días de la vigencia de esta reforma los magistrados inferiores\nsolamente podrán ser designados por el procedimiento previsto en la\npresente Constitución. Hasta tanto se aplicará el sistema vigente con\nanterioridad.\n(Corresponde al Artículo 114)\nDecimocuarta. Las causas en trámite ante\nla Cámara de Diputados al momento de instalarse el Consejo de la\nMagistratura, les serán remitidas a efectos del inc. 5 del Artículo\n114. Las ingresadas en el Senado continuarán allí hasta su terminación.\n(Corresponde al Artículo 115)\nDecimoquinta. Hasta tanto se constituyan\nlos poderes que surjan del nuevo régimen de autonomía de la ciudad de\nBuenos Aires, el Congreso ejercerá una legislación exclusiva sobre su\nterritorio, en los mismos términos que hasta la sanción de la presente.\nEl jefe de Gobierno será elegido durante el año mil novecientos noventa y cinco.\nLa ley prevista en los párrafos segundo y tercero\ndel Artículo 129, deberá ser sancionada dentro del plazo de doscientos\nsetenta días a partir de la vigencia de esta Constitución\nHasta tanto se haya dictado el Estatuto Organizativo la designación y remoción de los jueces de la ciudad de\nBuenos Aires se regirá por las disposiciones de los arts. 114 y 115 de\nesta Constitución.\n(Corresponde al Artículo 129)\nDecimosexta. Esta reforma entra en\nvigencia al día siguiente de su publicación. Los miembros de la\nConvención Constituyente, el presidente de la Nación Argentina, los\npresidentes de las Cámaras Legislativas y el presidente de la Corte\nSuprema de Justicia prestan juramento en un mismo acto el día 24 de\nagosto de 1994, en el Palacio San José, Concepción del Uruguay,\nprovincia de Entre Ríos.\nCada poder del Estado y las autoridades\nprovinciales y municipales disponen lo necesario para que sus miembros\ny funcionarios juren esta Constitución\nDecimoséptima. El texto constitucional ordenado, sancionado por esta Convención Constituyente, reemplaza al hasta ahora vigente.\nDADA EN LA SALA DE SESIONES DE LA CONVENCIÓN\nNACIONAL CONSTITUYENTE, EN LA CIUDAD DE SANTA FE, A LOS VEINTIDÓS DÍAS\nDEL MES DE AGOSTO DEL AÑO MIL NOVECIENTOS NOVENTA Y CUATRO.",
+      "incisos": [],
+      "location": {},
+      "materia": []
+    }
+  ]
+}

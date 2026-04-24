@@ -88,6 +88,27 @@ describe("findArticle", () => {
     const withoutPrefix = findArticle(lib, "ccyc", "1");
     expect(withPrefix).toEqual(withoutPrefix);
   });
+
+  it("currently exposes the reported CCyC corruption at the start of the corpus", () => {
+    const art1 = findArticle(lib, "ccyc", "1");
+    const art10 = findArticle(lib, "ccyc", "10");
+    expect(art1).toBeDefined();
+    expect(art1?.text.toLowerCase()).toContain("apruébase el");
+    expect(art1?.text.toLowerCase()).toContain("código civil y comercial");
+    expect(art10?.text.toLowerCase()).toContain("comuníquese al");
+    expect(art10?.text.toLowerCase()).toContain("poder ejecutivo");
+  });
+
+  it("still has substantive CCyC content in mid-range articles", () => {
+    const art = findArticle(lib, "ccyc", "765");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("obligación es de dar dinero");
+  });
+
+  it("keeps CCyC truncation visible for missing high articles", () => {
+    const art = findArticle(lib, "ccyc", "2200");
+    expect(art).toBeUndefined();
+  });
 });
 
 describe("normalizeNumber", () => {

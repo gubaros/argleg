@@ -187,7 +187,7 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
           .max(500)
           .describe("Término de búsqueda: palabra clave, materia o número de artículo."),
         law: LawIdSchema.optional().describe(
-          "Acotar búsqueda a una norma específica. Valores: constitucion | ccyc | penal | cppf | cpccn | ley_24240.",
+          "Acotar búsqueda a una norma específica. Valores: constitucion | ccyc | penal | cppf | cpccn | ley_24240 | ley_19550 | ley_19549.",
         ),
         article: z
           .string()
@@ -246,7 +246,7 @@ function registerTools(server: McpServer, lib: LoadedLibrary): void {
         "ley, artículo, inciso, capítulo y fuente. Sólo desde archivos locales.",
       inputSchema: {
         law: LawIdSchema.describe(
-          "Norma a consultar. Valores: constitucion | ccyc | penal | cppf | cpccn | ley_24240.",
+          "Norma a consultar. Valores: constitucion | ccyc | penal | cppf | cpccn | ley_24240 | ley_19550 | ley_19549.",
         ),
         article_number: z
           .string()
@@ -417,7 +417,7 @@ function registerResources(server: McpServer, lib: LoadedLibrary): void {
       title: "Artículo de norma",
       description:
         "Devuelve el texto completo de un artículo. URI: law://{id}/article/{number}. " +
-        "IDs válidos: constitucion, ccyc, penal, cppf, cpccn, ley_24240.",
+        "IDs válidos: constitucion, ccyc, penal, cppf, cpccn, ley_24240, ley_19550, ley_19549.",
       mimeType: "text/markdown",
     },
     async (uri, { id, number }) =>
@@ -480,7 +480,7 @@ function registerPrompts(server: McpServer): void {
       argsSchema: {
         law: z
           .string()
-          .describe("ID de la norma (constitucion, ccyc, penal, cppf, cpccn, ley_24240)."),
+          .describe("ID de la norma (constitucion, ccyc, penal, cppf, cpccn, ley_24240, ley_19550, ley_19549)."),
         article_number: z.string().describe("Número de artículo a analizar."),
         context: z
           .string()

@@ -16,6 +16,8 @@ Servidor MCP de solo lectura para consultar legislación argentina desde archivo
 | `cppf` | Código Procesal Penal Federal | Ley 27.063 |
 | `cpccn` | Código Procesal Civil y Comercial de la Nación | Ley 17.454 |
 | `ley_24240` | Ley de Defensa del Consumidor | Ley 24.240 |
+| `ley_19550` | Ley General de Sociedades | Ley 19.550 |
+| `ley_19549` | Ley Nacional de Procedimientos Administrativos | Ley 19.549 |
 
 ---
 
@@ -38,11 +40,8 @@ npm run build
 
 ## Cargar datos reales
 
-Los archivos en `data/` son esqueletos con texto placeholder.
-**Debés reemplazar cada campo `"text"` con el texto oficial** tomado de:
-
-- [InfoLEG](http://www.infoleg.gob.ar/)
-- [Boletín Oficial](https://www.boletinoficial.gob.ar/)
+Los archivos en `data/` son la fuente de verdad local del servidor.
+Pueden generarse desde HTML locales o desde InfoLEG con `fetch-infoleg`, y después se versionan si quieres conservar el corpus regenerado.
 
 ### Auto-importar desde InfoLEG
 
@@ -52,12 +51,14 @@ y genera el JSON automáticamente.
 **Importante:** a partir de esta versión, cada corpus pasa por su propio parser.
 No todos tienen el mismo nivel de madurez todavía:
 
-- `ccyc` → parser específico sólido (salta ley aprobatoria / corta en ANEXO II)
-- `cppf` → parser específico implementado, pero todavía requiere una pasada adicional de validación de corpus regenerado
-- `constitucion` → parser dedicado por archivo, actualmente con estrategia base
-- `penal` → parser dedicado por archivo, actualmente con estrategia base
-- `cpccn` → parser dedicado por archivo, actualmente con estrategia base
-- `ley_24240` → parser dedicado por archivo, actualmente con estrategia base
+- `ccyc` → parser específico + `location` + incisos + log auditable
+- `cppf` → parser específico + `location` + incisos + log auditable
+- `constitucion` → parser específico + incisos numerados
+- `penal` → parser específico + incisos + log auditable
+- `cpccn` → parser específico + `location`
+- `ley_24240` → parser dedicado por archivo
+- `ley_19549` → parser específico + incisos + log auditable
+- `ley_19550` → parser específico + incisos + log auditable
 
 La arquitectura ya no usa un único parser compartido para todas las normas.
 
@@ -86,8 +87,10 @@ URLs sugeridas (InfoLEG texto actualizado):
 | `cppf` | http://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/239340/norma.htm |
 | `cpccn` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/40000-44999/43797/texact.htm |
 | `ley_24240` | http://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/638/texact.htm |
+| `ley_19550` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm |
+| `ley_19549` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/20000-24999/22363/texact.htm |
 
-> **Es un importador con parsers específicos por corpus.** Aun así, sigue siendo necesario revisar el output: algunos corpus todavía pueden arrastrar encabezados de capítulo al final de un artículo, o no detectar ubicación (`location`), materia (`materia`) e incisos. Esos campos siguen quedando vacíos y los enriquecés a mano cuando querés.
+> **Es un importador con parsers específicos por corpus.** El servidor ya extrae parte de la estructura (`location`, `incisos`) en varias normas, pero sigue siendo recomendable auditar cada corpus regenerado antes de depender de él en producción.
 
 ### Formato de cada archivo JSON
 
@@ -164,7 +167,7 @@ al transporte JSON-RPC de MCP; mezclar ambos rompería el protocolo.
 
 Por defecto, texto human-readable:
 ```
-[argleg-mcp 2026-04-23T22:25:11.341Z info   ] server.ready tools=3 resources=7 prompts=2 log_level=info
+[argleg-mcp 2026-04-23T22:25:11.341Z info   ] server.ready tools=4 resources=9 prompts=2 log_level=info
 [argleg-mcp 2026-04-23T22:25:14.002Z verbose] tool.call name=get_article
 [argleg-mcp 2026-04-23T22:25:14.004Z verbose] tool.done name=get_article ms=2
 ```
@@ -241,6 +244,14 @@ Busca artículos por palabra clave, materia, capítulo o número.
   "article": "19",
   "limit": 10
 }
+```
+
+### `server_info`
+
+Devuelve metadata operativa del servidor, incluyendo versión y fecha/hora de build.
+
+```json
+{}
 ```
 
 ### `get_article`

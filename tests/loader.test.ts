@@ -168,6 +168,18 @@ describe("findArticle", () => {
     expect(art?.text.toLowerCase()).toContain("trato digno");
   });
 
+  it("loads Ley 19.549 article 1 from the local corpus", () => {
+    const art = findArticle(lib, "ley_19549", "1");
+    expect(art).toBeDefined();
+    expect(art?.text.toLowerCase()).toContain("ámbito de aplicación");
+  });
+
+  it("loads Ley 19.550 article 10 from the local corpus", () => {
+    const art = findArticle(lib, "ley_19550", "10");
+    expect(art).toBeDefined();
+    expect(art?.incisos.length).toBeGreaterThan(3);
+  });
+
   it("loads Constitución article 75 with structured numbered incisos", () => {
     const art = findArticle(lib, "constitucion", "75");
     expect(art).toBeDefined();

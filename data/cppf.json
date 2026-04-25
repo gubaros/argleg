@@ -337,8 +337,25 @@
     },
     {
       "number": "30",
-      "text": "Disponibilidad de la acción. El representante del Ministerio Público Fiscal puede disponer de la acción penal pública en los siguientes casos:\na) Criterios de oportunidad;\nb) Conversión de la acción;\nc) Conciliación;\nd) Suspensión del proceso a prueba.\nNo puede prescindir ni total ni parcialmente del ejercicio de la acción\npenal si el imputado fuera funcionario público y se le atribuyera un\ndelito cometido en el ejercicio o en razón de su cargo, o cuando\napareciere como un episodio dentro de un contexto de violencia\ndoméstica o motivada en razones discriminatorias. Tampoco podrá en los\nsupuestos que resulten incompatibles con previsiones de instrumentos\ninternacionales, leyes o instrucciones generales del Ministerio Público\nFiscal fundadas en criterios de política criminal.",
-      "incisos": [],
+      "text": "Disponibilidad de la acción. El representante del Ministerio Público Fiscal puede disponer de la acción penal pública en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Criterios de oportunidad;"
+        },
+        {
+          "id": "b",
+          "text": "Conversión de la acción;"
+        },
+        {
+          "id": "c",
+          "text": "Conciliación;"
+        },
+        {
+          "id": "d",
+          "text": "Suspensión del proceso a prueba. No puede prescindir ni total ni parcialmente del ejercicio de la acción penal si el imputado fuera funcionario público y se le atribuyera un delito cometido en el ejercicio o en razón de su cargo, o cuando apareciere como un episodio dentro de un contexto de violencia doméstica o motivada en razones discriminatorias. Tampoco podrá en los supuestos que resulten incompatibles con previsiones de instrumentos internacionales, leyes o instrucciones generales del Ministerio Público Fiscal fundadas en criterios de política criminal."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -350,8 +367,25 @@
     },
     {
       "number": "31",
-      "text": "Criterios de oportunidad.\nLos representantes del Ministerio Público Fiscal podrán prescindir\ntotal o parcialmente del ejercicio de la acción penal pública o\nlimitarla a alguna de las personas que intervinieron en el hecho en los\ncasos siguientes:\na) Si se tratara de un hecho que por su insignificancia no afectara gravemente el interés público;\nb) Si la intervención del imputado se estimara de menor relevancia, y\npudiera corresponder pena de multa, inhabilitación o condena\ncondicional;\nc) Si el imputado hubiera sufrido a consecuencia del hecho un daño\nfísico o moral grave que tornara innecesaria y desproporcionada la\naplicación de una pena;\nd) Si la pena que pudiera imponerse por el hecho careciera de\nimportancia en consideración a la sanción ya impuesta, o a la que deba\nesperarse por los restantes hechos investigados en el mismo u otro\nproceso, o a la que se impuso o se le impondría en un procedimiento\ntramitado en el extranjero.",
-      "incisos": [],
+      "text": "Criterios de oportunidad. Los representantes del Ministerio Público Fiscal podrán prescindir total o parcialmente del ejercicio de la acción penal pública o limitarla a alguna de las personas que intervinieron en el hecho en los casos siguientes:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si se tratara de un hecho que por su insignificancia no afectara gravemente el interés público;"
+        },
+        {
+          "id": "b",
+          "text": "Si la intervención del imputado se estimara de menor relevancia, y pudiera corresponder pena de multa, inhabilitación o condena condicional;"
+        },
+        {
+          "id": "c",
+          "text": "Si el imputado hubiera sufrido a consecuencia del hecho un daño físico o moral grave que tornara innecesaria y desproporcionada la aplicación de una pena;"
+        },
+        {
+          "id": "d",
+          "text": "Si la pena que pudiera imponerse por el hecho careciera de importancia en consideración a la sanción ya impuesta, o a la que deba esperarse por los restantes hechos investigados en el mismo u otro proceso, o a la que se impuso o se le impondría en un procedimiento tramitado en el extranjero."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -376,8 +410,21 @@
     },
     {
       "number": "33",
-      "text": "Conversión de la acción. A pedido de la víctima la acción penal pública podrá ser convertida en acción privada en los siguientes casos:\na) Si se aplicara un criterio de oportunidad;\nb) Si el Ministerio Público Fiscal solicitara el sobreseimiento al momento de la conclusión de la investigación preparatoria;\nc) Si se tratara de un delito que requiera instancia de parte, o de\nlesiones culposas, siempre que el representante del Ministerio Público\nFiscal lo autorice y no exista un interés público gravemente\ncomprometido.\nEn todos los casos, si existe pluralidad de víctimas, será necesario el\nconsentimiento de todas, aunque sólo una haya ejercido la querella.",
-      "incisos": [],
+      "text": "Conversión de la acción. A pedido de la víctima la acción penal pública podrá ser convertida en acción privada en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si se aplicara un criterio de oportunidad;"
+        },
+        {
+          "id": "b",
+          "text": "Si el Ministerio Público Fiscal solicitara el sobreseimiento al momento de la conclusión de la investigación preparatoria;"
+        },
+        {
+          "id": "c",
+          "text": "Si se tratara de un delito que requiera instancia de parte, o de lesiones culposas, siempre que el representante del Ministerio Público Fiscal lo autorice y no exista un interés público gravemente comprometido. En todos los casos, si existe pluralidad de víctimas, será necesario el consentimiento de todas, aunque sólo una haya ejercido la querella."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -402,8 +449,21 @@
     },
     {
       "number": "35",
-      "text": "Suspensión del proceso a prueba. La suspensión del proceso a prueba se aplicará en alguno de los siguientes casos:\na) Cuando el delito prevea un máximo de pena de tres (3) años de\nprisión y el imputado no hubiere sido condenado a pena de prisión o\nhubieran transcurrido cinco (5) años desde el vencimiento de la pena;\nb) Cuando las circunstancias del caso permitan dejar en suspenso el cumplimiento de la condena aplicable;\nc) Cuando proceda la aplicación de una pena no privativa de la libertad.\nEn caso de tratarse de una persona extranjera, también podrá aplicarse\ncuando haya sido sorprendida en flagrancia de un delito, conforme el\nartículo 184 de este Código, que prevea pena privativa de la libertad\ncuyo mínimo no fuere superior a tres (3) años de prisión. La aplicación\ndel trámite previsto en este artículo implicará la expulsión del\nterritorio nacional, siempre que no vulnere el derecho de reunificación\nfamiliar. La expulsión dispuesta judicialmente conlleva, sin excepción,\nla prohibición de reingreso que no puede ser inferior a cinco (5) años\nni mayor de quince (15).\nEl imputado podrá proponer al fiscal la suspensión del proceso a\nprueba. Dicha propuesta podrá formularse hasta la finalización de la\netapa preparatoria, salvo que se produzca una modificación en la\ncalificación jurídica, durante el transcurso de la audiencia de juicio,\nque habilite la aplicación en dicha instancia.\nEl acuerdo se hará por escrito, que llevará la firma del imputado y su\ndefensor y del fiscal, y será presentado ante el juez que evaluará las\nreglas de conducta aplicables en audiencia.\nSe celebrará una audiencia a la que se citará a las partes y a la\nvíctima, quienes debatirán sobre las reglas de conducta a imponer.\nEl control del cumplimiento de las reglas de conducta para la\nsuspensión del proceso a prueba estará a cargo de una oficina judicial\nespecífica, que dejará constancia en forma periódica sobre su\ncumplimiento y dará noticias a las partes de las circunstancias que\npudieran originar una modificación o revocación del instituto.\nLa víctima tiene derecho a ser informada respecto del cumplimiento de las reglas de conducta.\nSi el imputado incumpliere las condiciones establecidas, el\nrepresentante del Ministerio Público Fiscal o la querella solicitarán\nal juez una audiencia para que las partes expongan sus fundamentos\nsobre la continuidad, modificación o revocación del juicio a prueba. En\ncaso de revocación el procedimiento continuará de acuerdo a las reglas\ngenerales. La suspensión del juicio a prueba también se revocará si el\nimputado fuera condenado por un delito cometido durante el plazo de\nsuspensión.\nLos extranjeros en situación regular podrán solicitar la aplicación de una regla de conducta en el país.\nObstáculos fundados en privilegio constitucional",
-      "incisos": [],
+      "text": "Suspensión del proceso a prueba. La suspensión del proceso a prueba se aplicará en alguno de los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Cuando el delito prevea un máximo de pena de tres (3) años de prisión y el imputado no hubiere sido condenado a pena de prisión o hubieran transcurrido cinco (5) años desde el vencimiento de la pena;"
+        },
+        {
+          "id": "b",
+          "text": "Cuando las circunstancias del caso permitan dejar en suspenso el cumplimiento de la condena aplicable;"
+        },
+        {
+          "id": "c",
+          "text": "Cuando proceda la aplicación de una pena no privativa de la libertad. En caso de tratarse de una persona extranjera, también podrá aplicarse cuando haya sido sorprendida en flagrancia de un delito, conforme el artículo 184 de este Código, que prevea pena privativa de la libertad cuyo mínimo no fuere superior a tres (3) años de prisión. La aplicación del trámite previsto en este artículo implicará la expulsión del territorio nacional, siempre que no vulnere el derecho de reunificación familiar. La expulsión dispuesta judicialmente conlleva, sin excepción, la prohibición de reingreso que no puede ser inferior a cinco (5) años ni mayor de quince (15). El imputado podrá proponer al fiscal la suspensión del proceso a prueba. Dicha propuesta podrá formularse hasta la finalización de la etapa preparatoria, salvo que se produzca una modificación en la calificación jurídica, durante el transcurso de la audiencia de juicio, que habilite la aplicación en dicha instancia. El acuerdo se hará por escrito, que llevará la firma del imputado y su defensor y del fiscal, y será presentado ante el juez que evaluará las reglas de conducta aplicables en audiencia. Se celebrará una audiencia a la que se citará a las partes y a la víctima, quienes debatirán sobre las reglas de conducta a imponer. El control del cumplimiento de las reglas de conducta para la suspensión del proceso a prueba estará a cargo de una oficina judicial específica, que dejará constancia en forma periódica sobre su cumplimiento y dará noticias a las partes de las circunstancias que pudieran originar una modificación o revocación del instituto. La víctima tiene derecho a ser informada respecto del cumplimiento de las reglas de conducta. Si el imputado incumpliere las condiciones establecidas, el representante del Ministerio Público Fiscal o la querella solicitarán al juez una audiencia para que las partes expongan sus fundamentos sobre la continuidad, modificación o revocación del juicio a prueba. En caso de revocación el procedimiento continuará de acuerdo a las reglas generales. La suspensión del juicio a prueba también se revocará si el imputado fuera condenado por un delito cometido durante el plazo de suspensión. Los extranjeros en situación regular podrán solicitar la aplicación de una regla de conducta en el país. Obstáculos fundados en privilegio constitucional"
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -428,8 +488,21 @@
     },
     {
       "number": "37",
-      "text": "Excepciones. Las partes podrán oponer las siguientes excepciones:\na) Falta de jurisdicción o de competencia;\nb) Falta de acción, porque ésta no pudo promoverse, no fue iniciada legalmente o no puede proseguirse;\nc) Extinción de la acción penal o civil.\nSi concurren dos (2) o más excepciones, deberán interponerse conjuntamente.",
-      "incisos": [],
+      "text": "Excepciones. Las partes podrán oponer las siguientes excepciones:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Falta de jurisdicción o de competencia;"
+        },
+        {
+          "id": "b",
+          "text": "Falta de acción, porque ésta no pudo promoverse, no fue iniciada legalmente o no puede proseguirse;"
+        },
+        {
+          "id": "c",
+          "text": "Extinción de la acción penal o civil. Si concurren dos (2) o más excepciones, deberán interponerse conjuntamente."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -527,8 +600,21 @@
     },
     {
       "number": "45",
-      "text": "Reglas de competencia. Para determinar la competencia territorial de los jueces se observarán las siguientes reglas:\na) El juez tendrá competencia sobre los delitos cometidos dentro del distrito judicial en que ejerza sus funciones;\nb) En caso de delito continuado o permanente, lo será el del distrito judicial en que cesó la continuación o la permanencia;\nc) En caso de duda o si el lugar del hecho fuera desconocido será competente el juez que intervino primero.",
-      "incisos": [],
+      "text": "Reglas de competencia. Para determinar la competencia territorial de los jueces se observarán las siguientes reglas:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El juez tendrá competencia sobre los delitos cometidos dentro del distrito judicial en que ejerza sus funciones;"
+        },
+        {
+          "id": "b",
+          "text": "En caso de delito continuado o permanente, lo será el del distrito judicial en que cesó la continuación o la permanencia;"
+        },
+        {
+          "id": "c",
+          "text": "En caso de duda o si el lugar del hecho fuera desconocido será competente el juez que intervino primero."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -611,8 +697,29 @@
     },
     {
       "number": "52",
-      "text": "Organos jurisdiccionales. Son órganos jurisdiccionales, en los casos y formas que las leyes determinan:\na) Los jueces con funciones de revisión;\nb) Los jueces con funciones de juicio;\nc) Los Tribunales de Jurados;\nd) Los jueces con funciones de garantías;\ne) Los jueces con funciones de ejecución.",
-      "incisos": [],
+      "text": "Organos jurisdiccionales. Son órganos jurisdiccionales, en los casos y formas que las leyes determinan:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Los jueces con funciones de revisión;"
+        },
+        {
+          "id": "b",
+          "text": "Los jueces con funciones de juicio;"
+        },
+        {
+          "id": "c",
+          "text": "Los Tribunales de Jurados;"
+        },
+        {
+          "id": "d",
+          "text": "Los jueces con funciones de garantías;"
+        },
+        {
+          "id": "e",
+          "text": "Los jueces con funciones de ejecución."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -623,8 +730,29 @@
     },
     {
       "number": "53",
-      "text": "Jueces con funciones de revisión. Los jueces con funciones de revisión serán competentes para conocer:\na) En la sustanciación y resolución de las impugnaciones, de acuerdo con las normas de este Código;\nb) En los conflictos de competencia;\nc) En el procedimiento de excusación o recusación de los jueces;\nd) En las quejas por retardo de justicia;\ne) En la revisión de sentencias condenatorias firmes.",
-      "incisos": [],
+      "text": "Jueces con funciones de revisión. Los jueces con funciones de revisión serán competentes para conocer:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "En la sustanciación y resolución de las impugnaciones, de acuerdo con las normas de este Código;"
+        },
+        {
+          "id": "b",
+          "text": "En los conflictos de competencia;"
+        },
+        {
+          "id": "c",
+          "text": "En el procedimiento de excusación o recusación de los jueces;"
+        },
+        {
+          "id": "d",
+          "text": "En las quejas por retardo de justicia;"
+        },
+        {
+          "id": "e",
+          "text": "En la revisión de sentencias condenatorias firmes."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -635,8 +763,17 @@
     },
     {
       "number": "54",
-      "text": "Jueces con funciones de juicio. Los jueces con funciones de juicio serán competentes para conocer, de forma unipersonal:\na) En la sustanciación del juicio en los delitos de acción privada y en\ntodos aquellos que no estén reprimidos con pena privativa de libertad;\nb) En aquellos delitos reprimidos con pena privativa de libertad, si el\nrepresentante del Ministerio Público Fiscal pretendiera una pena\ninferior a los seis (6) años.\nCuando el requerimiento de pena estimado fuera superior a tres (3) años\ne inferior a seis (6), el imputado podrá solicitar la intervención de\ntres (3) jueces.\nSi el representante del Ministerio Público Fiscal requiriera una pena\nsuperior a seis (6) años, en el juicio oral intervendrán tres (3)\njueces.",
-      "incisos": [],
+      "text": "Jueces con funciones de juicio. Los jueces con funciones de juicio serán competentes para conocer, de forma unipersonal:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "En la sustanciación del juicio en los delitos de acción privada y en todos aquellos que no estén reprimidos con pena privativa de libertad;"
+        },
+        {
+          "id": "b",
+          "text": "En aquellos delitos reprimidos con pena privativa de libertad, si el representante del Ministerio Público Fiscal pretendiera una pena inferior a los seis (6) años. Cuando el requerimiento de pena estimado fuera superior a tres (3) años e inferior a seis (6), el imputado podrá solicitar la intervención de tres (3) jueces. Si el representante del Ministerio Público Fiscal requiriera una pena superior a seis (6) años, en el juicio oral intervendrán tres (3) jueces."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -647,8 +784,21 @@
     },
     {
       "number": "55",
-      "text": "Jueces con funciones de garantías. Los jueces con funciones de garantías serán competentes para conocer:\na) En el control de la investigación y de todas las decisiones\njurisdiccionales que se deban tomar durante la etapa preparatoria, así\ncomo en el control de la acusación;\nb) En el procedimiento abreviado cuando se presenten acuerdos plenos;\nc) En la suspensión del proceso a prueba.",
-      "incisos": [],
+      "text": "Jueces con funciones de garantías. Los jueces con funciones de garantías serán competentes para conocer:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "En el control de la investigación y de todas las decisiones jurisdiccionales que se deban tomar durante la etapa preparatoria, así como en el control de la acusación;"
+        },
+        {
+          "id": "b",
+          "text": "En el procedimiento abreviado cuando se presenten acuerdos plenos;"
+        },
+        {
+          "id": "c",
+          "text": "En la suspensión del proceso a prueba."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -659,8 +809,37 @@
     },
     {
       "number": "56",
-      "text": "Jueces con funciones de ejecución. Los jueces con funciones de ejecución tienen a su cargo:\na) Controlar que se respeten todas las garantías constitucionales e\ninstrumentos internacionales de Derechos Humanos en el trato otorgado a\nlos condenados y personas sometidas a medidas de seguridad. En los\ncasos en que tuviere conocimiento de la violación de una garantía en\nrelación a una persona sometida a prisión preventiva, pondrá de\ninmediato la situación a conocimiento del juez que ordenó la medida;\nb) Controlar el cumplimiento efectivo de las sentencias de condena;\nc) Resolver todos los planteos que se susciten durante la ejecución de\nlas penas y medidas curativas o educativas, así como los referidos a la\nexpulsión de condenados extranjeros en situación irregular en el país;\nd) Resolver las impugnaciones que se presenten contra las decisiones de la administración penitenciaria;\ne) Visitar periódicamente los establecimientos donde se encuentren personas privadas de su libertad, a su disposición;\nf) Dejar sin efecto una pena o modificar las condiciones de su cumplimiento cuando entre en vigencia una ley penal más benigna;\ng) Realizar la unificación de condenas o penas que se adviertan durante la ejecución de la pena.",
-      "incisos": [],
+      "text": "Jueces con funciones de ejecución. Los jueces con funciones de ejecución tienen a su cargo:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Controlar que se respeten todas las garantías constitucionales e instrumentos internacionales de Derechos Humanos en el trato otorgado a los condenados y personas sometidas a medidas de seguridad. En los casos en que tuviere conocimiento de la violación de una garantía en relación a una persona sometida a prisión preventiva, pondrá de inmediato la situación a conocimiento del juez que ordenó la medida;"
+        },
+        {
+          "id": "b",
+          "text": "Controlar el cumplimiento efectivo de las sentencias de condena;"
+        },
+        {
+          "id": "c",
+          "text": "Resolver todos los planteos que se susciten durante la ejecución de las penas y medidas curativas o educativas, así como los referidos a la expulsión de condenados extranjeros en situación irregular en el país;"
+        },
+        {
+          "id": "d",
+          "text": "Resolver las impugnaciones que se presenten contra las decisiones de la administración penitenciaria;"
+        },
+        {
+          "id": "e",
+          "text": "Visitar periódicamente los establecimientos donde se encuentren personas privadas de su libertad, a su disposición;"
+        },
+        {
+          "id": "f",
+          "text": "Dejar sin efecto una pena o modificar las condiciones de su cumplimiento cuando entre en vigencia una ley penal más benigna;"
+        },
+        {
+          "id": "g",
+          "text": "Realizar la unificación de condenas o penas que se adviertan durante la ejecución de la pena."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -695,8 +874,37 @@
     },
     {
       "number": "59",
-      "text": "Excusación. Motivos. El juez deberá apartarse del conocimiento del caso:\na) Si intervino en él como acusador, defensor, representante, perito o\nconsultor técnico, si denunció el hecho o lo conoció como testigo, o si\ndio recomendaciones o emitió opinión sobre el caso fuera del\nprocedimiento;\nb) Si intervino durante la investigación preparatoria o en el\nprocedimiento de control de la acusación, no podrá intervenir en el\njuicio; si pronunció la decisión impugnada no podrá intervenir en el\nprocedimiento que sustancia la impugnación, ni en su decisión;\nc) Si en el caso intervino o interviene su cónyuge, conviviente o algún\npariente dentro del tercer grado de consanguinidad o por adopción, y\nsegundo de afinidad, quien ha sido su tutor, curador o guardador o\nquien está o ha estado bajo su tutela, curatela o guarda;\nd) Si él o alguna de las personas mencionadas en el inciso c)\nestuvieren interesados en el caso o tuvieren juicio pendiente,\ncomunidad o sociedad con alguno de los interesados, salvo que se\ntratare de una sociedad anónima cuyas acciones coticen en el mercado de\nvalores;\ne) Si él o alguna de las personas mencionadas en el inciso c)\nrecibieron o reciben beneficios de importancia o son acreedores,\ndeudores o fiadores de alguno de los interesados, salvo que se tratare\nde instituciones estatales o de entidades financieras o si, después de\ncomenzado el procedimiento, el juez hubiere recibido presentes o\ndádivas de alguno de los interesados, aunque fueren de escaso valor;\nf) Si, antes de iniciado el procedimiento tuvo amistad íntima o\nenemistad manifiesta con alguno de los interesados, si denunció o acusó\na alguno de ellos o fue acusado o denunciado por alguno de ellos,\nincluso conforme al procedimiento para el desafuero o la destitución,\nsalvo que circunstancias posteriores demuestren armonía entre ambos;\ng) Si mediaren circunstancias que, por su gravedad, afecten su independencia e imparcialidad.\nEl juez comprendido en alguno de los motivos contenidos en los incisos\na), b), c), d), e) y g) deberá denunciarlo inmediatamente, no bien\nconozca su situación respecto del caso, y apartarse del conocimiento y\ndecisión del proceso respectivo.\nEn el supuesto del inciso f), el juez, a su exclusivo criterio, podrá\nomitir el apartamiento, sin perjuicio de informar a los intervinientes\nsobre la situación en que se halla.",
-      "incisos": [],
+      "text": "Excusación. Motivos. El juez deberá apartarse del conocimiento del caso:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si intervino en él como acusador, defensor, representante, perito o consultor técnico, si denunció el hecho o lo conoció como testigo, o si dio recomendaciones o emitió opinión sobre el caso fuera del procedimiento;"
+        },
+        {
+          "id": "b",
+          "text": "Si intervino durante la investigación preparatoria o en el procedimiento de control de la acusación, no podrá intervenir en el juicio; si pronunció la decisión impugnada no podrá intervenir en el procedimiento que sustancia la impugnación, ni en su decisión;"
+        },
+        {
+          "id": "c",
+          "text": "Si en el caso intervino o interviene su cónyuge, conviviente o algún pariente dentro del tercer grado de consanguinidad o por adopción, y segundo de afinidad, quien ha sido su tutor, curador o guardador o quien está o ha estado bajo su tutela, curatela o guarda;"
+        },
+        {
+          "id": "d",
+          "text": "Si él o alguna de las personas mencionadas en el inciso c) estuvieren interesados en el caso o tuvieren juicio pendiente, comunidad o sociedad con alguno de los interesados, salvo que se tratare de una sociedad anónima cuyas acciones coticen en el mercado de valores;"
+        },
+        {
+          "id": "e",
+          "text": "Si él o alguna de las personas mencionadas en el inciso c) recibieron o reciben beneficios de importancia o son acreedores, deudores o fiadores de alguno de los interesados, salvo que se tratare de instituciones estatales o de entidades financieras o si, después de comenzado el procedimiento, el juez hubiere recibido presentes o dádivas de alguno de los interesados, aunque fueren de escaso valor;"
+        },
+        {
+          "id": "f",
+          "text": "Si, antes de iniciado el procedimiento tuvo amistad íntima o enemistad manifiesta con alguno de los interesados, si denunció o acusó a alguno de ellos o fue acusado o denunciado por alguno de ellos, incluso conforme al procedimiento para el desafuero o la destitución, salvo que circunstancias posteriores demuestren armonía entre ambos;"
+        },
+        {
+          "id": "g",
+          "text": "Si mediaren circunstancias que, por su gravedad, afecten su independencia e imparcialidad. El juez comprendido en alguno de los motivos contenidos en los incisos a), b), c), d), e) y g) deberá denunciarlo inmediatamente, no bien conozca su situación respecto del caso, y apartarse del conocimiento y decisión del proceso respectivo. En el supuesto del inciso f), el juez, a su exclusivo criterio, podrá omitir el apartamiento, sin perjuicio de informar a los intervinientes sobre la situación en que se halla."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -755,8 +963,53 @@
     },
     {
       "number": "64",
-      "text": "Derechos del imputado.\nA todo imputado se le asegurarán las garantías necesarias para su\ndefensa, a cuyo fin las autoridades intervinientes le informarán los\nsiguientes derechos:\na) A ser informado de las razones de su aprehensión o detención, la\nautoridad que la ha ordenado, entregándole si la hubiere copia de la\norden judicial emitida en su contra, y el de ser conducido ante un\njuez, sin demora, para que decida sobre la legalidad de aquélla;\nb) A pedir que su aprehensión o detención sea comunicada en forma\ninmediata a un pariente o persona de su confianza, asociación o\nentidad; si el imputado ejerciere este derecho, se dejará constancia de\nla producción del aviso y del resultado obtenido; si el aprehendido o\ndetenido fuese extranjero se le informará que puede pedir que su\nsituación sea comunicada al representante diplomático del Estado de su\nnacionalidad, a quien también se le hará saber, si correspondiere, su\ninterés en ser entrevistado;\nc) A guardar silencio, sin que ello pueda ser valorado como una admisión de los hechos o como indicio de culpabilidad;\nd) A ser asistido desde el primer acto del procedimiento por el\ndefensor de su elección o por uno propuesto por una persona de su\nconfianza, o en su defecto, por un defensor público;\ne) A entrevistarse con su defensor en forma libre, privada y\nconfidencial, en particular en la oportunidad previa a la realización\nde cualquier acto que requiera su intervención;\nf) A prestar declaración, si así lo deseara y se encuentra detenido,\ndentro de las setenta y dos (72) horas de efectivizada la medida;\ng) A presentarse ante el representante del Ministerio Público Fiscal o\nel juez, para que se le informe y escuche sobre los hechos que se le\nimputan;\nh) A declarar cuantas veces quiera, con la presencia de su defensor, lo\nque se le hará saber cada vez que manifieste su deseo de hacerlo;\ni) A no ser sometido a técnicas o métodos que induzcan o alteren su libre voluntad o a medidas contrarias a su dignidad;\nj) A que no se empleen medios que impidan el libre movimiento de su\npersona en el lugar y durante la realización de un acto procesal, sin\nperjuicio de las medidas de vigilancia que en casos especiales y a su\nprudente arbitrio el juez o el representante del Ministerio Público\nFiscal consideren necesarias;\nk) A acceder a toda la información disponible desde el momento en que\ntenga noticia de la existencia del proceso, según las previsiones de\neste Código.\nEn todos los casos se dejará constancia fehaciente del cumplimiento del deber de información establecido en este artículo.",
-      "incisos": [],
+      "text": "Derechos del imputado. A todo imputado se le asegurarán las garantías necesarias para su defensa, a cuyo fin las autoridades intervinientes le informarán los siguientes derechos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "A ser informado de las razones de su aprehensión o detención, la autoridad que la ha ordenado, entregándole si la hubiere copia de la orden judicial emitida en su contra, y el de ser conducido ante un juez, sin demora, para que decida sobre la legalidad de aquélla;"
+        },
+        {
+          "id": "b",
+          "text": "A pedir que su aprehensión o detención sea comunicada en forma inmediata a un pariente o persona de su confianza, asociación o entidad; si el imputado ejerciere este derecho, se dejará constancia de la producción del aviso y del resultado obtenido; si el aprehendido o detenido fuese extranjero se le informará que puede pedir que su situación sea comunicada al representante diplomático del Estado de su nacionalidad, a quien también se le hará saber, si correspondiere, su interés en ser entrevistado;"
+        },
+        {
+          "id": "c",
+          "text": "A guardar silencio, sin que ello pueda ser valorado como una admisión de los hechos o como indicio de culpabilidad;"
+        },
+        {
+          "id": "d",
+          "text": "A ser asistido desde el primer acto del procedimiento por el defensor de su elección o por uno propuesto por una persona de su confianza, o en su defecto, por un defensor público;"
+        },
+        {
+          "id": "e",
+          "text": "A entrevistarse con su defensor en forma libre, privada y confidencial, en particular en la oportunidad previa a la realización de cualquier acto que requiera su intervención;"
+        },
+        {
+          "id": "f",
+          "text": "A prestar declaración, si así lo deseara y se encuentra detenido, dentro de las setenta y dos (72) horas de efectivizada la medida;"
+        },
+        {
+          "id": "g",
+          "text": "A presentarse ante el representante del Ministerio Público Fiscal o el juez, para que se le informe y escuche sobre los hechos que se le imputan;"
+        },
+        {
+          "id": "h",
+          "text": "A declarar cuantas veces quiera, con la presencia de su defensor, lo que se le hará saber cada vez que manifieste su deseo de hacerlo;"
+        },
+        {
+          "id": "i",
+          "text": "A no ser sometido a técnicas o métodos que induzcan o alteren su libre voluntad o a medidas contrarias a su dignidad;"
+        },
+        {
+          "id": "j",
+          "text": "A que no se empleen medios que impidan el libre movimiento de su persona en el lugar y durante la realización de un acto procesal, sin perjuicio de las medidas de vigilancia que en casos especiales y a su prudente arbitrio el juez o el representante del Ministerio Público Fiscal consideren necesarias;"
+        },
+        {
+          "id": "k",
+          "text": "A acceder a toda la información disponible desde el momento en que tenga noticia de la existencia del proceso, según las previsiones de este Código. En todos los casos se dejará constancia fehaciente del cumplimiento del deber de información establecido en este artículo."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -923,8 +1176,29 @@
     },
     {
       "number": "78",
-      "text": "Calidad de víctima. Este Código considera víctima:\na) A la persona ofendida directamente por el delito;\nb) Al cónyuge, conviviente, herederos, tutores o guardadores en los\ndelitos cuyo resultado sea la muerte de la persona con la que tuvieren\ntal vínculo, o si el ofendido hubiere sufrido una afectación psíquica o\nfísica que le impida ejercer sus derechos;\nc) A los socios, respecto de los delitos que afecten a una sociedad,\ncometidos por quienes la dirigen, administren, gerencien o controlen;\nd) A las asociaciones o fundaciones, en casos de crímenes de lesa\nhumanidad o de graves violaciones a los derechos humanos siempre que su\nobjeto estatutario se vincule directamente con la defensa de los\nderechos que se consideren lesionados y se encuentren registradas\nconforme a la ley;\ne) A los pueblos originarios en los delitos que impliquen\ndiscriminación de alguno de sus miembros, genocidio o afecten de un\nmodo directo sus derechos colectivos reconocidos constitucionalmente.",
-      "incisos": [],
+      "text": "Calidad de víctima. Este Código considera víctima:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "A la persona ofendida directamente por el delito;"
+        },
+        {
+          "id": "b",
+          "text": "Al cónyuge, conviviente, herederos, tutores o guardadores en los delitos cuyo resultado sea la muerte de la persona con la que tuvieren tal vínculo, o si el ofendido hubiere sufrido una afectación psíquica o física que le impida ejercer sus derechos;"
+        },
+        {
+          "id": "c",
+          "text": "A los socios, respecto de los delitos que afecten a una sociedad, cometidos por quienes la dirigen, administren, gerencien o controlen;"
+        },
+        {
+          "id": "d",
+          "text": "A las asociaciones o fundaciones, en casos de crímenes de lesa humanidad o de graves violaciones a los derechos humanos siempre que su objeto estatutario se vincule directamente con la defensa de los derechos que se consideren lesionados y se encuentren registradas conforme a la ley;"
+        },
+        {
+          "id": "e",
+          "text": "A los pueblos originarios en los delitos que impliquen discriminación de alguno de sus miembros, genocidio o afecten de un modo directo sus derechos colectivos reconocidos constitucionalmente."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -935,8 +1209,53 @@
     },
     {
       "number": "79",
-      "text": "Derechos de las víctimas. La víctima tendrá los siguientes derechos:\na) A recibir un trato digno y respetuoso y que sean mínimas las molestias derivadas del procedimiento;\nb) A que se respete su intimidad en la medida que no obstruya la investigación;\nc) A requerir medidas de protección para su seguridad, la de sus\nfamiliares y la de los testigos que declaren en su interés, a través de\nlos órganos competentes; y a ser asistida en forma especializada con el\nobjeto de propender a su recuperación psíquica, física y social;\nd) A intervenir en el procedimiento penal, conforme a lo establecido por este Código;\ne) A ser informada de los resultados del procedimiento;\nf) A examinar documentos y actuaciones, y a ser informada verbalmente sobre el estado del proceso y la situación del imputado;\ng) A aportar información durante la investigación;\nh) A ser escuchada antes de cada decisión que implique la extinción o\nsuspensión de la acción penal, siempre que lo solicite expresamente;\ni) A ser notificada de las resoluciones que puedan requerir su revisión;\nj) A requerir la revisión de la desestimación, el archivo, la\naplicación de un criterio de oportunidad o el sobreseimiento,\nsolicitado por el representante del Ministerio Público Fiscal, aun si\nno hubiera intervenido en el procedimiento como querellante;\nk) A participar en el proceso en calidad de querellante. La víctima\nserá informada sobre sus derechos cuando realice la denuncia o en su\nprimera intervención en el procedimiento.",
-      "incisos": [],
+      "text": "Derechos de las víctimas. La víctima tendrá los siguientes derechos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "A recibir un trato digno y respetuoso y que sean mínimas las molestias derivadas del procedimiento;"
+        },
+        {
+          "id": "b",
+          "text": "A que se respete su intimidad en la medida que no obstruya la investigación;"
+        },
+        {
+          "id": "c",
+          "text": "A requerir medidas de protección para su seguridad, la de sus familiares y la de los testigos que declaren en su interés, a través de los órganos competentes; y a ser asistida en forma especializada con el objeto de propender a su recuperación psíquica, física y social;"
+        },
+        {
+          "id": "d",
+          "text": "A intervenir en el procedimiento penal, conforme a lo establecido por este Código;"
+        },
+        {
+          "id": "e",
+          "text": "A ser informada de los resultados del procedimiento;"
+        },
+        {
+          "id": "f",
+          "text": "A examinar documentos y actuaciones, y a ser informada verbalmente sobre el estado del proceso y la situación del imputado;"
+        },
+        {
+          "id": "g",
+          "text": "A aportar información durante la investigación;"
+        },
+        {
+          "id": "h",
+          "text": "A ser escuchada antes de cada decisión que implique la extinción o suspensión de la acción penal, siempre que lo solicite expresamente;"
+        },
+        {
+          "id": "i",
+          "text": "A ser notificada de las resoluciones que puedan requerir su revisión;"
+        },
+        {
+          "id": "j",
+          "text": "A requerir la revisión de la desestimación, el archivo, la aplicación de un criterio de oportunidad o el sobreseimiento, solicitado por el representante del Ministerio Público Fiscal, aun si no hubiera intervenido en el procedimiento como querellante;"
+        },
+        {
+          "id": "k",
+          "text": "A participar en el proceso en calidad de querellante. La víctima será informada sobre sus derechos cuando realice la denuncia o en su primera intervención en el procedimiento."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -971,8 +1290,29 @@
     },
     {
       "number": "82",
-      "text": "Forma y contenido de la querella.\nLa pretensión de constituirse en parte querellante se formulará por\nescrito, con asistencia letrada, en forma personal o por mandatario\nespecial que agregará el poder y deberá contener:\na) Datos de identidad, domicilio y firma del querellante y, en su caso, también del mandatario;\nb) Datos de identidad y domicilio del querellado o, si se ignora, cualquier descripción que sirva para identificarlo;\nc) Una relación clara, precisa y circunstanciada del hecho, con indicación del lugar y el momento en que se ejecutó;\nd) Las pruebas que se ofrezcan, indicando en su caso los datos que\npermitan llevar adelante su producción. Si se trata de testigos o\nperitos, además de los datos personales y domicilio, se deberán indicar\nlos puntos sobre los que deberán ser examinados o requeridos;\ne) La acreditación de los extremos de personería que invoca, en su caso.\nLa presentación se deberá acompañar con una copia del escrito para cada\nquerellado. Si se omitiere alguno de los requisitos establecidos en\neste artículo, deberá intimarse a quien efectuó la presentación para\nque en el plazo de tres (3) días corrija el error u omisión, bajo\napercibimiento de inadmisibilidad.",
-      "incisos": [],
+      "text": "Forma y contenido de la querella. La pretensión de constituirse en parte querellante se formulará por escrito, con asistencia letrada, en forma personal o por mandatario especial que agregará el poder y deberá contener:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Datos de identidad, domicilio y firma del querellante y, en su caso, también del mandatario;"
+        },
+        {
+          "id": "b",
+          "text": "Datos de identidad y domicilio del querellado o, si se ignora, cualquier descripción que sirva para identificarlo;"
+        },
+        {
+          "id": "c",
+          "text": "Una relación clara, precisa y circunstanciada del hecho, con indicación del lugar y el momento en que se ejecutó;"
+        },
+        {
+          "id": "d",
+          "text": "Las pruebas que se ofrezcan, indicando en su caso los datos que permitan llevar adelante su producción. Si se trata de testigos o peritos, además de los datos personales y domicilio, se deberán indicar los puntos sobre los que deberán ser examinados o requeridos;"
+        },
+        {
+          "id": "e",
+          "text": "La acreditación de los extremos de personería que invoca, en su caso. La presentación se deberá acompañar con una copia del escrito para cada querellado. Si se omitiere alguno de los requisitos establecidos en este artículo, deberá intimarse a quien efectuó la presentación para que en el plazo de tres (3) días corrija el error u omisión, bajo apercibimiento de inadmisibilidad."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -997,8 +1337,21 @@
     },
     {
       "number": "84",
-      "text": "Desistimiento.\nEl querellante podrá desistir de su intervención en cualquier momento,\nquedando obligado por las costas que su actuación hubiere causado.\nSe considerará que ha renunciado a su intervención en los siguientes casos:\na) Si no concurriere a prestar declaración testimonial o a realizar\ncualquier medida de prueba para cuya producción sea necesaria su\npresencia;\nb) Si no formulare acusación en la oportunidad procesal legalmente prevista;\nc) Si no concurriere a la audiencia de debate o no presentare conclusiones.\nEn los casos de incomparecencia, la existencia de justa causa deberá\nacreditarse. El desistimiento será declarado por el juez a pedido de\nQuerellante en delitos de acción pública",
-      "incisos": [],
+      "text": "Desistimiento. El querellante podrá desistir de su intervención en cualquier momento, quedando obligado por las costas que su actuación hubiere causado. Se considerará que ha renunciado a su intervención en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si no concurriere a prestar declaración testimonial o a realizar cualquier medida de prueba para cuya producción sea necesaria su presencia;"
+        },
+        {
+          "id": "b",
+          "text": "Si no formulare acusación en la oportunidad procesal legalmente prevista;"
+        },
+        {
+          "id": "c",
+          "text": "Si no concurriere a la audiencia de debate o no presentare conclusiones. En los casos de incomparecencia, la existencia de justa causa deberá acreditarse. El desistimiento será declarado por el juez a pedido de Querellante en delitos de acción pública"
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -1036,8 +1389,21 @@
     },
     {
       "number": "87",
-      "text": "Abandono de la querella.\nAdemás de los casos generales previstos en este Código, se considerará\nabandonada la querella de acción privada en los siguientes casos:\na) Si el querellante no instara el procedimiento durante treinta (30) días;\nb) Si el querellante no concurriera a la audiencia de conciliación sin justa causa;\nc) Si fallecido o incapacitado el querellante, no concurriera a\nproseguir el procedimiento quien esté autorizado para ello según la\nley, dentro de los sesenta (60) días siguientes de la muerte o la\nincapacidad.\nMINISTERIO PUBLICO FISCAL\nNormas generales",
-      "incisos": [],
+      "text": "Abandono de la querella. Además de los casos generales previstos en este Código, se considerará abandonada la querella de acción privada en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si el querellante no instara el procedimiento durante treinta (30) días;"
+        },
+        {
+          "id": "b",
+          "text": "Si el querellante no concurriera a la audiencia de conciliación sin justa causa;"
+        },
+        {
+          "id": "c",
+          "text": "Si fallecido o incapacitado el querellante, no concurriera a proseguir el procedimiento quien esté autorizado para ello según la ley, dentro de los sesenta (60) días siguientes de la muerte o la incapacidad. MINISTERIO PUBLICO FISCAL Normas generales"
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -1073,8 +1439,57 @@
     },
     {
       "number": "90",
-      "text": "Deberes. La policía y demás fuerzas de seguridad deberán:\na) Recibir denuncias;\nb) Entrevistar a los testigos;\nc) Resguardar el lugar del hecho y cuidar que los rastros e instrumentos del delito sean conservados;\nd) Incautar los documentos y todo elemento material que pueda servir a la investigación, cuando les esté permitido;\ne) Custodiar los elementos secuestrados, dejando debida constancia de\nlas medidas adoptadas con el objeto de preservar la cadena de custodia;\nf) Hacer constar el estado de las personas, cosas y lugares, mediante\ninspecciones, planos, fotografías, video filmaciones, exámenes técnicos\ny demás operaciones que aconseje la investigación;\ng) Practicar las diligencias orientadas a la individualización de los\nautores y partícipes del delito dispuestas por el representante del\nMinisterio Público Fiscal;\nh) Recabar los datos que sirvan para la identificación del imputado, con los límites establecidos por este Código;\ni) Prestar auxilio a las víctimas y proteger a los testigos;\nj) Reunir toda la información de urgencia que pueda ser útil al representante del Ministerio Público Fiscal;\nk) Efectuar el arresto, detención o incomunicación de personas en los\ncasos autorizados, informándoles sus derechos en forma inmediata y\ncomprensible;\nl) Ejecutar allanamientos y requisas cuando les esté permitido.",
-      "incisos": [],
+      "text": "Deberes. La policía y demás fuerzas de seguridad deberán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Recibir denuncias;"
+        },
+        {
+          "id": "b",
+          "text": "Entrevistar a los testigos;"
+        },
+        {
+          "id": "c",
+          "text": "Resguardar el lugar del hecho y cuidar que los rastros e instrumentos del delito sean conservados;"
+        },
+        {
+          "id": "d",
+          "text": "Incautar los documentos y todo elemento material que pueda servir a la investigación, cuando les esté permitido;"
+        },
+        {
+          "id": "e",
+          "text": "Custodiar los elementos secuestrados, dejando debida constancia de las medidas adoptadas con el objeto de preservar la cadena de custodia;"
+        },
+        {
+          "id": "f",
+          "text": "Hacer constar el estado de las personas, cosas y lugares, mediante inspecciones, planos, fotografías, video filmaciones, exámenes técnicos y demás operaciones que aconseje la investigación;"
+        },
+        {
+          "id": "g",
+          "text": "Practicar las diligencias orientadas a la individualización de los autores y partícipes del delito dispuestas por el representante del Ministerio Público Fiscal;"
+        },
+        {
+          "id": "h",
+          "text": "Recabar los datos que sirvan para la identificación del imputado, con los límites establecidos por este Código;"
+        },
+        {
+          "id": "i",
+          "text": "Prestar auxilio a las víctimas y proteger a los testigos;"
+        },
+        {
+          "id": "j",
+          "text": "Reunir toda la información de urgencia que pueda ser útil al representante del Ministerio Público Fiscal;"
+        },
+        {
+          "id": "k",
+          "text": "Efectuar el arresto, detención o incomunicación de personas en los casos autorizados, informándoles sus derechos en forma inmediata y comprensible;"
+        },
+        {
+          "id": "l",
+          "text": "Ejecutar allanamientos y requisas cuando les esté permitido."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -1141,8 +1556,25 @@
     },
     {
       "number": "96",
-      "text": "Desistimiento.\nEl actor podrá desistir de la acción en cualquier estado del proceso,\nquedando obligado por las costas que su intervención hubiere causado.\nEl desistimiento importa renuncia de la acción civil. Se lo tendrá por desistido si:\na) No concretara su demanda en la oportunidad procesal prevista;\nb) Regularmente citado, no compareciera a la audiencia de control de la acusación sin causa justificada;\nc) No concurriera a la audiencia del juicio oral o no presentare conclusiones;\nd) Se ausentara de la audiencia del juicio oral sin autorización de los jueces.\nEL CIVILMENTE DEMANDADO",
-      "incisos": [],
+      "text": "Desistimiento. El actor podrá desistir de la acción en cualquier estado del proceso, quedando obligado por las costas que su intervención hubiere causado. El desistimiento importa renuncia de la acción civil. Se lo tendrá por desistido si:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "No concretara su demanda en la oportunidad procesal prevista;"
+        },
+        {
+          "id": "b",
+          "text": "Regularmente citado, no compareciera a la audiencia de control de la acusación sin causa justificada;"
+        },
+        {
+          "id": "c",
+          "text": "No concurriera a la audiencia del juicio oral o no presentare conclusiones;"
+        },
+        {
+          "id": "d",
+          "text": "Se ausentara de la audiencia del juicio oral sin autorización de los jueces. EL CIVILMENTE DEMANDADO"
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -1233,8 +1665,17 @@
     },
     {
       "number": "104",
-      "text": "Actas. Los actos que deban asentarse en forma escrita serán documentados en un acta que deberá contener:\na) La mención del lugar, la fecha, la hora y la indicación de las diligencias realizadas, así como el resumen de su contenido;\nb) La firma de todos los que participaron en el acto, dejándose\nconstancia de las razones de aquel que no la firme, o del que lo hace a\nruego o como testigo de actuación.\nLa omisión de estas formalidades sólo priva de efectos al acta o torna\ninvalorable su contenido cuando ellas no puedan ser suplidas con\ncerteza sobre la base de otros elementos de prueba.\nLos funcionarios de la policía u otra fuerza de seguridad que deban\nregistrar actos definitivos o irreproducibles, tales como secuestros,\ninspecciones oculares, requisas personales y allanamientos serán\nasistidos por dos (2) testigos que no podrán pertenecer a la misma\nfuerza que intervino en el acto.\nEn ningún caso podrán ser testigos de actuación los menores de\ndieciséis (16) años, ni quienes presenten signos evidentes de\nalteración de sus facultades psíquicas.\nActos y resoluciones judiciales",
-      "incisos": [],
+      "text": "Actas. Los actos que deban asentarse en forma escrita serán documentados en un acta que deberá contener:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La mención del lugar, la fecha, la hora y la indicación de las diligencias realizadas, así como el resumen de su contenido;"
+        },
+        {
+          "id": "b",
+          "text": "La firma de todos los que participaron en el acto, dejándose constancia de las razones de aquel que no la firme, o del que lo hace a ruego o como testigo de actuación. La omisión de estas formalidades sólo priva de efectos al acta o torna invalorable su contenido cuando ellas no puedan ser suplidas con certeza sobre la base de otros elementos de prueba. Los funcionarios de la policía u otra fuerza de seguridad que deban registrar actos definitivos o irreproducibles, tales como secuestros, inspecciones oculares, requisas personales y allanamientos serán asistidos por dos (2) testigos que no podrán pertenecer a la misma fuerza que intervino en el acto. En ningún caso podrán ser testigos de actuación los menores de dieciséis (16) años, ni quienes presenten signos evidentes de alteración de sus facultades psíquicas. Actos y resoluciones judiciales"
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -1245,8 +1686,25 @@
     },
     {
       "number": "105",
-      "text": "Resoluciones jurisdiccionales. Las resoluciones jurisdiccionales contendrán:\na) El día, lugar e identificación del proceso;\nb) El objeto a decidir y las peticiones de las partes;\nc) La decisión y su motivación;\nd) La firma del juez.\nLas resoluciones jurisdiccionales que requieran un debate previo o la\nproducción de prueba se adoptarán en audiencia pública, con la\nasistencia ininterrumpida del juez y las partes, garantizando el\nprincipio de oralidad, contradicción, publicidad, inmediación y\nsimplicidad. El juez no podrá suplir la actividad de las partes, y\ndeberá sujetarse a lo que hayan discutido. Los fundamentos de las\ndecisiones quedarán debidamente registrados en soporte de audio o\nvideo, entregándose copia a las partes.\nLas resoluciones jurisdiccionales expresarán los fundamentos de hecho y de derecho en que se basen.\nLa fundamentación no podrá ser reemplazada con la simple relación de\ndocumentos, invocación de las solicitudes de las partes, afirmaciones\ndogmáticas, expresiones rituales o apelaciones morales.",
-      "incisos": [],
+      "text": "Resoluciones jurisdiccionales. Las resoluciones jurisdiccionales contendrán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El día, lugar e identificación del proceso;"
+        },
+        {
+          "id": "b",
+          "text": "El objeto a decidir y las peticiones de las partes;"
+        },
+        {
+          "id": "c",
+          "text": "La decisión y su motivación;"
+        },
+        {
+          "id": "d",
+          "text": "La firma del juez. Las resoluciones jurisdiccionales que requieran un debate previo o la producción de prueba se adoptarán en audiencia pública, con la asistencia ininterrumpida del juez y las partes, garantizando el principio de oralidad, contradicción, publicidad, inmediación y simplicidad. El juez no podrá suplir la actividad de las partes, y deberá sujetarse a lo que hayan discutido. Los fundamentos de las decisiones quedarán debidamente registrados en soporte de audio o video, entregándose copia a las partes. Las resoluciones jurisdiccionales expresarán los fundamentos de hecho y de derecho en que se basen. La fundamentación no podrá ser reemplazada con la simple relación de documentos, invocación de las solicitudes de las partes, afirmaciones dogmáticas, expresiones rituales o apelaciones morales."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -1401,8 +1859,21 @@
     },
     {
       "number": "118",
-      "text": "Comunicaciones. Regla general.\nLas resoluciones, la convocatoria a los actos que requieran la\nintervención de las partes o de terceros y los pedidos de cooperación o\ninformes deberán comunicarse a quien corresponda, dentro de las\nveinticuatro (24) horas después de ser dictadas u ordenadas, salvo que\nse disponga un plazo menor. Deberá garantizarse que:\na) Transmitan con claridad, precisión y en forma completa el contenido\nde la resolución o de la actividad requerida y las condiciones o plazos\npara su cumplimiento;\nb) Contengan los elementos necesarios para asegurar la defensa y el ejercicio de los derechos de las partes;\nc) Adviertan suficientemente al imputado o a la víctima si el ejercicio\nde un derecho estuviera sujeto a un plazo o condición. No obstante las\nreglas fijadas, las partes podrán acordar expresamente en cada caso una\nmodalidad de comunicación efectiva de acuerdo con las posibilidades\ntécnicas a las que tengan acceso.",
-      "incisos": [],
+      "text": "Comunicaciones. Regla general. Las resoluciones, la convocatoria a los actos que requieran la intervención de las partes o de terceros y los pedidos de cooperación o informes deberán comunicarse a quien corresponda, dentro de las veinticuatro (24) horas después de ser dictadas u ordenadas, salvo que se disponga un plazo menor. Deberá garantizarse que:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Transmitan con claridad, precisión y en forma completa el contenido de la resolución o de la actividad requerida y las condiciones o plazos para su cumplimiento;"
+        },
+        {
+          "id": "b",
+          "text": "Contengan los elementos necesarios para asegurar la defensa y el ejercicio de los derechos de las partes;"
+        },
+        {
+          "id": "c",
+          "text": "Adviertan suficientemente al imputado o a la víctima si el ejercicio de un derecho estuviera sujeto a un plazo o condición. No obstante las reglas fijadas, las partes podrán acordar expresamente en cada caso una modalidad de comunicación efectiva de acuerdo con las posibilidades técnicas a las que tengan acceso."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -1471,8 +1942,17 @@
     },
     {
       "number": "124",
-      "text": "Convalidación.\nLos defectos formales que afecten al representante del Ministerio\nPúblico Fiscal o a la víctima quedan convalidados en los siguientes\ncasos:\na) Si las partes no han solicitado su saneamiento mientras se realizaba\nel acto o dentro de los tres (3) días de practicado y quien lo solicita\nno ha estado presente; si por las circunstancias del acto ha sido\nimposible advertir oportunamente el defecto, el interesado deberá\nreclamarlo dentro de las veinticuatro (24) horas de advertido;\nb) Si han aceptado, expresa o tácitamente, los efectos del acto.",
-      "incisos": [],
+      "text": "Convalidación. Los defectos formales que afecten al representante del Ministerio Público Fiscal o a la víctima quedan convalidados en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si las partes no han solicitado su saneamiento mientras se realizaba el acto o dentro de los tres (3) días de practicado y quien lo solicita no ha estado presente; si por las circunstancias del acto ha sido imposible advertir oportunamente el defecto, el interesado deberá reclamarlo dentro de las veinticuatro (24) horas de advertido;"
+        },
+        {
+          "id": "b",
+          "text": "Si han aceptado, expresa o tácitamente, los efectos del acto."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -1515,8 +1995,29 @@
     },
     {
       "number": "128",
-      "text": "Reglas sobre la prueba. La recolección y admisibilidad de la prueba se ajustará a las siguientes reglas procesales:\na) La recolección de los elementos de prueba estará a cargo del\nrepresentante del Ministerio Público Fiscal que actuará bajo los\nprincipios de objetividad y buena fe, y deberá requerir orden judicial\nprevia sólo en los casos en que este Código así lo establece;\nb) Las demás partes podrán recolectar por sí las pruebas que consideren\nnecesarias y sólo recurrirán al representante del Ministerio Público\nFiscal si fuese necesaria su intervención. En caso de negativa\ninjustificada podrán recurrir al órgano jurisdiccional competente para\nque se lo ordene. La prueba producida por la querella se incorporará\ncomo anexo al legajo del Ministerio Público Fiscal cuando ésta lo\nsolicite; la defensa tendrá su propio legajo de prueba;\nc) Los jueces no podrán de oficio incorporar prueba alguna;\nd) Sólo se admitirán medios de prueba que guarden relación, directa o\nindirecta, con el objeto del proceso, sean útiles y pertinentes para la\nresolución del caso y no resulten manifiestamente sobreabundantes; no\npodrá denegarse prueba si para su producción hubiere conformidad de las\npartes;\ne) Si se postula un hecho como admitido por todas las partes, el órgano\njurisdiccional puede prescindir de la prueba ofrecida, declarándolo\ncomprobado en el auto de apertura del juicio; durante la audiencia\nprevista en el artículo 246, el juez puede provocar el acuerdo entre\nlas partes si estimara que, según las pruebas ofrecidas, se trata de un\nhecho notorio.\nCOMPROBACIONES DIRECTAS",
-      "incisos": [],
+      "text": "Reglas sobre la prueba. La recolección y admisibilidad de la prueba se ajustará a las siguientes reglas procesales:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La recolección de los elementos de prueba estará a cargo del representante del Ministerio Público Fiscal que actuará bajo los principios de objetividad y buena fe, y deberá requerir orden judicial previa sólo en los casos en que este Código así lo establece;"
+        },
+        {
+          "id": "b",
+          "text": "Las demás partes podrán recolectar por sí las pruebas que consideren necesarias y sólo recurrirán al representante del Ministerio Público Fiscal si fuese necesaria su intervención. En caso de negativa injustificada podrán recurrir al órgano jurisdiccional competente para que se lo ordene. La prueba producida por la querella se incorporará como anexo al legajo del Ministerio Público Fiscal cuando ésta lo solicite; la defensa tendrá su propio legajo de prueba;"
+        },
+        {
+          "id": "c",
+          "text": "Los jueces no podrán de oficio incorporar prueba alguna;"
+        },
+        {
+          "id": "d",
+          "text": "Sólo se admitirán medios de prueba que guarden relación, directa o indirecta, con el objeto del proceso, sean útiles y pertinentes para la resolución del caso y no resulten manifiestamente sobreabundantes; no podrá denegarse prueba si para su producción hubiere conformidad de las partes;"
+        },
+        {
+          "id": "e",
+          "text": "Si se postula un hecho como admitido por todas las partes, el órgano jurisdiccional puede prescindir de la prueba ofrecida, declarándolo comprobado en el auto de apertura del juicio; durante la audiencia prevista en el artículo 246, el juez puede provocar el acuerdo entre las partes si estimara que, según las pruebas ofrecidas, se trata de un hecho notorio. COMPROBACIONES DIRECTAS"
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -1548,8 +2049,21 @@
     },
     {
       "number": "131",
-      "text": "Requisa sin orden judicial.\nSólo podrá procederse a la requisa sin orden judicial de la persona e\ninspeccionar los efectos personales que lleve consigo, así como el\ninterior de los vehículos, aeronaves y embarcaciones de cualquier\nclase, ante la concurrencia de los siguientes supuestos:\na) Existan circunstancias previas que razonable y objetivamente\npermitan presumir que se ocultan cosas relacionadas con un delito;\nb) No fuere posible esperar la orden judicial ante el peligro cierto de que desaparezcan las pruebas que se intentan incautar;\nc) Se practique en la vía pública, o en lugares de acceso público.\nSi correspondiera, se practicarán los secuestros del modo previsto por\neste Código, y se labrará un acta, expresando los motivos, debiéndose\ncomunicar la medida inmediatamente al representante del Ministerio\nPúblico Fiscal para que disponga lo que corresponda.",
-      "incisos": [],
+      "text": "Requisa sin orden judicial. Sólo podrá procederse a la requisa sin orden judicial de la persona e inspeccionar los efectos personales que lleve consigo, así como el interior de los vehículos, aeronaves y embarcaciones de cualquier clase, ante la concurrencia de los siguientes supuestos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Existan circunstancias previas que razonable y objetivamente permitan presumir que se ocultan cosas relacionadas con un delito;"
+        },
+        {
+          "id": "b",
+          "text": "No fuere posible esperar la orden judicial ante el peligro cierto de que desaparezcan las pruebas que se intentan incautar;"
+        },
+        {
+          "id": "c",
+          "text": "Se practique en la vía pública, o en lugares de acceso público. Si correspondiera, se practicarán los secuestros del modo previsto por este Código, y se labrará un acta, expresando los motivos, debiéndose comunicar la medida inmediatamente al representante del Ministerio Público Fiscal para que disponga lo que corresponda."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -1592,8 +2106,29 @@
     },
     {
       "number": "135",
-      "text": "Allanamiento sin orden judicial.\nNo obstante lo dispuesto en los artículos anteriores de este Título, la\npolicía u otra fuerza de seguridad podrán proceder al allanamiento sin\nprevia orden judicial si:\na) Por incendio, explosión, inundación u otro estrago se hallare amenazada la vida de los habitantes o la propiedad;\nb) Mediare denuncia, cuya entidad resulte verosímil de acuerdo a las\ncircunstancias, de que una o más personas han sido vistas mientras se\nintroducían en una casa o local con indicios manifiestos de comisión de\nun delito;\nc) Se introdujere en una casa o local algún sospechado de delito a quien se persigue para su aprehensión;\nd) Voces provenientes de una casa o local pidieren socorro o anunciaren que allí se está cometiendo un delito;\ne) Se tuvieren sospechas fundadas de que en una casa o local se\nencuentra la víctima de una privación ilegal de la libertad y corriere\npeligro inminente su vida o integridad física; el representante del\nMinisterio Público Fiscal deberá autorizar la medida.\nEn el acta se deberá dejar constancia de la existencia de alguna de las causales de excepción descriptas en este artículo.",
-      "incisos": [],
+      "text": "Allanamiento sin orden judicial. No obstante lo dispuesto en los artículos anteriores de este Título, la policía u otra fuerza de seguridad podrán proceder al allanamiento sin previa orden judicial si:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Por incendio, explosión, inundación u otro estrago se hallare amenazada la vida de los habitantes o la propiedad;"
+        },
+        {
+          "id": "b",
+          "text": "Mediare denuncia, cuya entidad resulte verosímil de acuerdo a las circunstancias, de que una o más personas han sido vistas mientras se introducían en una casa o local con indicios manifiestos de comisión de un delito;"
+        },
+        {
+          "id": "c",
+          "text": "Se introdujere en una casa o local algún sospechado de delito a quien se persigue para su aprehensión;"
+        },
+        {
+          "id": "d",
+          "text": "Voces provenientes de una casa o local pidieren socorro o anunciaren que allí se está cometiendo un delito;"
+        },
+        {
+          "id": "e",
+          "text": "Se tuvieren sospechas fundadas de que en una casa o local se encuentra la víctima de una privación ilegal de la libertad y corriere peligro inminente su vida o integridad física; el representante del Ministerio Público Fiscal deberá autorizar la medida. En el acta se deberá dejar constancia de la existencia de alguna de las causales de excepción descriptas en este artículo."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -1603,8 +2138,29 @@
     },
     {
       "number": "136",
-      "text": "Trámite de la autorización.\nSiempre que por este Código se requiera autorización para la\nrealización de una medida de prueba, el representante del Ministerio\nPúblico Fiscal deberá requerirla por escrito o en forma oral,\nexpresando:\na) La determinación concreta del lugar o los lugares que deberán ser registrados;\nb) La finalidad del registro, mencionando los objetos a secuestrar o las personas a detener;\nc) El nombre del representante del Ministerio Público Fiscal\nresponsable del control o de la ejecución de la medida, los motivos que\nfundan su necesidad y cuáles son las evidencias disponibles que, prima\nfacie, la justifican;\nd) En su caso, los motivos que fundamentan la necesidad de efectuar la diligencia fuera del horario diurno;\ne) La firma del representante del Ministerio Público Fiscal que requiere la autorización.\nEl juez podrá convocar a audiencia unilateral previo a tomar la decisión.",
-      "incisos": [],
+      "text": "Trámite de la autorización. Siempre que por este Código se requiera autorización para la realización de una medida de prueba, el representante del Ministerio Público Fiscal deberá requerirla por escrito o en forma oral, expresando:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La determinación concreta del lugar o los lugares que deberán ser registrados;"
+        },
+        {
+          "id": "b",
+          "text": "La finalidad del registro, mencionando los objetos a secuestrar o las personas a detener;"
+        },
+        {
+          "id": "c",
+          "text": "El nombre del representante del Ministerio Público Fiscal responsable del control o de la ejecución de la medida, los motivos que fundan su necesidad y cuáles son las evidencias disponibles que, prima facie, la justifican;"
+        },
+        {
+          "id": "d",
+          "text": "En su caso, los motivos que fundamentan la necesidad de efectuar la diligencia fuera del horario diurno;"
+        },
+        {
+          "id": "e",
+          "text": "La firma del representante del Ministerio Público Fiscal que requiere la autorización. El juez podrá convocar a audiencia unilateral previo a tomar la decisión."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -1669,8 +2225,17 @@
     },
     {
       "number": "142",
-      "text": "Objetos no sometidos a secuestro. No podrán ser objeto de secuestro:\na) Las comunicaciones entre el imputado y las personas que deban abstenerse de declarar como testigos;\nb) Las notas que hayan tomado los nombrados anteriormente sobre\ncomunicaciones confiadas por el imputado, o sobre cualquier\ncircunstancia a la cual se extienda el derecho o el deber de abstenerse\na declarar.",
-      "incisos": [],
+      "text": "Objetos no sometidos a secuestro. No podrán ser objeto de secuestro:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Las comunicaciones entre el imputado y las personas que deban abstenerse de declarar como testigos;"
+        },
+        {
+          "id": "b",
+          "text": "Las notas que hayan tomado los nombrados anteriormente sobre comunicaciones confiadas por el imputado, o sobre cualquier circunstancia a la cual se extienda el derecho o el deber de abstenerse a declarar."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -1768,8 +2333,29 @@
     },
     {
       "number": "151",
-      "text": "Derechos y obligaciones del testigo. Capacidad para atestiguar.\nDesde el inicio del proceso penal y hasta su finalización, al testigo\nse le garantizará el pleno respeto de los siguientes derechos:\na) A recibir un trato digno y respetuoso por parte de las autoridades competentes;\nb) Al pago de los gastos de traslado al lugar donde la autoridad competente designe;\nc) A la protección de la integridad física y moral, inclusive de su familia;\nd) A ser informado sobre los resultados del acto procesal en el que ha participado;\ne) Si se tratare de una persona mayor de setenta (70) años, mujer\nembarazada o enfermo grave, a cumplir con el acto procesal en el lugar\nde su residencia o internación; tal circunstancia deberá ser comunicada\na la autoridad competente con la debida anticipación.\nEl testigo no tendrá la obligación de declarar sobre hechos que le puedan acarrear responsabilidad penal.\nLos derechos reconocidos en este artículo deberán ser enunciados por el\nórgano competente al momento de practicar la primera citación del\ntestigo.\nToda persona será capaz de atestiguar y, cuando no concurran las\nexcepciones previstas en la ley, tendrá la obligación de comparecer si\nfuere citada para declarar la verdad de cuanto conociere y le fuera\npreguntado; no podrá ocultar hechos o circunstancias que guarden\nrelación con la investigación.",
-      "incisos": [],
+      "text": "Derechos y obligaciones del testigo. Capacidad para atestiguar. Desde el inicio del proceso penal y hasta su finalización, al testigo se le garantizará el pleno respeto de los siguientes derechos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "A recibir un trato digno y respetuoso por parte de las autoridades competentes;"
+        },
+        {
+          "id": "b",
+          "text": "Al pago de los gastos de traslado al lugar donde la autoridad competente designe;"
+        },
+        {
+          "id": "c",
+          "text": "A la protección de la integridad física y moral, inclusive de su familia;"
+        },
+        {
+          "id": "d",
+          "text": "A ser informado sobre los resultados del acto procesal en el que ha participado;"
+        },
+        {
+          "id": "e",
+          "text": "Si se tratare de una persona mayor de setenta (70) años, mujer embarazada o enfermo grave, a cumplir con el acto procesal en el lugar de su residencia o internación; tal circunstancia deberá ser comunicada a la autoridad competente con la debida anticipación. El testigo no tendrá la obligación de declarar sobre hechos que le puedan acarrear responsabilidad penal. Los derechos reconocidos en este artículo deberán ser enunciados por el órgano competente al momento de practicar la primera citación del testigo. Toda persona será capaz de atestiguar y, cuando no concurran las excepciones previstas en la ley, tendrá la obligación de comparecer si fuere citada para declarar la verdad de cuanto conociere y le fuera preguntado; no podrá ocultar hechos o circunstancias que guarden relación con la investigación."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -1845,8 +2431,37 @@
     },
     {
       "number": "158",
-      "text": "Declaración de menores\nde edad, víctimas de trata de personas, graves violaciones a derechos\nhumanos o personas con capacidad restringida. Si se tratare de\nvíctimas o testigos menores de edad que a la fecha en que se requiera\nsu comparecencia no hubiesen cumplido dieciséis (16) años, personas con\ncapacidad restringida, y testigos-víctimas de los delitos de trata y\nexplotación de personas u otras graves violaciones a derechos humanos,\nsi la naturaleza y circunstancias del caso así lo aconsejasen, se\ndeberá adoptar el siguiente procedimiento:\na) Serán entrevistados por un psicólogo especialista de acuerdo a las condiciones de la víctima;\nb) Si la víctima fuera menor de edad o persona con capacidad\nrestringida, el acto se llevará a cabo de acuerdo a su edad y etapa\nevolutiva, o adecuado a su estado de vulnerabilidad si fuera víctima\ndel delito de trata o explotación de personas u otra grave violación a\nlos derechos humanos;\nc) En el plazo que el representante del Ministerio Público Fiscal\ndisponga, el profesional actuante elevará un informe detallado con las\nconclusiones a las que arribe;\nd) El desarrollo del acto podrá ser seguido por las partes desde el\nexterior del recinto a través de un vidrio espejado, micrófono, equipo\nde video o cualquier otro medio técnico con que se cuente; en ese caso\ncon anterioridad a la iniciación del acto, el juez o el representante\ndel Ministerio Público Fiscal, según el caso, hará saber al profesional\na cargo de la entrevista las inquietudes propuestas por las partes así\ncomo las que surjan durante el transcurso del acto, las que serán\ncanalizadas teniendo en cuenta las características del hecho y el\nestado emocional de la víctima;\ne) Si la víctima estuviera imposibilitada de comparecer por motivos de\nsalud o por residir en un lugar distante a la sede del tribunal, o para\ngarantizar la protección de su seguridad, se podrá realizar el acto a\ntravés de videoconferencias;\nf) Se podrá admitir la exhibición del registro audiovisual de\ndeclaraciones previas de la víctima en ese u otro proceso judicial. Si\nlas partes requiriesen la comparecencia a los efectos de controlar la\nprueba, el juez les requerirá los motivos y el interés concreto, así\ncomo los puntos sobre los que pretendan examinar al testigo, y admitirá\nel interrogatorio sólo sobre aquéllos que hagan al efectivo\ncumplimiento del derecho de defensa;\ng) La declaración se registrará en un video fílmico.\nSi se tratase de actos de reconocimiento de lugares o cosas, el menor\nde edad o la persona con capacidad restringida víctima del delito será\nasistido por un profesional especialista. Si se tratare del delito de\ntrata o explotación de personas, la víctima será acompañada por un\nprofesional especialista; en ningún caso estará presente el imputado.\nSi se tratase de víctimas que a la fecha en que se requiere su\ncomparecencia ya hubiesen cumplido dieciséis (16) años pero fuesen\nmenores de dieciocho (18) años de edad, antes de la recepción del\ntestimonio, se requerirá informe a un especialista acerca de la\nexistencia de riesgo para la salud psicofísica del menor de edad en el\ncaso de que compareciese ante los estrados judiciales en presencia de\nlas partes. Esta medida debe llevarse adelante evitando la\nrevictimización del niño, niña o adolescente.",
-      "incisos": [],
+      "text": "Declaración de menores de edad, víctimas de trata de personas, graves violaciones a derechos humanos o personas con capacidad restringida. Si se tratare de víctimas o testigos menores de edad que a la fecha en que se requiera su comparecencia no hubiesen cumplido dieciséis (16) años, personas con capacidad restringida, y testigos-víctimas de los delitos de trata y explotación de personas u otras graves violaciones a derechos humanos, si la naturaleza y circunstancias del caso así lo aconsejasen, se deberá adoptar el siguiente procedimiento:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Serán entrevistados por un psicólogo especialista de acuerdo a las condiciones de la víctima;"
+        },
+        {
+          "id": "b",
+          "text": "Si la víctima fuera menor de edad o persona con capacidad restringida, el acto se llevará a cabo de acuerdo a su edad y etapa evolutiva, o adecuado a su estado de vulnerabilidad si fuera víctima del delito de trata o explotación de personas u otra grave violación a los derechos humanos;"
+        },
+        {
+          "id": "c",
+          "text": "En el plazo que el representante del Ministerio Público Fiscal disponga, el profesional actuante elevará un informe detallado con las conclusiones a las que arribe;"
+        },
+        {
+          "id": "d",
+          "text": "El desarrollo del acto podrá ser seguido por las partes desde el exterior del recinto a través de un vidrio espejado, micrófono, equipo de video o cualquier otro medio técnico con que se cuente; en ese caso con anterioridad a la iniciación del acto, el juez o el representante del Ministerio Público Fiscal, según el caso, hará saber al profesional a cargo de la entrevista las inquietudes propuestas por las partes así como las que surjan durante el transcurso del acto, las que serán canalizadas teniendo en cuenta las características del hecho y el estado emocional de la víctima;"
+        },
+        {
+          "id": "e",
+          "text": "Si la víctima estuviera imposibilitada de comparecer por motivos de salud o por residir en un lugar distante a la sede del tribunal, o para garantizar la protección de su seguridad, se podrá realizar el acto a través de videoconferencias;"
+        },
+        {
+          "id": "f",
+          "text": "Se podrá admitir la exhibición del registro audiovisual de declaraciones previas de la víctima en ese u otro proceso judicial. Si las partes requiriesen la comparecencia a los efectos de controlar la prueba, el juez les requerirá los motivos y el interés concreto, así como los puntos sobre los que pretendan examinar al testigo, y admitirá el interrogatorio sólo sobre aquéllos que hagan al efectivo cumplimiento del derecho de defensa;"
+        },
+        {
+          "id": "g",
+          "text": "La declaración se registrará en un video fílmico. Si se tratase de actos de reconocimiento de lugares o cosas, el menor de edad o la persona con capacidad restringida víctima del delito será asistido por un profesional especialista. Si se tratare del delito de trata o explotación de personas, la víctima será acompañada por un profesional especialista; en ningún caso estará presente el imputado. Si se tratase de víctimas que a la fecha en que se requiere su comparecencia ya hubiesen cumplido dieciséis (16) años pero fuesen menores de dieciocho (18) años de edad, antes de la recepción del testimonio, se requerirá informe a un especialista acerca de la existencia de riesgo para la salud psicofísica del menor de edad en el caso de que compareciese ante los estrados judiciales en presencia de las partes. Esta medida debe llevarse adelante evitando la revictimización del niño, niña o adolescente."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -2053,8 +2668,53 @@
     },
     {
       "number": "177",
-      "text": "Medidas de coerción.\nEl representante del Ministerio Público Fiscal o el querellante podrán\nsolicitar al juez, en cualquier estado del proceso y con el fin de\nasegurar la comparecencia del imputado o evitar el entorpecimiento de\nla investigación, la imposición, individual o combinada, de:\na) La promesa del imputado de someterse al procedimiento y de no obstaculizar la investigación;\nb) La obligación de someterse al cuidado o vigilancia de una persona o\ninstitución determinada, en las condiciones que se le fijen;\nc) La obligación de presentarse periódicamente ante el juez o ante la autoridad que él designe;\nd) La prohibición de salir sin autorización previa del ámbito territorial que se determine;\ne) La retención de documentos de viaje;\nf) La prohibición de concurrir a determinadas reuniones, de visitar\nciertos lugares, de comunicarse o acercarse a determinadas personas,\nsiempre que no se afecte el derecho de defensa;\ng) El abandono inmediato del domicilio, si se tratara de hechos de violencia doméstica y la víctima conviviera con el imputado;\nh) La prestación por sí o por un tercero de una caución real o personal\nadecuada, que podrá ser voluntariamente suplida por la contratación de\nun seguro de caución, a satisfacción del juez;\ni) La vigilancia del imputado mediante algún dispositivo electrónico de rastreo o posicionamiento de su ubicación física;\nj) El arresto en su propio domicilio o en el de otra persona, sin vigilancia o con la que el juez disponga;\nk) La prisión preventiva, en caso de que las medidas anteriores no fueren suficientes para asegurar los fines indicados.\nEl control sobre el cumplimiento de las medidas indicadas en los\nincisos a) a j) del presente artículo estará a cargo de la Oficina de\nMedidas Alternativas y Sustitutivas, cuya creación, composición y\nfuncionamiento será definida por una ley que se dicte a tal efecto.",
-      "incisos": [],
+      "text": "Medidas de coerción. El representante del Ministerio Público Fiscal o el querellante podrán solicitar al juez, en cualquier estado del proceso y con el fin de asegurar la comparecencia del imputado o evitar el entorpecimiento de la investigación, la imposición, individual o combinada, de:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La promesa del imputado de someterse al procedimiento y de no obstaculizar la investigación;"
+        },
+        {
+          "id": "b",
+          "text": "La obligación de someterse al cuidado o vigilancia de una persona o institución determinada, en las condiciones que se le fijen;"
+        },
+        {
+          "id": "c",
+          "text": "La obligación de presentarse periódicamente ante el juez o ante la autoridad que él designe;"
+        },
+        {
+          "id": "d",
+          "text": "La prohibición de salir sin autorización previa del ámbito territorial que se determine;"
+        },
+        {
+          "id": "e",
+          "text": "La retención de documentos de viaje;"
+        },
+        {
+          "id": "f",
+          "text": "La prohibición de concurrir a determinadas reuniones, de visitar ciertos lugares, de comunicarse o acercarse a determinadas personas, siempre que no se afecte el derecho de defensa;"
+        },
+        {
+          "id": "g",
+          "text": "El abandono inmediato del domicilio, si se tratara de hechos de violencia doméstica y la víctima conviviera con el imputado;"
+        },
+        {
+          "id": "h",
+          "text": "La prestación por sí o por un tercero de una caución real o personal adecuada, que podrá ser voluntariamente suplida por la contratación de un seguro de caución, a satisfacción del juez;"
+        },
+        {
+          "id": "i",
+          "text": "La vigilancia del imputado mediante algún dispositivo electrónico de rastreo o posicionamiento de su ubicación física;"
+        },
+        {
+          "id": "j",
+          "text": "El arresto en su propio domicilio o en el de otra persona, sin vigilancia o con la que el juez disponga;"
+        },
+        {
+          "id": "k",
+          "text": "La prisión preventiva, en caso de que las medidas anteriores no fueren suficientes para asegurar los fines indicados. El control sobre el cumplimiento de las medidas indicadas en los incisos a) a j) del presente artículo estará a cargo de la Oficina de Medidas Alternativas y Sustitutivas, cuya creación, composición y funcionamiento será definida por una ley que se dicte a tal efecto."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2093,8 +2753,29 @@
     },
     {
       "number": "181",
-      "text": "Cancelación. La\ncaución será cancelada y liberados los bienes afectados a la garantía,\nsiempre que no se hubiese ordenado su ejecución con anterioridad, en\nlos siguientes casos:\na) Si el imputado fuere constituido en prisión;\nb) Si se revocare la decisión de constituir cauciones, sean o no sean reemplazadas por otra medida;\nc) Si por decisión firme, se absolviere o sobreseyere al imputado;\nd) Si comenzare la ejecución de la pena privativa de libertad o ella no debiere ejecutarse;\ne) Si el imputado fuere condenado a una pena no privativa de la libertad.",
-      "incisos": [],
+      "text": "Cancelación. La caución será cancelada y liberados los bienes afectados a la garantía, siempre que no se hubiese ordenado su ejecución con anterioridad, en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si el imputado fuere constituido en prisión;"
+        },
+        {
+          "id": "b",
+          "text": "Si se revocare la decisión de constituir cauciones, sean o no sean reemplazadas por otra medida;"
+        },
+        {
+          "id": "c",
+          "text": "Si por decisión firme, se absolviere o sobreseyere al imputado;"
+        },
+        {
+          "id": "d",
+          "text": "Si comenzare la ejecución de la pena privativa de libertad o ella no debiere ejecutarse;"
+        },
+        {
+          "id": "e",
+          "text": "Si el imputado fuere condenado a una pena no privativa de la libertad."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2113,8 +2794,17 @@
     },
     {
       "number": "183",
-      "text": "Aprehensión sin orden judicial. No podrá aprehenderse a ninguna persona sin orden judicial, salvo en los siguientes casos:\na) Si hubiera sido sorprendida en flagrante delito;\nb) Si se hubiese fugado de algún establecimiento penal o de cualquier otro lugar de detención.\nEn caso de flagrancia, cualquier persona podrá practicar la aprehensión\ncon la finalidad de impedir que el delito produzca consecuencias. La\npersona aprehendida será entregada inmediatamente a la autoridad más\ncercana.\nLa autoridad que haya aprehendido a alguna persona lo deberá comunicar\ninmediatamente al juez y al representante del Ministerio Público Fiscal.\nSi el representante del Ministerio Público Fiscal estimare que debe\nmantenerse la medida deberá dar inmediata noticia al juez. Si en un\nplazo de setenta y dos (72) horas no se resolviera la aplicación de una\nmedida de coerción privativa de libertad, el juez deberá ordenar la\nlibertad. El representante del Ministerio Público Fiscal podrá, en\nforma excepcional y por única vez, solicitar en la audiencia prevista\nen el artículo 225, una prórroga del plazo de detención por razones\nfundadas en complejidad probatoria, que en ningún caso podrá exceder de\nsetenta y dos (72) horas.",
-      "incisos": [],
+      "text": "Aprehensión sin orden judicial. No podrá aprehenderse a ninguna persona sin orden judicial, salvo en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si hubiera sido sorprendida en flagrante delito;"
+        },
+        {
+          "id": "b",
+          "text": "Si se hubiese fugado de algún establecimiento penal o de cualquier otro lugar de detención. En caso de flagrancia, cualquier persona podrá practicar la aprehensión con la finalidad de impedir que el delito produzca consecuencias. La persona aprehendida será entregada inmediatamente a la autoridad más cercana. La autoridad que haya aprehendido a alguna persona lo deberá comunicar inmediatamente al juez y al representante del Ministerio Público Fiscal. Si el representante del Ministerio Público Fiscal estimare que debe mantenerse la medida deberá dar inmediata noticia al juez. Si en un plazo de setenta y dos (72) horas no se resolviera la aplicación de una medida de coerción privativa de libertad, el juez deberá ordenar la libertad. El representante del Ministerio Público Fiscal podrá, en forma excepcional y por única vez, solicitar en la audiencia prevista en el artículo 225, una prórroga del plazo de detención por razones fundadas en complejidad probatoria, que en ningún caso podrá exceder de setenta y dos (72) horas."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2133,8 +2823,21 @@
     },
     {
       "number": "185",
-      "text": "Prisión preventiva.\nCorresponde el dictado de la prisión preventiva en función de la\ngravedad de las circunstancias y naturaleza del hecho y de las\ncondiciones del imputado, que sirvan para decidir los criterios de\npeligro de fuga o entorpecimiento del proceso previstos en este Código.\nNo procederá la prisión preventiva en los siguientes supuestos:\na) Si por las características del hecho y las condiciones personales\ndel imputado pudiere resultar de aplicación una condena condicional;\nb) En los delitos de acción privada;\nc) Cuando se trate de hechos cometidos en el ejercicio de la libertad\nde expresión o como consecuencia de la crítica en cuestiones públicas.",
-      "incisos": [],
+      "text": "Prisión preventiva. Corresponde el dictado de la prisión preventiva en función de la gravedad de las circunstancias y naturaleza del hecho y de las condiciones del imputado, que sirvan para decidir los criterios de peligro de fuga o entorpecimiento del proceso previstos en este Código. No procederá la prisión preventiva en los siguientes supuestos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si por las características del hecho y las condiciones personales del imputado pudiere resultar de aplicación una condena condicional;"
+        },
+        {
+          "id": "b",
+          "text": "En los delitos de acción privada;"
+        },
+        {
+          "id": "c",
+          "text": "Cuando se trate de hechos cometidos en el ejercicio de la libertad de expresión o como consecuencia de la crítica en cuestiones públicas."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2143,8 +2846,25 @@
     },
     {
       "number": "186",
-      "text": "Embargo y otras medidas cautelares.\nEl juez podrá ordenar, a pedido de parte, el embargo de bienes, la\ninhibición del imputado o del civilmente demandado y las demás medidas\ncautelares necesarias para garantizar:\na) El comiso de los bienes directamente provenientes del delito, de\naquellos en los que éstos se hubieren transformado y de los\ninstrumentos de los que se hubiere valido el imputado para preparar,\nfacilitar o cometer el hecho;\nb) La pena pecuniaria;\nc) La indemnización civil;\nd) Las costas.",
-      "incisos": [],
+      "text": "Embargo y otras medidas cautelares. El juez podrá ordenar, a pedido de parte, el embargo de bienes, la inhibición del imputado o del civilmente demandado y las demás medidas cautelares necesarias para garantizar:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El comiso de los bienes directamente provenientes del delito, de aquellos en los que éstos se hubieren transformado y de los instrumentos de los que se hubiere valido el imputado para preparar, facilitar o cometer el hecho;"
+        },
+        {
+          "id": "b",
+          "text": "La pena pecuniaria;"
+        },
+        {
+          "id": "c",
+          "text": "La indemnización civil;"
+        },
+        {
+          "id": "d",
+          "text": "Las costas."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2153,8 +2873,21 @@
     },
     {
       "number": "187",
-      "text": "Condiciones y requisitos.\nAl solicitar la imposición de una o varias de las medidas de coerción\nenumeradas en el artículo 177, el representante del Ministerio Público\nFiscal o el querellante deberán:\na) Acreditar que existen elementos de convicción suficientes para\nsostener la probabilidad de la existencia del hecho y la participación\ndel imputado en éste;\nb) Justificar suficientemente, con arreglo a las circunstancias del\ncaso y a las personales del imputado, la presunción de que aquél no se\nsometerá al procedimiento u obstaculizará la investigación o la\nrealización de un acto concreto del proceso;\nc) Indicar el plazo de duración de la medida que estime necesario, según las circunstancias del caso.\nEl juez controlará la legalidad y razonabilidad del requerimiento y resolverá fundadamente.",
-      "incisos": [],
+      "text": "Condiciones y requisitos. Al solicitar la imposición de una o varias de las medidas de coerción enumeradas en el artículo 177, el representante del Ministerio Público Fiscal o el querellante deberán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Acreditar que existen elementos de convicción suficientes para sostener la probabilidad de la existencia del hecho y la participación del imputado en éste;"
+        },
+        {
+          "id": "b",
+          "text": "Justificar suficientemente, con arreglo a las circunstancias del caso y a las personales del imputado, la presunción de que aquél no se someterá al procedimiento u obstaculizará la investigación o la realización de un acto concreto del proceso;"
+        },
+        {
+          "id": "c",
+          "text": "Indicar el plazo de duración de la medida que estime necesario, según las circunstancias del caso. El juez controlará la legalidad y razonabilidad del requerimiento y resolverá fundadamente."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2163,8 +2896,21 @@
     },
     {
       "number": "188",
-      "text": "Peligro de fuga. Para decidir acerca del peligro de fuga se deberán tener en cuenta, entre otras, las siguientes pautas:\na) Arraigo, determinado por el domicilio, residencia habitual, asiento\nde la familia y de sus negocios o trabajo, y las facilidades para\nabandonar el país o permanecer oculto y demás cuestiones que influyan\nen el arraigo del imputado;\nb) Las circunstancias y naturaleza del hecho, la pena que se espera\ncomo resultado del procedimiento, la constatación de detenciones\nprevias, y la posibilidad de declaración de reincidencia por delitos\ndolosos;\nc) El comportamiento del imputado durante el procedimiento en cuestión,\notro anterior o que se encuentre en trámite, en la medida en que\nindique cuál es su voluntad de someterse a la persecución penal y en\nparticular, si incurrió en rebeldía o si ocultó o proporcionó falsa\ninformación sobre su identidad o domicilio.",
-      "incisos": [],
+      "text": "Peligro de fuga. Para decidir acerca del peligro de fuga se deberán tener en cuenta, entre otras, las siguientes pautas:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Arraigo, determinado por el domicilio, residencia habitual, asiento de la familia y de sus negocios o trabajo, y las facilidades para abandonar el país o permanecer oculto y demás cuestiones que influyan en el arraigo del imputado;"
+        },
+        {
+          "id": "b",
+          "text": "Las circunstancias y naturaleza del hecho, la pena que se espera como resultado del procedimiento, la constatación de detenciones previas, y la posibilidad de declaración de reincidencia por delitos dolosos;"
+        },
+        {
+          "id": "c",
+          "text": "El comportamiento del imputado durante el procedimiento en cuestión, otro anterior o que se encuentre en trámite, en la medida en que indique cuál es su voluntad de someterse a la persecución penal y en particular, si incurrió en rebeldía o si ocultó o proporcionó falsa información sobre su identidad o domicilio."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2173,8 +2919,21 @@
     },
     {
       "number": "189",
-      "text": "Peligro de entorpecimiento.\nPara decidir acerca del peligro de entorpecimiento para la averiguación\nde la verdad, se deberá tener en cuenta la existencia de indicios que\njustifiquen la grave sospecha de que el imputado:\na) Destruirá, modificará, ocultará, suprimirá o falsificará elementos de prueba;\nb) Influirá para que testigos o peritos informen falsamente o se comporten de manera desleal o reticente o,\nc) Inducirá a otros a realizar tales comportamientos.",
-      "incisos": [],
+      "text": "Peligro de entorpecimiento. Para decidir acerca del peligro de entorpecimiento para la averiguación de la verdad, se deberá tener en cuenta la existencia de indicios que justifiquen la grave sospecha de que el imputado:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Destruirá, modificará, ocultará, suprimirá o falsificará elementos de prueba;"
+        },
+        {
+          "id": "b",
+          "text": "Influirá para que testigos o peritos informen falsamente o se comporten de manera desleal o reticente o,"
+        },
+        {
+          "id": "c",
+          "text": "Inducirá a otros a realizar tales comportamientos."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2193,8 +2952,21 @@
     },
     {
       "number": "191",
-      "text": "Límite de la prisión preventiva. La prisión preventiva cesará:\na) Si el imputado hubiere cumplido en prisión preventiva la pena solicitada por el representante del Ministerio Público Fiscal;\nb) Si el imputado hubiere agotado en prisión preventiva un tiempo igual al de la pena impuesta por la sentencia no firme;\nc) Si el imputado hubiere permanecido en prisión preventiva un tiempo\nque, de haber existido condena, le habría permitido solicitar la\nlibertad condicional o la libertad asistida.\nNo podrá imponerse nuevamente la prisión preventiva en el mismo proceso\nsi una anterior hubiese cesado por cualquiera de las razones enunciadas\nprecedentemente; ello sin perjuicio de las facultades para hacer\ncomparecer al imputado a los actos necesarios del proceso o de la\naplicación de otras medidas de coerción.",
-      "incisos": [],
+      "text": "Límite de la prisión preventiva. La prisión preventiva cesará:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si el imputado hubiere cumplido en prisión preventiva la pena solicitada por el representante del Ministerio Público Fiscal;"
+        },
+        {
+          "id": "b",
+          "text": "Si el imputado hubiere agotado en prisión preventiva un tiempo igual al de la pena impuesta por la sentencia no firme;"
+        },
+        {
+          "id": "c",
+          "text": "Si el imputado hubiere permanecido en prisión preventiva un tiempo que, de haber existido condena, le habría permitido solicitar la libertad condicional o la libertad asistida. No podrá imponerse nuevamente la prisión preventiva en el mismo proceso si una anterior hubiese cesado por cualquiera de las razones enunciadas precedentemente; ello sin perjuicio de las facultades para hacer comparecer al imputado a los actos necesarios del proceso o de la aplicación de otras medidas de coerción."
+        }
+      ],
       "location": {
         "libro": "QUINTO",
         "parte": "PARTE GENERAL"
@@ -2342,8 +3114,25 @@
     },
     {
       "number": "204",
-      "text": "Obligación de denunciar. Tendrán obligación de denunciar los delitos de acción pública:\na) Los magistrados y demás funcionarios públicos que conozcan el hecho en ejercicio de sus funciones;\nb) Los médicos, farmacéuticos o enfermeros, siempre que conozcan el\nhecho en el ejercicio de su profesión u oficio, salvo que el caso se\nencuentre bajo el amparo del secreto profesional;\nc) Los escribanos y contadores en los casos de fraude, evasión impositiva, lavado de activos, trata y explotación de personas;\nd) Las personas que por disposición de la ley, de la autoridad o por\nalgún acto jurídico tengan a su cargo el manejo, la administración, el\ncuidado o control de bienes o intereses de una institución, entidad o\npersona, respecto de los delitos cometidos en perjuicio de ésta o de la\nmasa o patrimonio puesto bajo su cargo o control, siempre que conozcan\ndel hecho por el ejercicio de sus funciones.\nEn todos estos casos la denuncia no será obligatoria si razonablemente\npudiera acarrear la persecución penal propia, la del cónyuge,\nconviviente o pariente dentro del cuarto grado de consanguinidad o\nsegundo de afinidad, o cuando los hechos hubiesen sido conocidos bajo\nsecreto profesional.",
-      "incisos": [],
+      "text": "Obligación de denunciar. Tendrán obligación de denunciar los delitos de acción pública:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Los magistrados y demás funcionarios públicos que conozcan el hecho en ejercicio de sus funciones;"
+        },
+        {
+          "id": "b",
+          "text": "Los médicos, farmacéuticos o enfermeros, siempre que conozcan el hecho en el ejercicio de su profesión u oficio, salvo que el caso se encuentre bajo el amparo del secreto profesional;"
+        },
+        {
+          "id": "c",
+          "text": "Los escribanos y contadores en los casos de fraude, evasión impositiva, lavado de activos, trata y explotación de personas;"
+        },
+        {
+          "id": "d",
+          "text": "Las personas que por disposición de la ley, de la autoridad o por algún acto jurídico tengan a su cargo el manejo, la administración, el cuidado o control de bienes o intereses de una institución, entidad o persona, respecto de los delitos cometidos en perjuicio de ésta o de la masa o patrimonio puesto bajo su cargo o control, siempre que conozcan del hecho por el ejercicio de sus funciones. En todos estos casos la denuncia no será obligatoria si razonablemente pudiera acarrear la persecución penal propia, la del cónyuge, conviviente o pariente dentro del cuarto grado de consanguinidad o segundo de afinidad, o cuando los hechos hubiesen sido conocidos bajo secreto profesional."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2498,8 +3287,33 @@
     },
     {
       "number": "215",
-      "text": "Valoración inicial.\nRecibida una denuncia, querella, actuaciones de prevención o promovida\nuna investigación preliminar de oficio, el representante del Ministerio\nPúblico Fiscal formará un legajo de investigación, en el que deberá\nconstar una sucinta descripción de los hechos, situándolos en tiempo y\nlugar, y deberá adoptar o proponer en el plazo de quince (15) días\nalgunas de las siguientes decisiones:\na) La desestimación de la instancia por inexistencia de delito;\nb) El archivo;\nc) La aplicación de un criterio de oportunidad o disponibilidad;\nd) Iniciar la investigación previa a la formalización;\ne) Formalización de la investigación;\nf) La aplicación de alguno de los procedimientos especiales previstos en este Código.",
-      "incisos": [],
+      "text": "Valoración inicial. Recibida una denuncia, querella, actuaciones de prevención o promovida una investigación preliminar de oficio, el representante del Ministerio Público Fiscal formará un legajo de investigación, en el que deberá constar una sucinta descripción de los hechos, situándolos en tiempo y lugar, y deberá adoptar o proponer en el plazo de quince (15) días algunas de las siguientes decisiones:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La desestimación de la instancia por inexistencia de delito;"
+        },
+        {
+          "id": "b",
+          "text": "El archivo;"
+        },
+        {
+          "id": "c",
+          "text": "La aplicación de un criterio de oportunidad o disponibilidad;"
+        },
+        {
+          "id": "d",
+          "text": "Iniciar la investigación previa a la formalización;"
+        },
+        {
+          "id": "e",
+          "text": "Formalización de la investigación;"
+        },
+        {
+          "id": "f",
+          "text": "La aplicación de alguno de los procedimientos especiales previstos en este Código."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2666,8 +3480,25 @@
     },
     {
       "number": "229",
-      "text": "Anticipo de prueba. Las partes podrán solicitar el anticipo jurisdiccional de prueba únicamente en los siguientes casos:\na) Si se tratara de un acto que, por las circunstancias o por la\nnaturaleza y características de la medida, debiera ser considerado como\nun acto definitivo e irreproducible;\nb) Si se tratara de una declaración que probablemente no pudiera recibirse durante el juicio;\nc) Si por la complejidad del asunto existiera la probabilidad de que el\ntestigo olvidara circunstancias esenciales sobre lo que conoce;\nd) Si el imputado estuviera prófugo, fuera incapaz o existiera un\nobstáculo constitucional y se temiera que el transcurso del tiempo\npudiera dificultar la conservación de la prueba.\nEl juez admitirá o rechazará el pedido en audiencia. Si hace lugar, ordenará la realización con citación de todas las partes.\nSi existe acuerdo de todas las partes sobre la necesidad y modo de\nrealización de la prueba anticipada, y siempre que se trate de alguno\nde los supuestos mencionados en el primer párrafo, el juez deberá\ndisponer la producción anticipada de prueba.\nLa diligencia será documentada en acta u otro medio idóneo y quedará\nbajo la custodia del representante del Ministerio Público Fiscal, quien\nserá responsable por su conservación inalterada.",
-      "incisos": [],
+      "text": "Anticipo de prueba. Las partes podrán solicitar el anticipo jurisdiccional de prueba únicamente en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si se tratara de un acto que, por las circunstancias o por la naturaleza y características de la medida, debiera ser considerado como un acto definitivo e irreproducible;"
+        },
+        {
+          "id": "b",
+          "text": "Si se tratara de una declaración que probablemente no pudiera recibirse durante el juicio;"
+        },
+        {
+          "id": "c",
+          "text": "Si por la complejidad del asunto existiera la probabilidad de que el testigo olvidara circunstancias esenciales sobre lo que conoce;"
+        },
+        {
+          "id": "d",
+          "text": "Si el imputado estuviera prófugo, fuera incapaz o existiera un obstáculo constitucional y se temiera que el transcurso del tiempo pudiera dificultar la conservación de la prueba. El juez admitirá o rechazará el pedido en audiencia. Si hace lugar, ordenará la realización con citación de todas las partes. Si existe acuerdo de todas las partes sobre la necesidad y modo de realización de la prueba anticipada, y siempre que se trate de alguno de los supuestos mencionados en el primer párrafo, el juez deberá disponer la producción anticipada de prueba. La diligencia será documentada en acta u otro medio idóneo y quedará bajo la custodia del representante del Ministerio Público Fiscal, quien será responsable por su conservación inalterada."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2726,8 +3557,21 @@
     },
     {
       "number": "234",
-      "text": "Suspensión. Los plazos de duración de la investigación preparatoria se suspenderán:\na) Si se declarase la rebeldía del imputado;\nb) Si se resolviera la suspensión del proceso a prueba;\nc) Desde que se alcanzara un acuerdo reparatorio hasta el cumplimiento\nde las obligaciones contraídas por el imputado a favor de la víctima o\nhasta que hubiera debidamente garantizado su cumplimiento a\nsatisfacción de ésta última.",
-      "incisos": [],
+      "text": "Suspensión. Los plazos de duración de la investigación preparatoria se suspenderán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si se declarase la rebeldía del imputado;"
+        },
+        {
+          "id": "b",
+          "text": "Si se resolviera la suspensión del proceso a prueba;"
+        },
+        {
+          "id": "c",
+          "text": "Desde que se alcanzara un acuerdo reparatorio hasta el cumplimiento de las obligaciones contraídas por el imputado a favor de la víctima o hasta que hubiera debidamente garantizado su cumplimiento a satisfacción de ésta última."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2738,8 +3582,17 @@
     },
     {
       "number": "235",
-      "text": "Cierre de la investigación preparatoria.\nPracticadas las diligencias necesarias para la investigación del hecho\npunible y sus autores, cómplices o encubridores y para garantizar el\ncomiso, el representante del Ministerio Público Fiscal declarará\ncerrada la investigación preparatoria, y podrá:\na) Solicitar el sobreseimiento;\nb) Acusar al imputado.",
-      "incisos": [],
+      "text": "Cierre de la investigación preparatoria. Practicadas las diligencias necesarias para la investigación del hecho punible y sus autores, cómplices o encubridores y para garantizar el comiso, el representante del Ministerio Público Fiscal declarará cerrada la investigación preparatoria, y podrá:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Solicitar el sobreseimiento;"
+        },
+        {
+          "id": "b",
+          "text": "Acusar al imputado."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2750,8 +3603,37 @@
     },
     {
       "number": "236",
-      "text": "Causales del sobreseimiento. El sobreseimiento procede si:\na) El hecho investigado no se ha cometido;\nb) El hecho investigado no encuadra en una figura legal penal;\nc) El imputado no ha tomado parte en él;\nd) Media una causa de justificación, inculpabilidad o ausencia de punibilidad;\ne) Agotadas las tareas de investigación, no existe razonablemente la\nposibilidad de incorporar nuevos elementos de prueba y no hay\nfundamentos suficientes para requerir la apertura del juicio;\nf) La acción penal se ha extinguido;\ng) Se ha aplicado un criterio de oportunidad, conciliación, reparación\no suspensión del proceso a prueba, y se han cumplido las condiciones\nprevistas en el Código Penal y en este Código.",
-      "incisos": [],
+      "text": "Causales del sobreseimiento. El sobreseimiento procede si:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El hecho investigado no se ha cometido;"
+        },
+        {
+          "id": "b",
+          "text": "El hecho investigado no encuadra en una figura legal penal;"
+        },
+        {
+          "id": "c",
+          "text": "El imputado no ha tomado parte en él;"
+        },
+        {
+          "id": "d",
+          "text": "Media una causa de justificación, inculpabilidad o ausencia de punibilidad;"
+        },
+        {
+          "id": "e",
+          "text": "Agotadas las tareas de investigación, no existe razonablemente la posibilidad de incorporar nuevos elementos de prueba y no hay fundamentos suficientes para requerir la apertura del juicio;"
+        },
+        {
+          "id": "f",
+          "text": "La acción penal se ha extinguido;"
+        },
+        {
+          "id": "g",
+          "text": "Se ha aplicado un criterio de oportunidad, conciliación, reparación o suspensión del proceso a prueba, y se han cumplido las condiciones previstas en el Código Penal y en este Código."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2762,8 +3644,21 @@
     },
     {
       "number": "237",
-      "text": "Trámite. Si el\nrepresentante del Ministerio Público Fiscal considerara que corresponde\ndictar el sobreseimiento lo fundará por escrito y lo pondrá en\nconocimiento de las otras partes y de la víctima, quienes en el plazo\nde tres (3) días podrán:\na) La víctima, objetar el pedido de sobreseimiento solicitando su\nrevisión ante el superior del fiscal o presentarse como querellante\nejerciendo las facultades previstas en el inciso b);\nb) El querellante, oponerse al sobreseimiento ante el juez y, en su caso, formular acusación;\nc) El imputado o su defensor, pedir que se modifiquen los fundamentos o\nse precise la descripción de los hechos por los que se insta el\nsobreseimiento.",
-      "incisos": [],
+      "text": "Trámite. Si el representante del Ministerio Público Fiscal considerara que corresponde dictar el sobreseimiento lo fundará por escrito y lo pondrá en conocimiento de las otras partes y de la víctima, quienes en el plazo de tres (3) días podrán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La víctima, objetar el pedido de sobreseimiento solicitando su revisión ante el superior del fiscal o presentarse como querellante ejerciendo las facultades previstas en el inciso b);"
+        },
+        {
+          "id": "b",
+          "text": "El querellante, oponerse al sobreseimiento ante el juez y, en su caso, formular acusación;"
+        },
+        {
+          "id": "c",
+          "text": "El imputado o su defensor, pedir que se modifiquen los fundamentos o se precise la descripción de los hechos por los que se insta el sobreseimiento."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2822,8 +3717,41 @@
     },
     {
       "number": "241",
-      "text": "Acusación. La acusación será por escrito y deberá contener:\na) Los datos que sirvan para identificar al imputado y el nombre y domicilio de su defensor;\nb) La relación clara, precisa y circunstanciada del hecho punible que\nse atribuye al imputado; en caso de contener varios hechos\nindependientes, la separación y el detalle de cada uno de ellos;\nc) Los fundamentos de la imputación, con expresión de los medios de prueba que la motivan;\nd) La expresión precisa de las disposiciones legales aplicables y su\ndebida correlación con los hechos y con la intervención atribuida al\nimputado en ellos;\ne) La determinación precisa del daño cuya reparación se reclama;\nf) El ofrecimiento de la prueba que propone para el juicio;\ng) Las circunstancias de interés para determinar la pena o la medida\ncurativa y educativa, con expresión de los medios de prueba que propone\npara verificarlas en el juicio sobre la pena;\nh) El requerimiento de pena estimado, a los efectos de la determinación del juez, tribunal o jurado.\nLa acusación sólo podrá referirse a hechos y personas incluidas en la\nformalización de la investigación aunque se invocare una calificación\njurídica distinta de la asignada en esa oportunidad.",
-      "incisos": [],
+      "text": "Acusación. La acusación será por escrito y deberá contener:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Los datos que sirvan para identificar al imputado y el nombre y domicilio de su defensor;"
+        },
+        {
+          "id": "b",
+          "text": "La relación clara, precisa y circunstanciada del hecho punible que se atribuye al imputado; en caso de contener varios hechos independientes, la separación y el detalle de cada uno de ellos;"
+        },
+        {
+          "id": "c",
+          "text": "Los fundamentos de la imputación, con expresión de los medios de prueba que la motivan;"
+        },
+        {
+          "id": "d",
+          "text": "La expresión precisa de las disposiciones legales aplicables y su debida correlación con los hechos y con la intervención atribuida al imputado en ellos;"
+        },
+        {
+          "id": "e",
+          "text": "La determinación precisa del daño cuya reparación se reclama;"
+        },
+        {
+          "id": "f",
+          "text": "El ofrecimiento de la prueba que propone para el juicio;"
+        },
+        {
+          "id": "g",
+          "text": "Las circunstancias de interés para determinar la pena o la medida curativa y educativa, con expresión de los medios de prueba que propone para verificarlas en el juicio sobre la pena;"
+        },
+        {
+          "id": "h",
+          "text": "El requerimiento de pena estimado, a los efectos de la determinación del juez, tribunal o jurado. La acusación sólo podrá referirse a hechos y personas incluidas en la formalización de la investigación aunque se invocare una calificación jurídica distinta de la asignada en esa oportunidad."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2844,8 +3772,17 @@
     },
     {
       "number": "243",
-      "text": "Comunicación y actividad de la querella.\nRemisión de las actuaciones. El representante del Ministerio Público\nFiscal comunicará la acusación al querellante con copia del escrito que\nla contenga, colocando los elementos de prueba a disposición de aquel,\npara su consulta, por el plazo de cinco (5) días.\nEn el plazo indicado, el querellante podrá:\na) Adherir a la acusación del representante del Ministerio Público Fiscal o,\nb) Presentar una acusación autónoma, en cuyo caso deberá cumplir con\ntodos los requisitos exigidos para la acusación del representante del\nMinisterio Público Fiscal.\nEn el caso en que se hubiera constituido en actor civil deberá\nconcretar su demanda en el mismo plazo, acompañando las pruebas\npertinentes.\nVencido el plazo previsto en el primer párrafo, el representante del\nMinisterio Público Fiscal remitirá a la oficina judicial su acusación\ny, en su caso, la del querellante, junto a la demanda civil.",
-      "incisos": [],
+      "text": "Comunicación y actividad de la querella. Remisión de las actuaciones. El representante del Ministerio Público Fiscal comunicará la acusación al querellante con copia del escrito que la contenga, colocando los elementos de prueba a disposición de aquel, para su consulta, por el plazo de cinco (5) días. En el plazo indicado, el querellante podrá:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Adherir a la acusación del representante del Ministerio Público Fiscal o,"
+        },
+        {
+          "id": "b",
+          "text": "Presentar una acusación autónoma, en cuyo caso deberá cumplir con todos los requisitos exigidos para la acusación del representante del Ministerio Público Fiscal. En el caso en que se hubiera constituido en actor civil deberá concretar su demanda en el mismo plazo, acompañando las pruebas pertinentes. Vencido el plazo previsto en el primer párrafo, el representante del Ministerio Público Fiscal remitirá a la oficina judicial su acusación y, en su caso, la del querellante, junto a la demanda civil."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2877,8 +3814,37 @@
     },
     {
       "number": "246",
-      "text": "Audiencia de control de la acusación. Desarrollo.\nVencido el plazo del artículo 244, la oficina judicial convocará a las\npartes y a la víctima, si correspondiere su intervención, a una\naudiencia dentro de los cinco (5) días siguientes.\nComo cuestión preliminar el acusado y su defensa podrán:\na) Objetar la acusación o la demanda civil, señalando defectos formales;\nb) Oponer excepciones;\nc) Instar el sobreseimiento;\nd) Proponer reparación, conciliación, la suspensión del juicio a prueba o la aplicación del procedimiento de juicio abreviado;\ne) Solicitar que se unifiquen los hechos objeto de las acusaciones\ncuando la diversidad de enfoques o circunstancias perjudiquen la\ndefensa;\nf) Plantear la unión o separación de juicios;\ng) Contestar la demanda civil.\nResueltas las cuestiones, cada parte ofrecerá su prueba para las dos\n(2) etapas del juicio y formulará las solicitudes, observaciones e\ninstancias que estimare relevantes con relación a las peticiones\nrealizadas y las pruebas ofrecidas por los demás intervinientes.\nLas partes también podrán solicitar al juez que tenga por acreditados ciertos hechos, que no podrán ser discutidos en el juicio.\nEl juez evitará que en la audiencia se discutan cuestiones que son\npropias del juicio oral y resolverá exclusivamente con la prueba que\npresentaren las partes.\nSi las partes consideran que para resolver alguno de los aspectos\npropios de la audiencia de control es necesario producir prueba,\ntendrán a cargo su producción. Si es necesario podrán requerir el\nauxilio judicial.\nEl juez resolverá fundadamente todas las cuestiones en el orden que fueran planteadas.",
-      "incisos": [],
+      "text": "Audiencia de control de la acusación. Desarrollo. Vencido el plazo del artículo 244, la oficina judicial convocará a las partes y a la víctima, si correspondiere su intervención, a una audiencia dentro de los cinco (5) días siguientes. Como cuestión preliminar el acusado y su defensa podrán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Objetar la acusación o la demanda civil, señalando defectos formales;"
+        },
+        {
+          "id": "b",
+          "text": "Oponer excepciones;"
+        },
+        {
+          "id": "c",
+          "text": "Instar el sobreseimiento;"
+        },
+        {
+          "id": "d",
+          "text": "Proponer reparación, conciliación, la suspensión del juicio a prueba o la aplicación del procedimiento de juicio abreviado;"
+        },
+        {
+          "id": "e",
+          "text": "Solicitar que se unifiquen los hechos objeto de las acusaciones cuando la diversidad de enfoques o circunstancias perjudiquen la defensa;"
+        },
+        {
+          "id": "f",
+          "text": "Plantear la unión o separación de juicios;"
+        },
+        {
+          "id": "g",
+          "text": "Contestar la demanda civil. Resueltas las cuestiones, cada parte ofrecerá su prueba para las dos (2) etapas del juicio y formulará las solicitudes, observaciones e instancias que estimare relevantes con relación a las peticiones realizadas y las pruebas ofrecidas por los demás intervinientes. Las partes también podrán solicitar al juez que tenga por acreditados ciertos hechos, que no podrán ser discutidos en el juicio. El juez evitará que en la audiencia se discutan cuestiones que son propias del juicio oral y resolverá exclusivamente con la prueba que presentaren las partes. Si las partes consideran que para resolver alguno de los aspectos propios de la audiencia de control es necesario producir prueba, tendrán a cargo su producción. Si es necesario podrán requerir el auxilio judicial. El juez resolverá fundadamente todas las cuestiones en el orden que fueran planteadas."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2888,8 +3854,41 @@
     },
     {
       "number": "247",
-      "text": "Auto de apertura del juicio oral. El auto de apertura del juicio oral contendrá:\na) El órgano jurisdiccional competente para intervenir en el juicio oral;\nb) La acusación admitida;\nc) Los hechos que se dieron por acreditados en virtud de las convenciones probatorias;\nd) La decisión sobre la admisibilidad o inadmisibilidad de la prueba\nofrecida para el debate y el juicio de la pena, con expresión del\nfundamento;\ne) Los fundamentos por los cuales se rechazó, total o parcialmente, la oposición a la apertura del juicio;\nf) La decisión acerca de la legitimación del querellante para habilitar\nla apertura del juicio o para intervenir en él y, en caso de pluralidad\nde querellantes, la orden de unificar personería, si fuera procedente;\ng) Cuando el acusado soporte una medida de coerción, la decisión acerca de la subsistencia de la medida o su sustitución;\nh) En su caso, la indicación de cómo ha quedado trabada la litis en la demanda civil y su contestación.\nEl auto de apertura del juicio oral es irrecurrible y será remitido a la oficina judicial correspondiente.\nJUICIO\nNormas generales",
-      "incisos": [],
+      "text": "Auto de apertura del juicio oral. El auto de apertura del juicio oral contendrá:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El órgano jurisdiccional competente para intervenir en el juicio oral;"
+        },
+        {
+          "id": "b",
+          "text": "La acusación admitida;"
+        },
+        {
+          "id": "c",
+          "text": "Los hechos que se dieron por acreditados en virtud de las convenciones probatorias;"
+        },
+        {
+          "id": "d",
+          "text": "La decisión sobre la admisibilidad o inadmisibilidad de la prueba ofrecida para el debate y el juicio de la pena, con expresión del fundamento;"
+        },
+        {
+          "id": "e",
+          "text": "Los fundamentos por los cuales se rechazó, total o parcialmente, la oposición a la apertura del juicio;"
+        },
+        {
+          "id": "f",
+          "text": "La decisión acerca de la legitimación del querellante para habilitar la apertura del juicio o para intervenir en él y, en caso de pluralidad de querellantes, la orden de unificar personería, si fuera procedente;"
+        },
+        {
+          "id": "g",
+          "text": "Cuando el acusado soporte una medida de coerción, la decisión acerca de la subsistencia de la medida o su sustitución;"
+        },
+        {
+          "id": "h",
+          "text": "En su caso, la indicación de cómo ha quedado trabada la litis en la demanda civil y su contestación. El auto de apertura del juicio oral es irrecurrible y será remitido a la oficina judicial correspondiente. JUICIO Normas generales"
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2899,8 +3898,29 @@
     },
     {
       "number": "248",
-      "text": "Organización.\nDentro de las cuarenta y ocho (48) horas de recibido el auto de\napertura a juicio la oficina judicial procederá inmediatamente a:\na) Sortear el o los jueces que habrán de intervenir en el caso;\nb) Fijar el día y hora de la audiencia de debate, la cual no se\nrealizará antes de cinco (5) ni después de treinta (30) días de\nrecibidas las actuaciones. En los casos de aplicación del procedimiento\nprevisto en el artículo 292, la audiencia de debate deberá realizarse\nantes de los diez (10) días;\nc) Citar a todas las partes intervinientes;\nd) Recibir de las partes los objetos y documentos que deban analizarse durante el debate;\ne) Disponer todas las demás medidas necesarias para la organización y desarrollo del juicio.\nEl órgano jurisdiccional no podrá tomar conocimiento o solicitar a la\noficina judicial el auto de apertura o demás constancias que aquella o\nel Ministerio Público Fiscal posean.\nEn casos complejos o cuando las partes lo soliciten, el encargado de la\noficina judicial, realizará una audiencia preliminar para resolver\ncuestiones prácticas de organización.\nLas partes tendrán a su cargo la notificación a los testigos y peritos\nde la audiencia designada y de las respectivas citaciones a dicha\ndiligencia a través de la Oficina de Notificaciones, con la prevención\nde que, en caso de inasistencia injustificada, serán conducidos por la\nfuerza pública.\nCuando por las características del juicio se infiera que la audiencia\nde debate se prolongará por más de veinte (20) días, se sorteará uno\n(1) o más jueces sustitutos de conformidad con el procedimiento que\ndetermine la Ley de Organización y Competencia de la Justicia Penal\nFederal y Nacional, quienes tendrán las mismas obligaciones de\nasistencia que los jueces titulares, pero no la de participar en las\ndeliberaciones para la resolución de planteos ni las obligaciones\nprevistas en los artículos 269 y 270.",
-      "incisos": [],
+      "text": "Organización. Dentro de las cuarenta y ocho (48) horas de recibido el auto de apertura a juicio la oficina judicial procederá inmediatamente a:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Sortear el o los jueces que habrán de intervenir en el caso;"
+        },
+        {
+          "id": "b",
+          "text": "Fijar el día y hora de la audiencia de debate, la cual no se realizará antes de cinco (5) ni después de treinta (30) días de recibidas las actuaciones. En los casos de aplicación del procedimiento previsto en el artículo 292, la audiencia de debate deberá realizarse antes de los diez (10) días;"
+        },
+        {
+          "id": "c",
+          "text": "Citar a todas las partes intervinientes;"
+        },
+        {
+          "id": "d",
+          "text": "Recibir de las partes los objetos y documentos que deban analizarse durante el debate;"
+        },
+        {
+          "id": "e",
+          "text": "Disponer todas las demás medidas necesarias para la organización y desarrollo del juicio. El órgano jurisdiccional no podrá tomar conocimiento o solicitar a la oficina judicial el auto de apertura o demás constancias que aquella o el Ministerio Público Fiscal posean. En casos complejos o cuando las partes lo soliciten, el encargado de la oficina judicial, realizará una audiencia preliminar para resolver cuestiones prácticas de organización. Las partes tendrán a su cargo la notificación a los testigos y peritos de la audiencia designada y de las respectivas citaciones a dicha diligencia a través de la Oficina de Notificaciones, con la prevención de que, en caso de inasistencia injustificada, serán conducidos por la fuerza pública. Cuando por las características del juicio se infiera que la audiencia de debate se prolongará por más de veinte (20) días, se sorteará uno (1) o más jueces sustitutos de conformidad con el procedimiento que determine la Ley de Organización y Competencia de la Justicia Penal Federal y Nacional, quienes tendrán las mismas obligaciones de asistencia que los jueces titulares, pero no la de participar en las deliberaciones para la resolución de planteos ni las obligaciones previstas en los artículos 269 y 270."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2947,8 +3967,21 @@
     },
     {
       "number": "252",
-      "text": "Publicidad. El\ndebate será oral y público, bajo pena de nulidad. No obstante, el\ntribunal podrá disponer, fundadamente y si no existiere ningún medio\nalternativo, una o más de las siguientes medidas para proteger la\nintimidad o seguridad de cualquier persona que debiere tomar parte en\nel debate, o para evitar la divulgación de un secreto cuya revelación\nsea punible o afecte gravemente la seguridad del Estado:\na) Impedir el acceso u ordenar la salida de personas determinadas de la sala donde se efectúe la audiencia;\nb) Impedir el acceso del público en general u ordenar su salida temporaria para la práctica de pruebas específicas;\nc) Prohibir a las partes, testigos, peritos, intérpretes y demás\nintervinientes que divulguen información o formulen declaraciones a los\nmedios de comunicación durante el desarrollo del juicio sobre\ncuestiones que hayan sido excluidas de la publicidad en los términos\ndel primer párrafo.\nLas restricciones indicadas precedentemente sólo podrán ser dispuestas\nde oficio si la persona a proteger no estuviere representada en el\njuicio, o se tratare de un secreto cuya revelación fuere punible o\nafectare gravemente la seguridad del Estado. Las partes podrán deducir\nel recurso de reposición.\nDesaparecida la causa de la restricción, el tribunal permitirá nuevamente el ingreso del público.",
-      "incisos": [],
+      "text": "Publicidad. El debate será oral y público, bajo pena de nulidad. No obstante, el tribunal podrá disponer, fundadamente y si no existiere ningún medio alternativo, una o más de las siguientes medidas para proteger la intimidad o seguridad de cualquier persona que debiere tomar parte en el debate, o para evitar la divulgación de un secreto cuya revelación sea punible o afecte gravemente la seguridad del Estado:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Impedir el acceso u ordenar la salida de personas determinadas de la sala donde se efectúe la audiencia;"
+        },
+        {
+          "id": "b",
+          "text": "Impedir el acceso del público en general u ordenar su salida temporaria para la práctica de pruebas específicas;"
+        },
+        {
+          "id": "c",
+          "text": "Prohibir a las partes, testigos, peritos, intérpretes y demás intervinientes que divulguen información o formulen declaraciones a los medios de comunicación durante el desarrollo del juicio sobre cuestiones que hayan sido excluidas de la publicidad en los términos del primer párrafo. Las restricciones indicadas precedentemente sólo podrán ser dispuestas de oficio si la persona a proteger no estuviere representada en el juicio, o se tratare de un secreto cuya revelación fuere punible o afectare gravemente la seguridad del Estado. Las partes podrán deducir el recurso de reposición. Desaparecida la causa de la restricción, el tribunal permitirá nuevamente el ingreso del público."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -2995,8 +4028,21 @@
     },
     {
       "number": "256",
-      "text": "Excepciones a la oralidad. Sólo podrán ser incorporados al juicio por su lectura o exhibición audiovisual:\na) Las pruebas recibidas conforme a las reglas del anticipo\njurisdiccional de prueba, siempre que no sea posible la presencia de\nquien participó o presenció el acto;\nb) La prueba documental o de informes y las certificaciones;\nc) Los registros de declaraciones anteriores de testigos o peritos que\nhubieren fallecido o caído en incapacidad física o mental, o estuvieren\nausentes del país, o cuya residencia se ignorare o que por cualquier\nmotivo difícil de superar no pudieren declarar en el juicio, siempre\nque ellas hubieren sido recibidas notificando previamente a la defensa\ny en conformidad con las demás pautas establecidas en este Código.\nLa lectura o exhibición de los elementos esenciales en la audiencia no podrá omitirse ni siquiera con el acuerdo de las partes.\nToda otra prueba que se pretenda introducir al juicio por su lectura o\nexhibición, con excepción de lo previsto en el artículo 158 inciso f),\nno tendrá ningún valor, sin perjuicio de la presentación de documentos\nal testigo, perito o al imputado para facilitar su memoria o dar\nexplicaciones sobre lo que allí consta, previa autorización de los\njueces. En todo caso, se valorarán los dichos vertidos en la audiencia.",
-      "incisos": [],
+      "text": "Excepciones a la oralidad. Sólo podrán ser incorporados al juicio por su lectura o exhibición audiovisual:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Las pruebas recibidas conforme a las reglas del anticipo jurisdiccional de prueba, siempre que no sea posible la presencia de quien participó o presenció el acto;"
+        },
+        {
+          "id": "b",
+          "text": "La prueba documental o de informes y las certificaciones;"
+        },
+        {
+          "id": "c",
+          "text": "Los registros de declaraciones anteriores de testigos o peritos que hubieren fallecido o caído en incapacidad física o mental, o estuvieren ausentes del país, o cuya residencia se ignorare o que por cualquier motivo difícil de superar no pudieren declarar en el juicio, siempre que ellas hubieren sido recibidas notificando previamente a la defensa y en conformidad con las demás pautas establecidas en este Código. La lectura o exhibición de los elementos esenciales en la audiencia no podrá omitirse ni siquiera con el acuerdo de las partes. Toda otra prueba que se pretenda introducir al juicio por su lectura o exhibición, con excepción de lo previsto en el artículo 158 inciso f), no tendrá ningún valor, sin perjuicio de la presentación de documentos al testigo, perito o al imputado para facilitar su memoria o dar explicaciones sobre lo que allí consta, previa autorización de los jueces. En todo caso, se valorarán los dichos vertidos en la audiencia."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -3019,8 +4065,37 @@
     },
     {
       "number": "258",
-      "text": "Continuidad, suspensión e interrupción.\nLa audiencia se realizará sin interrupción, durante las sesiones\nconsecutivas que sean necesarias hasta su terminación. A estos efectos,\nconstituirán sesiones consecutivas aquellas que tuvieren lugar en el\ndía siguiente o subsiguiente del funcionamiento ordinario del tribunal.\nLa audiencia se podrá suspender por un plazo máximo de diez (10) días,\nsi:\na) Debiera resolverse alguna cuestión que, por su naturaleza, no pudiera decidirse inmediatamente;\nb) Fuera necesario practicar algún acto fuera del lugar de la audiencia\ny no pudiera cumplirse en el intervalo entre una y otra sesión;\nc) No comparecieran testigos, peritos o intérpretes cuya intervención\nfuera indispensable, salvo que pudiera continuarse con la recepción de\notras pruebas hasta que el ausente compareciera o fuera hecho\ncomparecer por la fuerza pública;\nd) Algún juez, representante del Ministerio Público Fiscal o defensor\nse enfermara hasta el punto de no poder continuar su actuación en el\njuicio, a menos que pudieran ser reemplazados inmediatamente;\ne) Se comprobara, mediante dictamen médico forense, que el imputado se\nencuentra en condiciones adversas de salud que no le permitan continuar\nsu asistencia o actuación en el juicio; en este caso, podrá ordenarse\nla separación de juicios y continuarse el trámite con los otros\nimputados;\nf) Alguna revelación o retractación hiciera indispensable la producción de una medida de prueba;\ng) El imputado o su defensor lo solicitaran después de ampliada la\nacusación, siempre que, por las circunstancias del caso, no se pudiera\ncontinuar inmediatamente.\nCuando el debate se hubiera prolongado por más de diez (10) sesiones\ndiarias de audiencia y se diera el supuesto del inciso d), la audiencia\nexcepcionalmente podrá suspenderse hasta quince (15) días corridos.\nSiempre que la suspensión excediera el plazo máximo fijado, todo el debate deberá realizarse nuevamente.\nLa rebeldía o la incapacidad del imputado interrumpirán el juicio. Si\néste no fuera hallado o no recuperara la capacidad dentro del décimo\ndía desde la suspensión, todo el debate se realizará nuevamente cuando\nestos obstáculos sean superados.",
-      "incisos": [],
+      "text": "Continuidad, suspensión e interrupción. La audiencia se realizará sin interrupción, durante las sesiones consecutivas que sean necesarias hasta su terminación. A estos efectos, constituirán sesiones consecutivas aquellas que tuvieren lugar en el día siguiente o subsiguiente del funcionamiento ordinario del tribunal. La audiencia se podrá suspender por un plazo máximo de diez (10) días, si:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Debiera resolverse alguna cuestión que, por su naturaleza, no pudiera decidirse inmediatamente;"
+        },
+        {
+          "id": "b",
+          "text": "Fuera necesario practicar algún acto fuera del lugar de la audiencia y no pudiera cumplirse en el intervalo entre una y otra sesión;"
+        },
+        {
+          "id": "c",
+          "text": "No comparecieran testigos, peritos o intérpretes cuya intervención fuera indispensable, salvo que pudiera continuarse con la recepción de otras pruebas hasta que el ausente compareciera o fuera hecho comparecer por la fuerza pública;"
+        },
+        {
+          "id": "d",
+          "text": "Algún juez, representante del Ministerio Público Fiscal o defensor se enfermara hasta el punto de no poder continuar su actuación en el juicio, a menos que pudieran ser reemplazados inmediatamente;"
+        },
+        {
+          "id": "e",
+          "text": "Se comprobara, mediante dictamen médico forense, que el imputado se encuentra en condiciones adversas de salud que no le permitan continuar su asistencia o actuación en el juicio; en este caso, podrá ordenarse la separación de juicios y continuarse el trámite con los otros imputados;"
+        },
+        {
+          "id": "f",
+          "text": "Alguna revelación o retractación hiciera indispensable la producción de una medida de prueba;"
+        },
+        {
+          "id": "g",
+          "text": "El imputado o su defensor lo solicitaran después de ampliada la acusación, siempre que, por las circunstancias del caso, no se pudiera continuar inmediatamente. Cuando el debate se hubiera prolongado por más de diez (10) sesiones diarias de audiencia y se diera el supuesto del inciso d), la audiencia excepcionalmente podrá suspenderse hasta quince (15) días corridos. Siempre que la suspensión excediera el plazo máximo fijado, todo el debate deberá realizarse nuevamente. La rebeldía o la incapacidad del imputado interrumpirán el juicio. Si éste no fuera hallado o no recuperara la capacidad dentro del décimo día desde la suspensión, todo el debate se realizará nuevamente cuando estos obstáculos sean superados."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -3175,8 +4250,29 @@
     },
     {
       "number": "271",
-      "text": "Requisitos de la sentencia. La sentencia contendrá:\na) El lugar y la fecha en que se ha dictado, la composición del órgano\njudicial, el nombre del o los jueces y las partes, los datos personales\ndel imputado y la enunciación del hecho que ha sido objeto de acusación\ny, en su caso, de la acción civil;\nb) El voto de los jueces sobre cada una de las cuestiones planteadas, con exposición de los motivos en que los fundan;\nc) La determinación precisa y circunstanciada del hecho que se estima acreditado;\nd) La parte dispositiva con mención de las normas aplicables;\ne) La firma de los jueces.",
-      "incisos": [],
+      "text": "Requisitos de la sentencia. La sentencia contendrá:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El lugar y la fecha en que se ha dictado, la composición del órgano judicial, el nombre del o los jueces y las partes, los datos personales del imputado y la enunciación del hecho que ha sido objeto de acusación y, en su caso, de la acción civil;"
+        },
+        {
+          "id": "b",
+          "text": "El voto de los jueces sobre cada una de las cuestiones planteadas, con exposición de los motivos en que los fundan;"
+        },
+        {
+          "id": "c",
+          "text": "La determinación precisa y circunstanciada del hecho que se estima acreditado;"
+        },
+        {
+          "id": "d",
+          "text": "La parte dispositiva con mención de las normas aplicables;"
+        },
+        {
+          "id": "e",
+          "text": "La firma de los jueces."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -3235,8 +4331,49 @@
     },
     {
       "number": "276",
-      "text": "Forma. De la audiencia de juicio se labrará acta que contendrá:\na) El lugar y fecha, con indicación de la hora de comienzo y finalización, así como de las suspensiones y de las reanudaciones;\nb) La mención de los jueces, los miembros del jurado y las partes;\nc) Los datos personales del imputado;\nd) Un breve resumen del desarrollo de la audiencia, con indicación de\nlos datos personales de los testigos, peritos e intérpretes y la\nreferencia de los documentos leídos;\ne) Las solicitudes y decisiones producidas en el curso del juicio y peticiones finales de las partes;\nf) La observancia de las formalidades esenciales, específicamente si se\nprocedió públicamente o fue excluida la publicidad, total o\nparcialmente, con mención de los motivos de la decisión;\ng) Otras menciones previstas por la ley o las que el juez presidente ordene, incluso por solicitud de las partes intervinientes;\nh) El veredicto del jurado y la parte dispositiva de la sentencia;\ni) La constancia de lectura de la sentencia o su diferimiento;\nj) La firma del juez presidente y la del funcionario responsable de confeccionar el acta.\nLa audiencia será grabada en forma total mediante soporte de audio o video.",
-      "incisos": [],
+      "text": "Forma. De la audiencia de juicio se labrará acta que contendrá:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El lugar y fecha, con indicación de la hora de comienzo y finalización, así como de las suspensiones y de las reanudaciones;"
+        },
+        {
+          "id": "b",
+          "text": "La mención de los jueces, los miembros del jurado y las partes;"
+        },
+        {
+          "id": "c",
+          "text": "Los datos personales del imputado;"
+        },
+        {
+          "id": "d",
+          "text": "Un breve resumen del desarrollo de la audiencia, con indicación de los datos personales de los testigos, peritos e intérpretes y la referencia de los documentos leídos;"
+        },
+        {
+          "id": "e",
+          "text": "Las solicitudes y decisiones producidas en el curso del juicio y peticiones finales de las partes;"
+        },
+        {
+          "id": "f",
+          "text": "La observancia de las formalidades esenciales, específicamente si se procedió públicamente o fue excluida la publicidad, total o parcialmente, con mención de los motivos de la decisión;"
+        },
+        {
+          "id": "g",
+          "text": "Otras menciones previstas por la ley o las que el juez presidente ordene, incluso por solicitud de las partes intervinientes;"
+        },
+        {
+          "id": "h",
+          "text": "El veredicto del jurado y la parte dispositiva de la sentencia;"
+        },
+        {
+          "id": "i",
+          "text": "La constancia de lectura de la sentencia o su diferimiento;"
+        },
+        {
+          "id": "j",
+          "text": "La firma del juez presidente y la del funcionario responsable de confeccionar el acta. La audiencia será grabada en forma total mediante soporte de audio o video."
+        }
+      ],
       "location": {
         "libro": "PRIMERO",
         "parte": "PARTE GENERAL",
@@ -3304,8 +4441,25 @@
     },
     {
       "number": "282",
-      "text": "Audiencia de conciliación. Admitida la querella, el juez convocará a una audiencia de conciliación y ordenará a la oficina judicial que proceda a:\na) Fijar día y hora dentro de los quince (15) días, para llevar a cabo la audiencia;\nb) Designar a un mediador habilitado que intervendrá en la audiencia;\nc) Practicar las comunicaciones correspondientes;\nd) Remitir a cada uno de los querellados, copia del escrito de querella\ny, en su caso, del poder y la demanda civil, intimándolos a que\ndesignen abogado defensor bajo apercibimiento de nombrarles uno\npúblico, de no comunicar aquella circunstancia con una anticipación de\ncuarenta y ocho (48) horas a la fecha para la que fuera fijada la\naudiencia.",
-      "incisos": [],
+      "text": "Audiencia de conciliación. Admitida la querella, el juez convocará a una audiencia de conciliación y ordenará a la oficina judicial que proceda a:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Fijar día y hora dentro de los quince (15) días, para llevar a cabo la audiencia;"
+        },
+        {
+          "id": "b",
+          "text": "Designar a un mediador habilitado que intervendrá en la audiencia;"
+        },
+        {
+          "id": "c",
+          "text": "Practicar las comunicaciones correspondientes;"
+        },
+        {
+          "id": "d",
+          "text": "Remitir a cada uno de los querellados, copia del escrito de querella y, en su caso, del poder y la demanda civil, intimándolos a que designen abogado defensor bajo apercibimiento de nombrarles uno público, de no comunicar aquella circunstancia con una anticipación de cuarenta y ocho (48) horas a la fecha para la que fuera fijada la audiencia."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -3436,8 +4590,33 @@
     },
     {
       "number": "294",
-      "text": "Plazos. Una vez autorizado este procedimiento, producirá los siguientes efectos:\na) El plazo máximo de duración de todo el procedimiento, se extenderá a seis (6) años;\nb) El plazo máximo de duración de la investigación preparatoria se\nextenderá a dos (2) años, el cual podrá ser prorrogado por única vez\npor un plazo no superior a un (1) año;\nc) Los plazos para la intervención, grabación o registro de comunicaciones se duplicarán;\nd) El plazo máximo de reserva total del legajo de investigación podrá\nextenderse hasta treinta (30) días, pudiéndose prorrogar por un período\nigual, según las condiciones fijadas en el artículo 201;\ne) Los plazos de duración del debate, la deliberación e interposición de las impugnaciones se duplicarán;\nf) Los plazos establecidos a favor de las partes para realizar alguna\nactuación y aquellos que establecen un determinado tiempo para celebrar\naudiencia se duplicarán.",
-      "incisos": [],
+      "text": "Plazos. Una vez autorizado este procedimiento, producirá los siguientes efectos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El plazo máximo de duración de todo el procedimiento, se extenderá a seis (6) años;"
+        },
+        {
+          "id": "b",
+          "text": "El plazo máximo de duración de la investigación preparatoria se extenderá a dos (2) años, el cual podrá ser prorrogado por única vez por un plazo no superior a un (1) año;"
+        },
+        {
+          "id": "c",
+          "text": "Los plazos para la intervención, grabación o registro de comunicaciones se duplicarán;"
+        },
+        {
+          "id": "d",
+          "text": "El plazo máximo de reserva total del legajo de investigación podrá extenderse hasta treinta (30) días, pudiéndose prorrogar por un período igual, según las condiciones fijadas en el artículo 201;"
+        },
+        {
+          "id": "e",
+          "text": "Los plazos de duración del debate, la deliberación e interposición de las impugnaciones se duplicarán;"
+        },
+        {
+          "id": "f",
+          "text": "Los plazos establecidos a favor de las partes para realizar alguna actuación y aquellos que establecen un determinado tiempo para celebrar audiencia se duplicarán."
+        }
+      ],
       "location": {
         "libro": "SEGUNDO",
         "parte": "PARTE GENERAL",
@@ -3557,8 +4736,29 @@
     },
     {
       "number": "305",
-      "text": "Legitimación del imputado. El imputado podrá impugnar:\na) La sentencia condenatoria y la pena que se le hubiera impuesto;\nb) Las medidas de coerción y demás cautelares y la denegatoria de la suspensión del juicio a prueba;\nc) La revocatoria del sobreseimiento;\nd) La decisión de aplicar a un proceso las normas de los artículos 293\ny siguientes y la denegatoria de dicha aplicación si ésta hubiese sido\nsolicitada por el imputado;\ne) Las decisiones que se tomen durante la ejecución de la pena.",
-      "incisos": [],
+      "text": "Legitimación del imputado. El imputado podrá impugnar:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La sentencia condenatoria y la pena que se le hubiera impuesto;"
+        },
+        {
+          "id": "b",
+          "text": "Las medidas de coerción y demás cautelares y la denegatoria de la suspensión del juicio a prueba;"
+        },
+        {
+          "id": "c",
+          "text": "La revocatoria del sobreseimiento;"
+        },
+        {
+          "id": "d",
+          "text": "La decisión de aplicar a un proceso las normas de los artículos 293 y siguientes y la denegatoria de dicha aplicación si ésta hubiese sido solicitada por el imputado;"
+        },
+        {
+          "id": "e",
+          "text": "Las decisiones que se tomen durante la ejecución de la pena."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3568,8 +4768,17 @@
     },
     {
       "number": "306",
-      "text": "Legitimación de la querella.\nEl querellante podrá impugnar el sobreseimiento, la absolución y la\ncondena si la pena aplicada fuere inferior a la mitad de la pena\npretendida. También podrá impugnar las demás resoluciones que pongan\nfin a la acción o a la pena o hagan imposible que continúen las\nactuaciones y la denegación o revocación de medidas cautelares, cuando\nno hubiese habido dos (2) pronunciamientos en el mismo sentido.\nEl querellante, constituido en actor civil podrá recurrir:\na) El sobreseimiento fundado en la inexistencia del hecho;\nb) El rechazo total o parcial de las pretensiones deducidas en la\ndemanda, siempre que su agravio supere los pesos cincuenta mil ($\n50.000.-).",
-      "incisos": [],
+      "text": "Legitimación de la querella. El querellante podrá impugnar el sobreseimiento, la absolución y la condena si la pena aplicada fuere inferior a la mitad de la pena pretendida. También podrá impugnar las demás resoluciones que pongan fin a la acción o a la pena o hagan imposible que continúen las actuaciones y la denegación o revocación de medidas cautelares, cuando no hubiese habido dos (2) pronunciamientos en el mismo sentido. El querellante, constituido en actor civil podrá recurrir:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El sobreseimiento fundado en la inexistencia del hecho;"
+        },
+        {
+          "id": "b",
+          "text": "El rechazo total o parcial de las pretensiones deducidas en la demanda, siempre que su agravio supere los pesos cincuenta mil ($ 50.000.-)."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3590,8 +4799,25 @@
     },
     {
       "number": "308",
-      "text": "Legitimación del representante del Ministerio Público Fiscal. El representante del Ministerio Público Fiscal podrá impugnar las decisiones judiciales en los siguientes casos:\na) Los sobreseimientos y demás resoluciones que pongan fin a la acción\no a la pena o hagan imposible que continúen las actuaciones y la\ndenegación o revocación de medidas cautelares, cuando no hubiese habido\ndos (2) pronunciamientos en el mismo sentido;\nb) La sentencia absolutoria;\nc) La sentencia condenatoria, si la pena aplicada fuera inferior a la mitad de la pena pretendida;\nd) Las decisiones que se tomen durante la ejecución de la pena.\nEstos límites no regirán si el imputado es funcionario público y el\nhecho se ha cometido en el ejercicio de la función o en ocasión de ella.\nDECISIONES IMPUGNABLES",
-      "incisos": [],
+      "text": "Legitimación del representante del Ministerio Público Fiscal. El representante del Ministerio Público Fiscal podrá impugnar las decisiones judiciales en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Los sobreseimientos y demás resoluciones que pongan fin a la acción o a la pena o hagan imposible que continúen las actuaciones y la denegación o revocación de medidas cautelares, cuando no hubiese habido dos (2) pronunciamientos en el mismo sentido;"
+        },
+        {
+          "id": "b",
+          "text": "La sentencia absolutoria;"
+        },
+        {
+          "id": "c",
+          "text": "La sentencia condenatoria, si la pena aplicada fuera inferior a la mitad de la pena pretendida;"
+        },
+        {
+          "id": "d",
+          "text": "Las decisiones que se tomen durante la ejecución de la pena. Estos límites no regirán si el imputado es funcionario público y el hecho se ha cometido en el ejercicio de la función o en ocasión de ella. DECISIONES IMPUGNABLES"
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3612,8 +4838,17 @@
     },
     {
       "number": "310",
-      "text": "Sobreseimiento. El sobreseimiento podrá impugnarse por los siguientes motivos:\na) Si careciera de motivación suficiente, se fundara en una errónea\nvaloración de la prueba u omitiera la consideración de pruebas\nesenciales;\nb) Si se hubiera inobservado o aplicado erróneamente un precepto legal.",
-      "incisos": [],
+      "text": "Sobreseimiento. El sobreseimiento podrá impugnarse por los siguientes motivos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si careciera de motivación suficiente, se fundara en una errónea valoración de la prueba u omitiera la consideración de pruebas esenciales;"
+        },
+        {
+          "id": "b",
+          "text": "Si se hubiera inobservado o aplicado erróneamente un precepto legal."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3623,8 +4858,49 @@
     },
     {
       "number": "311",
-      "text": "Sentencia condenatoria. La sentencia condenatoria podrá impugnarse por los motivos siguientes:\na) Si se alegara la inobservancia de un precepto o garantía constitucional o legal;\nb) Si se hubiera aplicado erróneamente la ley penal;\nc) Si careciera de motivación suficiente o ésta fuera contradictoria, irrazonable o arbitraria;\nd) Si se basara en prueba ilegal o incorporada por lectura en los casos no autorizados por este Código;\ne) Si se hubiera omitido la valoración de prueba decisiva o se hubiera valorado prueba inexistente;\nf) Si se hubiera, erróneamente, valorado una prueba o determinado los hechos que sustentan la sentencia condenatoria y la pena;\ng) Si no se hubiesen observado las reglas relativas a la correlación entre la acusación y la sentencia;\nh) Si no se cumplieran los requisitos esenciales de la sentencia;\ni) Si se diera alguno de los supuestos que autoricen la revisión de la sentencia condenatoria firme;\nj) Si no se hubiera respetado la cesura del debate.",
-      "incisos": [],
+      "text": "Sentencia condenatoria. La sentencia condenatoria podrá impugnarse por los motivos siguientes:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si se alegara la inobservancia de un precepto o garantía constitucional o legal;"
+        },
+        {
+          "id": "b",
+          "text": "Si se hubiera aplicado erróneamente la ley penal;"
+        },
+        {
+          "id": "c",
+          "text": "Si careciera de motivación suficiente o ésta fuera contradictoria, irrazonable o arbitraria;"
+        },
+        {
+          "id": "d",
+          "text": "Si se basara en prueba ilegal o incorporada por lectura en los casos no autorizados por este Código;"
+        },
+        {
+          "id": "e",
+          "text": "Si se hubiera omitido la valoración de prueba decisiva o se hubiera valorado prueba inexistente;"
+        },
+        {
+          "id": "f",
+          "text": "Si se hubiera, erróneamente, valorado una prueba o determinado los hechos que sustentan la sentencia condenatoria y la pena;"
+        },
+        {
+          "id": "g",
+          "text": "Si no se hubiesen observado las reglas relativas a la correlación entre la acusación y la sentencia;"
+        },
+        {
+          "id": "h",
+          "text": "Si no se cumplieran los requisitos esenciales de la sentencia;"
+        },
+        {
+          "id": "i",
+          "text": "Si se diera alguno de los supuestos que autoricen la revisión de la sentencia condenatoria firme;"
+        },
+        {
+          "id": "j",
+          "text": "Si no se hubiera respetado la cesura del debate."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3634,8 +4910,25 @@
     },
     {
       "number": "312",
-      "text": "Sentencia absolutoria. La sentencia absolutoria podrá impugnarse por los motivos siguientes:\na) Si se alegara la inobservancia del derecho a la tutela judicial de la víctima;\nb) Si se hubiera aplicado erróneamente la ley;\nc) Si la sentencia careciera de motivación suficiente, o ésta fuera contradictoria, irrazonable o arbitraria;\nd) Si no se cumplieran los requisitos esenciales de la sentencia.\nTRAMITE",
-      "incisos": [],
+      "text": "Sentencia absolutoria. La sentencia absolutoria podrá impugnarse por los motivos siguientes:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Si se alegara la inobservancia del derecho a la tutela judicial de la víctima;"
+        },
+        {
+          "id": "b",
+          "text": "Si se hubiera aplicado erróneamente la ley;"
+        },
+        {
+          "id": "c",
+          "text": "Si la sentencia careciera de motivación suficiente, o ésta fuera contradictoria, irrazonable o arbitraria;"
+        },
+        {
+          "id": "d",
+          "text": "Si no se cumplieran los requisitos esenciales de la sentencia. TRAMITE"
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3700,8 +4993,33 @@
     },
     {
       "number": "318",
-      "text": "Procedencia. La revisión de una sentencia firme procede en todo tiempo y únicamente a favor del condenado, por los motivos siguientes:\na) Los hechos establecidos como fundamento de la condena fueran\ninconciliables con los fijados por otra sentencia penal irrevocable;\nb) La sentencia impugnada se hubiera fundado en prueba documental o\ntestimonial cuya falsedad se hubiese declarado en fallo posterior\nirrevocable, o resulte evidente aunque no exista un procedimiento\nposterior;\nc) La sentencia condenatoria hubiera sido pronunciada a consecuencia de\nprevaricato, cohecho u otro delito cuya existencia se hubiese declarado\nen fallo posterior irrevocable;\nd) Después de la condena sobrevinieran o se descubrieran nuevos hechos\no elementos de prueba que, solos o unidos a los ya examinados en el\nproceso, hicieran evidente que el hecho no existió, que el condenado no\nlo cometió, que el hecho cometido no es punible o encuadra en una norma\npenal más favorable;\ne) Corresponda aplicar retroactivamente un cambio en la legislación que favorezca al condenado;\nf) Se dicte en el caso concreto una sentencia de la Corte\nInteramericana de Derechos Humanos o una decisión de un órgano de\naplicación de un tratado en una comunicación individual.\nEl rechazo de la solicitud de revisión no impedirá un nuevo pedido fundado en motivos distintos.",
-      "incisos": [],
+      "text": "Procedencia. La revisión de una sentencia firme procede en todo tiempo y únicamente a favor del condenado, por los motivos siguientes:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Los hechos establecidos como fundamento de la condena fueran inconciliables con los fijados por otra sentencia penal irrevocable;"
+        },
+        {
+          "id": "b",
+          "text": "La sentencia impugnada se hubiera fundado en prueba documental o testimonial cuya falsedad se hubiese declarado en fallo posterior irrevocable, o resulte evidente aunque no exista un procedimiento posterior;"
+        },
+        {
+          "id": "c",
+          "text": "La sentencia condenatoria hubiera sido pronunciada a consecuencia de prevaricato, cohecho u otro delito cuya existencia se hubiese declarado en fallo posterior irrevocable;"
+        },
+        {
+          "id": "d",
+          "text": "Después de la condena sobrevinieran o se descubrieran nuevos hechos o elementos de prueba que, solos o unidos a los ya examinados en el proceso, hicieran evidente que el hecho no existió, que el condenado no lo cometió, que el hecho cometido no es punible o encuadra en una norma penal más favorable;"
+        },
+        {
+          "id": "e",
+          "text": "Corresponda aplicar retroactivamente un cambio en la legislación que favorezca al condenado;"
+        },
+        {
+          "id": "f",
+          "text": "Se dicte en el caso concreto una sentencia de la Corte Interamericana de Derechos Humanos o una decisión de un órgano de aplicación de un tratado en una comunicación individual. El rechazo de la solicitud de revisión no impedirá un nuevo pedido fundado en motivos distintos."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3711,8 +5029,21 @@
     },
     {
       "number": "319",
-      "text": "Legitimación. Podrán solicitar la revisión:\na) El condenado o su defensor;\nb) El representante del Ministerio Público Fiscal a favor del condenado;\nc) El cónyuge, conviviente, ascendientes o descendientes del condenado, si éste hubiese fallecido.",
-      "incisos": [],
+      "text": "Legitimación. Podrán solicitar la revisión:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "El condenado o su defensor;"
+        },
+        {
+          "id": "b",
+          "text": "El representante del Ministerio Público Fiscal a favor del condenado;"
+        },
+        {
+          "id": "c",
+          "text": "El cónyuge, conviviente, ascendientes o descendientes del condenado, si éste hubiese fallecido."
+        }
+      ],
       "location": {
         "libro": "TERCERO",
         "parte": "PARTE GENERAL",
@@ -3832,8 +5163,17 @@
     },
     {
       "number": "330",
-      "text": "Diferimiento.\nLa ejecución de una pena privativa de la libertad podrá ser diferida\npor el juez con funciones de ejecución en los siguientes casos:\na) Cuando deba cumplirla una mujer embarazada o que tenga un hijo menor de doce (12) meses al momento de la sentencia;\nb) Cuando el condenado se encontrare gravemente enfermo y la inmediata\nejecución pusiere en peligro su vida, según el dictamen de peritos.\nCuando cesaren esas condiciones, la sentencia se ejecutará\ninmediatamente, salvo que el juez disponga alguna forma distinta de\nejecución de la condena conforme a la legislación vigente.",
-      "incisos": [],
+      "text": "Diferimiento. La ejecución de una pena privativa de la libertad podrá ser diferida por el juez con funciones de ejecución en los siguientes casos:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "Cuando deba cumplirla una mujer embarazada o que tenga un hijo menor de doce (12) meses al momento de la sentencia;"
+        },
+        {
+          "id": "b",
+          "text": "Cuando el condenado se encontrare gravemente enfermo y la inmediata ejecución pusiere en peligro su vida, según el dictamen de peritos. Cuando cesaren esas condiciones, la sentencia se ejecutará inmediatamente, salvo que el juez disponga alguna forma distinta de ejecución de la condena conforme a la legislación vigente."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",
@@ -3931,8 +5271,21 @@
     },
     {
       "number": "339",
-      "text": "Contenido. Las costas comprenderán:\na) La tasa de justicia;\nb) Los honorarios devengados por los abogados, procuradores y peritos;\nc) Los demás gastos que se hubieren originado por la tramitación del proceso.",
-      "incisos": [],
+      "text": "Contenido. Las costas comprenderán:",
+      "incisos": [
+        {
+          "id": "a",
+          "text": "La tasa de justicia;"
+        },
+        {
+          "id": "b",
+          "text": "Los honorarios devengados por los abogados, procuradores y peritos;"
+        },
+        {
+          "id": "c",
+          "text": "Los demás gastos que se hubieren originado por la tramitación del proceso."
+        }
+      ],
       "location": {
         "libro": "CUARTO",
         "parte": "PARTE GENERAL",

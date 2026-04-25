@@ -49,6 +49,16 @@ const DEFAULT_TITLES: Record<string, { title: string; shortName: string; officia
     shortName: "LDC",
     officialNumber: "Ley 24.240",
   },
+  ley_19550: {
+    title: "Ley General de Sociedades",
+    shortName: "LGS",
+    officialNumber: "Ley 19.550",
+  },
+  ley_19549: {
+    title: "Ley Nacional de Procedimientos Administrativos",
+    shortName: "LNPA",
+    officialNumber: "Ley 19.549",
+  },
 };
 
 function usage(): void {
@@ -58,7 +68,7 @@ function usage(): void {
       "Uso: npm run fetch -- --id <lawId> (--url <URL> | --file <path>) [opciones]",
       "",
       "Requerido:",
-      "  --id <id>              constitucion | ccyc | penal | cppf | cpccn | ley_24240",
+      "  --id <id>              constitucion | ccyc | penal | cppf | cpccn | ley_24240 | ley_19550 | ley_19549",
       "  --url <URL>            Descarga HTML desde la URL",
       "  --file <path>          O leer HTML de un archivo local",
       "",

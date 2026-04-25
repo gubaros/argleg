@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const LawIdSchema = z
-  .enum(["constitucion", "ccyc", "penal", "cppf", "cpccn", "ley_24240"])
+  .enum(["constitucion", "ccyc", "penal", "cppf", "cpccn", "ley_24240", "ley_19550", "ley_19549"])
   .describe("Identificador canónico de la norma.");
 
 export type LawId = z.infer<typeof LawIdSchema>;
@@ -55,6 +55,8 @@ export const LAW_IDS: LawId[] = [
   "cppf",
   "cpccn",
   "ley_24240",
+  "ley_19550",
+  "ley_19549",
 ];
 
 export const LAW_FILE_BY_ID: Record<LawId, string> = {
@@ -64,4 +66,6 @@ export const LAW_FILE_BY_ID: Record<LawId, string> = {
   cppf: "cppf.json",
   cpccn: "cpccn.json",
   ley_24240: "ley_24240.json",
+  ley_19550: "ley_19550.json",
+  ley_19549: "ley_19549.json",
 };

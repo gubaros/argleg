@@ -1,5 +1,5 @@
-# argleg-mcp
-
+# Argleg MCP
+Autor: Guido Barosio
 Servidor MCP de solo lectura para consultar legislación argentina desde archivos locales.
 
 > **Aviso legal:** Este servidor es una herramienta orientativa. El contenido normativo proviene exclusivamente de archivos locales que vos cargás. No sustituye el asesoramiento profesional de un abogado matriculado. Verificá siempre el texto vigente en fuentes oficiales (InfoLEG, BORA).

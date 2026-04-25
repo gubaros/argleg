@@ -1,4 +1,6 @@
-# Argleg MCP
+# Arg Leg MCP
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Autor: Guido Barosio
 
 Servidor MCP de solo lectura para consultar legislación argentina desde archivos locales.

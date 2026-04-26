@@ -310,3 +310,8 @@ Presenta en paralelo dos artículos para comparación textual.
 ## Conectar desde un cliente MCP
 
 Ver [`docs/connect.md`](docs/connect.md) para instrucciones detalladas.
+
+## Copyright
+
+Copyright © 2026 Guido Barosio. Todos los derechos reservados.
+Uso prohibido sin autorización expresa del autor.

@@ -60,6 +60,25 @@ Desarrollado por **Guido Barosio** en el marco del **IA Lab** de [Palermo E-Law 
 
 ---
 
+## Cómo agregar nuevas leyes
+
+El corpus legislativo crece con la participación de la comunidad.
+
+**Solicitar una ley mediante un issue**
+Si necesitás una norma que todavía no está incluida, [abrí un issue](https://github.com/gubaros/argleg/issues/new) describiendo qué ley querés y, si podés, pegá la URL de InfoLEG correspondiente. Cada issue queda disponible como una tarea abierta que cualquier persona puede tomar y resolver de forma voluntaria y gratuita.
+
+**Agregarla vos mismo**
+Al ser software de código abierto, cualquiera puede incorporar una ley nueva y proponer un pull request. El proceso es sencillo:
+
+1. Encontrá la URL del texto en [InfoLEG](https://www.infoleg.gob.ar/).
+2. Ejecutá el importador: `npm run fetch -- --id <id> --url '<URL>' --force`
+3. Revisá el JSON generado en `data/` y ajustá si es necesario.
+4. Abrí un pull request en el repositorio.
+
+El paso 2 puede hacerse también con asistencia de IA: herramientas como **Claude Code** o **Claude Codex** pueden guiarte en el proceso o ejecutarlo directamente si les das acceso al repositorio.
+
+---
+
 ## Sobre Palermo E-Law
 
 [Palermo E-Law](https://www.palermo.edu/derecho/palermo-e-law/) es el Centro de Estudios de Derecho Digital de la Facultad de Derecho de la Universidad de Palermo. Promueve el estudio y la discusión sobre las implicancias de la tecnología en el campo jurídico, ofreciendo un espacio de formación, debate, cooperación interinstitucional e implementación de proyectos de investigación.

@@ -1,7 +1,7 @@
 # Arg Leg MCP
 
 [![Node.js CI](https://github.com/gubaros/argleg/actions/workflows/node.js.yml/badge.svg)](https://github.com/gubaros/argleg/actions/workflows/node.js.yml)
-[![License: Proprietary](https://img.shields.io/badge/Licencia-Propietaria-red.svg)](LICENSE)
+[![Licencia](https://img.shields.io/badge/Licencia-No_Comercial_·_Con_Restricciones-blue.svg)](LICENSE)
 
 Servidor MCP de solo lectura para consultar legislación argentina desde archivos locales.
 
@@ -68,7 +68,10 @@ Este proyecto forma parte de las iniciativas del **IA Lab** de Palermo E-Law, or
 
 ---
 
-## Copyright
+## Licencia y copyright
 
-Copyright © 2026 Guido Barosio. Todos los derechos reservados.
-Uso prohibido sin autorización expresa del autor.
+Copyright © 2026 Guido Barosio.
+
+Código de fuente abierta. Queda prohibido el **uso comercial** y la **integración en otros sistemas** sin autorización expresa del autor. Toda modificación debe canalizarse mediante pull request en el repositorio oficial. Ver [LICENSE](LICENSE) para el texto completo.
+
+Consultas: gbarosio@gmail.com

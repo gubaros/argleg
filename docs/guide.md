@@ -342,3 +342,13 @@ Returns server metadata: version, build date, loaded laws.
 - It does not execute system commands or access the internet at runtime.
 - All parameters are validated with Zod before processing.
 - The data source is exclusively the configured local directory.
+
+---
+
+## License and copyright
+
+Copyright © 2026 Guido Barosio.
+
+Open source code. **Commercial use** and **integration into other systems** are prohibited without express written authorization from the author. All modifications must be submitted via pull request to the [official repository](https://github.com/gubaros/argleg). See [LICENSE](../LICENSE) for the full text.
+
+Contact: gbarosio@gmail.com

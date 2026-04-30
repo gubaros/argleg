@@ -344,3 +344,13 @@ Devuelve metadata del servidor: versión, fecha de build, normas cargadas.
 - No ejecuta comandos del sistema ni accede a internet en tiempo de ejecución.
 - Todos los parámetros se validan con Zod antes de procesarse.
 - La fuente de datos es exclusivamente el directorio local configurado.
+
+---
+
+## Licencia y copyright
+
+Copyright © 2026 Guido Barosio.
+
+Código de fuente abierta. Queda prohibido el **uso comercial** y la **integración en otros sistemas** sin autorización expresa del autor. Toda modificación debe canalizarse mediante pull request en el [repositorio oficial](https://github.com/gubaros/argleg). Ver [LICENSE](../LICENSE) para el texto completo.
+
+Consultas: gbarosio@gmail.com

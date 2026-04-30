@@ -65,7 +65,7 @@ Desarrollado por **Guido Barosio** en el marco del **IA Lab** de [Palermo E-Law 
 El corpus legislativo crece con la participación de la comunidad.
 
 **Solicitar una ley mediante un issue**
-Si necesitás una norma que todavía no está incluida, [abrí un issue](https://github.com/gubaros/argleg/issues/new) describiendo qué ley querés y, si podés, pegá la URL de InfoLEG correspondiente. Cada issue queda disponible como una tarea abierta que cualquier persona puede tomar y resolver de forma voluntaria y gratuita.
+Si necesitás una norma que todavía no está incluida, [abrí un issue](https://github.com/gubaros/argleg/issues/new) describiendo qué ley querés y, si podés, pegá la URL de InfoLEG correspondiente. Cada issue queda disponible como una tarea abierta que cualquier persona que entienda sobre desarrollo y github puede tomar y resolver de forma voluntaria y gratuita. 
 
 **Agregarla vos mismo**
 Al ser software de código abierto, cualquiera puede incorporar una ley nueva y proponer un pull request. El proceso es sencillo:

@@ -1,8 +1,28 @@
-Copyright (c) 2026 Guido Barosio. All rights reserved.
+Copyright (c) 2026 Guido Barosio. Todos los derechos reservados.
 
-This software and its source code, while publicly available, are proprietary and confidential.
-Unauthorized use, reproduction, distribution, or modification, in whole
-or in part, is strictly prohibited without prior written authorization
-from the copyright holder.
+Este software es de código abierto (open source): su código fuente es público,
+puede ser leído, estudiado y bifurcado (forked) libremente.
 
-For licensing inquiries: gbarosio@gmail.com 
+Sin perjuicio de lo anterior, se establecen las siguientes restricciones:
+
+1. USO COMERCIAL
+   Queda prohibido el uso de este software, en todo o en parte, con fines
+   comerciales o lucrativos sin autorización expresa y por escrito del autor.
+
+2. INTEGRACIÓN EN OTROS SISTEMAS
+   Queda prohibida la incorporación de este software, en todo o en parte,
+   como componente de otros sistemas, productos o servicios —sean de código
+   abierto o propietarios— sin autorización expresa y por escrito del autor.
+
+3. MODIFICACIONES
+   Toda modificación al código fuente debe canalizarse a través del proceso
+   de pull request en el repositorio oficial (https://github.com/gubaros/argleg).
+   No se admiten forks independientes que introduzcan modificaciones sin
+   haberlas propuesto previamente mediante dicho proceso.
+
+4. ATRIBUCIÓN
+   Cualquier uso permitido debe mantener este aviso de copyright y la
+   atribución al autor original (Guido Barosio) y al proyecto Palermo E-Law
+   — Centro de Estudios de Derecho Digital UP, Universidad de Palermo.
+
+Para consultas sobre licenciamiento: gbarosio@gmail.com

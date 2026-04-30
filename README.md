@@ -75,7 +75,7 @@ Al ser software de código abierto, cualquiera puede incorporar una ley nueva y 
 3. Revisá el JSON generado en `data/` y ajustá si es necesario.
 4. Abrí un pull request en el repositorio.
 
-El paso 2 puede hacerse también con asistencia de IA: herramientas como **Claude Code** o **Claude Codex** pueden guiarte en el proceso o ejecutarlo directamente si les das acceso al repositorio.
+Todos los pasos pueden hacerse también con asistencia de IA: herramientas como **Claude Code** o **Claude Codex** pueden guiarte en el proceso o ejecutarlo directamente si les das acceso al repositorio. El archivo CLAUDE.md contiene dichas instrucciones, **Claude Codex** lo puede interpretar. 
 
 ---
 
@@ -83,7 +83,7 @@ El paso 2 puede hacerse también con asistencia de IA: herramientas como **Claud
 
 [Palermo E-Law](https://www.palermo.edu/derecho/palermo-e-law/) es el Centro de Estudios de Derecho Digital de la Facultad de Derecho de la Universidad de Palermo. Promueve el estudio y la discusión sobre las implicancias de la tecnología en el campo jurídico, ofreciendo un espacio de formación, debate, cooperación interinstitucional e implementación de proyectos de investigación.
 
-Este proyecto forma parte de las iniciativas del **IA Lab** de Palermo E-Law, orientadas a explorar el uso de inteligencia artificial como herramienta de apoyo a la práctica y la investigación jurídica.
+Este proyecto forma parte de las iniciativas del **IA Lab** de Palermo E-Law, orientadas a explorar el uso de inteligencia artificial como herramienta de apoyo a la práctica y la investigación jurídica. Palermo E-Law esta liderado por los abogados Anibal Ramirez y Hernán Quadri. 
 
 ---
 

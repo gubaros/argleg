@@ -8,6 +8,7 @@ import { parsePenal } from "./penal.js";
 import { parseGeneric } from "./generic.js";
 import { parseLey19549 } from "./ley_19549.js";
 import { parseLey19550 } from "./ley_19550.js";
+import { parseLey25326 } from "./ley_25326.js";
 
 export function parseLawHtml(id: LawId, html: string): Article[] {
   switch (id) {
@@ -27,6 +28,8 @@ export function parseLawHtml(id: LawId, html: string): Article[] {
       return parseLey19549(html);
     case "ley_19550":
       return parseLey19550(html);
+    case "ley_25326":
+      return parseLey25326(html);
     default: {
       const exhaustive: never = id;
       return exhaustive;

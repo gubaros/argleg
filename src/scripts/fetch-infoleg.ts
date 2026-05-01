@@ -59,6 +59,11 @@ const DEFAULT_TITLES: Record<string, { title: string; shortName: string; officia
     shortName: "LNPA",
     officialNumber: "Ley 19.549",
   },
+  ley_25326: {
+    title: "Ley de Protección de los Datos Personales",
+    shortName: "LPDP",
+    officialNumber: "Ley 25.326",
+  },
 };
 
 function usage(): void {
@@ -156,7 +161,11 @@ async function readHtml(args: Args): Promise<{ html: string; source: string }> {
     const buf = await readFile(abs);
     let html = buf.toString("utf8");
     if (looksMojibake(html)) {
-      html = buf.toString("latin1");
+      // InfoLEG actually serves CP1252 (Windows-1252), not strict ISO-8859-1.
+      // Bytes 0x80-0x9F encode typographic chars (— – ' " … etc.) in CP1252 but
+      // map to invisible control chars in Latin-1. Node's TextDecoder("windows-1252")
+      // leaves these bytes as U+0080-U+009F, so we remap them manually.
+      html = decodeCp1252(buf);
     }
     return { html, source: abs };
   }
@@ -165,7 +174,7 @@ async function readHtml(args: Args): Promise<{ html: string; source: string }> {
     const res = await fetch(args.url, {
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "es-AR,es;q=0.9,en;q=0.8",
         "Referer": "https://www.infoleg.gob.ar/",
@@ -176,11 +185,40 @@ async function readHtml(args: Args): Promise<{ html: string; source: string }> {
     // InfoLEG sometimes serves ISO-8859-1. Try UTF-8 first; fall back on replacement chars.
     let html = buf.toString("utf8");
     if (looksMojibake(html)) {
-      html = buf.toString("latin1");
+      // InfoLEG actually serves CP1252 (Windows-1252), not strict ISO-8859-1.
+      // Bytes 0x80-0x9F encode typographic chars (— – ' " … etc.) in CP1252 but
+      // map to invisible control chars in Latin-1. Node's TextDecoder("windows-1252")
+      // leaves these bytes as U+0080-U+009F, so we remap them manually.
+      html = decodeCp1252(buf);
     }
     return { html, source: args.url };
   }
   throw new Error("Falta --url o --file");
+}
+
+/**
+ * Decode a Buffer as Windows-1252. Node's TextDecoder("windows-1252") has a
+ * known limitation where it leaves bytes 0x80-0x9F as the matching Unicode
+ * code point instead of mapping them to the typographic chars defined by the
+ * CP1252 spec. We start from latin1 and remap the affected range manually.
+ */
+function decodeCp1252(buf: Buffer): string {
+  const CP1252_HIGH: Record<number, string> = {
+    0x80: "€", 0x82: "‚", 0x83: "ƒ", 0x84: "„", 0x85: "…", 0x86: "†",
+    0x87: "‡", 0x88: "ˆ", 0x89: "‰", 0x8a: "Š", 0x8b: "‹", 0x8c: "Œ",
+    0x8e: "Ž", 0x91: "'", 0x92: "'", 0x93: "“", 0x94: "”",
+    0x95: "•", 0x96: "–", 0x97: "—", 0x98: "˜", 0x99: "™", 0x9a: "š",
+    0x9b: "›", 0x9c: "œ", 0x9e: "ž", 0x9f: "Ÿ",
+  };
+  let out = "";
+  for (const b of buf) {
+    if (b >= 0x80 && b <= 0x9f && CP1252_HIGH[b]) {
+      out += CP1252_HIGH[b];
+    } else {
+      out += String.fromCharCode(b);
+    }
+  }
+  return out;
 }
 
 function looksMojibake(s: string): boolean {

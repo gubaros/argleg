@@ -4,6 +4,7 @@ import path from "node:path";
 import { homedir } from "node:os";
 import { LAW_FILE_BY_ID, LawIdSchema, LawSchema } from "../laws/types.js";
 import { extractArticlesForLaw, buildLaw } from "./infoleg.js";
+import { decodeCp1252, looksMojibake } from "./parsers/encoding.js";
 
 interface Args {
   url?: string;
@@ -196,36 +197,8 @@ async function readHtml(args: Args): Promise<{ html: string; source: string }> {
   throw new Error("Falta --url o --file");
 }
 
-/**
- * Decode a Buffer as Windows-1252. Node's TextDecoder("windows-1252") has a
- * known limitation where it leaves bytes 0x80-0x9F as the matching Unicode
- * code point instead of mapping them to the typographic chars defined by the
- * CP1252 spec. We start from latin1 and remap the affected range manually.
- */
-function decodeCp1252(buf: Buffer): string {
-  const CP1252_HIGH: Record<number, string> = {
-    0x80: "€", 0x82: "‚", 0x83: "ƒ", 0x84: "„", 0x85: "…", 0x86: "†",
-    0x87: "‡", 0x88: "ˆ", 0x89: "‰", 0x8a: "Š", 0x8b: "‹", 0x8c: "Œ",
-    0x8e: "Ž", 0x91: "'", 0x92: "'", 0x93: "“", 0x94: "”",
-    0x95: "•", 0x96: "–", 0x97: "—", 0x98: "˜", 0x99: "™", 0x9a: "š",
-    0x9b: "›", 0x9c: "œ", 0x9e: "ž", 0x9f: "Ÿ",
-  };
-  let out = "";
-  for (const b of buf) {
-    if (b >= 0x80 && b <= 0x9f && CP1252_HIGH[b]) {
-      out += CP1252_HIGH[b];
-    } else {
-      out += String.fromCharCode(b);
-    }
-  }
-  return out;
-}
-
-function looksMojibake(s: string): boolean {
-  // Heuristic: UTF-8 decoding of latin1 text leaves many  replacement chars.
-  const replacements = (s.match(/�/g) ?? []).length;
-  return replacements > 10;
-}
+// CP1252 decoding helpers live in src/scripts/parsers/encoding.ts
+// (re-exported here for readability of the imports above).
 
 async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));

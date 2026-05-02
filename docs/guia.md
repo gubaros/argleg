@@ -70,9 +70,25 @@ npm run build
 
 ## Cargar datos (corpus legislativo)
 
-Los archivos JSON en `data/` son la fuente de verdad local. El servidor no accede a internet en tiempo de ejecución.
+La fuente de verdad operativa es la base SQLite `data/argleg.db`. Los archivos JSON en `data/` son la entrada que alimenta esa base. Flujo completo:
 
-### Importar desde InfoLEG
+```
+InfoLEG (HTML)  →  npm run fetch   →  data/<ley>.json
+                                            ↓
+                                     npm run db:import
+                                            ↓
+                                     data/argleg.db
+                                            ↓
+                                       MCP server
+```
+
+### 1. Crear la base SQLite (una sola vez)
+
+```bash
+npm run db:init                   # crea data/argleg.db con el schema, idempotente
+```
+
+### 2. Importar leyes desde InfoLEG (genera JSONs)
 
 ```bash
 # Vista previa (no escribe nada, imprime el JSON por stdout)
@@ -89,6 +105,13 @@ npm run fetch -- --id ccyc \
 npm run fetch -- --id penal --file ./penal.html --force
 ```
 
+### 3. Cargar los JSON en SQLite
+
+```bash
+npm run db:import                 # ingesta incremental (deja datos previos)
+npm run db:reset                  # limpia y recarga todo desde cero
+```
+
 ### URLs oficiales (InfoLEG, texto actualizado)
 
 | ID | URL |
@@ -101,6 +124,7 @@ npm run fetch -- --id penal --file ./penal.html --force
 | `ley_24240` | http://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/638/texact.htm |
 | `ley_19550` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm |
 | `ley_19549` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/20000-24999/22363/texact.htm |
+| `ley_25326` | https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/texact.htm |
 
 > Auditá siempre el corpus importado antes de usarlo en producción. El importador extrae estructura automáticamente, pero puede requerir ajustes manuales en `location`, `materia` e `incisos`.
 
@@ -116,9 +140,9 @@ npm run dev
 npm run build
 npm start
 
-# Directorio de datos alternativo
-ARGLEG_DATA_DIR=/otra/ruta/data npm start        # macOS/Linux
-$env:ARGLEG_DATA_DIR="C:\otra\ruta\data"; npm start  # Windows PowerShell
+# Base de datos alternativa (path absoluto)
+ARGLEG_DB=/otra/ruta/argleg.db npm start             # macOS/Linux
+$env:ARGLEG_DB="C:\otra\ruta\argleg.db"; npm start   # Windows PowerShell
 ```
 
 ---
@@ -147,7 +171,7 @@ Contenido (ajustá la ruta a donde clonaste el repositorio):
       "command": "node",
       "args": ["/Users/TU_USUARIO/Desktop/mcp/dist/index.js"],
       "env": {
-        "ARGLEG_DATA_DIR": "/Users/TU_USUARIO/Desktop/mcp/data"
+        "ARGLEG_DB": "/Users/TU_USUARIO/Desktop/mcp/data/argleg.db"
       }
     }
   }
@@ -162,7 +186,7 @@ Contenido (ajustá la ruta a donde clonaste el repositorio):
       "command": "node",
       "args": ["C:/Users/TU_USUARIO/Desktop/mcp/dist/index.js"],
       "env": {
-        "ARGLEG_DATA_DIR": "C:/Users/TU_USUARIO/Desktop/mcp/data"
+        "ARGLEG_DB": "C:/Users/TU_USUARIO/Desktop/mcp/data/argleg.db"
       }
     }
   }
@@ -185,7 +209,7 @@ Agregá la configuración en `.claude/settings.json` (proyecto) o `~/.claude/set
       "command": "node",
       "args": ["/Users/TU_USUARIO/Desktop/mcp/dist/index.js"],
       "env": {
-        "ARGLEG_DATA_DIR": "/Users/TU_USUARIO/Desktop/mcp/data"
+        "ARGLEG_DB": "/Users/TU_USUARIO/Desktop/mcp/data/argleg.db"
       }
     }
   }
@@ -200,7 +224,7 @@ Agregá la configuración en `.claude/settings.json` (proyecto) o `~/.claude/set
       "command": "node",
       "args": ["C:/Users/TU_USUARIO/Desktop/mcp/dist/index.js"],
       "env": {
-        "ARGLEG_DATA_DIR": "C:/Users/TU_USUARIO/Desktop/mcp/data"
+        "ARGLEG_DB": "C:/Users/TU_USUARIO/Desktop/mcp/data/argleg.db"
       }
     }
   }
@@ -215,7 +239,7 @@ Para desarrollo sin compilar (usando `tsx`):
       "command": "npx",
       "args": ["tsx", "/Users/TU_USUARIO/Desktop/mcp/src/index.ts"],
       "env": {
-        "ARGLEG_DATA_DIR": "/Users/TU_USUARIO/Desktop/mcp/data"
+        "ARGLEG_DB": "/Users/TU_USUARIO/Desktop/mcp/data/argleg.db"
       }
     }
   }
@@ -235,7 +259,7 @@ En `settings.json` del workspace:
       "command": "node",
       "args": ["/Users/TU_USUARIO/Desktop/mcp/dist/index.js"],
       "env": {
-        "ARGLEG_DATA_DIR": "/Users/TU_USUARIO/Desktop/mcp/data"
+        "ARGLEG_DB": "/Users/TU_USUARIO/Desktop/mcp/data/argleg.db"
       }
     }
   }
@@ -259,10 +283,13 @@ Abre una UI en `http://localhost:5173` donde podés ejecutar herramientas, leer 
 Una vez conectado el servidor, podés escribir en el chat:
 
 ```
-Usá get_article con law=constitucion y article_number=14bis
+Usá get_article con norma_id=constitucion y numero_articulo=14bis
 ```
 ```
 Buscá artículos sobre "daño" en el CCyC
+```
+```
+Mostrame qué normas hay con list_norms
 ```
 ```
 Compará el artículo 79 del Código Penal con el artículo 4 de la Ley 24.240
@@ -277,10 +304,12 @@ Aplicá el prompt analisis_juridico al artículo 1710 del CCyC con el contexto: 
 
 | Variable | Descripción | Valor por defecto |
 |----------|-------------|-------------------|
-| `ARGLEG_DATA_DIR` | Ruta al directorio de archivos JSON | `~/Desktop/mcp/data` |
+| `ARGLEG_DB` | Ruta al archivo SQLite con el corpus | `~/Desktop/mcp/data/argleg.db` |
+| `ARGLEG_DATA_DIR` | Directorio con los JSON fuente (usado solo por los scripts de ingesta) | `~/Desktop/mcp/data` |
 | `ARGLEG_LOG_LEVEL` | Nivel de log: `silent` \| `info` \| `verbose` \| `debug` | `info` |
 | `ARGLEG_LOG_JSON` | `1` para emitir logs en formato JSONL | — |
 | `ARGLEG_LOG_FILE` | Ruta a un archivo donde duplicar los logs | — |
+| `ARGLEG_VALIDATE_VERBOSE` | `1` para imprimir cada warning de validación durante `db:import` | — |
 
 ---
 
@@ -288,16 +317,24 @@ Aplicá el prompt analisis_juridico al artículo 1710 del CCyC con el contexto: 
 
 El servidor escribe logs exclusivamente en **stderr**. STDOUT está reservado para el transporte JSON-RPC de MCP.
 
+Hay tres capas de eventos:
+
+1. **Protocolo** (`rpc.request`, `rpc.notification`) — todo mensaje JSON-RPC entrante, incluso `initialize`, `tools/list`, `ping`, etc., visibles a partir de `verbose`.
+2. **Handlers** (`tool.call`, `tool.done`, `tool.error`, `resource.*`, `prompt.*`) — cada invocación de tool/resource/prompt, con timing.
+3. **Lifecycle** (`server.loading`, `server.norma_loaded`, `server.ready`, `server.started`, `server.fatal`).
+
 ```bash
-# Ver cada llamada en tiempo real
+# Ver cada request entrante + cada llamada a tool
 ARGLEG_LOG_LEVEL=verbose npm start
 
-# Debug completo con argumentos y tamaños de respuesta
+# Debug completo: incluye notifications, args y tamaños de respuesta
 ARGLEG_LOG_LEVEL=debug npm start
 
 # Logs en formato JSON, guardados en archivo
 ARGLEG_LOG_LEVEL=debug ARGLEG_LOG_JSON=1 ARGLEG_LOG_FILE=/tmp/argleg.jsonl npm start
 ```
+
+> Si lanzás el servidor desde Claude Desktop, su stderr queda capturado por el cliente. Para ver los logs en vivo, usá `ARGLEG_LOG_FILE=/tmp/argleg-mcp.log` y en otra terminal corré `tail -f /tmp/argleg-mcp.log`.
 
 ### Dónde ver los logs según el cliente
 
@@ -312,26 +349,50 @@ ARGLEG_LOG_LEVEL=debug ARGLEG_LOG_JSON=1 ARGLEG_LOG_FILE=/tmp/argleg.jsonl npm s
 
 ## Referencia de herramientas MCP
 
-### `search_law`
-Busca artículos por palabra clave, materia, capítulo o número exacto.
+### `list_norms`
+Lista las normas cargadas. Filtra por **tier** de la pirámide normativa argentina (`constitucion_nacional`, `codigo_fondo`, `codigo_procesal_federal`, `ley_federal`, `constitucion_provincial`, `constitucion_caba`, etc.), materia o estado de vigencia.
 ```json
-{ "query": "persona humana", "law": "ccyc", "limit": 10 }
+{ "tier": "ley_federal", "estado_vigencia": "vigente" }
+```
+
+### `get_norm_metadata`
+Devuelve la metadata completa de una norma más un resumen estructural (niveles presentes, cantidad de capítulos/títulos/secciones, profundidad).
+```json
+{ "norma_id": "ccyc" }
 ```
 
 ### `get_article`
-Devuelve el texto completo de un artículo.
+Devuelve el texto completo de un artículo y su contexto estructural.
 ```json
-{ "law": "constitucion", "article_number": "14bis" }
+{ "norma_id": "constitucion", "numero_articulo": "14bis" }
+```
+
+### `search_articles`
+Busca artículos por palabra clave o número. Acepta filtro por norma.
+```json
+{ "query": "persona humana", "norma_id": "ccyc", "limit": 10 }
+```
+
+### `list_ramas`
+Lista las ramas del derecho que el MCP cubre con principios, doctrina y referencias normativas.
+```json
+{}
+```
+
+### `get_rama_metadata`
+Devuelve la metadata jurídica de una rama: principios fundamentales (con su fuente y vigencia), normas que aplican (con relevancia nuclear / complementaria / tangencial), doctrina representativa y jurisprudencia (cuando esté curada).
+```json
+{ "rama_id": "derecho_civil" }
 ```
 
 ### `compare_articles`
 Presenta dos artículos en paralelo para comparación textual.
 ```json
-{ "law_a": "ccyc", "article_a": "1710", "law_b": "ley_24240", "article_b": "4" }
+{ "norma_a": "ccyc", "articulo_a": "1710", "norma_b": "ley_24240", "articulo_b": "4" }
 ```
 
 ### `server_info`
-Devuelve metadata del servidor: versión, fecha de build, normas cargadas.
+Devuelve metadata del servidor: versión, fecha de build, ruta de la base SQLite, normas cargadas.
 ```json
 {}
 ```
@@ -343,7 +404,7 @@ Devuelve metadata del servidor: versión, fecha de build, normas cargadas.
 - El servidor es **solo lectura**. No escribe ni modifica archivos.
 - No ejecuta comandos del sistema ni accede a internet en tiempo de ejecución.
 - Todos los parámetros se validan con Zod antes de procesarse.
-- La fuente de datos es exclusivamente el directorio local configurado.
+- La fuente de datos es exclusivamente la base SQLite local configurada.
 
 ---
 

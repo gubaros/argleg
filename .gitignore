@@ -8,3 +8,6 @@ coverage/
 tmp/
 parser_logs/
 .claude/
+data/argleg.db
+data/argleg.db-*
+

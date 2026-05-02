@@ -6,14 +6,22 @@ describe("schema", () => {
   it("creates all canonical tables (corpus + intelligence layer)", () => {
     const db = openDb({ path: ":memory:" });
     applySchema(db);
+    // Filter out FTS5 shadow tables (articulos_fts_data, _idx, _docsize,
+    // _config) — those are private to the FTS5 implementation and not part
+    // of the canonical schema surface.
     const tables = db
-      .prepare(`SELECT name FROM sqlite_master WHERE type='table' ORDER BY name`)
+      .prepare(
+        `SELECT name FROM sqlite_master
+         WHERE type='table' AND name NOT LIKE 'articulos_fts\\_%' ESCAPE '\\'
+         ORDER BY name`,
+      )
       .all() as Array<{ name: string }>;
     const names = tables.map((t) => t.name);
     // Sorted alphabetically by SQLite — corpus and intelligence-layer tables interleave.
     expect(names).toEqual([
       "articulo_estructura",
       "articulos",
+      "articulos_fts",
       "doctrina",
       "estructura_normativa",
       "jurisprudencia",
@@ -53,10 +61,15 @@ describe("schema", () => {
     applySchema(db);
     applySchema(db);
     applySchema(db);
+    // Count only canonical schema tables (11 base + articulos_fts virtual);
+    // exclude FTS5's private shadow tables.
     const tables = db
-      .prepare(`SELECT COUNT(*) AS c FROM sqlite_master WHERE type='table'`)
+      .prepare(
+        `SELECT COUNT(*) AS c FROM sqlite_master
+         WHERE type='table' AND name NOT LIKE 'articulos_fts\\_%' ESCAPE '\\'`,
+      )
       .get() as { c: number };
-    expect(tables.c).toBe(11);
+    expect(tables.c).toBe(12);
     db.close();
   });
 });

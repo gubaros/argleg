@@ -54,6 +54,11 @@ CREATE TABLE IF NOT EXISTS estructura_normativa (
 CREATE INDEX IF NOT EXISTS idx_estructura_norma
   ON estructura_normativa(norma_id, orden);
 
+-- Acelera el CTE recursivo de buildResumen, que recorre estructura_normativa
+-- por parent_id partiendo de los nodos raíz.
+CREATE INDEX IF NOT EXISTS idx_estructura_parent
+  ON estructura_normativa(parent_id);
+
 CREATE TABLE IF NOT EXISTS articulo_estructura (
   articulo_id    TEXT NOT NULL,
   estructura_id  TEXT NOT NULL,
@@ -61,6 +66,11 @@ CREATE TABLE IF NOT EXISTS articulo_estructura (
   FOREIGN KEY (articulo_id) REFERENCES articulos(id),
   FOREIGN KEY (estructura_id) REFERENCES estructura_normativa(id)
 );
+
+-- getSection filtra articulo_estructura por estructura_id; el PK
+-- (articulo_id, estructura_id) no cubre esa dirección.
+CREATE INDEX IF NOT EXISTS idx_articulo_estructura_estructura
+  ON articulo_estructura(estructura_id);
 
 CREATE TABLE IF NOT EXISTS relaciones_normativas (
   id                TEXT PRIMARY KEY,
@@ -148,3 +158,37 @@ CREATE TABLE IF NOT EXISTS jurisprudencia_norma (
 );
 
 CREATE INDEX IF NOT EXISTS idx_jurisprudencia_rama ON jurisprudencia(rama_id);
+
+-- ─── Búsqueda full-text (FTS5) ──────────────────────────────────────────────
+-- Tabla virtual sobre articulos (numero, epigrafe, texto). Usa contenido
+-- externo: el cuerpo se sigue almacenando solo en articulos y la FTS
+-- referencia por rowid. El tokenizer unicode61 con remove_diacritics=2 imita
+-- la semántica de foldText() (NFD + strip diacrítico + casefold) para que
+-- "constitucion"/"Constitución" matcheen indistintamente.
+CREATE VIRTUAL TABLE IF NOT EXISTS articulos_fts USING fts5(
+  numero,
+  epigrafe,
+  texto,
+  content='articulos',
+  content_rowid='rowid',
+  tokenize='unicode61 remove_diacritics 2'
+);
+
+-- Triggers para mantener articulos_fts sincronizado con articulos. Más
+-- robustos que un rebuild manual frente a tests que insertan filas crudas.
+CREATE TRIGGER IF NOT EXISTS articulos_ai AFTER INSERT ON articulos BEGIN
+  INSERT INTO articulos_fts(rowid, numero, epigrafe, texto)
+  VALUES (new.rowid, new.numero, new.epigrafe, new.texto);
+END;
+
+CREATE TRIGGER IF NOT EXISTS articulos_ad AFTER DELETE ON articulos BEGIN
+  INSERT INTO articulos_fts(articulos_fts, rowid, numero, epigrafe, texto)
+  VALUES ('delete', old.rowid, old.numero, old.epigrafe, old.texto);
+END;
+
+CREATE TRIGGER IF NOT EXISTS articulos_au AFTER UPDATE ON articulos BEGIN
+  INSERT INTO articulos_fts(articulos_fts, rowid, numero, epigrafe, texto)
+  VALUES ('delete', old.rowid, old.numero, old.epigrafe, old.texto);
+  INSERT INTO articulos_fts(rowid, numero, epigrafe, texto)
+  VALUES (new.rowid, new.numero, new.epigrafe, new.texto);
+END;

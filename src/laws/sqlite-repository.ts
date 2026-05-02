@@ -1,6 +1,6 @@
 import type { Db } from "../db/connection.js";
 import { normalizeNumber } from "./loader.js";
-import type { LegalTier } from "./hierarchy.js";
+import { canonicalNormaId, type LegalTier } from "./hierarchy.js";
 import type {
   ArticuloConContexto,
   ArticuloRow,
@@ -99,33 +99,35 @@ export class SqliteLegalRepository implements LegalRepository {
   }
 
   getNormMetadata(normaId: string): NormaConResumen | undefined {
+    const id = canonicalNormaId(normaId) ?? normaId;
     const row = this.db
       .prepare(`SELECT * FROM normas WHERE id = ?`)
-      .get(normaId) as NormaRowRaw | undefined;
+      .get(id) as NormaRowRaw | undefined;
     if (!row) return undefined;
     return {
       ...normaFromRow(row),
-      resumen_estructural: this.buildResumen(normaId),
+      resumen_estructural: this.buildResumen(id),
     };
   }
 
   getArticle(normaId: string, articleNumber: string): ArticuloConContexto | undefined {
+    const id = canonicalNormaId(normaId) ?? normaId;
     const norma = this.db
       .prepare(`SELECT * FROM normas WHERE id = ?`)
-      .get(normaId) as NormaRowRaw | undefined;
+      .get(id) as NormaRowRaw | undefined;
     if (!norma) return undefined;
 
     const target = normalizeNumber(articleNumber);
     // Try fast path: exact match on stored articulos.numero.
     let articulo = this.db
       .prepare(`SELECT * FROM articulos WHERE norma_id = ? AND numero = ?`)
-      .get(normaId, articleNumber) as ArticuloRow | undefined;
+      .get(id, articleNumber) as ArticuloRow | undefined;
 
     if (!articulo) {
       // Fallback: scan and compare with normalizeNumber (handles "14bis" vs "14 bis", etc.).
       const all = this.db
         .prepare(`SELECT * FROM articulos WHERE norma_id = ? ORDER BY orden ASC`)
-        .all(normaId) as ArticuloRow[];
+        .all(id) as ArticuloRow[];
       articulo = all.find((a) => normalizeNumber(a.numero) === target);
     }
     if (!articulo) return undefined;
@@ -153,7 +155,7 @@ export class SqliteLegalRepository implements LegalRepository {
     let normaFilter = "";
     if (opts.norma_id) {
       normaFilter = " AND a.norma_id = @norma_id";
-      params.norma_id = opts.norma_id;
+      params.norma_id = canonicalNormaId(opts.norma_id) ?? opts.norma_id;
     }
 
     const rows = this.db
@@ -224,25 +226,28 @@ export class SqliteLegalRepository implements LegalRepository {
   }
 
   getNormStructure(normaId: string): EstructuraNodo[] {
+    const id = canonicalNormaId(normaId) ?? normaId;
     return this.db
       .prepare(
         `SELECT * FROM estructura_normativa WHERE norma_id = ? ORDER BY orden ASC`,
       )
-      .all(normaId) as EstructuraNodo[];
+      .all(id) as EstructuraNodo[];
   }
 
   listArticles(normaId: string): ArticuloRow[] {
+    const id = canonicalNormaId(normaId) ?? normaId;
     return this.db
       .prepare(`SELECT * FROM articulos WHERE norma_id = ? ORDER BY orden ASC`)
-      .all(normaId) as ArticuloRow[];
+      .all(id) as ArticuloRow[];
   }
 
   getSection(normaId: string, identificador: string): SeccionConArticulos | undefined {
+    const id = canonicalNormaId(normaId) ?? normaId;
     // Resolve the section by id first (most specific), then by case-insensitive
     // substring of nombre. Restrict to the given norma.
     const idCandidate = this.db
       .prepare(`SELECT * FROM estructura_normativa WHERE norma_id = ? AND id = ?`)
-      .get(normaId, identificador) as EstructuraNodo | undefined;
+      .get(id, identificador) as EstructuraNodo | undefined;
     const nodo =
       idCandidate ??
       (this.db
@@ -251,7 +256,7 @@ export class SqliteLegalRepository implements LegalRepository {
            WHERE norma_id = ? AND LOWER(nombre) LIKE @needle
            ORDER BY orden ASC LIMIT 1`,
         )
-        .get(normaId, { needle: `%${identificador.toLowerCase()}%` }) as
+        .get(id, { needle: `%${identificador.toLowerCase()}%` }) as
         | EstructuraNodo
         | undefined);
     if (!nodo) return undefined;

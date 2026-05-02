@@ -75,4 +75,20 @@ describe("MCP server backed by SQLite", () => {
   it("buildServer returns a server with a close() helper", () => {
     expect((server as unknown as { close: () => void }).close).toBeTypeOf("function");
   });
+
+  it("getArticle accepts formatted variants of the norma_id", () => {
+    const canonical = repo.getArticle("ley_19549", "1");
+    expect(canonical, "ley_19549/art 1 must exist in the seeded corpus").toBeDefined();
+    for (const variant of ["Ley 19.549", "LEY 19549", "ley-19549", "ley_19.549"]) {
+      const result = repo.getArticle(variant, "1");
+      expect(result, `variant ${variant}`).toBeDefined();
+      expect(result!.articulo.id).toBe(canonical!.articulo.id);
+    }
+  });
+
+  it("getNormMetadata still returns undefined for bare-number input", () => {
+    // Conservative policy: '19549' is not auto-mapped to 'ley_19549'; the
+    // server emits a `suggestion` field instead — covered by hierarchy tests.
+    expect(repo.getNormMetadata("19549")).toBeUndefined();
+  });
 });

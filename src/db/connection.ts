@@ -25,15 +25,20 @@ export function resolveDbPath(opts: OpenDbOptions = {}): string {
 }
 
 /**
- * Opens a SQLite database with the pragmas argleg expects: foreign keys ON
- * and WAL journaling for concurrent readers (skipped for in-memory).
+ * Opens a SQLite database with the pragmas argleg expects: foreign keys ON,
+ * WAL journaling for concurrent readers, and a read-tuned cache/mmap profile.
+ * On-disk-only pragmas (journal_mode, mmap_size) are skipped for `:memory:`.
  */
 export function openDb(opts: OpenDbOptions = {}): Db {
   const file = resolveDbPath(opts);
   const db = new Database(file, { readonly: opts.readonly ?? false });
   db.pragma("foreign_keys = ON");
+  db.pragma("temp_store = MEMORY");
+  db.pragma("cache_size = -20000");
   if (file !== ":memory:") {
     db.pragma("journal_mode = WAL");
+    db.pragma("synchronous = NORMAL");
+    db.pragma("mmap_size = 134217728");
   }
   return db;
 }

@@ -52,7 +52,7 @@ The arrows are unidirectional: the MCP server **never** reads JSON, and the impo
 
 ### SQLite schema (`src/db/schema.sql`)
 
-Eleven tables, all in Spanish to align with the legal-domain vocabulary. Two layers:
+Eleven tables (in Spanish to align with the legal-domain vocabulary) plus one FTS5 virtual table for full-text search. Two layers:
 
 **Corpus layer:**
 
@@ -66,14 +66,18 @@ Eleven tables, all in Spanish to align with the legal-domain vocabulary. Two lay
 
 - `ramas_derecho`, `principios_juridicos`, `norma_rama`, `doctrina`, `jurisprudencia`, `jurisprudencia_norma`. See "Intelligence layer" below.
 
-Foreign keys are enforced (`PRAGMA foreign_keys = ON`); WAL journaling is enabled for on-disk databases.
+**Search layer:**
+
+- `articulos_fts` — FTS5 virtual table over `(numero, epigrafe, texto)` using the `unicode61 remove_diacritics 2` tokenizer (matches the NFD + casefold semantics of `foldText` in `src/laws/sqlite-repository.ts`). Uses external content (`content='articulos', content_rowid='rowid'`) so the body is not duplicated. Insert/update/delete triggers (`articulos_ai`/`articulos_au`/`articulos_ad`) keep it in sync with `articulos`. `db-import` also runs `INSERT INTO articulos_fts(articulos_fts) VALUES('rebuild')` defensively at the end of import to repopulate after a schema upgrade over a pre-existing DB.
+
+Foreign keys are enforced (`PRAGMA foreign_keys = ON`); WAL journaling on disk; the connection also sets `synchronous=NORMAL`, `cache_size=-20000` (~20 MB), `mmap_size=128 MB`, and `temp_store=MEMORY` for a read-tuned profile.
 
 ### Key modules
 
-- **`src/db/connection.ts`** — `openDb()` resolves the database path (option → `ARGLEG_DB` → `~/Desktop/mcp/data/argleg.db`) and applies the standard pragmas.
+- **`src/db/connection.ts`** — `openDb()` resolves the database path (option → `ARGLEG_DB` → `~/Desktop/mcp/data/argleg.db`) and applies the runtime pragmas: `foreign_keys=ON`, `temp_store=MEMORY`, `cache_size=-20000`, plus on-disk-only `journal_mode=WAL`, `synchronous=NORMAL`, `mmap_size=134217728`.
 - **`src/db/migrations.ts`** — `applySchema(db)` reads `schema.sql` and runs it. Idempotent.
 - **`src/laws/repository.ts`** — `LegalRepository` interface. Domain types (`Norma`, `ArticuloRow`, `EstructuraNodo`, `SearchHitRow`, `ResumenEstructural`) plus adapters (`articuloToArticle`, `normaToLaw`) that rebuild the legacy `Law`/`Article` shapes for `format.ts`.
-- **`src/laws/sqlite-repository.ts`** — `SqliteLegalRepository` implements the interface. Search uses an OR'd LIKE filter in SQL to pull candidates, then a JS reranker (mirroring the legacy `foldText` scoring weights) to order them.
+- **`src/laws/sqlite-repository.ts`** — `SqliteLegalRepository` implements the interface. `searchArticles` pulls candidates from the `articulos_fts` virtual table via `MATCH` (each token quoted and prefix-suffixed: `"token"*`), batches one structure-context query for all candidate articles (replacing the prior N+1), and feeds rows into the JS reranker (`scoreArticle`: numero=+50, epigrafe=+10, estructura=+4, texto=+3) which is the source of truth for ordering. The reranker mirrors the legacy `foldText` scoring weights so output rankings stay byte-identical to pre-FTS behaviour for word-level queries.
 - **`src/laws/loader.ts`** — still loads JSON; **only used by the ingest scripts**, not by the runtime server. Exports `normalizeNumber()` which both ingest and repo use to compare article numbers (`"14bis"` ↔ `"14 bis"`, etc.).
 - **`src/laws/format.ts`** — Markdown rendering for tools and resources. The repository feeds it adapters so the rendered output is byte-identical to the pre-refactor JSON-backed version.
 - **`src/scripts/db-init.ts`** — `npm run db:init`. Creates the file if missing, applies schema.
@@ -177,6 +181,7 @@ Output goes to **stderr** by default. Set `ARGLEG_LOG_FILE=/path/to/file.log` to
 | `ARGLEG_LOG_JSON` | `1` for JSONL log output |
 | `ARGLEG_LOG_FILE` | Path to duplicate log output to a file |
 | `ARGLEG_VALIDATE_VERBOSE` | `1` to print every per-article validation warning during `db:import` |
+| `RUN_PERF` | `1` to enable the `searchArticles` microbenchmark in `tests/perf.test.ts` (skipped by default; expects the on-disk DB to be present) |
 
 ## Best practices for every commit
 

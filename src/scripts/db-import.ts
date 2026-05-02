@@ -533,6 +533,10 @@ export function importIntoDb(db: Db, laws: Law[], opts: { reset?: boolean } = {}
     seedIntelligence(db);
   });
   tx();
+  // Defensive FTS rebuild: triggers keep articulos_fts in sync with articulos
+  // for normal inserts, but a freshly-applied schema over a pre-existing DB
+  // would leave the index empty. The rebuild is idempotent and ~ms-scale.
+  db.exec(`INSERT INTO articulos_fts(articulos_fts) VALUES('rebuild')`);
   return { totals, warnings, fatalErrors };
 }
 

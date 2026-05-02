@@ -142,35 +142,59 @@ export class SqliteLegalRepository implements LegalRepository {
     if (tokens.length === 0) return [];
     const limit = Math.max(1, Math.min(opts.limit ?? 20, 100));
 
-    // Pull candidate articles with at least one substring match across the
-    // searchable columns. We OR every token and let the JS reranker score.
-    const where: string[] = ["1=1"];
-    const params: Record<string, unknown> = {};
-    if (opts.norma_id) {
-      where.push("a.norma_id = @norma_id");
-      params.norma_id = opts.norma_id;
-    }
+    // Pull candidates via FTS5 MATCH. Cada token va con prefijo (term*) para
+    // imitar la intención de "LIKE %t%" sobre límites de palabra; los caracteres
+    // reservados de FTS se neutralizan envolviendo el token en comillas dobles.
+    const matchExpr = tokens
+      .map((t) => `"${t.replace(/"/g, '""')}"*`)
+      .join(" OR ");
 
-    const tokenClauses: string[] = [];
-    tokens.forEach((t, i) => {
-      const k = `t${i}`;
-      params[k] = `%${t}%`;
-      tokenClauses.push(
-        `(LOWER(a.numero) LIKE @${k} OR LOWER(a.epigrafe) LIKE @${k} OR LOWER(a.texto) LIKE @${k})`,
-      );
-    });
-    if (tokenClauses.length > 0) {
-      where.push(`(${tokenClauses.join(" OR ")})`);
+    const params: Record<string, unknown> = { match: matchExpr };
+    let normaFilter = "";
+    if (opts.norma_id) {
+      normaFilter = " AND a.norma_id = @norma_id";
+      params.norma_id = opts.norma_id;
     }
 
     const rows = this.db
       .prepare(
         `SELECT a.*, n.titulo AS norma_titulo, n.nombre_corto AS norma_nombre_corto
-         FROM articulos a
+         FROM articulos_fts f
+         JOIN articulos a ON a.rowid = f.rowid
          JOIN normas n ON n.id = a.norma_id
-         WHERE ${where.join(" AND ")}`,
+         WHERE articulos_fts MATCH @match${normaFilter}
+         LIMIT 500`,
       )
       .all(params) as Array<ArticuloRow & { norma_titulo: string; norma_nombre_corto: string | null }>;
+
+    if (rows.length === 0) return [];
+
+    // Fix N+1: traer toda la estructura de los candidatos en una sola query
+    // en vez de invocar getStructureForArticle por cada fila.
+    const ids = rows.map((r) => r.id);
+    const placeholders = ids.map(() => "?").join(",");
+    const structRows = this.db
+      .prepare(
+        `SELECT ae.articulo_id AS articulo_id, e.id AS id, e.norma_id AS norma_id,
+                e.parent_id AS parent_id, e.tipo AS tipo, e.nombre AS nombre,
+                e.orden AS orden
+         FROM articulo_estructura ae
+         JOIN estructura_normativa e ON e.id = ae.estructura_id
+         WHERE ae.articulo_id IN (${placeholders})
+         ORDER BY e.orden ASC`,
+      )
+      .all(...ids) as Array<EstructuraNodo & { articulo_id: string }>;
+
+    const byArt = new Map<string, EstructuraNodo[]>();
+    for (const r of structRows) {
+      const { articulo_id, ...node } = r;
+      let bucket = byArt.get(articulo_id);
+      if (!bucket) {
+        bucket = [];
+        byArt.set(articulo_id, bucket);
+      }
+      bucket.push(node as EstructuraNodo);
+    }
 
     const scored: SearchHitRow[] = [];
     for (const row of rows) {
@@ -182,7 +206,7 @@ export class SqliteLegalRepository implements LegalRepository {
         orden: row.orden,
         epigrafe: row.epigrafe,
       };
-      const contexto = this.getStructureForArticle(row.id);
+      const contexto = byArt.get(row.id) ?? [];
       const { score, matchedOn } = this.scoreArticle(articulo, contexto, tokens);
       if (score <= 0) continue;
       scored.push({

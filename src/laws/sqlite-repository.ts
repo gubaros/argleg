@@ -74,6 +74,17 @@ function tokenize(query: string): string[] {
 export class SqliteLegalRepository implements LegalRepository {
   constructor(private readonly db: Db) {}
 
+  /**
+   * Resuelve un id de norma probando, en orden:
+   *   1. `canonicalNormaId` (lossless: case, espacios, guiones, dots/comas).
+   *   2. `findNormaByShortName` (alias `nombre_corto` único: LNPA, LDC, CCyC...).
+   *   3. el raw input — la SQL no matcheará y el caller se entera vía undefined.
+   * Es el único lugar donde se decide cómo mapear input "natural" a id canónico.
+   */
+  private resolveNormaId(raw: string): string {
+    return canonicalNormaId(raw) ?? this.findNormaByShortName(raw) ?? raw;
+  }
+
   listNorms(filter: ListNormsFilter = {}): Norma[] {
     const where: string[] = [];
     const params: Record<string, unknown> = {};
@@ -99,7 +110,7 @@ export class SqliteLegalRepository implements LegalRepository {
   }
 
   getNormMetadata(normaId: string): NormaConResumen | undefined {
-    const id = canonicalNormaId(normaId) ?? normaId;
+    const id = this.resolveNormaId(normaId);
     const row = this.db
       .prepare(`SELECT * FROM normas WHERE id = ?`)
       .get(id) as NormaRowRaw | undefined;
@@ -111,7 +122,7 @@ export class SqliteLegalRepository implements LegalRepository {
   }
 
   getArticle(normaId: string, articleNumber: string): ArticuloConContexto | undefined {
-    const id = canonicalNormaId(normaId) ?? normaId;
+    const id = this.resolveNormaId(normaId);
     const norma = this.db
       .prepare(`SELECT * FROM normas WHERE id = ?`)
       .get(id) as NormaRowRaw | undefined;
@@ -155,7 +166,7 @@ export class SqliteLegalRepository implements LegalRepository {
     let normaFilter = "";
     if (opts.norma_id) {
       normaFilter = " AND a.norma_id = @norma_id";
-      params.norma_id = canonicalNormaId(opts.norma_id) ?? opts.norma_id;
+      params.norma_id = this.resolveNormaId(opts.norma_id);
     }
 
     const rows = this.db
@@ -226,7 +237,7 @@ export class SqliteLegalRepository implements LegalRepository {
   }
 
   getNormStructure(normaId: string): EstructuraNodo[] {
-    const id = canonicalNormaId(normaId) ?? normaId;
+    const id = this.resolveNormaId(normaId);
     return this.db
       .prepare(
         `SELECT * FROM estructura_normativa WHERE norma_id = ? ORDER BY orden ASC`,
@@ -235,14 +246,35 @@ export class SqliteLegalRepository implements LegalRepository {
   }
 
   listArticles(normaId: string): ArticuloRow[] {
-    const id = canonicalNormaId(normaId) ?? normaId;
+    const id = this.resolveNormaId(normaId);
     return this.db
       .prepare(`SELECT * FROM articulos WHERE norma_id = ? ORDER BY orden ASC`)
       .all(id) as ArticuloRow[];
   }
 
+  findNormaByShortName(name: string): string | null {
+    if (!name) return null;
+    const target = name
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toLowerCase()
+      .trim();
+    if (target.length === 0) return null;
+    // SQLite LOWER doesn't strip diacritics, so we fold in JS over the small
+    // set of non-null nombre_corto values. The corpus is ~30 norms; this is
+    // an error-path query and not hot.
+    const rows = this.db
+      .prepare(`SELECT id, nombre_corto FROM normas WHERE nombre_corto IS NOT NULL`)
+      .all() as Array<{ id: string; nombre_corto: string }>;
+    const matches = rows.filter((r) => {
+      const folded = r.nombre_corto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+      return folded === target;
+    });
+    return matches.length === 1 ? matches[0]!.id : null;
+  }
+
   getSection(normaId: string, identificador: string): SeccionConArticulos | undefined {
-    const id = canonicalNormaId(normaId) ?? normaId;
+    const id = this.resolveNormaId(normaId);
     // Resolve the section by id first (most specific), then by case-insensitive
     // substring of nombre. Restrict to the given norma.
     const idCandidate = this.db

@@ -176,6 +176,13 @@ export interface LegalRepository {
   listArticles(normaId: string): ArticuloRow[];
   /** Look up a structural node by norma + identifier (slug or display name fragment). */
   getSection(normaId: string, identificador: string): SeccionConArticulos | undefined;
+  /**
+   * Find a norma by its `nombre_corto` (case- and diacritic-insensitive exact match).
+   * Used by the server's NOT_AVAILABLE path to suggest a canonical id when a client
+   * passes the short name (e.g. "LNPA" → "ley_19549"). Returns the canonical id, or
+   * null when there is no match or the match is ambiguous.
+   */
+  findNormaByShortName(name: string): string | null;
 
   // Intelligence layer (read-only). Lazy: only the methods needed by tools.
   listRamas(): RamaDerecho[];

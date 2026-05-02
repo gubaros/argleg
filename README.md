@@ -3,7 +3,7 @@
 [![Node.js CI](https://github.com/gubaros/argleg/actions/workflows/node.js.yml/badge.svg)](https://github.com/gubaros/argleg/actions/workflows/node.js.yml)
 [![Licencia](https://img.shields.io/badge/Licencia-No_Comercial_·_Con_Restricciones-blue.svg)](LICENSE)
 
-Servidor MCP de solo lectura para consultar legislación argentina desde archivos locales.
+Servidor MCP de solo lectura para consultar legislación argentina desde una base SQLite local. Los archivos JSON en `data/` se usan como input/fixtures para alimentar la base; el servidor lee siempre desde SQLite (`data/argleg.db`).
 
 Desarrollado por **Guido Barosio** en el marco del **IA Lab** de [Palermo E-Law — Centro de Estudios de Derecho Digital UP](https://www.palermo.edu/derecho/palermo-e-law/), Universidad de Palermo.
 
@@ -32,6 +32,7 @@ Desarrollado por **Guido Barosio** en el marco del **IA Lab** de [Palermo E-Law 
 | `ley_24240` | Ley de Defensa del Consumidor | Ley 24.240 |
 | `ley_19550` | Ley General de Sociedades | Ley 19.550 |
 | `ley_19549` | Ley Nacional de Procedimientos Administrativos | Ley 19.549 |
+| `ley_25326` | Ley de Protección de los Datos Personales | Ley 25.326 |
 
 ---
 
@@ -39,9 +40,13 @@ Desarrollado por **Guido Barosio** en el marco del **IA Lab** de [Palermo E-Law 
 
 | Herramienta | Descripción |
 |-------------|-------------|
-| `search_law` | Busca artículos por palabra clave, materia o número |
+| `list_norms` | Lista las normas disponibles (filtros por **tier** de la pirámide normativa, materia o vigencia) |
+| `get_norm_metadata` | Devuelve metadata completa de una norma + resumen estructural |
 | `get_article` | Devuelve el texto completo de un artículo |
+| `search_articles` | Busca artículos por palabra clave o número (filtra por norma) |
 | `compare_articles` | Compara dos artículos en paralelo |
+| `list_ramas` | Lista las ramas del derecho cubiertas (constitucional, civil, penal, etc.) |
+| `get_rama_metadata` | Devuelve principios, normas aplicables, doctrina y jurisprudencia de una rama |
 | `server_info` | Metadata operativa del servidor |
 
 ## Recursos MCP
@@ -71,9 +76,9 @@ Si necesitás una norma que todavía no está incluida, [abrí un issue](https:/
 Al ser software de código abierto, cualquiera puede incorporar una ley nueva y proponer un pull request. El proceso es sencillo:
 
 1. Encontrá la URL del texto en [InfoLEG](https://www.infoleg.gob.ar/).
-2. Ejecutá el importador: `npm run fetch -- --id <id> --url '<URL>' --force`
-3. Revisá el JSON generado en `data/` y ajustá si es necesario.
-4. Abrí un pull request en el repositorio.
+2. Ejecutá el importador: `npm run fetch -- --id <id> --url '<URL>' --force` (genera el JSON en `data/`).
+3. Cargalo en SQLite: `npm run db:reset` (recrea la base con todos los JSON, incluido el nuevo).
+4. Revisá el resultado y abrí un pull request.
 
 Todos los pasos pueden hacerse también con asistencia de IA: herramientas como **Claude Code** o **Claude Codex** pueden guiarte en el proceso o ejecutarlo directamente si les das acceso al repositorio. El archivo CLAUDE.md contiene dichas instrucciones, **Claude Codex** lo puede interpretar. 
 

@@ -74,7 +74,7 @@ export async function buildServer(opts: BuildServerOptions = {}): Promise<McpSer
   };
 
   log.info("server.ready", {
-    tools: 8,
+    tools: 10,
     resources: norms.length + 1,
     prompts: 2,
     log_level: log.level,
@@ -370,6 +370,114 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
           query: args.query,
           norma_id: args.norma_id,
           results: hits.length,
+        });
+      }),
+  );
+
+  // list_sections
+  server.registerTool(
+    "list_sections",
+    {
+      title: "Listar la jerarquía estructural de una norma",
+      description:
+        "Devuelve el árbol estructural completo de una norma (partes, libros, títulos, capítulos, secciones) con la cantidad de artículos directos en cada nodo. Útil para explorar cómo está organizada una norma sin leer artículo por artículo.",
+      inputSchema: {
+        norma_id: z
+          .string()
+          .min(1)
+          .describe("Identificador de la norma (p.ej. 'constitucion', 'ccyc')."),
+      },
+    },
+    async (args) =>
+      runToolLogged("list_sections", args, async () => {
+        const meta = repo.getNormMetadata(args.norma_id);
+        if (!meta) {
+          return textPayload(`${NOT_AVAILABLE}: ${args.norma_id}`, {
+            found: false,
+            norma_id: args.norma_id,
+          });
+        }
+        const nodes = repo.getNormStructure(args.norma_id);
+        if (nodes.length === 0) {
+          return textPayload(
+            `# ${meta.titulo}\n\n_La norma no tiene estructura jerárquica capturada (todos los artículos están al mismo nivel)._`,
+            { found: true, norma_id: args.norma_id, sections: 0 },
+          );
+        }
+        const text = formatStructureTree(meta.titulo, nodes);
+        return textPayload(text + DISCLAIMER, {
+          found: true,
+          norma_id: args.norma_id,
+          sections: nodes.length,
+          tree: nodes.map((n) => ({
+            id: n.id,
+            tipo: n.tipo,
+            nombre: n.nombre,
+            parent_id: n.parent_id,
+            orden: n.orden,
+          })),
+        });
+      }),
+  );
+
+  // get_section
+  server.registerTool(
+    "get_section",
+    {
+      title: "Obtener una sección estructural y sus artículos",
+      description:
+        "Devuelve metadata de una sección estructural (parte, libro, título, capítulo o sección) más la lista completa de artículos contenidos. Resuelve el identificador exacto del nodo o una coincidencia parcial sobre el nombre. Permite leer 'todo el Capítulo X' en una sola llamada.",
+      inputSchema: {
+        norma_id: z
+          .string()
+          .min(1)
+          .describe("Identificador de la norma."),
+        identificador: z
+          .string()
+          .min(1)
+          .describe(
+            "ID exacto del nodo estructural o substring del nombre (p.ej. 'Capítulo Segundo', 'Nuevos derechos').",
+          ),
+      },
+    },
+    async (args) =>
+      runToolLogged("get_section", args, async () => {
+        const result = repo.getSection(args.norma_id, args.identificador);
+        if (!result) {
+          return textPayload(
+            `Sección no encontrada en \`${args.norma_id}\`: ${args.identificador}`,
+            { found: false, norma_id: args.norma_id, identificador: args.identificador },
+          );
+        }
+        const lines: string[] = [];
+        const ancestros = result.ancestros.map((a) => a.nombre).join(" › ");
+        if (ancestros) lines.push(`_${ancestros} ›_`);
+        lines.push(`# ${result.nodo.nombre}`);
+        lines.push(`**Tipo:** ${result.nodo.tipo}`);
+        if (result.rango) {
+          lines.push(
+            `**Artículos:** ${result.articulos.length} (Art. ${result.rango.primero} a Art. ${result.rango.ultimo})`,
+          );
+        }
+        if (result.articulos.length > 0) {
+          lines.push("");
+          lines.push("## Artículos contenidos");
+          for (const a of result.articulos) {
+            const head = a.epigrafe ? ` — ${a.epigrafe}` : "";
+            lines.push(`\n### Art. ${a.numero}${head}`);
+            lines.push(a.texto);
+          }
+        }
+        return textPayload(lines.join("\n") + DISCLAIMER, {
+          found: true,
+          norma_id: args.norma_id,
+          nodo: {
+            id: result.nodo.id,
+            tipo: result.nodo.tipo,
+            nombre: result.nodo.nombre,
+          },
+          articulos_count: result.articulos.length,
+          rango: result.rango,
         });
       }),
   );
@@ -716,6 +824,30 @@ function toLegacyHit(hit: SearchHitRow): LegacySearchHit {
       }
     }),
   };
+}
+
+function formatStructureTree(
+  titulo: string,
+  nodes: Array<{ id: string; parent_id: string | null; tipo: string; nombre: string | null; orden: number }>,
+): string {
+  const byParent = new Map<string | null, typeof nodes>();
+  for (const n of nodes) {
+    const list = byParent.get(n.parent_id) ?? [];
+    list.push(n);
+    byParent.set(n.parent_id, list);
+  }
+  const lines: string[] = [`# ${titulo} — estructura`];
+  function walk(parentId: string | null, depth: number): void {
+    const children = byParent.get(parentId) ?? [];
+    children.sort((a, b) => a.orden - b.orden);
+    for (const c of children) {
+      const indent = "  ".repeat(depth);
+      lines.push(`${indent}- **${c.tipo}** · ${c.nombre ?? "(sin nombre)"} _(id: \`${c.id}\`)_`);
+      walk(c.id, depth + 1);
+    }
+  }
+  walk(null, 0);
+  return lines.join("\n");
 }
 
 function formatRama(

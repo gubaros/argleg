@@ -1,2 +1,2 @@
-export const ARGLEG_VERSION = "0.1.55";
-export const ARGLEG_BUILD_DATE_TIME = "2026-05-02T02:22:40.657Z";
+export const ARGLEG_VERSION = "0.1.57";
+export const ARGLEG_BUILD_DATE_TIME = "2026-05-02T03:59:59.025Z";

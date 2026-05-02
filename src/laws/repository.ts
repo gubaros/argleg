@@ -153,6 +153,17 @@ export interface RamaConContenido {
   jurisprudencia: JurisprudenciaEntry[];
 }
 
+/** A node from `estructura_normativa` with its contained articles range. */
+export interface SeccionConArticulos {
+  nodo: EstructuraNodo;
+  /** All ancestors from root to this node's parent, in order. */
+  ancestros: EstructuraNodo[];
+  /** Articles directly attached to this node. */
+  articulos: ArticuloRow[];
+  /** Range of article numbers (first ↔ last) for quick display. */
+  rango: { primero: string; ultimo: string } | null;
+}
+
 // ─── Repository contract ─────────────────────────────────────────────────────
 
 export interface LegalRepository {
@@ -163,6 +174,8 @@ export interface LegalRepository {
   getNormStructure(normaId: string): EstructuraNodo[];
   /** All articles of a norma in order. Used by formatLawSummary and resource listings. */
   listArticles(normaId: string): ArticuloRow[];
+  /** Look up a structural node by norma + identifier (slug or display name fragment). */
+  getSection(normaId: string, identificador: string): SeccionConArticulos | undefined;
 
   // Intelligence layer (read-only). Lazy: only the methods needed by tools.
   listRamas(): RamaDerecho[];

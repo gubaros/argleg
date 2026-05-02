@@ -5,8 +5,37 @@ import { openDb, resolveDbPath, type Db } from "../db/connection.js";
 import { applySchema } from "../db/migrations.js";
 import { loadLibrary, normalizeNumber } from "../laws/loader.js";
 import type { Article, Inciso, Law, LawId } from "../laws/types.js";
-import { TIER_BY_NORMA_ID, type LegalTier } from "../laws/hierarchy.js";
+import { TIER_BY_NORMA_ID, type LegalTier, type StructuralLevel } from "../laws/hierarchy.js";
 import { DOCTRINA, NORMAS_POR_RAMA, PRINCIPIOS, RAMAS } from "../db/seeds/intelligence.js";
+import {
+  nestingDepth,
+  splitArticleHeaders,
+  trimTrailingOrphans,
+  type DetectedHeader,
+} from "./parsers/structural-headers.js";
+
+/**
+ * Vigencia curada para las normas foundational del corpus.
+ *
+ * El default del schema es 'desconocido', que es razonable como fallback
+ * pero cosmetically embarrassing en demos. Las normas listadas acá tienen
+ * vigencia verificada manualmente como `vigente` al 2026-05-02.
+ *
+ * No es una fuente automatizada: si una de estas normas se deroga, el
+ * mantenimiento de este map es responsabilidad del operador. Para una
+ * verificación periódica programada, ver el follow-up en BACKLOG.md.
+ */
+const VIGENCIA_BY_NORMA_ID: Record<string, "vigente" | "derogada"> = {
+  constitucion: "vigente",
+  ccyc: "vigente",
+  penal: "vigente",
+  cppf: "vigente",
+  cpccn: "vigente",
+  ley_24240: "vigente",
+  ley_19549: "vigente",
+  ley_19550: "vigente",
+  ley_25326: "vigente",
+};
 
 interface Args {
   db?: string;
@@ -94,11 +123,20 @@ function slugify(s: string): string {
     .slice(0, 60);
 }
 
-function articleTextWithIncisos(article: Article): string {
-  if (article.incisos.length === 0) return article.text;
-  const lines: string[] = [article.text.trimEnd()];
+function articleTextWithIncisos(article: Article, cleanText?: string): string {
+  const body = (cleanText ?? article.text).trimEnd();
+  if (article.incisos.length === 0) return body;
+  const lines: string[] = [body];
   for (const inc of article.incisos) {
-    lines.push(formatIncisoForStorage(inc));
+    // Trim orphan-caps tail from each inciso too — the legacy parser
+    // sometimes appended the next section's marker to the LAST inciso of
+    // an article (e.g., CPPF arts 96, 128, 308 carrying "EL CIVILMENTE
+    // DEMANDADO" / "COMPROBACIONES DIRECTAS" inside the last inciso).
+    const cleanedInc: Inciso = {
+      id: inc.id,
+      text: trimTrailingOrphans(inc.text),
+    };
+    lines.push(formatIncisoForStorage(cleanedInc));
   }
   return lines.join("\n");
 }
@@ -310,20 +348,44 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
     fecha_publicacion: null,
     fuente_nombre: null,
     fuente_url: law.source,
-    estado_vigencia: "desconocido",
+    estado_vigencia: VIGENCIA_BY_NORMA_ID[law.id] ?? "desconocido",
     fecha_ultima_actualizacion: law.lastUpdated || null,
     texto_ordenado: 0,
     materias: null,
     notas: law.description ?? null,
   });
 
+  // Two coexisting strategies for capturing structure:
+  //
+  //  (A) `art.location` populated → legacy parser worked (CCyC, CPPF, CPCCN).
+  //      Use the location chain as authoritative; trailing-header detection
+  //      not needed.
+  //
+  //  (B) `art.location` empty → legacy parser dropped structural info but it
+  //      may still be reconstructible from the article text, where the
+  //      legacy parser concatenated headers like "CAPÍTULO SEGUNDO" / "Nuevos
+  //      derechos y garantías" at the end of the previous article. We detect
+  //      those, strip them from the text, and promote them to estructura
+  //      nodes via a running stack that determines the structural parent of
+  //      subsequent articles.
+  //
+  // The two strategies are not mixed within a single norma — we pick (A) if
+  // ANY article in the law has a populated location, otherwise (B).
+  const useLegacyLocation = law.articles.some(
+    (a) => Object.values(a.location).some((v) => !!v),
+  );
+
   // Track structural nodes already inserted so we dedupe across articles.
   const nodes = new Map<string, { tipo: StructureLevel; orden: number; parent_id: string | null }>();
   let nodeOrder = 0;
   let articulosInsertados = 0;
-  // Track how many times we've seen each base article id to disambiguate
-  // duplicates with a stable suffix.
   const idCount = new Map<string, number>();
+
+  // (B) running stack of open structural nodes, used when reconstructing
+  // structure from trailing headers.
+  const recoveryStack: Array<{ id: string; tipo: StructuralLevel; depth: number }> = [];
+  // Counter for unique recovery-node ids within this law.
+  let recoveryNodeIdx = 0;
 
   for (let i = 0; i < law.articles.length; i++) {
     const art = law.articles[i]!;
@@ -331,51 +393,108 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
     const count = idCount.get(baseId) ?? 0;
     idCount.set(baseId, count + 1);
     const aid = count === 0 ? baseId : articleId(law.id, art.number, count + 1);
+
+    // Both strategies clean the article body of trailing-header noise.
+    // (B) additionally captures the detected headers as estructura nodes;
+    // (A) ignores them because `art.location` is authoritative for those
+    // normas. We also trim any trailing orphan all-caps line that survived
+    // both flows — this catches leakage in normas like the CPCCN where the
+    // legacy parser left "SUBSISTENCIA DE LOS DOMICILIOS" hanging without
+    // a following keyword.
+    let cleanText: string | undefined;
+    let trailingHeaders: DetectedHeader[] = [];
+    if (!useLegacyLocation) {
+      const split = splitArticleHeaders(art.text);
+      cleanText = trimTrailingOrphans(split.cleanText);
+      trailingHeaders = split.trailingHeaders;
+    } else {
+      cleanText = trimTrailingOrphans(art.text);
+    }
+
     insertArticulo.run({
       id: aid,
       norma_id: law.id,
       numero: art.number,
-      texto: articleTextWithIncisos(art),
+      texto: articleTextWithIncisos(art, cleanText),
       orden: i,
       epigrafe: art.title ?? null,
     });
     articulosInsertados++;
 
-    // Build the chain (level, name) for this article and ensure each node exists.
-    const chain: Array<[StructureLevel, string]> = [];
-    for (const lvl of STRUCTURE_LEVELS) {
-      const name = art.location[lvl];
-      if (name) chain.push([lvl, name]);
-    }
-
-    let parentId: string | null = null;
     let leafId: string | null = null;
-    for (let j = 0; j < chain.length; j++) {
-      const subchain = chain.slice(0, j + 1);
-      const nodeId = structureNodeId(law.id, subchain);
-      const [tipo, nombre] = subchain[subchain.length - 1]!;
-      if (!nodes.has(nodeId)) {
-        insertEstructura.run({
-          id: nodeId,
-          norma_id: law.id,
-          parent_id: parentId,
-          tipo,
-          nombre,
-          orden: nodeOrder++,
-        });
-        nodes.set(nodeId, { tipo, orden: nodeOrder - 1, parent_id: parentId });
+
+    if (useLegacyLocation) {
+      // (A) Build the chain (level, name) from art.location.
+      const chain: Array<[StructureLevel, string]> = [];
+      for (const lvl of STRUCTURE_LEVELS) {
+        const name = art.location[lvl];
+        if (name) chain.push([lvl, name]);
       }
-      parentId = nodeId;
-      leafId = nodeId;
+      let parentId: string | null = null;
+      for (let j = 0; j < chain.length; j++) {
+        const subchain = chain.slice(0, j + 1);
+        const nodeId = structureNodeId(law.id, subchain);
+        const [tipo, nombre] = subchain[subchain.length - 1]!;
+        if (!nodes.has(nodeId)) {
+          insertEstructura.run({
+            id: nodeId,
+            norma_id: law.id,
+            parent_id: parentId,
+            tipo,
+            nombre,
+            orden: nodeOrder++,
+          });
+          nodes.set(nodeId, { tipo, orden: nodeOrder - 1, parent_id: parentId });
+        }
+        parentId = nodeId;
+        leafId = nodeId;
+      }
+    } else {
+      // (B) Article belongs under whatever the recovery stack currently has
+      // as its leaf. The stack reflects the headers we've seen in PREVIOUS
+      // articles' trailing text.
+      if (recoveryStack.length > 0) {
+        leafId = recoveryStack[recoveryStack.length - 1]!.id;
+      }
     }
 
     if (leafId) {
       insertArticuloEstructura.run({ articulo_id: aid, estructura_id: leafId });
     }
+
+    // (B) After linking the article, process its trailing headers — these
+    // open sections that the NEXT articles will live under.
+    for (const h of trailingHeaders) {
+      const depth = nestingDepth(h.tipo);
+      while (
+        recoveryStack.length > 0 &&
+        recoveryStack[recoveryStack.length - 1]!.depth >= depth
+      ) {
+        recoveryStack.pop();
+      }
+      const parentId =
+        recoveryStack.length > 0 ? recoveryStack[recoveryStack.length - 1]!.id : null;
+      const newNodeId = `${law.id}_recovered_${recoveryNodeIdx++}`;
+      // splitArticleHeaders only emits the 5 nesting levels by construction
+      // (parte | libro | titulo | capitulo | seccion). Narrow for the
+      // local `nodes` map which is typed against that subset.
+      const nestingTipo = h.tipo as StructureLevel;
+      insertEstructura.run({
+        id: newNodeId,
+        norma_id: law.id,
+        parent_id: parentId,
+        tipo: nestingTipo,
+        nombre: h.nombre,
+        orden: nodeOrder++,
+      });
+      nodes.set(newNodeId, { tipo: nestingTipo, orden: nodeOrder - 1, parent_id: parentId });
+      recoveryStack.push({ id: newNodeId, tipo: h.tipo, depth });
+    }
   }
 
   return { norma: 1, articulos: articulosInsertados, nodos: nodes.size };
 }
+
 
 export interface ImportResult {
   totals: { norma: number; articulos: number; nodos: number };

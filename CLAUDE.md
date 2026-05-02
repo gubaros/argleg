@@ -86,6 +86,12 @@ Foreign keys are enforced (`PRAGMA foreign_keys = ON`); WAL journaling is enable
 
 The Argentine legal pyramid is encoded as a typed model: 15 `LegalTier` values from `constitucion_nacional` (top) to `ordenanza_municipal` (bottom), each with a profile (kelsen rank, ámbito, emisor, base constitucional, allowed structural levels, header detection regexes). `TIER_BY_NORMA_ID` maps every corpus norma to its tier, including the 23 provincial constitutions and CABA. The `PROVINCIAS` catalogue lists the 24 jurisdictions with metadata for the ingest workflow (see [docs/provincial-constitutions.md](docs/provincial-constitutions.md)). A norma cannot be ingested unless its id is declared in `TIER_BY_NORMA_ID` first.
 
+### Structural-header recovery at ingest (`src/scripts/parsers/structural-headers.ts`)
+
+The legacy per-law parsers (still active for the JSON corpus of constitucion / penal / ley_19549 / ley_19550 / ley_24240 / ley_25326) didn't recognise InfoLEG's section markers — strings like `"PRIMERA PARTE"`, `"LIBRO PRIMERO"`, `"TÍTULO PRELIMINAR"`, `"CAPÍTULO SEGUNDO"`. As a result those headers got concatenated to the END of the previous article's text and `Article.location` was left empty. `db-import` runs `splitArticleHeaders` and `trimTrailingOrphans` on each ingested article to (a) clean the body of trailing-header noise and (b) reconstruct the structural hierarchy by promoting detected headers to `estructura_normativa` rows. This is what makes `get_section`/`list_sections` work on normas whose source JSON has empty `location`.
+
+The cleaning pass runs in two phases: a line-based detector that walks from the first structural keyword to end-of-text and consumes all keyword + subtitle pairs (plus orphan all-caps lines that morally belong to a section but lost their keyword upstream, e.g. "DEL PODER LEGISLATIVO"); and a regex pass that strips trailing all-caps phrases sharing a line with body text (e.g. inciso `d) ... sin autorización. EL CIVILMENTE DEMANDADO`).
+
 ### Universal parser (`src/laws/universal-parser.ts`)
 
 Single tier-aware parser that replaces per-law parsers. `parseDocument(html, tier)` returns `{ articles, structure, warnings }` regardless of input tier. Header detection is driven by `TIER_PROFILES[tier].niveles_posibles`; the parser walks the document linearly, maintains a stack of open structural nodes, normalises soft-wrap newlines mid-sentence, and emits coherence warnings if a level outside the tier's allowed set shows up. Mode (a)+(b): operator declares the tier; parser verifies via `verifyTierAgainstText` and warns on mismatch.
@@ -114,6 +120,8 @@ The seed is loaded inside the same transaction as the corpus by `db-import`. To 
 | tool | `compare_articles` | `{ norma_a, articulo_a, norma_b, articulo_b }` |
 | tool | `list_ramas` | — |
 | tool | `get_rama_metadata` | `{ rama_id }` |
+| tool | `list_sections` | `{ norma_id }` |
+| tool | `get_section` | `{ norma_id, identificador }` |
 | resource | `law://<norma_id>` | per-norma summary |
 | resource template | `law://{id}/article/{number}` | individual article |
 | prompt | `analisis_juridico` | `{ norma_id, numero_articulo, context? }` |

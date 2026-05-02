@@ -91,4 +91,31 @@ describe("MCP server backed by SQLite", () => {
     // server emits a `suggestion` field instead — covered by hierarchy tests.
     expect(repo.getNormMetadata("19549")).toBeUndefined();
   });
+
+  it("getArticle auto-resolves nombres_cortos from the real corpus", () => {
+    const canonical = repo.getArticle("ley_19549", "1");
+    expect(canonical).toBeDefined();
+    for (const alias of ["LNPA", "lnpa"]) {
+      const result = repo.getArticle(alias, "1");
+      expect(result, `alias ${alias}`).toBeDefined();
+      expect(result!.articulo.id).toBe(canonical!.articulo.id);
+    }
+  });
+
+  it("findNormaByShortName resolves nombres_cortos from the real corpus", () => {
+    // The corpus loads canonical short names like "LNPA", "LDC", "CCyC".
+    // The server uses this in the NOT_AVAILABLE path so a client passing the
+    // alias gets a "did you mean" suggestion.
+    expect(repo.findNormaByShortName("LNPA")).toBe("ley_19549");
+    expect(repo.findNormaByShortName("lnpa")).toBe("ley_19549");
+    expect(repo.findNormaByShortName("LDC")).toBe("ley_24240");
+    expect(repo.findNormaByShortName("CCyC")).toBe("ccyc");
+    expect(repo.findNormaByShortName("ccyc")).toBe("ccyc");
+    expect(repo.findNormaByShortName("CN")).toBe("constitucion");
+  });
+
+  it("findNormaByShortName returns null for unknown names", () => {
+    expect(repo.findNormaByShortName("XXX")).toBeNull();
+    expect(repo.findNormaByShortName("")).toBeNull();
+  });
 });

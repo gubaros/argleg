@@ -36,6 +36,16 @@ function textPayload(text: string, extra: Record<string, unknown> = {}) {
 }
 
 /**
+ * Resuelve una sugerencia de id canónico para un input que no matchea. Combina
+ * dos fuentes: (1) `suggestNormaId` puro sobre `TIER_BY_NORMA_ID`, y (2) el
+ * `nombre_corto` de cada norma en la DB ("LNPA" → "ley_19549"). El primero
+ * cubre dígitos y substrings del id; el segundo cubre el alias humano.
+ */
+function resolveSuggestion(rawId: string, repo: LegalRepository): string | null {
+  return suggestNormaId(rawId) ?? repo.findNormaByShortName(rawId);
+}
+
+/**
  * Payload de "norma no disponible" enriquecido con sugerencia de id canónico
  * cuando hay un único candidato cercano. El mensaje devuelto al LLM cliente
  * incluye `¿Quisiste decir \`X\`?` y `structuredContent.suggestion = "X"` para
@@ -44,9 +54,10 @@ function textPayload(text: string, extra: Record<string, unknown> = {}) {
 function notAvailablePayload(
   rawId: string,
   detail: string,
-  extra: Record<string, unknown> = {},
+  extra: Record<string, unknown>,
+  repo: LegalRepository,
 ) {
-  const suggestion = suggestNormaId(rawId);
+  const suggestion = resolveSuggestion(rawId, repo);
   const suffix = suggestion ? ` ¿Quisiste decir \`${suggestion}\`?` : "";
   return textPayload(`${NOT_AVAILABLE} (${detail}).${suffix}`, {
     ...extra,
@@ -299,6 +310,7 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
             args.norma_id,
             `\`${args.norma_id}\` no está cargada`,
             { found: false, norma_id: args.norma_id },
+            repo,
           );
         }
         const text = formatNormMetadata(meta);
@@ -338,6 +350,7 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
             args.norma_id,
             `Art. ${args.numero_articulo} de \`${args.norma_id}\` no está cargado`,
             { norma_id: args.norma_id, numero_articulo: args.numero_articulo, found: false },
+            repo,
           );
         }
         const law = lawFromNorma(result.norma);
@@ -420,6 +433,7 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
             args.norma_id,
             `\`${args.norma_id}\` no está cargada`,
             { found: false, norma_id: args.norma_id },
+            repo,
           );
         }
         const nodes = repo.getNormStructure(args.norma_id);
@@ -476,6 +490,7 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
               args.norma_id,
               `\`${args.norma_id}\` no está cargada`,
               { found: false, norma_id: args.norma_id, identificador: args.identificador },
+              repo,
             );
           }
           return textPayload(
@@ -603,11 +618,11 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
         const suggestions: Record<string, string | null> = {};
         if (!a) {
           notFound.push(`Art. ${args.articulo_a} de \`${args.norma_a}\``);
-          suggestions.norma_a = suggestNormaId(args.norma_a);
+          suggestions.norma_a = resolveSuggestion(args.norma_a, repo);
         }
         if (!b) {
           notFound.push(`Art. ${args.articulo_b} de \`${args.norma_b}\``);
-          suggestions.norma_b = suggestNormaId(args.norma_b);
+          suggestions.norma_b = resolveSuggestion(args.norma_b, repo);
         }
         if (notFound.length > 0) {
           const hints: string[] = [];

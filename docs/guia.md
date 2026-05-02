@@ -323,6 +323,8 @@ Hay tres capas de eventos:
 2. **Handlers** (`tool.call`, `tool.done`, `tool.error`, `resource.*`, `prompt.*`) — cada invocación de tool/resource/prompt, con timing.
 3. **Lifecycle** (`server.loading`, `server.norma_loaded`, `server.ready`, `server.started`, `server.fatal`).
 
+Cada línea emitida **después** del handshake `initialize` también lleva un campo `client={"name":"…","version":"…"}`, tomado del bloque `clientInfo` que envía el cliente MCP. Esto permite saber qué cliente (Claude Desktop, Claude Code, Cursor, …) hizo cada llamada al grepear los logs.
+
 ```bash
 # Ver cada request entrante + cada llamada a tool
 ARGLEG_LOG_LEVEL=verbose npm start
@@ -332,6 +334,9 @@ ARGLEG_LOG_LEVEL=debug npm start
 
 # Logs en formato JSON, guardados en archivo
 ARGLEG_LOG_LEVEL=debug ARGLEG_LOG_JSON=1 ARGLEG_LOG_FILE=/tmp/argleg.jsonl npm start
+
+# Filtrar solo las llamadas hechas por Claude Code
+ARGLEG_LOG_LEVEL=verbose ARGLEG_LOG_JSON=1 npm start 2>&1 | jq 'select(.client.name == "claude-code")'
 ```
 
 > Si lanzás el servidor desde Claude Desktop, su stderr queda capturado por el cliente. Para ver los logs en vivo, usá `ARGLEG_LOG_FILE=/tmp/argleg-mcp.log` y en otra terminal corré `tail -f /tmp/argleg-mcp.log`.

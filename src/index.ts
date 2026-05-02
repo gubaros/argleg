@@ -2,7 +2,7 @@
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import type { JSONRPCMessage } from "@modelcontextprotocol/sdk/types.js";
 import { buildServer } from "./server.js";
-import { log, truncate } from "./log.js";
+import { log, setClientInfo, truncate } from "./log.js";
 
 /**
  * Logs every inbound JSON-RPC message at the transport layer, before the SDK
@@ -19,6 +19,12 @@ function logRpcMessage(message: JSONRPCMessage): void {
   const method = (message as { method: string }).method;
   const isRequest = "id" in message && (message as { id?: unknown }).id !== undefined;
   const params = (message as { params?: unknown }).params;
+  // Capture client identity from the `initialize` handshake so every
+  // subsequent log line (including this one) is tagged with `client=…`.
+  if (method === "initialize" && params && typeof params === "object") {
+    const ci = (params as { clientInfo?: { name?: string; version?: string } }).clientInfo;
+    if (ci) setClientInfo({ name: ci.name, version: ci.version });
+  }
   if (isRequest) {
     log.verbose("rpc.request", {
       method,

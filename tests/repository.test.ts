@@ -179,4 +179,51 @@ describe("SqliteLegalRepository: norma_id canonicalization", () => {
     expect(nodes).toHaveLength(1);
     expect(nodes[0]!.tipo).toBe("titulo");
   });
+
+  it("findNormaByShortName resolves the nombre_corto alias (case-insensitive)", () => {
+    expect(repo.findNormaByShortName("LPA")).toBe("ley_19549");
+    expect(repo.findNormaByShortName("lpa")).toBe("ley_19549");
+    expect(repo.findNormaByShortName("Lpa")).toBe("ley_19549");
+  });
+
+  it("getArticle auto-resolves nombre_corto aliases", () => {
+    const baseline = repo.getArticle("ley_19549", "1");
+    expect(baseline).toBeDefined();
+    for (const alias of ["LPA", "lpa", "Lpa"]) {
+      const result = repo.getArticle(alias, "1");
+      expect(result, `alias ${alias}`).toBeDefined();
+      expect(result!.articulo.id).toBe(baseline!.articulo.id);
+    }
+  });
+
+  it("getNormMetadata auto-resolves nombre_corto aliases", () => {
+    expect(repo.getNormMetadata("LPA")?.id).toBe("ley_19549");
+    expect(repo.getNormMetadata("lpa")?.id).toBe("ley_19549");
+  });
+
+  it("findNormaByShortName strips diacritics", () => {
+    // Insert a row with an accented short name to exercise the fold path.
+    const db = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    db.exec(`
+      INSERT INTO normas (id, tier, titulo, nombre_corto, jurisdiccion, pais, estado_vigencia, fecha_ultima_actualizacion)
+      VALUES ('test_acentos', 'ley_federal', 'Ley con acentos', 'Código X', 'nacional', 'Argentina', 'vigente', '2026-01-01');
+    `);
+    expect(repo.findNormaByShortName("codigo x")).toBe("test_acentos");
+    expect(repo.findNormaByShortName("Código X")).toBe("test_acentos");
+    expect(repo.findNormaByShortName("CODIGO X")).toBe("test_acentos");
+  });
+
+  it("findNormaByShortName returns null for empty, unknown, or ambiguous input", () => {
+    expect(repo.findNormaByShortName("")).toBeNull();
+    expect(repo.findNormaByShortName("xyz")).toBeNull();
+    // Insert a duplicate nombre_corto to exercise the ambiguity guard.
+    const db = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    db.exec(`
+      INSERT INTO normas (id, tier, titulo, nombre_corto, jurisdiccion, pais, estado_vigencia, fecha_ultima_actualizacion)
+      VALUES
+        ('dup_a', 'ley_federal', 'Norma A', 'DUP', 'nacional', 'Argentina', 'vigente', '2026-01-01'),
+        ('dup_b', 'ley_federal', 'Norma B', 'DUP', 'nacional', 'Argentina', 'vigente', '2026-01-01');
+    `);
+    expect(repo.findNormaByShortName("DUP")).toBeNull();
+  });
 });

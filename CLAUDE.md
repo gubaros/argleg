@@ -28,7 +28,7 @@ Run a single test file:
 npx vitest run tests/repository.test.ts
 ```
 
-The `prebuild` hook auto-bumps `src/version.ts` via `scripts/bump-version.mjs` on every `npm run build`.
+The `prebuild` hook auto-bumps `src/version.ts` via `scripts/bump-version.mjs` — but **only when the working tree is clean** (no uncommitted changes to tracked files). Iterating builds with a dirty tree leave `package.json` and `src/version.ts` untouched, so `npm run build` is safe to run repeatedly during development without dirtying the diff. The bump only fires on release-ready builds (clean tree). Untracked files (e.g. browser dumps in `data/`) don't count as "dirty".
 
 ## Architecture
 

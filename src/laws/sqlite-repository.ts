@@ -18,6 +18,7 @@ import type {
   ResumenEstructural,
   SearchHitRow,
   SearchOptions,
+  SeccionConArticulos,
 } from "./repository.js";
 
 interface NormaRowRaw {
@@ -210,6 +211,55 @@ export class SqliteLegalRepository implements LegalRepository {
     return this.db
       .prepare(`SELECT * FROM articulos WHERE norma_id = ? ORDER BY orden ASC`)
       .all(normaId) as ArticuloRow[];
+  }
+
+  getSection(normaId: string, identificador: string): SeccionConArticulos | undefined {
+    // Resolve the section by id first (most specific), then by case-insensitive
+    // substring of nombre. Restrict to the given norma.
+    const idCandidate = this.db
+      .prepare(`SELECT * FROM estructura_normativa WHERE norma_id = ? AND id = ?`)
+      .get(normaId, identificador) as EstructuraNodo | undefined;
+    const nodo =
+      idCandidate ??
+      (this.db
+        .prepare(
+          `SELECT * FROM estructura_normativa
+           WHERE norma_id = ? AND LOWER(nombre) LIKE @needle
+           ORDER BY orden ASC LIMIT 1`,
+        )
+        .get(normaId, { needle: `%${identificador.toLowerCase()}%` }) as
+        | EstructuraNodo
+        | undefined);
+    if (!nodo) return undefined;
+
+    // Walk ancestors via parent_id.
+    const ancestros: EstructuraNodo[] = [];
+    let current: EstructuraNodo | undefined = nodo;
+    while (current && current.parent_id) {
+      const parent = this.db
+        .prepare(`SELECT * FROM estructura_normativa WHERE id = ?`)
+        .get(current.parent_id) as EstructuraNodo | undefined;
+      if (!parent) break;
+      ancestros.unshift(parent);
+      current = parent;
+    }
+
+    // Articles attached to THIS node (direct children only).
+    const articulos = this.db
+      .prepare(
+        `SELECT a.* FROM articulo_estructura ae
+         JOIN articulos a ON a.id = ae.articulo_id
+         WHERE ae.estructura_id = ?
+         ORDER BY a.orden ASC`,
+      )
+      .all(nodo.id) as ArticuloRow[];
+
+    const rango =
+      articulos.length > 0
+        ? { primero: articulos[0]!.numero, ultimo: articulos[articulos.length - 1]!.numero }
+        : null;
+
+    return { nodo, ancestros, articulos, rango };
   }
 
   // ─── Intelligence layer ────────────────────────────────────────────────────

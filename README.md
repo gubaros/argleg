@@ -47,6 +47,8 @@ Desarrollado por **Guido Barosio** en el marco del **IA Lab** de [Palermo E-Law 
 | `compare_articles` | Compara dos artículos en paralelo |
 | `list_ramas` | Lista las ramas del derecho cubiertas (constitucional, civil, penal, etc.) |
 | `get_rama_metadata` | Devuelve principios, normas aplicables, doctrina y jurisprudencia de una rama |
+| `list_sections` | Devuelve el árbol estructural completo de una norma (partes, libros, títulos, capítulos, secciones) |
+| `get_section` | Devuelve una sección estructural y todos los artículos contenidos (p.ej., todo el Capítulo Segundo) |
 | `server_info` | Metadata operativa del servidor |
 
 ## Recursos MCP

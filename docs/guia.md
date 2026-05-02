@@ -373,6 +373,19 @@ Busca artículos por palabra clave o número. Acepta filtro por norma.
 { "query": "persona humana", "norma_id": "ccyc", "limit": 10 }
 ```
 
+### `list_sections`
+Devuelve el árbol estructural completo de una norma (partes / libros / títulos / capítulos / secciones), en formato indentado con el `id` interno de cada nodo.
+```json
+{ "norma_id": "constitucion" }
+```
+
+### `get_section`
+Devuelve una sección estructural más todos los artículos que contiene. El `identificador` puede ser el id interno del nodo o un substring del nombre.
+```json
+{ "norma_id": "constitucion", "identificador": "Nuevos derechos" }
+```
+Devuelve, por ejemplo, los 8 artículos del Capítulo Segundo (arts. 36-43) en una sola llamada.
+
 ### `list_ramas`
 Lista las ramas del derecho que el MCP cubre con principios, doctrina y referencias normativas.
 ```json

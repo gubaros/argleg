@@ -368,6 +368,19 @@ Search articles by keyword or number; filter optionally by law.
 { "query": "persona humana", "norma_id": "ccyc", "limit": 10 }
 ```
 
+### `list_sections`
+Returns the full structural tree of a norma (parts / books / titles / chapters / sections), indented, with each node's internal id.
+```json
+{ "norma_id": "constitucion" }
+```
+
+### `get_section`
+Returns one structural section together with every article it contains. The `identificador` can be the node's internal id or a substring of its name.
+```json
+{ "norma_id": "constitucion", "identificador": "Nuevos derechos" }
+```
+For example, returns the 8 articles of Capítulo Segundo (arts. 36-43) in a single call.
+
 ### `list_ramas`
 Lists the branches of law the MCP covers with principles, doctrine and norm cross-references.
 ```json

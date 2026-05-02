@@ -349,6 +349,8 @@ ARGLEG_LOG_LEVEL=verbose ARGLEG_LOG_JSON=1 npm start 2>&1 | jq 'select(.client.n
 
 ## MCP tools reference
 
+> **Note on `norma_id`**: tools accept lossless variants (case, whitespace, dashes, dots). `"Ley 19.549"`, `"LEY-19.549"` and `"ley_19549"` all resolve to the same row. When an id isn't recognized and a single near-match exists, the response includes `¿Quisiste decir \`<id>\`?` plus a `suggestion` field in `structuredContent` so clients can auto-recover. Bare numbers like `"19549"` do not auto-map to `ley_19549` (conservative policy) — but they do trigger the suggestion.
+
 ### `list_norms`
 Lists the laws available in the database. Filters by **tier** of the Argentine legal pyramid (`constitucion_nacional`, `codigo_fondo`, `codigo_procesal_federal`, `ley_federal`, `constitucion_provincial`, `constitucion_caba`, etc.), subject or currency status.
 ```json

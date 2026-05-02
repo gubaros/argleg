@@ -439,6 +439,68 @@ export const TIER_BY_NORMA_ID: Record<string, LegalTier> = {
   constitucion_caba: "constitucion_caba",
 };
 
+// ─── Norma id canonicalization & suggestion ────────────────────────────────
+//
+// El catálogo `TIER_BY_NORMA_ID` es la fuente de verdad de los identificadores
+// canónicos. Cualquier input que llegue a las tools del MCP se compara contra
+// estas keys; si el LLM cliente prueba una variante razonable (mayúsculas,
+// espacios, puntos en el número, diacríticos), normalizamos lossless. Si la
+// canonicalización falla, `suggestNormaId` busca un único candidato cercano
+// para devolver "¿quisiste decir X?" — política conservadora: 0 ó >1 matches
+// devuelven null para no fabular.
+
+function foldDiacritics(s: string): string {
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+
+/**
+ * Devuelve el id canónico para un input dado, si y solo si una transformación
+ * lossless (case-fold + strip diacritics + normalizar separadores) lo lleva a
+ * una key existente en `TIER_BY_NORMA_ID`. Si no, null.
+ *
+ * No infiere tipo: `"19549"` (sin prefijo) no se mapea a `"ley_19549"` —
+ * para esos casos `suggestNormaId` da la pista.
+ */
+export function canonicalNormaId(raw: string): string | null {
+  if (!raw) return null;
+  const folded = foldDiacritics(raw).trim().toLowerCase();
+  if (folded.length === 0) return null;
+  if (folded in TIER_BY_NORMA_ID) return folded;
+
+  const normalized = folded
+    // Punctuation between digits is number formatting ("19.549" → "19549").
+    .replace(/(?<=\d)[.,](?=\d)/g, "")
+    // Anything else (whitespace, dashes, leftover dots/commas) is a separator.
+    .replace(/[\s\-.,]+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_|_$/g, "");
+  return normalized in TIER_BY_NORMA_ID ? normalized : null;
+}
+
+/**
+ * Cuando un input no canonicaliza, intenta encontrar un único id candidato
+ * cuya forma alfanumérica contenga la del input. Devuelve null si no hay
+ * match o si hay ambigüedad (≥2 matches).
+ */
+export function suggestNormaId(raw: string): string | null {
+  if (!raw) return null;
+  const keys = Object.keys(TIER_BY_NORMA_ID);
+
+  const digits = raw.replace(/[^0-9]/g, "");
+  if (digits.length >= 4) {
+    const matches = keys.filter((k) => k.includes(digits));
+    if (matches.length === 1) return matches[0]!;
+  }
+
+  const alphanum = foldDiacritics(raw).toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (alphanum.length >= 4) {
+    const matches = keys.filter((k) => k.replace(/[^a-z0-9]/g, "").includes(alphanum));
+    if (matches.length === 1) return matches[0]!;
+  }
+
+  return null;
+}
+
 /**
  * Catálogo declarativo de provincias argentinas, con metadata útil para el
  * fetch e ingest de sus respectivas constituciones. URLs apuntan a fuentes

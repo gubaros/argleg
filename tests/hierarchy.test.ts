@@ -6,7 +6,9 @@ import {
   PROVINCIAS,
   TIER_BY_NORMA_ID,
   TIER_PROFILES,
+  canonicalNormaId,
   findIncoherentLevels,
+  suggestNormaId,
   tiersByAmbito,
   verifyTierAgainstText,
   type LegalTier,
@@ -202,6 +204,95 @@ describe("hierarchy: findIncoherentLevels", () => {
       "articulo",
     ]);
     expect(violators).toEqual([]);
+  });
+});
+
+describe("hierarchy: canonicalNormaId", () => {
+  it("returns canonical ids unchanged", () => {
+    expect(canonicalNormaId("ley_19549")).toBe("ley_19549");
+    expect(canonicalNormaId("constitucion")).toBe("constitucion");
+    expect(canonicalNormaId("constitucion_caba")).toBe("constitucion_caba");
+  });
+
+  it("normalizes case", () => {
+    expect(canonicalNormaId("LEY_19549")).toBe("ley_19549");
+    expect(canonicalNormaId("Ley_19549")).toBe("ley_19549");
+    expect(canonicalNormaId("CONSTITUCION")).toBe("constitucion");
+  });
+
+  it("normalizes whitespace, dashes, dots and commas as separators", () => {
+    expect(canonicalNormaId("ley 19549")).toBe("ley_19549");
+    expect(canonicalNormaId("ley-19549")).toBe("ley_19549");
+    expect(canonicalNormaId("ley.19549")).toBe("ley_19549");
+    expect(canonicalNormaId("ley_19.549")).toBe("ley_19549");
+    expect(canonicalNormaId("Ley 19.549")).toBe("ley_19549");
+    expect(canonicalNormaId("LEY-19.549")).toBe("ley_19549");
+    expect(canonicalNormaId("constitucion buenos aires")).toBe("constitucion_buenos_aires");
+  });
+
+  it("strips diacritics", () => {
+    expect(canonicalNormaId("Constitución")).toBe("constitucion");
+    expect(canonicalNormaId("constitución")).toBe("constitucion");
+  });
+
+  it("collapses repeated separators and trims edges", () => {
+    expect(canonicalNormaId("  ley__19549  ")).toBe("ley_19549");
+    expect(canonicalNormaId("_ley_19549_")).toBe("ley_19549");
+    expect(canonicalNormaId("ley   19549")).toBe("ley_19549");
+  });
+
+  it("returns null for bare numbers (no type assumption)", () => {
+    expect(canonicalNormaId("19549")).toBeNull();
+    expect(canonicalNormaId("24240")).toBeNull();
+    expect(canonicalNormaId("19.549")).toBeNull();
+  });
+
+  it("returns null for empty or unknown input", () => {
+    expect(canonicalNormaId("")).toBeNull();
+    expect(canonicalNormaId("   ")).toBeNull();
+    expect(canonicalNormaId("ley_99999")).toBeNull();
+    expect(canonicalNormaId("decreto_123")).toBeNull();
+    expect(canonicalNormaId("constitucion_nacional")).toBeNull(); // tier name, not norma id
+  });
+});
+
+describe("hierarchy: suggestNormaId", () => {
+  it("suggests ley_<n> from a bare digit run", () => {
+    expect(suggestNormaId("19549")).toBe("ley_19549");
+    expect(suggestNormaId("24240")).toBe("ley_24240");
+    expect(suggestNormaId("19550")).toBe("ley_19550");
+    expect(suggestNormaId("25326")).toBe("ley_25326");
+  });
+
+  it("ignores formatting around the digits", () => {
+    expect(suggestNormaId("19.549")).toBe("ley_19549");
+    expect(suggestNormaId("19 549")).toBe("ley_19549");
+    expect(suggestNormaId("Ley N° 19.549")).toBe("ley_19549");
+  });
+
+  it("suggests provincial constitutions from a substring of the name", () => {
+    expect(suggestNormaId("buenos aires")).toBe("constitucion_buenos_aires");
+    expect(suggestNormaId("Buenos Aires")).toBe("constitucion_buenos_aires");
+    expect(suggestNormaId("caba")).toBe("constitucion_caba");
+    expect(suggestNormaId("córdoba")).toBe("constitucion_cordoba");
+  });
+
+  it("returns null when there is no candidate", () => {
+    expect(suggestNormaId("12")).toBeNull();
+    expect(suggestNormaId("ab")).toBeNull();
+    expect(suggestNormaId("zzzzzz")).toBeNull();
+    expect(suggestNormaId("99999")).toBeNull();
+  });
+
+  it("returns null for empty input", () => {
+    expect(suggestNormaId("")).toBeNull();
+  });
+
+  it("returns null when the substring would match more than one canonical id", () => {
+    // "constitucion" without a province name is ambiguous: it matches the
+    // federal one plus all provincial ones. Conservative behavior: no
+    // suggestion.
+    expect(suggestNormaId("constitucion")).toBeNull();
   });
 });
 

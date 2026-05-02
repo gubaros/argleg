@@ -354,6 +354,8 @@ ARGLEG_LOG_LEVEL=verbose ARGLEG_LOG_JSON=1 npm start 2>&1 | jq 'select(.client.n
 
 ## Referencia de herramientas MCP
 
+> **Nota sobre `norma_id`**: las herramientas aceptan variantes lossless (mayúsculas, espacios, guiones, puntos). `"Ley 19.549"`, `"LEY-19.549"` y `"ley_19549"` se resuelven igual. Si el id no es reconocido y existe un único candidato cercano, la respuesta incluye `¿Quisiste decir \`<id>\`?` y un campo `suggestion` en `structuredContent` para auto-recovery del cliente. Bare numbers como `"19549"` no se mapean automáticamente (política conservadora) — pero sí disparan la sugerencia.
+
 ### `list_norms`
 Lista las normas cargadas. Filtra por **tier** de la pirámide normativa argentina (`constitucion_nacional`, `codigo_fondo`, `codigo_procesal_federal`, `ley_federal`, `constitucion_provincial`, `constitucion_caba`, etc.), materia o estado de vigencia.
 ```json

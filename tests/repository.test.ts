@@ -119,3 +119,64 @@ describe("SqliteLegalRepository", () => {
     expect(arts.map((a) => a.numero)).toEqual(["1", "2"]);
   });
 });
+
+describe("SqliteLegalRepository: norma_id canonicalization", () => {
+  let repo: SqliteLegalRepository;
+
+  beforeEach(() => {
+    const db = openDb({ path: ":memory:" });
+    applySchema(db);
+    repo = new SqliteLegalRepository(db);
+    // Seed a row whose id IS a canonical key in TIER_BY_NORMA_ID so that
+    // canonicalNormaId actually does work resolving variants.
+    const handle = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    handle.exec(`
+      INSERT INTO normas (id, tier, titulo, nombre_corto, jurisdiccion, pais, estado_vigencia, fuente_url, fecha_ultima_actualizacion, numero)
+      VALUES ('ley_19549', 'ley_federal', 'Ley de Procedimientos Administrativos', 'LPA',
+              'nacional', 'Argentina', 'vigente', 'https://example.test/lpa', '2026-01-01', '19.549');
+
+      INSERT INTO articulos (id, norma_id, numero, texto, orden, epigrafe)
+      VALUES ('lpa_art_1', 'ley_19549', '1', 'Las normas del procedimiento administrativo nacional.', 0, 'Ámbito');
+
+      INSERT INTO estructura_normativa (id, norma_id, parent_id, tipo, nombre, orden)
+      VALUES ('lpa_titulo_1', 'ley_19549', NULL, 'titulo', 'Disposiciones generales', 0);
+
+      INSERT INTO articulo_estructura (articulo_id, estructura_id) VALUES ('lpa_art_1', 'lpa_titulo_1');
+    `);
+  });
+
+  it("getArticle resolves spaced/dotted/upper-case variants", () => {
+    const variants = ["ley_19549", "Ley 19.549", "ley 19549", "LEY-19.549", "Ley_19549"];
+    const baseline = repo.getArticle("ley_19549", "1");
+    expect(baseline).toBeDefined();
+    for (const v of variants) {
+      const result = repo.getArticle(v, "1");
+      expect(result, `variant ${v}`).toBeDefined();
+      expect(result!.articulo.id).toBe(baseline!.articulo.id);
+    }
+  });
+
+  it("getNormMetadata resolves variants", () => {
+    const meta = repo.getNormMetadata("Ley 19.549");
+    expect(meta).toBeDefined();
+    expect(meta!.id).toBe("ley_19549");
+  });
+
+  it("getNormMetadata still returns undefined for bare-number input (no type assumption)", () => {
+    expect(repo.getNormMetadata("19549")).toBeUndefined();
+  });
+
+  it("searchArticles canonicalizes the norma_id filter", () => {
+    const hits = repo.searchArticles("procedimiento", { norma_id: "Ley 19.549" });
+    expect(hits.length).toBeGreaterThan(0);
+    for (const h of hits) {
+      expect(h.norma_id).toBe("ley_19549");
+    }
+  });
+
+  it("getNormStructure canonicalizes input", () => {
+    const nodes = repo.getNormStructure("LEY 19.549");
+    expect(nodes).toHaveLength(1);
+    expect(nodes[0]!.tipo).toBe("titulo");
+  });
+});

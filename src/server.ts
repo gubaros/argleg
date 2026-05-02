@@ -13,7 +13,7 @@ import {
   type SearchHitRow,
 } from "./laws/repository.js";
 import { formatArticle, formatHit, formatLawSummary } from "./laws/format.js";
-import { LegalTierSchema } from "./laws/hierarchy.js";
+import { LegalTierSchema, suggestNormaId } from "./laws/hierarchy.js";
 import type { LawId, Law, Article } from "./laws/types.js";
 import { log, resultSize } from "./log.js";
 import { ARGLEG_BUILD_DATE_TIME, ARGLEG_VERSION } from "./version.js";
@@ -33,6 +33,25 @@ function textPayload(text: string, extra: Record<string, unknown> = {}) {
     content: [{ type: "text" as const, text: text + VERSION_TEXT }],
     structuredContent: { version: ARGLEG_VERSION, ...extra },
   };
+}
+
+/**
+ * Payload de "norma no disponible" enriquecido con sugerencia de id canónico
+ * cuando hay un único candidato cercano. El mensaje devuelto al LLM cliente
+ * incluye `¿Quisiste decir \`X\`?` y `structuredContent.suggestion = "X"` para
+ * que el modelo pueda reintentar sin pedir otra vuelta al usuario.
+ */
+function notAvailablePayload(
+  rawId: string,
+  detail: string,
+  extra: Record<string, unknown> = {},
+) {
+  const suggestion = suggestNormaId(rawId);
+  const suffix = suggestion ? ` ¿Quisiste decir \`${suggestion}\`?` : "";
+  return textPayload(`${NOT_AVAILABLE} (${detail}).${suffix}`, {
+    ...extra,
+    suggestion,
+  });
 }
 
 export interface BuildServerOptions {
@@ -276,7 +295,11 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
       runToolLogged("get_norm_metadata", args, async () => {
         const meta = repo.getNormMetadata(args.norma_id);
         if (!meta) {
-          return textPayload(`${NOT_AVAILABLE}: ${args.norma_id}`, { found: false, norma_id: args.norma_id });
+          return notAvailablePayload(
+            args.norma_id,
+            `\`${args.norma_id}\` no está cargada`,
+            { found: false, norma_id: args.norma_id },
+          );
         }
         const text = formatNormMetadata(meta);
         return textPayload(text + DISCLAIMER, {
@@ -311,8 +334,9 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
       runToolLogged("get_article", args, async () => {
         const result = repo.getArticle(args.norma_id, args.numero_articulo);
         if (!result) {
-          return textPayload(
-            `${NOT_AVAILABLE} (Art. ${args.numero_articulo} de \`${args.norma_id}\` no está cargado).`,
+          return notAvailablePayload(
+            args.norma_id,
+            `Art. ${args.numero_articulo} de \`${args.norma_id}\` no está cargado`,
             { norma_id: args.norma_id, numero_articulo: args.numero_articulo, found: false },
           );
         }
@@ -392,10 +416,11 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
       runToolLogged("list_sections", args, async () => {
         const meta = repo.getNormMetadata(args.norma_id);
         if (!meta) {
-          return textPayload(`${NOT_AVAILABLE}: ${args.norma_id}`, {
-            found: false,
-            norma_id: args.norma_id,
-          });
+          return notAvailablePayload(
+            args.norma_id,
+            `\`${args.norma_id}\` no está cargada`,
+            { found: false, norma_id: args.norma_id },
+          );
         }
         const nodes = repo.getNormStructure(args.norma_id);
         if (nodes.length === 0) {
@@ -444,6 +469,15 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
       runToolLogged("get_section", args, async () => {
         const result = repo.getSection(args.norma_id, args.identificador);
         if (!result) {
+          // Distinguir "la norma no existe" de "la sección no matchea":
+          // si la norma no está cargada, sumamos la sugerencia de id canónico.
+          if (!repo.getNormMetadata(args.norma_id)) {
+            return notAvailablePayload(
+              args.norma_id,
+              `\`${args.norma_id}\` no está cargada`,
+              { found: false, norma_id: args.norma_id, identificador: args.identificador },
+            );
+          }
           return textPayload(
             `Sección no encontrada en \`${args.norma_id}\`: ${args.identificador}`,
             { found: false, norma_id: args.norma_id, identificador: args.identificador },
@@ -566,10 +600,24 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
         const a = repo.getArticle(args.norma_a, args.articulo_a);
         const b = repo.getArticle(args.norma_b, args.articulo_b);
         const notFound: string[] = [];
-        if (!a) notFound.push(`Art. ${args.articulo_a} de \`${args.norma_a}\``);
-        if (!b) notFound.push(`Art. ${args.articulo_b} de \`${args.norma_b}\``);
+        const suggestions: Record<string, string | null> = {};
+        if (!a) {
+          notFound.push(`Art. ${args.articulo_a} de \`${args.norma_a}\``);
+          suggestions.norma_a = suggestNormaId(args.norma_a);
+        }
+        if (!b) {
+          notFound.push(`Art. ${args.articulo_b} de \`${args.norma_b}\``);
+          suggestions.norma_b = suggestNormaId(args.norma_b);
+        }
         if (notFound.length > 0) {
-          return textPayload(`${NOT_AVAILABLE}: ${notFound.join(", ")}`, { notFound });
+          const hints: string[] = [];
+          if (suggestions.norma_a) hints.push(`norma_a → \`${suggestions.norma_a}\``);
+          if (suggestions.norma_b) hints.push(`norma_b → \`${suggestions.norma_b}\``);
+          const suffix = hints.length > 0 ? ` ¿Quisiste decir ${hints.join(", ")}?` : "";
+          return textPayload(`${NOT_AVAILABLE}: ${notFound.join(", ")}.${suffix}`, {
+            notFound,
+            suggestions,
+          });
         }
         const lawA = lawFromNorma(a!.norma);
         const lawB = lawFromNorma(b!.norma);

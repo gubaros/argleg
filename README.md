@@ -100,6 +100,8 @@ Acceso vía las tools `list_ramas` y `get_rama_metadata`.
 | `get_rama_metadata` | Devuelve principios, normas aplicables, doctrina y jurisprudencia de una rama |
 | `server_info` | Metadata operativa del servidor |
 
+> **Sobre `norma_id`**: las herramientas aceptan variantes lossless del identificador canónico (mayúsculas, espacios, guiones, puntos como separador o como formato de número). `"Ley 19.549"`, `"LEY-19.549"` y `"ley_19549"` resuelven a la misma norma. Cuando un id no es reconocido (p. ej. `"19549"` solo o `"buenos aires"`), si hay un único candidato cercano el server devuelve `¿Quisiste decir \`<id_canónico>\`?` en el texto y un campo `suggestion` en `structuredContent` para que el cliente pueda reintentar automáticamente.
+
 ### Recursos MCP
 
 | URI | Descripción |

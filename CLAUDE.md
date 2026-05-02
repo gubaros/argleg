@@ -77,8 +77,8 @@ Foreign keys are enforced (`PRAGMA foreign_keys = ON`); WAL journaling is enable
 - **`src/laws/loader.ts`** — still loads JSON; **only used by the ingest scripts**, not by the runtime server. Exports `normalizeNumber()` which both ingest and repo use to compare article numbers (`"14bis"` ↔ `"14 bis"`, etc.).
 - **`src/laws/format.ts`** — Markdown rendering for tools and resources. The repository feeds it adapters so the rendered output is byte-identical to the pre-refactor JSON-backed version.
 - **`src/scripts/db-init.ts`** — `npm run db:init`. Creates the file if missing, applies schema.
-- **`src/scripts/db-import.ts`** — `npm run db:import`. Reads JSONs via `loadLibrary()`, validates them (warnings vs fatal errors), inserts everything in a single transaction. Exports `importIntoDb(db, laws, opts)` for tests.
-- **`src/server.ts`** — `buildServer({ dbPath?, repository? })`. Opens the DB (or accepts an injected repo for tests), registers six tools, the per-norma resources, the article template, and two prompts. Each handler goes through `runToolLogged` / `runResourceLogged` / `runPromptLogged`.
+- **`src/scripts/db-import.ts`** — `npm run db:import`. Reads JSONs via `loadLibrary()`, validates them (warnings vs fatal errors), inserts everything in a single transaction. Resolves each norma's `tier` from `TIER_BY_NORMA_ID` (fails loudly if undeclared), and assigns `estado_vigencia` from a curated `VIGENCIA_BY_NORMA_ID` map (defaults to `desconocido` for normas not in the map). Exports `importIntoDb(db, laws, opts)` for tests.
+- **`src/server.ts`** — `buildServer({ dbPath?, repository? })`. Opens the DB (or accepts an injected repo for tests), registers ten tools (see *MCP surface* below), the per-norma resources, the article template, and two prompts. Each handler goes through `runToolLogged` / `runResourceLogged` / `runPromptLogged`.
 - **`src/index.ts`** — stdio entrypoint. Installs `transport.onmessage = logRpcMessage` **before** `server.connect()` so every inbound JSON-RPC message is logged at the protocol layer (see Logging below).
 - **`src/log.ts`** — writes only to stderr. Levels: `silent` | `info` | `verbose` | `debug`. Optional JSON output and file mirroring.
 
@@ -98,13 +98,13 @@ Single tier-aware parser that replaces per-law parsers. `parseDocument(html, tie
 
 ### Intelligence layer (`src/db/seeds/intelligence.ts`)
 
-Five tables extend the corpus with curated legal knowledge:
+Six tables extend the corpus with curated legal knowledge:
 
-- `ramas_derecho` — branches of law (constitucional, civil, comercial, penal, procesal, administrativo, consumidor, protección de datos) with descripción + ámbito.
-- `principios_juridicos` — fundamental principles per branch, with enunciado, fuente normativa or doctrinaria, and vigencia (`positivado`/`dogmatico`/`controvertido`).
-- `norma_rama` — many-to-many link between norms and branches, with `relevancia` (nuclear/complementaria/tangencial).
-- `doctrina` — canonical authors and works.
-- `jurisprudencia` (+ `jurisprudencia_norma`) — schema is ready but content curation is pending.
+- `ramas_derecho` — 8 branches of law (constitucional, civil, comercial, penal, procesal, administrativo, consumidor, protección de datos) with descripción + ámbito.
+- `principios_juridicos` — 17 fundamental principles per branch, with enunciado, fuente normativa or doctrinaria, and vigencia (`positivado`/`dogmatico`/`controvertido`).
+- `norma_rama` — many-to-many link between norms and branches, with `relevancia` (nuclear/complementaria/tangencial). 15 links seeded.
+- `doctrina` — 10 canonical authors and works.
+- `jurisprudencia` and `jurisprudencia_norma` — schema is ready, content curation is pending.
 
 The seed is loaded inside the same transaction as the corpus by `db-import`. To extend: edit `src/db/seeds/intelligence.ts` and re-run `npm run db:reset`.
 
@@ -131,13 +131,15 @@ The seed is loaded inside the same transaction as the corpus by `db-import`. To 
 
 `fetch-infoleg.ts` is a CLI that downloads a law from InfoLEG (or reads a local HTML file), runs it through the appropriate parser, and writes a validated JSON to `data/`. The dispatcher is `src/scripts/parsers/index.ts` — each law has its own parser (`ccyc.ts`, `constitucion.ts`, `ley_25326.ts`, etc.) built on top of shared utilities in `src/scripts/parsers/base.ts` (`htmlToText`, `parseArticles`, `updateContextFromLine`, `ARTICLE_RE`).
 
-Adding a new law requires:
-1. A new parser in `src/scripts/parsers/`.
-2. Registering it in `parsers/index.ts`.
-3. Adding the `LawId` to `LawIdSchema`, `LAW_IDS`, and `LAW_FILE_BY_ID` in `src/laws/types.ts`.
-4. Adding defaults to `fetch-infoleg.ts`.
-5. Running `npm run fetch -- --id <id> --url <URL> --force` to produce the JSON.
-6. Running `npm run db:import` (or `db:reset`) to push it into SQLite.
+Adding a new norma to the corpus requires touching three independent gatekeepers:
+
+1. **Hierarchy declaration** (gatekeeper for `db-import`) — add the `norma_id` to `TIER_BY_NORMA_ID` in `src/laws/hierarchy.ts` with its tier. `db-import` refuses to ingest any norma not declared here.
+2. **Legacy validation** (gatekeeper for `loadLibrary`) — add the id to `LawIdSchema`, `LAW_IDS`, and `LAW_FILE_BY_ID` in `src/laws/types.ts`. The Zod schema validates the JSON file at load time.
+3. **Legacy fetch parser** (gatekeeper for `npm run fetch`) — add a parser to `src/scripts/parsers/<id>.ts`, register it in the `parseLawHtml` switch in `parsers/index.ts`, and add display defaults to `DEFAULT_TITLES` in `fetch-infoleg.ts`.
+4. **Optionally** — add an entry to `VIGENCIA_BY_NORMA_ID` in `db-import.ts` if the norma is currently in force (default is `desconocido`).
+5. Then run: `npm run fetch -- --id <id> --url <URL> --force` to produce the JSON, followed by `npm run db:reset` to push it into SQLite.
+
+The universal parser at `src/laws/universal-parser.ts` is the eventual replacement for steps 2–3 (legacy paths), but `fetch-infoleg.ts` still routes through `extractArticlesForLaw` → per-law parsers, so until that's wired, all three gatekeepers remain required.
 
 `fetch-infoleg.ts` ships with a manual CP1252 decoder because Node's `TextDecoder("windows-1252")` leaves bytes 0x80–0x9F as raw control codepoints instead of mapping them to the typographic characters InfoLEG actually serves (`—`, `–`, `'`, `"`, `…`). Don't replace that decoder with `TextDecoder` unless Node fixes the upstream behaviour.
 
@@ -178,10 +180,62 @@ Output goes to **stderr** by default. Set `ARGLEG_LOG_FILE=/path/to/file.log` to
 
 ## Best practices for every commit
 
-Before opening or merging a PR, **review and update**:
+Before opening or merging a PR, **review and update** in this order:
 
-1. **Logging.** If a behaviour changed at the protocol, handler, or lifecycle layer, the corresponding log event should reflect it. New env vars or runtime decisions are often worth a `log.info` at startup. Verify by running `ARGLEG_LOG_LEVEL=verbose npm start` (or piping JSON-RPC messages into `node dist/index.js`) and reading the output.
-2. **Documentation.** Walk through the `.md` files at the repo root (`README.md`, `CLAUDE.md`, `BACKLOG.md`) and under `docs/` (`guia.md`, `guide.md`, `connect.md`). If anything in the change touches commands, scripts, env vars, the MCP surface (tools/resources/prompts), data flow, or the file layout, update **every** doc that mentions that area. The Spanish guide and the English guide must stay in sync.
-3. **Tests.** Run `npm test` and `npm run typecheck`. New code paths warrant new tests — at minimum cover the happy path and one obvious edge case.
-4. **End-to-end smoke test.** For changes that touch ingest, the repository, or the MCP wiring, re-run `npm run db:init && npm run db:import && npm run build` and verify a couple of tool calls land correctly via the JSON-RPC stdio transport.
-5. **Commit hygiene.** One coherent change per commit; the message should explain *why*, not just *what*. PRs go through GitHub for review — never push directly to `main`.
+### 1. README.md (non-negotiable when public surface changes)
+
+The `README.md` at the repo root is the entry point for everyone landing on the project — readers, contributors, the Palermo E-Law team. **It must stay in sync with the public surface in the same PR that changes the surface.** A README out of sync with reality is a documentation bug, not "something to fix later".
+
+Update README.md if your change touches *any* of:
+
+- The list of MCP tools, resources, or prompts (their names, inputs, or what they do)
+- The list of normas in the corpus (additions, removals, vigencia changes)
+- The pirámide normativa (a new tier, a new ámbito)
+- Commands or scripts (a new `npm run` target, a renamed one)
+- Environment variables (a new `ARGLEG_*` var, a renamed default)
+- The architecture diagram or data flow (a new module that's user-visible, a removed one)
+- The "Cómo agregar leyes" workflow
+
+When in doubt, open the README and re-read it against the change. If anything reads as stale, fix it before pushing the PR.
+
+### 2. Other documentation
+
+After README.md, walk through the rest of the `.md` files:
+
+- `CLAUDE.md` (this file) — the source of truth for Claude Code agents working in this repo.
+- `docs/guia.md` (Spanish) and `docs/guide.md` (English) — the user-facing onboarding guides. **These two must stay in sync** with each other; never update one without the other.
+- `docs/provincial-constitutions.md` — workflow for ingesting provincial constitutions.
+- `BACKLOG.md` — operational backlog. Move items off when shipped, add follow-ups when discovered.
+- `docs/connect.md` — short redirect to the guides.
+
+If your change touches commands, scripts, env vars, the MCP surface, data flow, or the file layout, update **every** doc that mentions that area.
+
+### 3. Logging
+
+If behaviour changed at the protocol, handler, or lifecycle layer, the corresponding log event should reflect it. New env vars or runtime decisions are often worth a `log.info` at startup. Verify by running `ARGLEG_LOG_LEVEL=verbose npm start` (or piping JSON-RPC messages into `node dist/index.js`) and reading stderr.
+
+### 4. Tests
+
+Run `npm test` and `npm run typecheck`. New code paths warrant new tests — at minimum cover the happy path and one obvious edge case. Aim to keep coverage of the structural-headers parser and the repository at 100% — those modules are load-bearing and silent regressions are expensive.
+
+### 5. End-to-end smoke test
+
+For changes that touch ingest, the repository, or the MCP wiring, re-run:
+
+```bash
+rm -f data/argleg.db data/argleg.db-shm data/argleg.db-wal
+npm run db:init && npm run db:import && npm run build
+```
+
+Then pipe a couple of `tools/call` messages into `node dist/index.js` via stdio JSON-RPC and verify the responses. The smoke test is more reliable than `npm test` for catching wiring bugs at the MCP boundary.
+
+### 6. Commit hygiene
+
+One coherent change per commit; the message should explain *why*, not just *what*. PRs go through GitHub for review — **never push directly to `main`**. Branch naming convention:
+
+- `feat/<short-noun-phrase>` for new features (e.g., `feat/ley-25326`)
+- `fix/<short-noun-phrase>` for bug fixes (e.g., `fix/structural-headers-and-vigencia`)
+- `refactor/<short-noun-phrase>` for refactors (e.g., `refactor/sqlite-source-of-truth`)
+- `docs/<short-noun-phrase>` for doc-only changes (e.g., `docs/readme-update`)
+
+The `gh` CLI in this environment is authenticated as a different user than the repo owner, so PR creation via `gh pr create` will fail. After pushing the branch, surface the GitHub PR-creation URL (`https://github.com/gubaros/argleg/pull/new/<branch>`) so the operator can open it manually.

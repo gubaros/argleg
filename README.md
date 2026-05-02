@@ -124,11 +124,21 @@ El corpus legislativo crece con la participación de la comunidad. Hay dos camin
 
 **Agregarla vos mismo.** Al ser software de código abierto, cualquiera puede incorporar una norma y proponer un pull request:
 
-1. **Declarar el `norma_id` y el tier** en [src/laws/hierarchy.ts](src/laws/hierarchy.ts) (mapping `TIER_BY_NORMA_ID`). Sin esta declaración la ingesta falla ruidosamente — es el gatekeeper del modelo.
-2. **Encontrar la URL del texto consolidado** en InfoLEG (federal) o el portal oficial provincial.
-3. **Ejecutar el importador**: `npm run fetch -- --id <norma_id> --url '<URL>' --force` genera el JSON en `data/`.
-4. **Cargar a SQLite**: `npm run db:reset` recrea la base con todos los JSON, incluido el nuevo.
-5. **Verificar y abrir un pull request**.
+Tres gatekeepers que tocás antes del primer fetch (los tres son obligatorios; saltearse uno produce un error en algún punto del pipeline):
+
+1. **Hierarchy** — agregá el `norma_id` con su tier al mapping `TIER_BY_NORMA_ID` de [src/laws/hierarchy.ts](src/laws/hierarchy.ts). Sin esta declaración el `db-import` falla.
+2. **Validación legacy del JSON** — agregá el id a `LawIdSchema`, `LAW_IDS` y `LAW_FILE_BY_ID` en [src/laws/types.ts](src/laws/types.ts). Sin esto el `loadLibrary()` no carga el JSON al ingest.
+3. **Parser de fetch** — creá `src/scripts/parsers/<id>.ts`, registrálo en el switch `parseLawHtml` de `parsers/index.ts`, y agregá título por defecto en `DEFAULT_TITLES` de `src/scripts/fetch-infoleg.ts`. Sin esto `npm run fetch` no sabe cómo extraer artículos del HTML de InfoLEG.
+
+Después:
+
+4. **Encontrá la URL del texto consolidado** en InfoLEG (federal) o el portal oficial provincial.
+5. **Ejecutá el importador**: `npm run fetch -- --id <norma_id> --url '<URL>' --force` genera el JSON en `data/`.
+6. **Cargá a SQLite**: `npm run db:reset` recrea la base con todos los JSON, incluido el nuevo.
+7. **Opcional pero recomendado**: agregá entrada en `VIGENCIA_BY_NORMA_ID` (`db-import.ts`) si la norma está vigente.
+8. **Verificá y abrí un pull request**.
+
+> El universal parser de [src/laws/universal-parser.ts](src/laws/universal-parser.ts) es el reemplazo eventual del paso 3 (parser per-law), pero todavía no está wireado a `fetch-infoleg`. Hasta que lo esté, los tres gatekeepers son requeridos.
 
 Para constituciones provinciales el workflow es el mismo, sólo cambia la fuente del HTML (cada provincia tiene su portal). Detalle en [docs/provincial-constitutions.md](docs/provincial-constitutions.md).
 

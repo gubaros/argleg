@@ -318,6 +318,8 @@ Three layers of events are emitted:
 2. **Handler layer** (`tool.call`, `tool.done`, `tool.error`, `resource.*`, `prompt.*`) — every tool/resource/prompt invocation, with timing.
 3. **Lifecycle** (`server.loading`, `server.norma_loaded`, `server.ready`, `server.started`, `server.fatal`).
 
+Every log line emitted **after** the `initialize` handshake also carries a `client={"name":"…","version":"…"}` field, populated from the `clientInfo` block the MCP client sends. This lets you tell which client (Claude Desktop, Claude Code, Cursor, …) made each call when grepping logs.
+
 ```bash
 # Live request tracing + tool calls
 ARGLEG_LOG_LEVEL=verbose npm start
@@ -327,6 +329,9 @@ ARGLEG_LOG_LEVEL=debug npm start
 
 # JSON logs saved to file
 ARGLEG_LOG_LEVEL=debug ARGLEG_LOG_JSON=1 ARGLEG_LOG_FILE=/tmp/argleg.jsonl npm start
+
+# Filter all calls made by Claude Code only
+ARGLEG_LOG_LEVEL=verbose ARGLEG_LOG_JSON=1 npm start 2>&1 | jq 'select(.client.name == "claude-code")'
 ```
 
 > When the server runs as a child of Claude Desktop, that client captures stderr. Set `ARGLEG_LOG_FILE=/tmp/argleg-mcp.log` and `tail -f` it from another terminal to see live traffic.

@@ -169,6 +169,8 @@ Levels:
 - `verbose` — adds `rpc.request`, `tool.call`, `tool.done`, `resource.read`, `resource.done`, `prompt.call`.
 - `debug` — adds `rpc.notification`, plus args/params/result-size payloads on the handler-layer events.
 
+**Client identity tagging.** When the connecting MCP client sends `clientInfo` in the `initialize` handshake (Claude Desktop, Claude Code, Cursor, etc. all do), `logRpcMessage` extracts `{ name, version }` and stores it via `setClientInfo()` in `src/log.ts`. From that point on **every** log line — pretty or JSON — gets a `client={"name":"…","version":"…"}` field automatically merged in by `withClient()`. This lets you grep `tool.call` lines by client. The stdio transport is 1:1 client↔process, so the module-level slot is safe; if HTTP/SSE multi-client is ever added, the identity will need to move into per-request context. The `client` field is omitted when both name and version are unset (e.g., before `initialize` is observed).
+
 Output goes to **stderr** by default. Set `ARGLEG_LOG_FILE=/path/to/file.log` to mirror everything to a file (useful when the MCP server is launched by Claude Desktop, which discards the child process's stderr — `tail -f` the file in another terminal to see live traffic).
 
 ## Environment variables

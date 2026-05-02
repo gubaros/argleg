@@ -37,6 +37,34 @@ const LEVEL: LogLevel = resolveLevel();
 const JSON_MODE = process.env.ARGLEG_LOG_JSON === "1";
 const LOG_FILE = process.env.ARGLEG_LOG_FILE?.trim() || "";
 
+/**
+ * Identity of the connected MCP client, populated from the `clientInfo` field
+ * of the `initialize` JSON-RPC handshake. Auto-merged into every log line so
+ * tool/resource calls can be attributed to a specific client (Claude Desktop,
+ * Claude Code, Cursor, etc.). The stdio transport is 1:1 client↔process, so
+ * a module-level slot is safe.
+ */
+export interface ClientInfo {
+  name?: string;
+  version?: string;
+}
+let CLIENT_INFO: ClientInfo | undefined;
+
+export function setClientInfo(info: ClientInfo): void {
+  CLIENT_INFO = info;
+}
+
+export function getClientInfo(): ClientInfo | undefined {
+  return CLIENT_INFO;
+}
+
+function withClient(fields: Record<string, unknown>): Record<string, unknown> {
+  if (!CLIENT_INFO) return fields;
+  // Skip the tag if both name and version are absent — avoids printing `client={}`.
+  if (CLIENT_INFO.name === undefined && CLIENT_INFO.version === undefined) return fields;
+  return { client: CLIENT_INFO, ...fields };
+}
+
 function enabled(at: LogLevel): boolean {
   return LEVEL_RANK[at] <= LEVEL_RANK[LEVEL];
 }
@@ -54,12 +82,13 @@ function writeLine(line: string): void {
 function emit(level: LogLevel, event: string, fields: Record<string, unknown> = {}): void {
   if (!enabled(level)) return;
   const ts = new Date().toISOString();
+  const merged = withClient(fields);
   if (JSON_MODE) {
-    const line = JSON.stringify({ ts, level, event, ...fields }) + "\n";
+    const line = JSON.stringify({ ts, level, event, ...merged }) + "\n";
     writeLine(line);
     return;
   }
-  const pairs = Object.entries(fields)
+  const pairs = Object.entries(merged)
     .filter(([, v]) => v !== undefined)
     .map(([k, v]) => `${k}=${fmt(v)}`)
     .join(" ");
@@ -95,11 +124,12 @@ export const log = {
     // Errors are always shown unless silent.
     if (LEVEL === "silent") return;
     const ts = new Date().toISOString();
+    const merged = withClient(fields ?? {});
     if (JSON_MODE) {
-      writeLine(JSON.stringify({ ts, level: "error", event, ...fields }) + "\n");
+      writeLine(JSON.stringify({ ts, level: "error", event, ...merged }) + "\n");
       return;
     }
-    const pairs = Object.entries(fields ?? {})
+    const pairs = Object.entries(merged)
       .filter(([, v]) => v !== undefined)
       .map(([k, v]) => `${k}=${fmt(v)}`)
       .join(" ");

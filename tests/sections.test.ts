@@ -155,6 +155,40 @@ describe("structural recovery (bug #1 + tech debt #3)", () => {
     });
   });
 
+  describe("bug #6 — soft-wrap newlines collapsed in article text", () => {
+    it("CN art 14bis has exactly 3 paragraphs (\\n\\n separated) with no internal newlines", () => {
+      const result = repo.getArticle("constitucion", "14bis");
+      expect(result).toBeDefined();
+      const text = result!.articulo.texto;
+      const paras = text.split("\n\n");
+      expect(paras).toHaveLength(3);
+      for (const p of paras) {
+        expect(p).not.toContain("\n");
+      }
+    });
+
+    it("CN art 14bis paragraph 1 starts with 'El trabajo en sus diversas formas'", () => {
+      const result = repo.getArticle("constitucion", "14bis");
+      const text = result!.articulo.texto;
+      expect(text.startsWith("El trabajo en sus diversas formas")).toBe(true);
+    });
+
+    it("CCyC art 1 text contains no mid-sentence newlines", () => {
+      const result = repo.getArticle("ccyc", "1");
+      expect(result).toBeDefined();
+      const text = result!.articulo.texto;
+      // No single \n should exist outside of double-newline context
+      expect(text.replace(/\n\n/g, "")).not.toContain("\n");
+    });
+
+    it("LDC art 1 text contains no mid-sentence newlines", () => {
+      const result = repo.getArticle("ley_24240", "1");
+      expect(result).toBeDefined();
+      const text = result!.articulo.texto;
+      expect(text.replace(/\n\n/g, "")).not.toContain("\n");
+    });
+  });
+
   describe("bug #5 — Roman numeral title-casing (Iii / Xi / Viii)", () => {
     const BAD_ROMAN = /\b(Ii|Iii|Iv|Vi|Vii|Viii|Ix|Xi|Xii|Xiii|Xiv|Xv|Xvi|Xvii|Xviii|Xix|Xx)\b/;
 

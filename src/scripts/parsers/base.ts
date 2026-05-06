@@ -97,6 +97,27 @@ function cleanStructureValue(value?: string): string | undefined {
 }
 
 /**
+ * Collapse soft-wrap newlines from InfoLEG's HTML line-wrapping (~70 chars/line)
+ * into single spaces while preserving genuine paragraph breaks (double newlines).
+ *
+ * InfoLEG serves HTML where every visual line ends with a `<br>` tag. `htmlToText`
+ * converts those to `\n`, which makes article text look like:
+ *   "El trabajo en sus\ndiversas formas gozará..."
+ * instead of the correct single-paragraph sentence.
+ *
+ * Algorithm: split on `\n\n+` (paragraph boundaries), collapse remaining `\n`
+ * to space within each segment, normalise runs of spaces, trim each paragraph,
+ * and rejoin with `\n\n`.  Idempotent: already-clean text is left unchanged.
+ */
+export function collapseWrappedLines(text: string): string {
+  return text
+    .split(/\n{2,}/)
+    .map((para) => para.replace(/\n/g, " ").replace(/ {2,}/g, " ").trim())
+    .filter((para) => para.length > 0)
+    .join("\n\n");
+}
+
+/**
  * Strip InfoLEG-style trailing epigraphs from article bodies.
  *
  * In InfoLEG HTML the descriptive title (epigraph) of article N+1 appears

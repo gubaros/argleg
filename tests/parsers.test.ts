@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { extractArticlesForLaw } from "../src/scripts/infoleg.js";
-import { extractTrailingEpigraphs } from "../src/scripts/parsers/base.js";
+import { collapseWrappedLines, extractTrailingEpigraphs } from "../src/scripts/parsers/base.js";
 import type { Article } from "../src/laws/types.js";
 
 function makeArticle(number: string, text: string, title?: string): Article {
@@ -267,5 +267,45 @@ describe("extractTrailingEpigraphs", () => {
     expect(arts[0]!.number).toBe("27");
     expect(arts[0]!.text).not.toContain("Socios herederos");
     expect(arts[1]!.title).toBe("Socios herederos menores, incapaces o con capacidad restringida");
+  });
+});
+
+describe("collapseWrappedLines", () => {
+  it("collapses a soft-wrap single newline to space", () => {
+    expect(collapseWrappedLines("El trabajo en sus\ndiversas formas gozará")).toBe(
+      "El trabajo en sus diversas formas gozará",
+    );
+  });
+
+  it("preserves double newlines as paragraph breaks", () => {
+    const input = "Primer párrafo.\n\nSegundo párrafo.";
+    expect(collapseWrappedLines(input)).toBe(input);
+  });
+
+  it("normalizes each paragraph independently", () => {
+    const input = "Primera línea\ncontinuación.\n\nOtra línea\nmás texto.";
+    expect(collapseWrappedLines(input)).toBe("Primera línea continuación.\n\nOtra línea más texto.");
+  });
+
+  it("collapses three or more consecutive newlines to a single paragraph break", () => {
+    expect(collapseWrappedLines("A.\n\n\n\nB.")).toBe("A.\n\nB.");
+  });
+
+  it("normalises runs of spaces produced by the join", () => {
+    // Trailing space before newline + leading space after collapse → double space
+    expect(collapseWrappedLines("Texto  con  espacios  extra.")).toBe("Texto con espacios extra.");
+  });
+
+  it("is idempotent — already clean text is unchanged", () => {
+    const clean = "Primer párrafo limpio.\n\nSegundo párrafo limpio.";
+    expect(collapseWrappedLines(clean)).toBe(clean);
+  });
+
+  it("trims leading and trailing whitespace within each paragraph", () => {
+    expect(collapseWrappedLines("  Texto con margen.  ")).toBe("Texto con margen.");
+  });
+
+  it("drops empty paragraphs", () => {
+    expect(collapseWrappedLines("A.\n\n\n\nB.")).toBe("A.\n\nB.");
   });
 });

@@ -13,7 +13,7 @@ import {
   trimTrailingOrphans,
   type DetectedHeader,
 } from "./parsers/structural-headers.js";
-import { extractTrailingEpigraphs } from "./parsers/base.js";
+import { collapseWrappedLines, extractTrailingEpigraphs } from "./parsers/base.js";
 
 /**
  * Vigencia curada para las normas foundational del corpus.
@@ -155,7 +155,7 @@ function slugify(s: string): string {
 }
 
 function articleTextWithIncisos(article: Article, cleanText?: string): string {
-  const body = (cleanText ?? article.text).trimEnd();
+  const body = collapseWrappedLines((cleanText ?? article.text).trimEnd());
   if (article.incisos.length === 0) return body;
   const lines: string[] = [body];
   for (const inc of article.incisos) {
@@ -165,7 +165,7 @@ function articleTextWithIncisos(article: Article, cleanText?: string): string {
     // DEMANDADO" / "COMPROBACIONES DIRECTAS" inside the last inciso).
     const cleanedInc: Inciso = {
       id: inc.id,
-      text: trimTrailingOrphans(inc.text),
+      text: collapseWrappedLines(trimTrailingOrphans(inc.text)),
     };
     lines.push(formatIncisoForStorage(cleanedInc));
   }

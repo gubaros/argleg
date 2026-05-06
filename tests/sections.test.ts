@@ -86,6 +86,44 @@ describe("structural recovery (bug #1 + tech debt #3)", () => {
     });
   });
 
+  describe("bug #2 — CN Primera Parte missing from structure (smoke-test report #2)", () => {
+    it("constitucion has a 'Primera Parte' root structural node", () => {
+      const nodes = repo.getNormStructure("constitucion");
+      const primera = nodes.find((n) => n.tipo === "parte" && /primera/i.test(n.nombre ?? ""));
+      expect(primera).toBeDefined();
+      expect(primera!.parent_id).toBeNull();
+    });
+
+    it("CN art 1 is structurally under Primera Parte", () => {
+      const result = repo.getArticle("constitucion", "1");
+      expect(result).toBeDefined();
+      expect(
+        result!.contexto_estructural.some(
+          (n) => n.tipo === "parte" && /primera/i.test(n.nombre ?? ""),
+        ),
+      ).toBe(true);
+    });
+
+    it("Primera Parte contains 36 articles (arts. 1–14bis–35, the dogmatic core)", () => {
+      // The CN's First Part (Declaraciones, Derechos y Garantías) has 36
+      // articles: 1-14, 14bis, 15-35.
+      const sec = repo.getSection("constitucion", "Declaraciones");
+      expect(sec).toBeDefined();
+      expect(sec!.articulos).toHaveLength(36);
+      expect(sec!.rango).toEqual({ primero: "1", ultimo: "35" });
+    });
+
+    it("Capítulo Segundo (Nuevos derechos) is nested under Primera Parte", () => {
+      const nodes = repo.getNormStructure("constitucion");
+      const primera = nodes.find((n) => n.tipo === "parte" && /primera/i.test(n.nombre ?? ""));
+      const capSeg = nodes.find(
+        (n) => n.tipo === "capitulo" && /nuevos derechos/i.test(n.nombre ?? ""),
+      );
+      expect(capSeg).toBeDefined();
+      expect(capSeg!.parent_id).toBe(primera!.id);
+    });
+  });
+
   describe("getSection — list articles in a structural section", () => {
     it("retrieves Capítulo Segundo of the CN with all 8 articles (36-43)", () => {
       const sec = repo.getSection("constitucion", "Nuevos derechos");

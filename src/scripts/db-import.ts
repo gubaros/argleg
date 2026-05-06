@@ -48,6 +48,21 @@ const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const STRUCTURE_LEVELS = ["libro", "parte", "titulo", "capitulo", "seccion"] as const;
 type StructureLevel = (typeof STRUCTURE_LEVELS)[number];
 
+// Structural headers that appear before the first article in the InfoLEG HTML.
+// The parser discards this preamble text (it slices from the first article
+// marker), so normas with a section header before Art. 1 lose it entirely.
+// We inject these into the recovery stack before the article loop so early
+// articles are correctly nested under their opening section.
+const PREAMBLE_HEADERS: Partial<Record<string, readonly DetectedHeader[]>> = {
+  constitucion: [
+    {
+      tipo: "parte",
+      ordinal: "PRIMERA",
+      nombre: "Primera Parte — Declaraciones, Derechos y Garantías",
+    },
+  ],
+};
+
 function parseArgs(argv: string[]): Args {
   const a: Args = { reset: false };
   for (let i = 0; i < argv.length; i++) {
@@ -396,6 +411,34 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
   const recoveryStack: Array<{ id: string; tipo: StructuralLevel; depth: number }> = [];
   // Counter for unique recovery-node ids within this law.
   let recoveryNodeIdx = 0;
+
+  // (B) Seed the recovery stack with structural headers that appear before the
+  // first article in the InfoLEG HTML and are therefore discarded by the parser.
+  if (!useLegacyLocation) {
+    for (const h of (PREAMBLE_HEADERS[law.id] ?? [])) {
+      const depth = nestingDepth(h.tipo);
+      while (
+        recoveryStack.length > 0 &&
+        recoveryStack[recoveryStack.length - 1]!.depth >= depth
+      ) {
+        recoveryStack.pop();
+      }
+      const parentId =
+        recoveryStack.length > 0 ? recoveryStack[recoveryStack.length - 1]!.id : null;
+      const newNodeId = `${law.id}_recovered_${recoveryNodeIdx++}`;
+      const nestingTipo = h.tipo as StructureLevel;
+      insertEstructura.run({
+        id: newNodeId,
+        norma_id: law.id,
+        parent_id: parentId,
+        tipo: nestingTipo,
+        nombre: h.nombre,
+        orden: nodeOrder++,
+      });
+      nodes.set(newNodeId, { tipo: nestingTipo, orden: nodeOrder - 1, parent_id: parentId });
+      recoveryStack.push({ id: newNodeId, tipo: h.tipo, depth });
+    }
+  }
 
   for (let i = 0; i < law.articles.length; i++) {
     const art = law.articles[i]!;

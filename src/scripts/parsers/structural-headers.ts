@@ -57,6 +57,8 @@ interface KeywordMatch {
 }
 
 function capitalize(s: string): string {
+  // Roman numerals must stay fully uppercase (e.g. "III" → "III", not "Iii").
+  if (/^[IVXLCDM]+$/i.test(s)) return s.toUpperCase();
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
 

@@ -155,6 +155,30 @@ describe("structural recovery (bug #1 + tech debt #3)", () => {
     });
   });
 
+  describe("bug #5 — Roman numeral title-casing (Iii / Xi / Viii)", () => {
+    const BAD_ROMAN = /\b(Ii|Iii|Iv|Vi|Vii|Viii|Ix|Xi|Xii|Xiii|Xiv|Xv|Xvi|Xvii|Xviii|Xix|Xx)\b/;
+
+    it("LGS (ley_19550) structure nodes contain no badly-cased Roman numerals", () => {
+      const nodes = repo.getNormStructure("ley_19550");
+      const bad = nodes.filter((n) => n.nombre && BAD_ROMAN.test(n.nombre));
+      expect(bad.map((n) => n.nombre)).toEqual([]);
+    });
+
+    it("CCyC (ccyc) structure nodes contain no badly-cased Roman numerals", () => {
+      const nodes = repo.getNormStructure("ccyc");
+      const bad = nodes.filter((n) => n.nombre && BAD_ROMAN.test(n.nombre));
+      expect(bad.map((n) => n.nombre)).toEqual([]);
+    });
+
+    it("LGS Sección III is stored exactly as 'Sección III'", () => {
+      const nodes = repo.getNormStructure("ley_19550");
+      const sec3 = nodes.find((n) => n.tipo === "seccion" && /III/.test(n.nombre ?? ""));
+      expect(sec3).toBeDefined();
+      // The ordinal must be fully uppercase — 'Iii' is the broken form.
+      expect(sec3!.nombre).not.toMatch(/\bIii\b/);
+    });
+  });
+
   describe("bug #4 — list_norms materia filter backfilled", () => {
     it("list_norms(materia='consumidor') returns ley_24240", () => {
       const result = repo.listNorms({ materia: "consumidor" });

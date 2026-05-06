@@ -38,6 +38,21 @@ const VIGENCIA_BY_NORMA_ID: Record<string, "vigente" | "derogada"> = {
   ley_25326: "vigente",
 };
 
+// Curated topic tags stored as a JSON array in normas.materias.
+// Used by list_norms(materia=...) and surfaced in get_norm_metadata.
+// All values are lowercase; the filter lowercases input before matching.
+const MATERIAS_BY_NORMA_ID: Partial<Record<string, string[]>> = {
+  constitucion: ["constitucional", "derechos fundamentales", "organización del estado", "poder legislativo", "poder ejecutivo", "poder judicial"],
+  ccyc: ["civil", "comercial", "contratos", "familia", "sucesiones", "bienes", "obligaciones", "personas"],
+  penal: ["penal", "delitos", "penas", "responsabilidad penal"],
+  cppf: ["procesal penal", "proceso penal", "garantías procesales"],
+  cpccn: ["procesal civil", "proceso civil", "ejecución"],
+  ley_24240: ["consumidor", "defensa del consumidor", "consumo", "relación de consumo"],
+  ley_19549: ["administrativo", "procedimiento administrativo", "acto administrativo"],
+  ley_19550: ["sociedades", "comercial", "personas jurídicas", "empresa"],
+  ley_25326: ["datos personales", "protección de datos", "privacidad", "habeas data"],
+};
+
 interface Args {
   db?: string;
   dataDir?: string;
@@ -367,7 +382,7 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
     estado_vigencia: VIGENCIA_BY_NORMA_ID[law.id] ?? "desconocido",
     fecha_ultima_actualizacion: law.lastUpdated || null,
     texto_ordenado: 0,
-    materias: null,
+    materias: MATERIAS_BY_NORMA_ID[law.id] ? JSON.stringify(MATERIAS_BY_NORMA_ID[law.id]) : null,
     notas: law.description ?? null,
   });
 

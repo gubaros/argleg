@@ -287,3 +287,62 @@ describe("searchArticles scoring — bug #3: norma-title boost + term-frequency 
     expect(idx3).toBeLessThan(idx4);
   });
 });
+
+describe("listNorms materia filter — bug #4: orphaned materia param", () => {
+  let repo: SqliteLegalRepository;
+
+  beforeEach(() => {
+    const db = openDb({ path: ":memory:" });
+    applySchema(db);
+    repo = new SqliteLegalRepository(db);
+    const handle = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    handle.exec(`
+      INSERT INTO normas (id, tier, titulo, nombre_corto, jurisdiccion, pais, estado_vigencia,
+                          fecha_ultima_actualizacion, materias)
+      VALUES
+        ('ldc_mat', 'ley_federal', 'Ley de Defensa del Consumidor', 'LDC',
+         'nacional', 'Argentina', 'vigente', '2026-01-01',
+         '["consumidor","defensa del consumidor","consumo","relación de consumo"]'),
+        ('ccyc_mat', 'codigo_fondo', 'Código Civil y Comercial', 'CCyC',
+         'nacional', 'Argentina', 'vigente', '2026-01-01',
+         '["civil","comercial","contratos","familia"]'),
+        ('no_materias', 'ley_federal', 'Ley sin materias', NULL,
+         'nacional', 'Argentina', 'vigente', '2026-01-01', NULL);
+    `);
+  });
+
+  it("returns the norma whose materias array contains the exact token", () => {
+    const result = repo.listNorms({ materia: "consumidor" });
+    expect(result).toHaveLength(1);
+    expect(result[0]!.id).toBe("ldc_mat");
+  });
+
+  it("matches multi-word materia tokens", () => {
+    const result = repo.listNorms({ materia: "defensa del consumidor" });
+    expect(result).toHaveLength(1);
+    expect(result[0]!.id).toBe("ldc_mat");
+  });
+
+  it("is case-insensitive (Consumidor → consumidor)", () => {
+    const upper = repo.listNorms({ materia: "Consumidor" });
+    const lower = repo.listNorms({ materia: "consumidor" });
+    expect(upper.map((n) => n.id)).toEqual(lower.map((n) => n.id));
+  });
+
+  it("returns empty for an unknown materia", () => {
+    expect(repo.listNorms({ materia: "tributario" })).toHaveLength(0);
+  });
+
+  it("does not match normas with null materias", () => {
+    const result = repo.listNorms({ materia: "ley" });
+    for (const n of result) {
+      expect(n.id).not.toBe("no_materias");
+    }
+  });
+
+  it("get_norm_metadata exposes materias in the returned object", () => {
+    const meta = repo.getNormMetadata("ldc_mat");
+    expect(meta).toBeDefined();
+    expect(meta!.materias).toEqual(["consumidor", "defensa del consumidor", "consumo", "relación de consumo"]);
+  });
+});

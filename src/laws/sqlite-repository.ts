@@ -105,9 +105,9 @@ export class SqliteLegalRepository implements LegalRepository {
       params.estado_vigencia = filter.estado_vigencia;
     }
     if (filter.materia) {
-      // materias is a JSON array string; we use LIKE for a coarse contains match.
+      // materias is a JSON array of lowercase strings; fold input to match case-insensitively.
       where.push("materias LIKE @materia_like");
-      params.materia_like = `%"${filter.materia}"%`;
+      params.materia_like = `%"${filter.materia.toLowerCase()}"%`;
     }
     const sql =
       `SELECT * FROM normas` +

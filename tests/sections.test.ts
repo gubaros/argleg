@@ -155,6 +155,27 @@ describe("structural recovery (bug #1 + tech debt #3)", () => {
     });
   });
 
+  describe("bug #4 — list_norms materia filter backfilled", () => {
+    it("list_norms(materia='consumidor') returns ley_24240", () => {
+      const result = repo.listNorms({ materia: "consumidor" });
+      const ids = result.map((n) => n.id);
+      expect(ids).toContain("ley_24240");
+    });
+
+    it("list_norms(materia='datos personales') returns ley_25326 exclusively", () => {
+      const result = repo.listNorms({ materia: "datos personales" });
+      expect(result.map((n) => n.id)).toContain("ley_25326");
+      expect(result.map((n) => n.id)).not.toContain("ley_24240");
+    });
+
+    it("get_norm_metadata('ley_24240') exposes materias field", () => {
+      const meta = repo.getNormMetadata("ley_24240");
+      expect(meta!.materias).toBeDefined();
+      expect(meta!.materias!.length).toBeGreaterThan(0);
+      expect(meta!.materias).toContain("consumidor");
+    });
+  });
+
   describe("bug #3 — search relevance: LDC art 1 in top-3 for 'consumidor'", () => {
     it("search('consumidor') returns ley_24240 art 1 in the first 3 hits", () => {
       const hits = repo.searchArticles("consumidor");

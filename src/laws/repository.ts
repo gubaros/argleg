@@ -83,7 +83,7 @@ export interface SearchHitRow {
   articulo: ArticuloRow;
   contexto_estructural: EstructuraNodo[];
   score: number;
-  matched_on: Array<"numero" | "epigrafe" | "texto" | "estructura">;
+  matched_on: Array<"numero" | "epigrafe" | "texto" | "estructura" | "norma">;
 }
 
 export interface ListNormsFilter {

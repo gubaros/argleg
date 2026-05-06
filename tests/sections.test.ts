@@ -154,4 +154,20 @@ describe("structural recovery (bug #1 + tech debt #3)", () => {
       }
     });
   });
+
+  describe("bug #3 — search relevance: LDC art 1 in top-3 for 'consumidor'", () => {
+    it("search('consumidor') returns ley_24240 art 1 in the first 3 hits", () => {
+      const hits = repo.searchArticles("consumidor");
+      const top3 = hits.slice(0, 3);
+      const ldcHit = top3.find((h) => h.norma_id === "ley_24240" && h.articulo.numero === "1");
+      expect(ldcHit, "LDC art. 1 should be in top-3 for query 'consumidor'").toBeDefined();
+    });
+
+    it("LDC hit has 'norma' in matched_on (norma-title boost fired)", () => {
+      const hits = repo.searchArticles("consumidor");
+      const ldcHit = hits.find((h) => h.norma_id === "ley_24240");
+      expect(ldcHit).toBeDefined();
+      expect(ldcHit!.matched_on).toContain("norma");
+    });
+  });
 });

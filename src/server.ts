@@ -885,6 +885,8 @@ function toLegacyHit(hit: SearchHitRow): LegacySearchHit {
           return "text";
         case "estructura":
           return "capitulo";
+        case "norma":
+          return "materia";
       }
     }),
   };

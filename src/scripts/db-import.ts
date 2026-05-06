@@ -13,6 +13,7 @@ import {
   trimTrailingOrphans,
   type DetectedHeader,
 } from "./parsers/structural-headers.js";
+import { extractTrailingEpigraphs } from "./parsers/base.js";
 
 /**
  * Vigencia curada para las normas foundational del corpus.
@@ -374,6 +375,15 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
   const useLegacyLocation = law.articles.some(
     (a) => Object.values(a.location).some((v) => !!v),
   );
+
+  // Normas whose InfoLEG source places the article epigraph before the "Art. N"
+  // marker, causing it to bleed into the previous article's body. The parsers
+  // (parseLey19550, parseLey19549) already call extractTrailingEpigraphs at
+  // fetch time; this pre-pass also cleans existing JSON without a re-fetch.
+  const NORMAS_WITH_INFOLEG_EPIGRAPHS = new Set(["ley_19550", "ley_19549"]);
+  if (NORMAS_WITH_INFOLEG_EPIGRAPHS.has(law.id)) {
+    extractTrailingEpigraphs(law.articles);
+  }
 
   // Track structural nodes already inserted so we dedupe across articles.
   const nodes = new Map<string, { tipo: StructureLevel; orden: number; parent_id: string | null }>();

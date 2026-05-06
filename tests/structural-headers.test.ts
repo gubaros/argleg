@@ -50,6 +50,37 @@ describe("splitArticleHeaders", () => {
     expect(trailingHeaders[1]!.nombre).toBe("Título Primero — GOBIERNO FEDERAL");
   });
 
+  it("preserves Roman numeral section ordinals uppercase — Sección III not Iii", () => {
+    const text = "Texto del artículo.\n\nSECCIÓN III";
+    const { trailingHeaders } = splitArticleHeaders(text);
+    expect(trailingHeaders).toHaveLength(1);
+    expect(trailingHeaders[0]!.nombre).toBe("Sección III");
+  });
+
+  it("preserves Roman numeral chapter ordinals uppercase — Capítulo XI not Xi", () => {
+    const text = "Texto del artículo.\n\nCAPÍTULO XI";
+    const { trailingHeaders } = splitArticleHeaders(text);
+    expect(trailingHeaders[0]!.nombre).toBe("Capítulo XI");
+  });
+
+  it("preserves Roman numeral title ordinals — Título VIII not Viii", () => {
+    const text = "Texto.\n\nTÍTULO VIII\nDe las obligaciones";
+    const { trailingHeaders } = splitArticleHeaders(text);
+    expect(trailingHeaders[0]!.nombre).toBe("Título VIII — De las obligaciones");
+  });
+
+  it("preserves Roman numeral book ordinals — Libro IV not Iv", () => {
+    const text = "Texto.\n\nLIBRO IV";
+    const { trailingHeaders } = splitArticleHeaders(text);
+    expect(trailingHeaders[0]!.nombre).toBe("Libro IV");
+  });
+
+  it("still title-cases Spanish ordinals correctly — Capítulo Primero", () => {
+    const text = "Texto.\n\nCAPÍTULO PRIMERO\nDel objeto";
+    const { trailingHeaders } = splitArticleHeaders(text);
+    expect(trailingHeaders[0]!.nombre).toBe("Capítulo Primero — Del objeto");
+  });
+
   it("absorbs an unkeyworded ALL-CAPS orphan that precedes a real keyword", () => {
     // Mirrors CN art 86: "DEL PODER EJECUTIVO" is morally Sección Segunda
     // but the SECCIÓN keyword was lost upstream; CAPÍTULO PRIMERO follows.

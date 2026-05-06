@@ -1,4 +1,5 @@
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
+import path from "node:path";
 import { z } from "zod";
 import { openDb, resolveDbPath, type Db } from "./db/connection.js";
 import { applySchema } from "./db/migrations.js";
@@ -219,14 +220,14 @@ function registerTools(server: McpServer, repo: LegalRepository, dbPath: string)
             `Servidor: argleg-mcp`,
             `Versión: ${ARGLEG_VERSION}`,
             `Fecha y hora de versión: ${ARGLEG_BUILD_DATE_TIME}`,
-            `Base SQLite: ${dbPath}`,
+            `Base SQLite: ${path.basename(dbPath)}`,
             `Normas cargadas: ${norms.length}`,
           ].join("\n"),
           {
             name: "argleg-mcp",
             version: ARGLEG_VERSION,
             buildDateTime: ARGLEG_BUILD_DATE_TIME,
-            dbPath,
+            dbPath: path.basename(dbPath),
             loadedLaws: norms.length,
           },
         );
@@ -884,6 +885,8 @@ function toLegacyHit(hit: SearchHitRow): LegacySearchHit {
           return "text";
         case "estructura":
           return "capitulo";
+        case "norma":
+          return "materia";
       }
     }),
   };

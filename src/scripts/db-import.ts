@@ -13,6 +13,7 @@ import {
   trimTrailingOrphans,
   type DetectedHeader,
 } from "./parsers/structural-headers.js";
+import { extractTrailingEpigraphs } from "./parsers/base.js";
 
 /**
  * Vigencia curada para las normas foundational del corpus.
@@ -37,6 +38,21 @@ const VIGENCIA_BY_NORMA_ID: Record<string, "vigente" | "derogada"> = {
   ley_25326: "vigente",
 };
 
+// Curated topic tags stored as a JSON array in normas.materias.
+// Used by list_norms(materia=...) and surfaced in get_norm_metadata.
+// All values are lowercase; the filter lowercases input before matching.
+const MATERIAS_BY_NORMA_ID: Partial<Record<string, string[]>> = {
+  constitucion: ["constitucional", "derechos fundamentales", "organización del estado", "poder legislativo", "poder ejecutivo", "poder judicial"],
+  ccyc: ["civil", "comercial", "contratos", "familia", "sucesiones", "bienes", "obligaciones", "personas"],
+  penal: ["penal", "delitos", "penas", "responsabilidad penal"],
+  cppf: ["procesal penal", "proceso penal", "garantías procesales"],
+  cpccn: ["procesal civil", "proceso civil", "ejecución"],
+  ley_24240: ["consumidor", "defensa del consumidor", "consumo", "relación de consumo"],
+  ley_19549: ["administrativo", "procedimiento administrativo", "acto administrativo"],
+  ley_19550: ["sociedades", "comercial", "personas jurídicas", "empresa"],
+  ley_25326: ["datos personales", "protección de datos", "privacidad", "habeas data"],
+};
+
 interface Args {
   db?: string;
   dataDir?: string;
@@ -46,6 +62,21 @@ interface Args {
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const STRUCTURE_LEVELS = ["libro", "parte", "titulo", "capitulo", "seccion"] as const;
 type StructureLevel = (typeof STRUCTURE_LEVELS)[number];
+
+// Structural headers that appear before the first article in the InfoLEG HTML.
+// The parser discards this preamble text (it slices from the first article
+// marker), so normas with a section header before Art. 1 lose it entirely.
+// We inject these into the recovery stack before the article loop so early
+// articles are correctly nested under their opening section.
+const PREAMBLE_HEADERS: Partial<Record<string, readonly DetectedHeader[]>> = {
+  constitucion: [
+    {
+      tipo: "parte",
+      ordinal: "PRIMERA",
+      nombre: "Primera Parte — Declaraciones, Derechos y Garantías",
+    },
+  ],
+};
 
 function parseArgs(argv: string[]): Args {
   const a: Args = { reset: false };
@@ -351,7 +382,7 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
     estado_vigencia: VIGENCIA_BY_NORMA_ID[law.id] ?? "desconocido",
     fecha_ultima_actualizacion: law.lastUpdated || null,
     texto_ordenado: 0,
-    materias: null,
+    materias: MATERIAS_BY_NORMA_ID[law.id] ? JSON.stringify(MATERIAS_BY_NORMA_ID[law.id]) : null,
     notas: law.description ?? null,
   });
 
@@ -375,6 +406,15 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
     (a) => Object.values(a.location).some((v) => !!v),
   );
 
+  // Normas whose InfoLEG source places the article epigraph before the "Art. N"
+  // marker, causing it to bleed into the previous article's body. The parsers
+  // (parseLey19550, parseLey19549) already call extractTrailingEpigraphs at
+  // fetch time; this pre-pass also cleans existing JSON without a re-fetch.
+  const NORMAS_WITH_INFOLEG_EPIGRAPHS = new Set(["ley_19550", "ley_19549"]);
+  if (NORMAS_WITH_INFOLEG_EPIGRAPHS.has(law.id)) {
+    extractTrailingEpigraphs(law.articles);
+  }
+
   // Track structural nodes already inserted so we dedupe across articles.
   const nodes = new Map<string, { tipo: StructureLevel; orden: number; parent_id: string | null }>();
   let nodeOrder = 0;
@@ -386,6 +426,34 @@ function insertLaw(db: Db, law: Law): InsertedCounts {
   const recoveryStack: Array<{ id: string; tipo: StructuralLevel; depth: number }> = [];
   // Counter for unique recovery-node ids within this law.
   let recoveryNodeIdx = 0;
+
+  // (B) Seed the recovery stack with structural headers that appear before the
+  // first article in the InfoLEG HTML and are therefore discarded by the parser.
+  if (!useLegacyLocation) {
+    for (const h of (PREAMBLE_HEADERS[law.id] ?? [])) {
+      const depth = nestingDepth(h.tipo);
+      while (
+        recoveryStack.length > 0 &&
+        recoveryStack[recoveryStack.length - 1]!.depth >= depth
+      ) {
+        recoveryStack.pop();
+      }
+      const parentId =
+        recoveryStack.length > 0 ? recoveryStack[recoveryStack.length - 1]!.id : null;
+      const newNodeId = `${law.id}_recovered_${recoveryNodeIdx++}`;
+      const nestingTipo = h.tipo as StructureLevel;
+      insertEstructura.run({
+        id: newNodeId,
+        norma_id: law.id,
+        parent_id: parentId,
+        tipo: nestingTipo,
+        nombre: h.nombre,
+        orden: nodeOrder++,
+      });
+      nodes.set(newNodeId, { tipo: nestingTipo, orden: nodeOrder - 1, parent_id: parentId });
+      recoveryStack.push({ id: newNodeId, tipo: h.tipo, depth });
+    }
+  }
 
   for (let i = 0; i < law.articles.length; i++) {
     const art = law.articles[i]!;

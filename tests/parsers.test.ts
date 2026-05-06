@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { extractArticlesForLaw } from "../src/scripts/infoleg.js";
+import { extractTrailingEpigraphs } from "../src/scripts/parsers/base.js";
+import type { Article } from "../src/laws/types.js";
+
+function makeArticle(number: string, text: string, title?: string): Article {
+  return { number, text, title, incisos: [], location: {}, materia: [] };
+}
 
 describe("parsers by corpus", () => {
   it("uses a specific CCyC parser that skips approving law and reaches final article", () => {
@@ -174,5 +180,92 @@ describe("parsers by corpus", () => {
     expect(arts[0]?.location.titulo).toBe("I");
     expect(arts[0]?.location.capitulo).toBe("I");
     expect(arts[1]?.location.titulo).toBe("II");
+  });
+});
+
+describe("extractTrailingEpigraphs", () => {
+  it("strips an isolated trailing epigraph and assigns it as the next article's title", () => {
+    // Mirrors LGS Art. 27 → Art. 28 boundary.
+    const arts = [
+      makeArticle("27", "Los cónyuges pueden integrar entre sí sociedades de cualquier tipo.\n\nSocios herederos menores, incapaces o con capacidad restringida."),
+      makeArticle("28", "Cuando existan herederos menores de edad..."),
+    ];
+    extractTrailingEpigraphs(arts);
+    expect(arts[0]!.text).toBe("Los cónyuges pueden integrar entre sí sociedades de cualquier tipo.");
+    expect(arts[1]!.title).toBe("Socios herederos menores, incapaces o con capacidad restringida");
+  });
+
+  it("strips an epigraph with no preceding blank line (directly appended)", () => {
+    // Mirrors LGS Art. 32: no blank line between body and epigraph.
+    const arts = [
+      makeArticle("32", "Las participaciones que excedan los límites serán enajenadas.\nSociedades controladas."),
+      makeArticle("33", "Se consideran controladas las sociedades..."),
+    ];
+    extractTrailingEpigraphs(arts);
+    expect(arts[0]!.text).toBe("Las participaciones que excedan los límites serán enajenadas.");
+    expect(arts[1]!.title).toBe("Sociedades controladas");
+  });
+
+  it("does NOT strip when the last line is longer than 80 chars", () => {
+    // Mirrors Constitución Art. 38 — legitimate conclusion, 94 chars.
+    const longSentence = "Los partidos políticos deberán dar publicidad del origen y destino de sus fondos y patrimonio.";
+    const arts = [
+      makeArticle("38", `Texto del artículo.\n\n${longSentence}`),
+      makeArticle("39", "Texto del artículo siguiente."),
+    ];
+    extractTrailingEpigraphs(arts);
+    expect(arts[0]!.text).toContain(longSentence);
+    expect(arts[1]!.title).toBeUndefined();
+  });
+
+  it("does NOT strip a parenthetical modification note", () => {
+    const arts = [
+      makeArticle("5", "Texto del artículo.\n(Artículo sustituido por Ley N° 26.994 B.O. 08/10/2014)"),
+      makeArticle("6", "Texto del artículo siguiente."),
+    ];
+    extractTrailingEpigraphs(arts);
+    expect(arts[0]!.text).toContain("(Artículo sustituido");
+    expect(arts[1]!.title).toBeUndefined();
+  });
+
+  it("does NOT hollow out a single-line article body", () => {
+    // If the only line IS the candidate epigraph, we keep it in the body.
+    const arts = [
+      makeArticle("36", "Derogado."),
+      makeArticle("37", "Texto del siguiente."),
+    ];
+    extractTrailingEpigraphs(arts);
+    expect(arts[0]!.text).toBe("Derogado.");
+    expect(arts[1]!.title).toBeUndefined();
+  });
+
+  it("does NOT modify the last article in the list", () => {
+    const arts = [makeArticle("1", "Único artículo.\n\nAlgo corto.")];
+    extractTrailingEpigraphs(arts);
+    expect(arts[0]!.text).toContain("Algo corto.");
+  });
+
+  it("does NOT overwrite an existing title on the next article", () => {
+    const arts = [
+      makeArticle("10", "Texto.\n\nEpígrafe candidato."),
+      makeArticle("11", "Texto siguiente.", "Título ya asignado"),
+    ];
+    extractTrailingEpigraphs(arts);
+    expect(arts[1]!.title).toBe("Título ya asignado");
+  });
+
+  it("LGS parser assigns epigraphs via parseLey19550 integration", () => {
+    const html = [
+      "<div id='Contenido'>",
+      "Art. 27.- Los cónyuges pueden integrar entre sí sociedades de cualquier tipo.<br>",
+      "<br>",
+      "Socios herederos menores, incapaces o con capacidad restringida.<br>",
+      "Art. 28.- Cuando existan herederos menores de edad, el representante legal...<br>",
+      "</div>",
+    ].join("");
+    const arts = extractArticlesForLaw("ley_19550", html);
+    expect(arts[0]!.number).toBe("27");
+    expect(arts[0]!.text).not.toContain("Socios herederos");
+    expect(arts[1]!.title).toBe("Socios herederos menores, incapaces o con capacidad restringida");
   });
 });

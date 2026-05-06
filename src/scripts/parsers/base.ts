@@ -96,6 +96,61 @@ function cleanStructureValue(value?: string): string | undefined {
   return v;
 }
 
+/**
+ * Strip InfoLEG-style trailing epigraphs from article bodies.
+ *
+ * In InfoLEG HTML the descriptive title (epigraph) of article N+1 appears
+ * before the "Art. N+1" marker, so the text parser appends it to the body of
+ * article N. This pass detects it by the trailing-paragraph heuristic — short,
+ * sentence-case, ends with a period — strips it from art[i].text, and assigns
+ * it to art[i+1].title.
+ *
+ * NOT called from generic `parseArticles` to avoid false positives in normas
+ * where short terminal sentences are legitimate content ("Derogado." in Penal,
+ * Art. 2 of the Constitución, etc.). Callers must opt in explicitly.
+ */
+export function extractTrailingEpigraphs(arts: Article[]): void {
+  for (let i = 0; i < arts.length - 1; i++) {
+    const art = arts[i]!;
+    const next = arts[i + 1]!;
+
+    const lines = art.text.split("\n");
+
+    // Find the last non-blank line.
+    let lastNB = lines.length - 1;
+    while (lastNB >= 0 && !lines[lastNB]!.trim()) lastNB--;
+    if (lastNB < 0) continue;
+
+    const lastLine = lines[lastNB]!.trim();
+
+    // Epigraph criteria (tuned for InfoLEG LGS/LNPA style):
+    //   - 4–80 chars: covers the longest known InfoLEG epigraph (76 chars)
+    //     while excluding prose sentences that look similar in other normas.
+    //   - Ends with '.': avoids "Serán sus atribuciones:" (colon-ending lead-ins).
+    //   - Has at least one lowercase letter: sentence-case noun phrase, not ALL-CAPS.
+    //   - Starts with an uppercase letter: not a parenthetical note.
+    //   - Does not start with '(': rules out modification notes.
+    if (
+      lastLine.length >= 4 &&
+      lastLine.length <= 80 &&
+      lastLine.endsWith(".") &&
+      !lastLine.startsWith("(") &&
+      /[a-záéíóúñü]/u.test(lastLine) &&
+      /^[A-ZÁÉÍÓÚÑ]/u.test(lastLine)
+    ) {
+      // Require at least one body line to remain — don't hollow out the article.
+      const remaining = lines.slice(0, lastNB);
+      while (remaining.length > 0 && !remaining[remaining.length - 1]!.trim()) remaining.pop();
+      if (remaining.length === 0) continue;
+
+      art.text = remaining.join("\n");
+      if (!next.title) {
+        next.title = lastLine.slice(0, -1); // strip trailing period
+      }
+    }
+  }
+}
+
 export function updateContextFromLine(ctx: StructureContext, rawLine: string): StructureContext {
   const line = rawLine.trim().replace(/\s+/g, " ");
   const next: StructureContext = { ...ctx };

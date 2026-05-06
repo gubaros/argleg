@@ -227,3 +227,122 @@ describe("SqliteLegalRepository: norma_id canonicalization", () => {
     expect(repo.findNormaByShortName("DUP")).toBeNull();
   });
 });
+
+describe("searchArticles scoring — bug #3: norma-title boost + term-frequency density", () => {
+  let repo: SqliteLegalRepository;
+
+  beforeEach(() => {
+    const db = openDb({ path: ":memory:" });
+    applySchema(db);
+    repo = new SqliteLegalRepository(db);
+    const handle = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    // Two normas: one specialised in "consumidor" (by title), one generic.
+    handle.exec(`
+      INSERT INTO normas (id, tier, titulo, nombre_corto, jurisdiccion, pais, estado_vigencia, fecha_ultima_actualizacion)
+      VALUES
+        ('ldc_test', 'ley_federal', 'Ley de Defensa del Consumidor', 'LDC',
+         'nacional', 'Argentina', 'vigente', '2026-01-01'),
+        ('other_test', 'codigo_fondo', 'Código Civil y Comercial', 'CCyC',
+         'nacional', 'Argentina', 'vigente', '2026-01-01');
+
+      INSERT INTO articulos (id, norma_id, numero, texto, orden, epigrafe) VALUES
+        ('ldc_art1',   'ldc_test',   '1',  'El consumidor es la persona que adquiere bienes. El proveedor no es consumidor.', 0, NULL),
+        ('other_art1', 'other_test', '1',  'El consumidor en este código tiene derechos.', 0, NULL),
+        ('other_art2', 'other_test', '2',  'Texto no relacionado.', 1, NULL);
+    `);
+  });
+
+  it("norma-title match adds 'norma' to matched_on", () => {
+    const hits = repo.searchArticles("consumidor");
+    const ldcHit = hits.find((h) => h.norma_id === "ldc_test" && h.articulo.numero === "1");
+    expect(ldcHit).toBeDefined();
+    expect(ldcHit!.matched_on).toContain("norma");
+  });
+
+  it("ldc art 1 ranks above other_art1 for query 'consumidor' (norma-title boost)", () => {
+    const hits = repo.searchArticles("consumidor");
+    const ldcIdx = hits.findIndex((h) => h.norma_id === "ldc_test");
+    const otherIdx = hits.findIndex((h) => h.norma_id === "other_test" && h.articulo.numero === "1");
+    expect(ldcIdx).toBeGreaterThanOrEqual(0);
+    expect(otherIdx).toBeGreaterThanOrEqual(0);
+    // LDC gets +5 norma-title bonus + density bonus (2 occurrences) → beats the CCyC article.
+    expect(ldcIdx).toBeLessThan(otherIdx);
+  });
+
+  it("term-frequency density: article with 2 occurrences scores higher than 1 occurrence", () => {
+    // ldc_art1 has "consumidor" twice; other_art1 has it once (both norma contexts differ,
+    // so isolate the effect by filtering to just other_test articles which have NO norma-title boost).
+    const handle = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    handle.exec(`
+      INSERT INTO articulos (id, norma_id, numero, texto, orden, epigrafe) VALUES
+        ('other_art3', 'other_test', '3', 'El consumidor actúa como consumidor de bienes.', 2, NULL),
+        ('other_art4', 'other_test', '4', 'El consumidor.', 3, NULL);
+    `);
+    const hits = repo.searchArticles("consumidor", { norma_id: "other_test" });
+    // art3 has "consumidor" twice → density bonus → must rank above art4 (once).
+    const idx3 = hits.findIndex((h) => h.articulo.numero === "3");
+    const idx4 = hits.findIndex((h) => h.articulo.numero === "4");
+    expect(idx3).toBeGreaterThanOrEqual(0);
+    expect(idx4).toBeGreaterThanOrEqual(0);
+    expect(idx3).toBeLessThan(idx4);
+  });
+});
+
+describe("listNorms materia filter — bug #4: orphaned materia param", () => {
+  let repo: SqliteLegalRepository;
+
+  beforeEach(() => {
+    const db = openDb({ path: ":memory:" });
+    applySchema(db);
+    repo = new SqliteLegalRepository(db);
+    const handle = (repo as unknown as { db: import("../src/db/connection.js").Db }).db;
+    handle.exec(`
+      INSERT INTO normas (id, tier, titulo, nombre_corto, jurisdiccion, pais, estado_vigencia,
+                          fecha_ultima_actualizacion, materias)
+      VALUES
+        ('ldc_mat', 'ley_federal', 'Ley de Defensa del Consumidor', 'LDC',
+         'nacional', 'Argentina', 'vigente', '2026-01-01',
+         '["consumidor","defensa del consumidor","consumo","relación de consumo"]'),
+        ('ccyc_mat', 'codigo_fondo', 'Código Civil y Comercial', 'CCyC',
+         'nacional', 'Argentina', 'vigente', '2026-01-01',
+         '["civil","comercial","contratos","familia"]'),
+        ('no_materias', 'ley_federal', 'Ley sin materias', NULL,
+         'nacional', 'Argentina', 'vigente', '2026-01-01', NULL);
+    `);
+  });
+
+  it("returns the norma whose materias array contains the exact token", () => {
+    const result = repo.listNorms({ materia: "consumidor" });
+    expect(result).toHaveLength(1);
+    expect(result[0]!.id).toBe("ldc_mat");
+  });
+
+  it("matches multi-word materia tokens", () => {
+    const result = repo.listNorms({ materia: "defensa del consumidor" });
+    expect(result).toHaveLength(1);
+    expect(result[0]!.id).toBe("ldc_mat");
+  });
+
+  it("is case-insensitive (Consumidor → consumidor)", () => {
+    const upper = repo.listNorms({ materia: "Consumidor" });
+    const lower = repo.listNorms({ materia: "consumidor" });
+    expect(upper.map((n) => n.id)).toEqual(lower.map((n) => n.id));
+  });
+
+  it("returns empty for an unknown materia", () => {
+    expect(repo.listNorms({ materia: "tributario" })).toHaveLength(0);
+  });
+
+  it("does not match normas with null materias", () => {
+    const result = repo.listNorms({ materia: "ley" });
+    for (const n of result) {
+      expect(n.id).not.toBe("no_materias");
+    }
+  });
+
+  it("get_norm_metadata exposes materias in the returned object", () => {
+    const meta = repo.getNormMetadata("ldc_mat");
+    expect(meta).toBeDefined();
+    expect(meta!.materias).toEqual(["consumidor", "defensa del consumidor", "consumo", "relación de consumo"]);
+  });
+});

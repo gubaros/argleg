@@ -64,6 +64,14 @@ function foldText(s: string): string {
   return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 
+function countOccurrences(text: string, token: string): number {
+  if (token.length === 0) return 0;
+  let n = 0;
+  let pos = 0;
+  while ((pos = text.indexOf(token, pos)) !== -1) { n++; pos += token.length; }
+  return n;
+}
+
 function tokenize(query: string): string[] {
   return foldText(query)
     .split(/[^a-z0-9áéíóúñü]+/i)
@@ -97,9 +105,9 @@ export class SqliteLegalRepository implements LegalRepository {
       params.estado_vigencia = filter.estado_vigencia;
     }
     if (filter.materia) {
-      // materias is a JSON array string; we use LIKE for a coarse contains match.
+      // materias is a JSON array of lowercase strings; fold input to match case-insensitively.
       where.push("materias LIKE @materia_like");
-      params.materia_like = `%"${filter.materia}"%`;
+      params.materia_like = `%"${filter.materia.toLowerCase()}"%`;
     }
     const sql =
       `SELECT * FROM normas` +
@@ -220,7 +228,7 @@ export class SqliteLegalRepository implements LegalRepository {
         epigrafe: row.epigrafe,
       };
       const contexto = byArt.get(row.id) ?? [];
-      const { score, matchedOn } = this.scoreArticle(articulo, contexto, tokens);
+      const { score, matchedOn } = this.scoreArticle(articulo, contexto, tokens, row.norma_titulo, row.norma_nombre_corto);
       if (score <= 0) continue;
       scored.push({
         norma_id: row.norma_id,
@@ -501,6 +509,8 @@ export class SqliteLegalRepository implements LegalRepository {
     a: ArticuloRow,
     contexto: EstructuraNodo[],
     tokens: string[],
+    normaTitulo: string,
+    normaNombreCorto: string | null,
   ): { score: number; matchedOn: SearchHitRow["matched_on"] } {
     const matchedOn = new Set<SearchHitRow["matched_on"][number]>();
     let score = 0;
@@ -511,6 +521,8 @@ export class SqliteLegalRepository implements LegalRepository {
     const estructura = contexto
       .map((n) => (n.nombre ? foldText(n.nombre) : ""))
       .filter((s) => s.length > 0);
+    const tituloNorma = foldText(normaTitulo);
+    const nombreCorto = normaNombreCorto ? foldText(normaNombreCorto) : "";
 
     for (const t of tokens) {
       let hit = false;
@@ -530,8 +542,16 @@ export class SqliteLegalRepository implements LegalRepository {
         hit = true;
       }
       if (texto.includes(t)) {
-        score += 3;
+        // Base score + density bonus: each extra occurrence adds +1 up to +5.
+        const freq = countOccurrences(texto, t);
+        score += 3 + Math.min(freq - 1, 5);
         matchedOn.add("texto");
+        hit = true;
+      }
+      if (tituloNorma.includes(t) || nombreCorto.includes(t)) {
+        // Boost articles from normas whose title matches the query (e.g. "consumidor" → LDC).
+        score += 5;
+        matchedOn.add("norma");
         hit = true;
       }
       if (!hit) score -= 0.5;

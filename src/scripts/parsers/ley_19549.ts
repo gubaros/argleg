@@ -1,7 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { Article, Inciso } from "../../laws/types.js";
-import { htmlToText, parseArticles, sliceFromFirstMatch, truncateAtMarkers, ARTICLE_RE } from "./base.js";
+import { htmlToText, parseArticles, sliceFromFirstMatch, truncateAtMarkers, ARTICLE_RE, extractTrailingEpigraphs } from "./base.js";
 
 const FOOTERS = [
   /^\s*Antecedentes\s+Normativos\b/im,
@@ -52,6 +52,7 @@ export function parseLey19549(html: string): Article[] {
   text = sliceFromFirstMatch(text, ARTICLE_RE);
   text = truncateAtMarkers(text, FOOTERS);
   const arts = parseArticles(text);
+  extractTrailingEpigraphs(arts);
   const audit: string[] = [];
   for (const art of arts) {
     const extracted = extractLetteredIncisos(art.text);

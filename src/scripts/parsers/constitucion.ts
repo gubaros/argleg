@@ -73,11 +73,7 @@ export function parseConstitucion(html: string): Article[] {
   for (let i = 0; i < matches.length; i++) {
     const cur = matches[i]!;
     const next = matches[i + 1];
-    let body = text.slice(cur.end, next ? next.start : text.length).trim();
-    body = body
-      .replace(/\n\s*CAPITULO\s+[A-ZÁÉÍÓÚ0-9]+.*$/imu, "")
-      .replace(/\n\s*Secci[oó]n\s+.*$/imu, "")
-      .trim();
+    const body = text.slice(cur.end, next ? next.start : text.length).trim();
     if (!body || seen.has(cur.number)) continue;
     seen.add(cur.number);
     const structured = extractConstitutionIncisos(body);
